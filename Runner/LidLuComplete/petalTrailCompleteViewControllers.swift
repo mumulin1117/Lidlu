@@ -632,17 +632,25 @@ final class ivoryMenuSettingsViewController: onyxFlowBaseViewController {
     }
 
     private func installcustomCreationRoot() {
-        let page = velvetEntryGateViewController()
-        page.visualDiary = { [weak page] in
-            page?.navigationController?.setViewControllers([glimmerNestHomeViewController()], animated: true)
-        }
-        page.portfolioPiece = { [weak page] in
-            page?.navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .epicTransformation), animated: true)
-        }
-        page.creativeCanvas = { [weak page] in
-            page?.navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .stunningResult), animated: true)
-        }
-        navigationController?.setViewControllers([page], animated: true)
+        let nativeRoot = (UIApplication.shared.delegate as? AppDelegate)?.nativeRoot
+        nativeRoot?.setNavigationBarHidden(true, animated: false)
+        
+        guard let controllett = (UIApplication.shared.delegate as? AppDelegate)?.makeLoginGate() else{return}
+        nativeRoot?.setViewControllers([controllett], animated: false)
+        ( UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController  = nativeRoot
+        
+        
+//        let page = velvetEntryGateViewController()
+//        page.visualDiary = { [weak page] in
+//            page?.navigationController?.setViewControllers([glimmerNestHomeViewController()], animated: true)
+//        }
+//        page.portfolioPiece = { [weak page] in
+//            page?.navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .epicTransformation), animated: true)
+//        }
+//        page.creativeCanvas = { [weak page] in
+//            page?.navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .stunningResult), animated: true)
+//        }
+//        navigationController?.setViewControllers([page], animated: true)
     }
 }
 

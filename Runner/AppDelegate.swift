@@ -4,7 +4,7 @@ import UserNotifications
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
-    private let nativeRoot = UINavigationController()
+     let nativeRoot = UINavigationController()
 
     func application(
         _ application: UIApplication,
@@ -36,7 +36,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         }
     }
 
-    private func installNativeRoot() {
+     func installNativeRoot() {
         window = UIWindow(frame: UIScreen.main.bounds)
         nativeRoot.setNavigationBarHidden(true, animated: false)
         if velvetAuraStore.shared.choseMain {
@@ -48,7 +48,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         window?.makeKeyAndVisible()
     }
 
-    private func makeLoginGate() -> velvetEntryGateViewController {
+     func makeLoginGate() -> velvetEntryGateViewController {
         let page = velvetEntryGateViewController()
         page.visualDiary = { [weak self] in
             self?.nativeRoot.setViewControllers([prismRootTabsViewController(initialIndex: 1)], animated: true)
