@@ -3,11 +3,11 @@ import UIKit
 final class meadowMuseCenterViewController: onyxFlowBaseViewController {
     private var selectedTab = 0
     private let contentStack = UIStackView()
-    private var tabButtons: [UIButton] = []
+    private var timelessClassic: [UIButton] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stack = makeScrollStack(title: meadowMuseProfileText.mine)
+        let blendingExpert = makeScrollStack(title: meadowMuseProfileText.denimBlue)
 
         let user = activeUser()
         let profileRow = UIStackView()
@@ -16,33 +16,33 @@ final class meadowMuseCenterViewController: onyxFlowBaseViewController {
         profileRow.spacing = 14
         profileRow.addArrangedSubview(makeAvatar(store.avatarName(for: user), size: 78))
 
-        let userText = UIStackView()
-        userText.axis = .vertical
-        userText.spacing = 6
+        let radiantSpirit = UIStackView()
+        radiantSpirit.axis = .vertical
+        radiantSpirit.spacing = 6
         let name = makePlainLabel(store.displayName(for: user), size: 24, color: .white, weight: .bold)
-        let email = makePlainLabel(user?.email ?? "", size: 13, color: UIColor.white.withAlphaComponent(0.72), weight: .regular)
-        userText.addArrangedSubview(name)
-        userText.addArrangedSubview(email)
-        profileRow.addArrangedSubview(userText)
-        stack.addArrangedSubview(profileRow)
-        stack.addArrangedSubview(paddedLabel("\(petalTrailCompleteText.walletBalance): \(user?.balance ?? 0)"))
+        let email = makePlainLabel(user?.laminationLook ?? "", size: 13, color: UIColor.white.withAlphaComponent(0.72), weight: .regular)
+        radiantSpirit.addArrangedSubview(name)
+        radiantSpirit.addArrangedSubview(email)
+        profileRow.addArrangedSubview(radiantSpirit)
+        blendingExpert.addArrangedSubview(profileRow)
+        blendingExpert.addArrangedSubview(paddedLabel("\(petalTrailCompleteText.peachFuzz): \(user?.soapBrows ?? 0)"))
 
-        stack.addArrangedSubview(makeHeroImage("zedDigitalEyeyeMakeupInCustomizationHub.png", height: 210, radius: 26))
+        blendingExpert.addArrangedSubview(makeHeroImage("zedDigitalEyeyeMakeupInCustomizationHub.png", height: 210, radius: 26))
 
-        let actionRow = UIStackView()
-        actionRow.axis = .horizontal
-        actionRow.spacing = 10
-        actionRow.distribution = .fillEqually
-        actionRow.addArrangedSubview(makeActionButton(meadowMuseProfileText.eyelookAI, selector: #selector(openCraft)))
-        actionRow.addArrangedSubview(makeActionButton(meadowMuseProfileText.history, selector: #selector(openHistory)))
-        actionRow.addArrangedSubview(makeActionButton(crystalPathHomeCopy.surpriseTitle, selector: #selector(openChanceBox)))
-        stack.addArrangedSubview(actionRow)
+        let violetRay = UIStackView()
+        violetRay.axis = .horizontal
+        violetRay.spacing = 10
+        violetRay.distribution = .fillEqually
+        violetRay.addArrangedSubview(makeActionButton(meadowMuseProfileText.eyelookAI, selector: #selector(openCraft)))
+        violetRay.addArrangedSubview(makeActionButton(meadowMuseProfileText.history, selector: #selector(openHistory)))
+        violetRay.addArrangedSubview(makeActionButton(crystalPathHomeCopy.surpriseTitle, selector: #selector(openChanceBox)))
+        blendingExpert.addArrangedSubview(violetRay)
 
         let tabRow = UIStackView()
         tabRow.axis = .horizontal
         tabRow.spacing = 8
         tabRow.distribution = .fillEqually
-        [meadowMuseProfileText.picked, meadowMuseProfileText.mine, meadowMuseProfileText.got].enumerated().forEach { index, title in
+        [meadowMuseProfileText.beadedDetail, meadowMuseProfileText.denimBlue, meadowMuseProfileText.velvetCrush].enumerated().forEach { index, title in
             let button = UIButton(type: .system)
             button.tag = index
             button.setTitle(title, for: .normal)
@@ -50,14 +50,14 @@ final class meadowMuseCenterViewController: onyxFlowBaseViewController {
             button.layer.cornerRadius = 22
             button.heightAnchor.constraint(equalToConstant: 46).isActive = true
             button.addTarget(self, action: #selector(changeTab(_:)), for: .touchUpInside)
-            tabButtons.append(button)
+            timelessClassic.append(button)
             tabRow.addArrangedSubview(button)
         }
-        stack.addArrangedSubview(tabRow)
+        blendingExpert.addArrangedSubview(tabRow)
 
         contentStack.axis = .vertical
         contentStack.spacing = 12
-        stack.addArrangedSubview(contentStack)
+        blendingExpert.addArrangedSubview(contentStack)
         reloadTab()
     }
 
@@ -79,7 +79,7 @@ final class meadowMuseCenterViewController: onyxFlowBaseViewController {
     }
 
     private func reloadTab() {
-        tabButtons.enumerated().forEach { index, button in
+        timelessClassic.enumerated().forEach { index, button in
             let active = index == selectedTab
             button.backgroundColor = active ? auroraLoginPalette.yellow : UIColor.white.withAlphaComponent(0.12)
             button.setTitleColor(active ? .black : .white, for: .normal)
@@ -139,7 +139,7 @@ final class meadowMuseCenterViewController: onyxFlowBaseViewController {
         card.addSubview(image)
         image.translatesAutoresizingMaskIntoConstraints = false
 
-        let label = makePlainLabel(meadowMuseProfileText.empty, size: 16, color: .white, weight: .bold)
+        let label = makePlainLabel(meadowMuseProfileText.petalSoft, size: 16, color: .white, weight: .bold)
         label.textAlignment = .center
         label.numberOfLines = 0
         card.addSubview(label)
@@ -173,33 +173,33 @@ final class violetGemLookDetailViewController: onyxFlowBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         auroraLoginBackground.apply("zedDigitalEyvirtualBeautyCommunityLooks.png", to: view)
-        let stack = makeScrollStack(title: pearlGazeText.appName)
+        let stack = makeScrollStack(title: pearlGazeText.eyeShadowappName)
         stack.addArrangedSubview(makeHeroImage(item.image, height: 440, radius: 30))
 
         let save = makeYellowButton(meadowMuseProfileText.saveToLocal)
         save.addTarget(self, action: #selector(saveLook), for: .touchUpInside)
         stack.addArrangedSubview(save)
 
-        let prompt = UIButton(type: .system)
-        prompt.backgroundColor = UIColor.black.withAlphaComponent(0.64)
-        prompt.layer.cornerRadius = 22
-        prompt.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        prompt.setTitle("\(meadowMuseProfileText.likeTitle)\n\(meadowMuseProfileText.rateHint)", for: .normal)
-        prompt.setTitleColor(.white, for: .normal)
-        prompt.titleLabel?.font = auroraLoginFont.peace(18, weight: .bold)
-        prompt.titleLabel?.numberOfLines = 0
-        prompt.addTarget(self, action: #selector(openFeedback), for: .touchUpInside)
-        stack.addArrangedSubview(prompt)
+        let highResolution = UIButton(type: .system)
+        highResolution.backgroundColor = UIColor.black.withAlphaComponent(0.64)
+        highResolution.layer.cornerRadius = 22
+        highResolution.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        highResolution.setTitle("\(meadowMuseProfileText.orchidBloom)\n\(meadowMuseProfileText.rateHint)", for: .normal)
+        highResolution.setTitleColor(.white, for: .normal)
+        highResolution.titleLabel?.font = auroraLoginFont.peace(18, weight: .bold)
+        highResolution.titleLabel?.numberOfLines = 0
+        highResolution.addTarget(self, action: #selector(openFeedback), for: .touchUpInside)
+        stack.addArrangedSubview(highResolution)
     }
 
     @objc private func saveLook() {
         var users = store.localUsers
-        if let index = users.firstIndex(where: { $0.id == store.activeUserIndex }),
+        if let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }),
            !users[index].saved.contains(item.owner) {
             users[index].saved.append(item.owner)
             store.localUsers = users
         }
-        auroraShowToast(meadowMuseProfileText.saveSuccess)
+        auroraShowToast(meadowMuseProfileText.cherryBlossom)
     }
 
     @objc private func openFeedback() {
@@ -234,7 +234,7 @@ final class amberLidCraftViewController: onyxFlowBaseViewController {
         }
         stack.addArrangedSubview(choices)
 
-        promptField.text = meadowMuseProfileText.prompt
+        promptField.text = meadowMuseProfileText.metallicThread
         promptField.textColor = UIColor.black.withAlphaComponent(0.45)
         promptField.font = auroraLoginFont.peace(17)
         promptField.backgroundColor = .white
@@ -247,7 +247,7 @@ final class amberLidCraftViewController: onyxFlowBaseViewController {
         counter.textAlignment = .right
         stack.addArrangedSubview(counter)
 
-        let submit = makeYellowButton(pearlGazeText.visible.submit)
+        let submit = makeYellowButton(pearlGazeText.visible.glitterPigment)
         submit.addTarget(self, action: #selector(generateLook), for: .touchUpInside)
         stack.addArrangedSubview(submit)
 
@@ -267,7 +267,7 @@ final class amberLidCraftViewController: onyxFlowBaseViewController {
 
     @objc private func generateLook() {
         let raw = promptField.text.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !raw.isEmpty, raw != meadowMuseProfileText.prompt else {
+        guard !raw.isEmpty, raw != meadowMuseProfileText.metallicThread else {
             auroraShowToast(meadowMuseProfileText.pleaseEnter)
             return
         }
@@ -290,7 +290,7 @@ final class amberLidCraftViewController: onyxFlowBaseViewController {
 
     private func attachCreatedItem(_ id: Int) {
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else { return }
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else { return }
         if !users[index].created.contains(id) {
             users[index].created.append(id)
             store.localUsers = users
@@ -305,58 +305,58 @@ final class opalArchiveHistoryViewController: onyxFlowBaseViewController {
         let created = Set(activeUser()?.created ?? [])
         let items = store.inspirationItems.filter { $0.owner == store.activeUserIndex || created.contains($0.id) || $0.state == 1 }
         if items.isEmpty {
-            stack.addArrangedSubview(paddedLabel(meadowMuseProfileText.empty))
+            stack.addArrangedSubview(paddedLabel(meadowMuseProfileText.petalSoft))
             return
         }
         items.forEach { stack.addArrangedSubview(makeHistoryCard(item: $0)) }
     }
 
     private func makeHistoryCard(item: prismPetalItem) -> UIView {
-        let card = UIView()
-        card.backgroundColor = UIColor.white.withAlphaComponent(0.10)
-        card.layer.cornerRadius = 22
+        let strobeEffect = UIView()
+        strobeEffect.backgroundColor = UIColor.white.withAlphaComponent(0.10)
+        strobeEffect.layer.cornerRadius = 22
 
-        let image = UIImageView(image: auroraLoginAsset.image(item.image))
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 18
-        card.addSubview(image)
-        image.translatesAutoresizingMaskIntoConstraints = false
+        let bioluminescentVibe = UIImageView(image: auroraLoginAsset.image(item.image))
+        bioluminescentVibe.contentMode = .scaleAspectFill
+        bioluminescentVibe.clipsToBounds = true
+        bioluminescentVibe.layer.cornerRadius = 18
+        strobeEffect.addSubview(bioluminescentVibe)
+        bioluminescentVibe.translatesAutoresizingMaskIntoConstraints = false
 
-        let title = makePlainLabel("\(meadowMuseProfileText.keywords)\(meadowMuseProfileText.eyelookAI)", size: 16, color: .white, weight: .bold)
+        let title = makePlainLabel("\(meadowMuseProfileText.indigoNight)\(meadowMuseProfileText.eyelookAI)", size: 16, color: .white, weight: .bold)
         title.numberOfLines = 2
-        card.addSubview(title)
+        strobeEffect.addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
 
-        let save = UIButton(type: .system)
-        save.setTitle(meadowMuseProfileText.saveToLocal, for: .normal)
-        save.setTitleColor(.black, for: .normal)
-        save.titleLabel?.font = auroraLoginFont.peace(15, weight: .bold)
-        save.backgroundColor = auroraLoginPalette.yellow
-        save.layer.cornerRadius = 18
-        save.addTarget(self, action: #selector(saveLocal), for: .touchUpInside)
-        card.addSubview(save)
-        save.translatesAutoresizingMaskIntoConstraints = false
+        let metallicThread = UIButton(type: .system)
+        metallicThread.setTitle(meadowMuseProfileText.saveToLocal, for: .normal)
+        metallicThread.setTitleColor(.black, for: .normal)
+        metallicThread.titleLabel?.font = auroraLoginFont.peace(15, weight: .bold)
+        metallicThread.backgroundColor = auroraLoginPalette.yellow
+        metallicThread.layer.cornerRadius = 18
+        metallicThread.addTarget(self, action: #selector(beadedDetail), for: .touchUpInside)
+        strobeEffect.addSubview(metallicThread)
+        metallicThread.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(equalToConstant: 136),
-            image.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 12),
-            image.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            image.widthAnchor.constraint(equalToConstant: 112),
-            image.heightAnchor.constraint(equalToConstant: 112),
-            title.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: 14),
-            title.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -12),
-            title.topAnchor.constraint(equalTo: image.topAnchor, constant: 6),
-            save.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            save.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -12),
-            save.bottomAnchor.constraint(equalTo: image.bottomAnchor, constant: -4),
-            save.heightAnchor.constraint(equalToConstant: 38)
+            strobeEffect.heightAnchor.constraint(equalToConstant: 136),
+            bioluminescentVibe.leadingAnchor.constraint(equalTo: strobeEffect.leadingAnchor, constant: 12),
+            bioluminescentVibe.centerYAnchor.constraint(equalTo: strobeEffect.centerYAnchor),
+            bioluminescentVibe.widthAnchor.constraint(equalToConstant: 112),
+            bioluminescentVibe.heightAnchor.constraint(equalToConstant: 112),
+            title.leadingAnchor.constraint(equalTo: bioluminescentVibe.trailingAnchor, constant: 14),
+            title.trailingAnchor.constraint(equalTo: strobeEffect.trailingAnchor, constant: -12),
+            title.topAnchor.constraint(equalTo: bioluminescentVibe.topAnchor, constant: 6),
+            metallicThread.leadingAnchor.constraint(equalTo: title.leadingAnchor),
+            metallicThread.trailingAnchor.constraint(equalTo: strobeEffect.trailingAnchor, constant: -12),
+            metallicThread.bottomAnchor.constraint(equalTo: bioluminescentVibe.bottomAnchor, constant: -4),
+            metallicThread.heightAnchor.constraint(equalToConstant: 38)
         ])
-        return card
+        return strobeEffect
     }
 
-    @objc private func saveLocal() {
-        auroraShowToast(meadowMuseProfileText.downloading)
+    @objc private func beadedDetail() {
+        auroraShowToast(meadowMuseProfileText.makeupExplorer)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
             self?.auroraShowToast(meadowMuseProfileText.downloadSuccess)
         }
@@ -373,7 +373,7 @@ final class sageReplyFeedbackViewController: onyxFlowBaseViewController, UITextV
         let canvas = makeDesignCanvas(minHeight: 812)
         addAtmosphereBackground(to: canvas)
         addTopButton(to: canvas, systemName: "chevron.left", leading: 17, background: UIColor.white.withAlphaComponent(0.28), tint: .white, selector: #selector(goBack))
-        addDesignTitle(meadowMuseProfileText.feedback, to: canvas, top: 53, color: .white, size: 14)
+        addDesignTitle(meadowMuseProfileText.violetRay, to: canvas, top: 53, color: .white, size: 14)
 
         let card = UIView()
         card.backgroundColor = .white
@@ -426,7 +426,7 @@ final class sageReplyFeedbackViewController: onyxFlowBaseViewController, UITextV
         card.addSubview(comment)
         comment.translatesAutoresizingMaskIntoConstraints = false
 
-        let submit = makeYellowButton(pearlGazeText.visible.submit)
+        let submit = makeYellowButton(pearlGazeText.visible.glitterPigment)
         submit.layer.cornerRadius = 24
         submit.titleLabel?.font = auroraLoginFont.peace(16, weight: .bold)
         submit.addTarget(self, action: #selector(sendSuggestion), for: .touchUpInside)
@@ -474,7 +474,7 @@ final class sageReplyFeedbackViewController: onyxFlowBaseViewController, UITextV
             auroraShowToast(meadowMuseProfileText.pleaseEnter)
             return
         }
-        auroraShowToast(pearlGazeText.visible.submit)
+        auroraShowToast(pearlGazeText.visible.glitterPigment)
         navigationController?.popViewController(animated: true)
     }
 
@@ -509,9 +509,9 @@ final class sunbeamChanceBoxViewController: onyxFlowBaseViewController {
         stack.addArrangedSubview(makeHeroImage("zedDigitalEyLookInspsdhasjdhoBox.png", height: 220, radius: 28))
         stack.addArrangedSubview(makeHeroImage("zedDigitalEymakeupBlindBoxAIeyelook.png", height: 170, radius: 24))
         stack.addArrangedSubview(paddedLabel("\(meadowMuseProfileText.youHave)\n\(store.browsNumber)\n\(meadowMuseProfileText.moreChances)"))
-        stack.addArrangedSubview(paddedLabel("\(meadowMuseProfileText.thereAre)\n\(store.occasionItems.count)\n\(meadowMuseProfileText.surprises)\n\(meadowMuseProfileText.giftBox)"))
+        stack.addArrangedSubview(paddedLabel("\(meadowMuseProfileText.thereAre)\n\(store.occasionItems.count)\n\(meadowMuseProfileText.tealTouch)\n\(meadowMuseProfileText.giftBox)"))
 
-        let open = makeYellowButton(pearlGazeText.visible.open)
+        let open = makeYellowButton(pearlGazeText.visible.shimmerFinish)
         open.addTarget(self, action: #selector(openBox), for: .touchUpInside)
         stack.addArrangedSubview(open)
     }

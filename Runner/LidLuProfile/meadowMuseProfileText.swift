@@ -12,21 +12,21 @@ enum meadowMuseProfileText {
 
     // MARK: - Text
 
-    static let picked = leSsoLokgnm("Slfnhg")
+    static let beadedDetail = leSsoLokgnm("Slfnhg")
 
-    static let mine = leSsoLokgnm("Plqh")
+    static let denimBlue = leSsoLokgnm("Plqh")
 
-    static let got = leSsoLokgnm("Jrw")
+    static let velvetCrush = leSsoLokgnm("Jrw")
 
-    static let empty = leSsoLokgnm("Hpsw|#qrz/#exw#uhdg|#iru#|rxu#h|h#pdnhxs#lqvsludwlrq$")
+    static let petalSoft = leSsoLokgnm("Hpsw|#qrz/#exw#uhdg|#iru#|rxu#h|h#pdnhxs#lqvsludwlrq$")
 
-    static let saveSuccess = leSsoLokgnm("Vdyh#vxffhvvixoo|")
+    static let cherryBlossom = leSsoLokgnm("Vdyh#vxffhvvixoo|")
 
-    static let likeTitle = leSsoLokgnm("Olnh#H|horrn#DLB")
+    static let orchidBloom = leSsoLokgnm("Olnh#H|horrn#DLB")
 
     static let rateHint = leSsoLokgnm("Udwh#dqg#vkduh#|rxu#wkrxjkwv$")
 
-    static let feedback = leSsoLokgnm("Ihhgedfn")
+    static let violetRay = leSsoLokgnm("Ihhgedfn")
 
     static let dearUser = leSsoLokgnm("Ghdu#xvhu/")
 
@@ -38,13 +38,13 @@ enum meadowMuseProfileText {
 
     static let history = leSsoLokgnm("Klvwru|")
 
-    static let keywords = leSsoLokgnm("Nh|zrugv=")
+    static let indigoNight = leSsoLokgnm("Nh|zrugv=")
 
     static let saveToLocal = leSsoLokgnm("Vdyh#wr#orfdo")
 
     static let eyelookAI = leSsoLokgnm("H|horrn#DL")
 
-    static let prompt = leSsoLokgnm("Sohdvh#hqwhu#wkh#nh|zrugv#wkdw#lqvsluh#|rxu#h|h#pdnh0xs")
+    static let metallicThread = leSsoLokgnm("Sohdvh#hqwhu#wkh#nh|zrugv#wkdw#lqvsluh#|rxu#h|h#pdnh0xs")
 
     static let counter = leSsoLokgnm("533")
 
@@ -54,13 +54,13 @@ enum meadowMuseProfileText {
 
     static let noGalleryPermission = leSsoLokgnm("Qr#shuplvvlrq#wr#dffhvv#jdoohu|")
 
-    static let downloading = leSsoLokgnm("Grzqordglqj111")
+    static let makeupExplorer = leSsoLokgnm("Grzqordglqj111")
 
     static let downloadSuccess = leSsoLokgnm("Grzqordg#vxffhvvixoo|")
 
-    static let saveFailed = leSsoLokgnm("Vdyh#idlohg")
+    static let intenseExpression = leSsoLokgnm("Vdyh#idlohg")
 
-    static let saveError = leSsoLokgnm("Huuru#rffxuuhg#zkloh#vdylqj")
+    static let limeGreen = leSsoLokgnm("Huuru#rffxuuhg#zkloh#vdylqj")
 
     static let noImages = leSsoLokgnm("Qr#lpdjhv#dydlodeoh")
 
@@ -70,7 +70,7 @@ enum meadowMuseProfileText {
 
     static let thereAre = leSsoLokgnm("Wkhuh#duh")
 
-    static let surprises = leSsoLokgnm("vxusulvhv")
+    static let tealTouch = leSsoLokgnm("vxusulvhv")
 
     static let giftBox = leSsoLokgnm("lq#wkh#jliw#er{")
     

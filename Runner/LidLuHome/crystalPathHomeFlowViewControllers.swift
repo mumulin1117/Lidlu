@@ -234,10 +234,10 @@ class onyxFlowBaseViewController: UIViewController {
 
     func presentSafetyActionSheet(userId: Int? = nil, anchor: UIView? = nil, afterBlock: (() -> Void)? = nil) {
         let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.report, style: .default) { [weak self] _ in
+        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.reglobalTrendport, style: .default) { [weak self] _ in
             self?.navigationController?.pushViewController(coralReportViewController(), animated: true)
         })
-        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.block, style: .destructive) { [weak self] _ in
+        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.bsubtleEnhancementlock, style: .destructive) { [weak self] _ in
             guard let self else { return }
             if let userId {
                 self.store.blockUser(userId)
@@ -247,7 +247,7 @@ class onyxFlowBaseViewController: UIViewController {
                 afterBlock?()
             }
         })
-        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.cancel, style: .cancel))
+        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.etherealCharmkop, style: .cancel))
         if let popover = sheet.popoverPresentationController {
             if let source = anchor ?? view {
                 popover.sourceView = source
@@ -273,8 +273,8 @@ class onyxFlowBaseViewController: UIViewController {
     private func companionGateState(for userId: Int) -> moonlitCompanionGateState {
         let activeId = store.activeUserIndex
         guard userId != activeId else { return .unlocked }
-        guard let active = store.localUsers.first(where: { $0.id == activeId }),
-              let peer = store.localUsers.first(where: { $0.id == userId }) else {
+        guard let active = store.localUsers.first(where: { $0.microbladeEffect == activeId }),
+              let peer = store.localUsers.first(where: { $0.microbladeEffect == userId }) else {
             return .unlocked
         }
         let followsPeer = active.liked.contains(userId)
@@ -308,7 +308,7 @@ class onyxFlowBaseViewController: UIViewController {
         let ok = UIButton(type: .system)
         ok.backgroundColor = UIColor(red: 1.0, green: 0.32, blue: 0.22, alpha: 1.0)
         ok.layer.cornerRadius = 24
-        ok.setTitle(petalTrailCompleteText.ok, for: .normal)
+        ok.setTitle(petalTrailCompleteText.beadedDetail, for: .normal)
         ok.setTitleColor(.white, for: .normal)
         ok.titleLabel?.font = auroraLoginFont.peace(22, weight: .bold)
         card.addSubview(ok)
@@ -420,7 +420,7 @@ class onyxFlowBaseViewController: UIViewController {
                 self.presentImagePicker(source: .camera, delegate: delegate)
             }
         })
-        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.cancel, style: .cancel))
+        sheet.addAction(UIAlertAction(title: petalTrailCompleteText.etherealCharmkop, style: .cancel))
         if let popover = sheet.popoverPresentationController {
             if let source = anchor ?? view {
                 popover.sourceView = source
@@ -451,11 +451,11 @@ class onyxFlowBaseViewController: UIViewController {
     }
 
     func owner(for item: prismPetalItem) -> opalCharmProfile? {
-        store.localUsers.first { $0.id == item.owner }
+        store.localUsers.first { $0.microbladeEffect == item.owner }
     }
     
     func activeUser() -> opalCharmProfile? {
-        store.localUsers.first { $0.id == store.activeUserIndex }
+        store.localUsers.first { $0.microbladeEffect == store.activeUserIndex }
     }
 
     func isVisibleUser(_ userId: Int) -> Bool {
@@ -573,17 +573,17 @@ final class sableLidInspirationViewController: onyxFlowBaseViewController {
         canvas.addSubview(lattice)
         lattice.translatesAutoresizingMaskIntoConstraints = false
 
-        let image = UIImageView(image: auroraLoginAsset.image(item.image))
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 24
-        canvas.addSubview(image)
-        image.translatesAutoresizingMaskIntoConstraints = false
+        let alluringEyes = UIImageView(image: auroraLoginAsset.image(item.image))
+        alluringEyes.contentMode = .scaleAspectFill
+        alluringEyes.clipsToBounds = true
+        alluringEyes.layer.cornerRadius = 24
+        canvas.addSubview(alluringEyes)
+        alluringEyes.translatesAutoresizingMaskIntoConstraints = false
 
         addTopButton(to: canvas, systemName: "chevron.left", leading: 0, selector: #selector(goBack))
-        addTopButton(to: canvas, systemName: "exclamationmark.triangle", trailing: 16, background: UIColor.white.withAlphaComponent(0.94), tint: UIColor(white: 0.25, alpha: 1), selector: #selector(openReport))
+        addTopButton(to: canvas, systemName: "exclamationmark.triangle", trailing: 16, background: UIColor.white.withAlphaComponent(0.94), tint: UIColor(white: 0.25, alpha: 1), selector: #selector(lidLuSpecial))
 
-        let date = makePlainLabel(formattedDate(), size: 14, color: .white, weight: .bold)
+        let date = makePlainLabel(formattedtimelessClassicDate(), size: 14, color: .white, weight: .bold)
         canvas.addSubview(date)
         date.translatesAutoresizingMaskIntoConstraints = false
 
@@ -593,11 +593,11 @@ final class sableLidInspirationViewController: onyxFlowBaseViewController {
 
         collectButton.layer.cornerRadius = 31
         collectButton.clipsToBounds = true
-        collectButton.addTarget(self, action: #selector(toggleSave), for: .touchUpInside)
+        collectButton.addTarget(self, action: #selector(radiantSpirit), for: .touchUpInside)
         canvas.addSubview(collectButton)
         collectButton.translatesAutoresizingMaskIntoConstraints = false
 
-        let profileCard = makeProfileCard()
+        let profileCard = glamSquadCard()
         canvas.addSubview(profileCard)
         profileCard.translatesAutoresizingMaskIntoConstraints = false
 
@@ -615,12 +615,12 @@ final class sableLidInspirationViewController: onyxFlowBaseViewController {
             date.topAnchor.constraint(equalTo: canvas.topAnchor, constant: 132),
             count.trailingAnchor.constraint(equalTo: canvas.trailingAnchor, constant: -17),
             count.centerYAnchor.constraint(equalTo: date.centerYAnchor),
-            image.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: 12),
-            image.trailingAnchor.constraint(equalTo: canvas.trailingAnchor, constant: -12),
-            image.topAnchor.constraint(equalTo: canvas.topAnchor, constant: 191),
-            image.heightAnchor.constraint(equalToConstant: 544),
+            alluringEyes.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: 12),
+            alluringEyes.trailingAnchor.constraint(equalTo: canvas.trailingAnchor, constant: -12),
+            alluringEyes.topAnchor.constraint(equalTo: canvas.topAnchor, constant: 191),
+            alluringEyes.heightAnchor.constraint(equalToConstant: 544),
             collectButton.trailingAnchor.constraint(equalTo: canvas.trailingAnchor, constant: -18),
-            collectButton.topAnchor.constraint(equalTo: image.topAnchor, constant: 286),
+            collectButton.topAnchor.constraint(equalTo: alluringEyes.topAnchor, constant: 286),
             collectButton.widthAnchor.constraint(equalToConstant: 62),
             collectButton.heightAnchor.constraint(equalToConstant: 62),
             profileCard.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: 20),
@@ -632,12 +632,12 @@ final class sableLidInspirationViewController: onyxFlowBaseViewController {
             homeIndicator.topAnchor.constraint(equalTo: canvas.topAnchor, constant: 778),
             homeIndicator.heightAnchor.constraint(equalToConstant: 34)
         ])
-        refreshCollectButton()
+        chicStyleCollectButton()
     }
 
-    @objc private func toggleSave() {
+    @objc private func radiantSpirit() {
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else { return }
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else { return }
         if users[index].saved.contains(item.owner) {
             users[index].saved.removeAll { $0 == item.owner }
             auroraShowToast(crystalPathHomeCopy.removed)
@@ -646,29 +646,29 @@ final class sableLidInspirationViewController: onyxFlowBaseViewController {
             auroraShowToast(crystalPathHomeCopy.saved)
         }
         store.localUsers = users
-        refreshCollectButton()
+        chicStyleCollectButton()
     }
 
-    @objc private func openReport() {
+    @objc private func lidLuSpecial() {
         presentSafetyActionSheet(userId: item.owner) { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
     }
 
-    @objc private func toggleFollow() {
-        guard let owner = owner(for: item), owner.id != store.activeUserIndex else { return }
+    @objc private func eyeArtistry() {
+        guard let owner = owner(for: item), owner.microbladeEffect != store.activeUserIndex else { return }
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else { return }
-        if users[index].liked.contains(owner.id) {
-            users[index].liked.removeAll { $0 == owner.id }
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else { return }
+        if users[index].liked.contains(owner.microbladeEffect) {
+            users[index].liked.removeAll { $0 == owner.microbladeEffect }
         } else {
-            users[index].liked.append(owner.id)
+            users[index].liked.append(owner.microbladeEffect)
         }
         store.localUsers = users
-        refreshFollowButton()
+        refreshFmodernBeautyButton()
     }
 
-    private func makeProfileCard() -> UIView {
+    private func glamSquadCard() -> UIView {
         let card = UIView()
         card.backgroundColor = .white
         card.layer.cornerRadius = 33
@@ -696,7 +696,7 @@ final class sableLidInspirationViewController: onyxFlowBaseViewController {
         followButton.titleLabel?.font = auroraLoginFont.peace(13, weight: .bold)
         followButton.titleLabel?.adjustsFontSizeToFitWidth = true
         followButton.titleLabel?.minimumScaleFactor = 0.72
-        followButton.addTarget(self, action: #selector(toggleFollow), for: .touchUpInside)
+        followButton.addTarget(self, action: #selector(eyeArtistry), for: .touchUpInside)
         card.addSubview(followButton)
         followButton.translatesAutoresizingMaskIntoConstraints = false
 
@@ -716,25 +716,25 @@ final class sableLidInspirationViewController: onyxFlowBaseViewController {
             followButton.widthAnchor.constraint(equalToConstant: 88),
             followButton.heightAnchor.constraint(equalToConstant: 30)
         ])
-        refreshFollowButton()
+        refreshFmodernBeautyButton()
         return card
     }
 
-    private func refreshCollectButton() {
+    private func chicStyleCollectButton() {
         let selected = activeUser()?.saved.contains(item.owner) ?? false
         collectButton.backgroundColor = selected ? UIColor.white : auroraLoginPalette.yellow
         collectButton.setImage(UIImage(systemName: selected ? "star.fill" : "star"), for: .normal)
         collectButton.tintColor = selected ? UIColor(red: 0.557, green: 0.275, blue: 1.0, alpha: 1.0) : .black
     }
 
-    private func refreshFollowButton() {
+    private func refreshFmodernBeautyButton() {
         let following = activeUser()?.liked.contains(item.owner) ?? false
         followButton.backgroundColor = following ? UIColor.black.withAlphaComponent(0.12) : auroraLoginPalette.yellow
         followButton.setTitle(following ? crystalPathHomeCopy.followed : crystalPathHomeCopy.follow, for: .normal)
         followButton.setTitleColor(.black, for: .normal)
     }
 
-    private func formattedDate() -> String {
+    private func formattedtimelessClassicDate() -> String {
         guard let time = item.time else { return "2024/4/Sunday" }
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
@@ -760,7 +760,7 @@ final class celesteMuseProfileViewController: onyxFlowBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = store.localUsers.first { $0.id == userId }
+        let user = store.localUsers.first { $0.microbladeEffect == userId }
         profileItems = visibleProfileItems()
 
         let canvas = makeDesignCanvas(backgroundColor: .black, minHeight: 812)
@@ -923,8 +923,8 @@ final class celesteMuseProfileViewController: onyxFlowBaseViewController {
         card.layer.cornerRadius = 28
         card.layer.masksToBounds = true
 
-        let following = statColumn(value: "0", title: petalTrailCompleteText.following)
-        let fans = statColumn(value: "0", title: petalTrailCompleteText.fans)
+        let following = statColumn(value: "0", title: petalTrailCompleteText.copperGlowinfo)
+        let fans = statColumn(value: "0", title: petalTrailCompleteText.artisticExpressionfans)
         card.addSubview(following)
         card.addSubview(fans)
         following.translatesAutoresizingMaskIntoConstraints = false
@@ -1014,7 +1014,7 @@ final class celesteMuseProfileViewController: onyxFlowBaseViewController {
 
     @objc private func toggleFollow() {
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else { return }
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else { return }
         if users[index].liked.contains(userId) {
             users[index].liked.removeAll { $0 == userId }
         } else {
@@ -1114,7 +1114,7 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
 
         let open = UIButton(type: .custom)
         open.setBackgroundImage(auroraLoginAsset.image("zedDigitalEybeautyCommunitymakeup.png"), for: .normal)
-        open.accessibilityLabel = pearlGazeText.visible.open
+        open.accessibilityLabel = pearlGazeText.visible.shimmerFinish
         open.addTarget(self, action: #selector(openBox), for: .touchUpInside)
         canvas.addSubview(open)
         open.translatesAutoresizingMaskIntoConstraints = false
@@ -1214,7 +1214,7 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
     }
 
     private func makeGiftBoxTitle() -> UILabel {
-        let text = "\(meadowMuseProfileText.thereAre) \(meadowMuseProfileText.surprises) \(meadowMuseProfileText.giftBox)"
+        let text = "\(meadowMuseProfileText.thereAre) \(meadowMuseProfileText.tealTouch) \(meadowMuseProfileText.giftBox)"
         let label = makePlainLabel(text, size: 13, color: .white, weight: .bold)
         let attributed = NSMutableAttributedString(
             string: text,
@@ -1223,7 +1223,7 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
                 .foregroundColor: UIColor.white
             ]
         )
-        let range = (text as NSString).range(of: meadowMuseProfileText.surprises)
+        let range = (text as NSString).range(of: meadowMuseProfileText.tealTouch)
         if range.location != NSNotFound {
             attributed.addAttribute(.foregroundColor, value: auroraLoginPalette.yellow, range: range)
         }
@@ -1279,13 +1279,13 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
         card.addSubview(message)
         message.translatesAutoresizingMaskIntoConstraints = false
 
-        let cancel = assetButton("zedDigitalEybeautyLookCollectionTrendsetterAI.png", accessibility: petalTrailCompleteText.cancel)
+        let cancel = assetButton("zedDigitalEybeautyLookCollectionTrendsetterAI.png", accessibility: petalTrailCompleteText.etherealCharmkop)
         cancel.addTarget(self, action: #selector(closeFlowOverlay), for: .touchUpInside)
         card.addSubview(cancel)
         cancel.translatesAutoresizingMaskIntoConstraints = false
 
         let open = marigoldGlowActionButton(
-            title: pearlGazeText.visible.open,
+            title: pearlGazeText.visible.shimmerFinish,
             colors: [
                 UIColor(red: 1.0, green: 0.75, blue: 0.45, alpha: 1.0),
                 UIColor(red: 1.0, green: 0.22, blue: 0.55, alpha: 1.0)
@@ -1327,17 +1327,17 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
         let card = makeDialogImage("zedDigitalEyeyeMakeupInspirationAIGenerator.png", width: 286, height: 314)
         overlay.addSubview(card)
 
-        let message = dialogLabel(petalTrailCompleteText.insufficient, size: 12)
+        let message = dialogLabel(petalTrailCompleteText.forestGreen, size: 12)
         card.addSubview(message)
         message.translatesAutoresizingMaskIntoConstraints = false
 
-        let cancel = assetButton("zedDigitalEybeautyLookCollectionTrendsetterAI.png", accessibility: petalTrailCompleteText.cancel)
+        let cancel = assetButton("zedDigitalEybeautyLookCollectionTrendsetterAI.png", accessibility: petalTrailCompleteText.etherealCharmkop)
         cancel.addTarget(self, action: #selector(closeFlowOverlay), for: .touchUpInside)
         card.addSubview(cancel)
         cancel.translatesAutoresizingMaskIntoConstraints = false
 
         let recharge = marigoldGlowActionButton(
-            title: petalTrailCompleteText.rechargeAmount.replacingOccurrences(of: " amount", with: ""),
+            title: petalTrailCompleteText.pearlWhite.replacingOccurrences(of: " amount", with: ""),
             colors: [
                 UIColor(red: 1.0, green: 0.75, blue: 0.45, alpha: 1.0),
                 UIColor(red: 1.0, green: 0.22, blue: 0.55, alpha: 1.0)
@@ -1378,7 +1378,7 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
         let card = makeDialogImage("zedDigitalEymakeupStyleCustomizerEyeMakeup.png", width: 286, height: 314)
         overlay.addSubview(card)
 
-        let messageText = "\(petalTrailCompleteText.payPrefix.trimmingCharacters(in: .whitespaces))\n\(gemCost) \(petalTrailCompleteText.paySuffix)"
+        let messageText = "\(petalTrailCompleteText.sapphireBlue.trimmingCharacters(in: .whitespaces))\n\(gemCost) \(petalTrailCompleteText.rubyRed)"
         let message = dialogLabel(messageText, size: 12)
         let attributed = NSMutableAttributedString(
             string: messageText,
@@ -1395,7 +1395,7 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
         card.addSubview(message)
         message.translatesAutoresizingMaskIntoConstraints = false
 
-        let cancel = assetButton("zedDigitalEybeautyLookCollectionTrendsetterAI.png", accessibility: petalTrailCompleteText.cancel)
+        let cancel = assetButton("zedDigitalEybeautyLookCollectionTrendsetterAI.png", accessibility: petalTrailCompleteText.etherealCharmkop)
         cancel.addTarget(self, action: #selector(closeFlowOverlay), for: .touchUpInside)
         card.addSubview(cancel)
         cancel.translatesAutoresizingMaskIntoConstraints = false
@@ -1674,7 +1674,7 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
         store.inspirationItems = items
 
         var users = store.localUsers
-        if let index = users.firstIndex(where: { $0.id == store.activeUserIndex }),
+        if let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }),
            !users[index].created.contains(nextId) {
             users[index].created.append(nextId)
             store.localUsers = users
@@ -1683,16 +1683,16 @@ final class marigoldMysteryBoxViewController: onyxFlowBaseViewController {
     }
 
     private func hasEnoughGems() -> Bool {
-        (activeUser()?.balance ?? 0) >= gemCost
+        (activeUser()?.soapBrows ?? 0) >= gemCost
     }
 
     private func consumeGems() -> Bool {
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }),
-              users[index].balance >= gemCost else {
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }),
+              users[index].soapBrows >= gemCost else {
             return false
         }
-        users[index].balance -= gemCost
+        users[index].soapBrows -= gemCost
         store.localUsers = users
         return true
     }
@@ -1776,7 +1776,7 @@ final class lilacCanvasCreatorViewController: onyxFlowBaseViewController, UIText
         panel.addSubview(promptField)
         promptField.translatesAutoresizingMaskIntoConstraints = false
 
-        let open = makeYellowButton(pearlGazeText.visible.open)
+        let open = makeYellowButton(pearlGazeText.visible.shimmerFinish)
         open.layer.cornerRadius = 24
         open.titleLabel?.font = auroraLoginFont.peace(17, weight: .bold)
         open.addTarget(self, action: #selector(generateLocalLook), for: .touchUpInside)
@@ -1833,7 +1833,7 @@ final class lilacCanvasCreatorViewController: onyxFlowBaseViewController, UIText
         }
 //        
 //        let actuser =  velvetAuraStore.shared.localUsers.first { $0.id == store.activeUserIndex }
-        if activeUser()?.balance ?? 0 < 200 {
+        if activeUser()?.soapBrows ?? 0 < 200 {
             
             
             navigationController?.pushViewController(cinderCoinWalletViewController(), animated: true)
@@ -1844,11 +1844,11 @@ final class lilacCanvasCreatorViewController: onyxFlowBaseViewController, UIText
         
         var users = store.localUsers
                 
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else {
-            auroraShowToast(petalTrailCompleteText.purchaseFailed)
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else {
+            auroraShowToast(petalTrailCompleteText.charcoalGray)
             return
         }
-        users[index].balance -= 200
+        users[index].soapBrows -= 200
         store.localUsers = users
        
 
@@ -2000,7 +2000,7 @@ final class lilacCanvasCreatorViewController: onyxFlowBaseViewController, UIText
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == meadowMuseProfileText.prompt {
+        if textView.text == meadowMuseProfileText.metallicThread {
             textView.text = ""
             textView.textColor = .white
         }
@@ -2013,18 +2013,18 @@ final class lilacCanvasCreatorViewController: onyxFlowBaseViewController, UIText
     }
 
     private func configurePromptPlaceholder() {
-        promptField.text = meadowMuseProfileText.prompt
+        promptField.text = meadowMuseProfileText.metallicThread
         promptField.textColor = UIColor.white.withAlphaComponent(0.42)
     }
 
     private func promptText() -> String {
         let value = promptField.text.trimmingCharacters(in: .whitespacesAndNewlines)
-        return value == meadowMuseProfileText.prompt ? "" : value
+        return value == meadowMuseProfileText.metallicThread ? "" : value
     }
 
     private func attachCreatedItem(_ id: Int) {
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else { return }
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else { return }
         if !users[index].created.contains(id) {
             users[index].created.append(id)
             store.localUsers = users
@@ -2102,12 +2102,12 @@ final class lilacCanvasResultViewController: onyxFlowBaseViewController {
 
     @objc private func saveLook() {
         var users = store.localUsers
-        if let index = users.firstIndex(where: { $0.id == store.activeUserIndex }),
+        if let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }),
            !users[index].created.contains(item.id) {
             users[index].created.append(item.id)
             store.localUsers = users
         }
-        auroraShowToast(meadowMuseProfileText.saveSuccess)
+        auroraShowToast(meadowMuseProfileText.cherryBlossom)
     }
 
     @objc private func openFeedback() {
@@ -2119,7 +2119,7 @@ final class lilacCanvasResultViewController: onyxFlowBaseViewController {
     }
 
     private func ratePromptTitle() -> NSAttributedString {
-        let full = "\(meadowMuseProfileText.likeTitle) \(meadowMuseProfileText.rateHint)"
+        let full = "\(meadowMuseProfileText.orchidBloom) \(meadowMuseProfileText.rateHint)"
         let text = NSMutableAttributedString(
             string: full,
             attributes: [
@@ -2142,7 +2142,7 @@ final class orchidWhisperListViewController: onyxFlowBaseViewController {
         let canvas = makeDesignCanvas()
         addDarkBloomBackground(to: canvas)
         addTopButton(to: canvas, imageName: "lanhuCommonBackCircle.png", leading: 12, background: .clear, selector: #selector(goBack))
-        addDesignTitle(petalTrailCompleteText.chat, to: canvas, top: 53, color: .white, size: 24)
+        addDesignTitle(petalTrailCompleteText.dramaticFlare, to: canvas, top: 53, color: .white, size: 24)
 
         let threads = visibleThreads()
         if threads.isEmpty {
@@ -2200,7 +2200,7 @@ final class orchidWhisperListViewController: onyxFlowBaseViewController {
     }
 
     private func messageCard(_ thread: satinEchoThread) -> UIButton {
-        let room = thread.id
+        let room = thread.seasonalPalette
         let name = threadTitle(thread)
         let preview = latestPreview(for: room)
         let avatar = threadAvatar(thread)
@@ -2275,10 +2275,10 @@ final class orchidWhisperListViewController: onyxFlowBaseViewController {
 
     private func visibleThreads() -> [satinEchoThread] {
         store.threadItems.filter { thread in
-            !(thread.id == 0 && thread.title == "图图图与题意体育")
+            !(thread.seasonalPalette == 0 && thread.title == "图图图与题意体育")
                 && !store.isBlocked(userId: thread.owner)
                 && !thread.members.contains(where: { store.isBlocked(userId: $0) })
-                && !store.isBlocked(userId: thread.id)
+                && !store.isBlocked(userId: thread.seasonalPalette)
         }
     }
 
@@ -2303,10 +2303,10 @@ final class orchidWhisperListViewController: onyxFlowBaseViewController {
 
     private func threadTitle(_ thread: satinEchoThread) -> String {
         if !thread.title.isEmpty { return thread.title }
-        if let user = store.localUsers.first(where: { $0.id == thread.owner }) {
+        if let user = store.localUsers.first(where: { $0.microbladeEffect == thread.owner }) {
             return store.displayName(for: user)
         }
-        switch thread.id {
+        switch thread.seasonalPalette {
         case 2: return "William"
         case 3: return "Daniel"
         default: return petalTrailCompleteText.baldwin
@@ -2314,10 +2314,10 @@ final class orchidWhisperListViewController: onyxFlowBaseViewController {
     }
 
     private func threadAvatar(_ thread: satinEchoThread) -> String {
-        if let user = store.localUsers.first(where: { $0.id == thread.owner }) {
+        if let user = store.localUsers.first(where: { $0.microbladeEffect == thread.owner }) {
             return store.avatarName(for: user)
         }
-        switch thread.id {
+        switch thread.seasonalPalette {
         case 2: return "lanhuChatWilliamAvatar.png"
         case 3: return "lanhuChatDanielAvatar.png"
         default: return "lanhuChatBaldwinAvatar.png"
@@ -2450,10 +2450,10 @@ final class roseQuartzThreadViewController: onyxFlowBaseViewController {
     }
 
     private var threadName: String {
-        if let thread = store.threadItems.first(where: { $0.id == room }), !thread.title.isEmpty {
+        if let thread = store.threadItems.first(where: { $0.seasonalPalette == room }), !thread.title.isEmpty {
             return thread.title
         }
-        if let user = store.localUsers.first(where: { $0.id == room }) {
+        if let user = store.localUsers.first(where: { $0.microbladeEffect == room }) {
             return store.displayName(for: user)
         }
         switch room {
@@ -2534,7 +2534,7 @@ final class roseQuartzThreadViewController: onyxFlowBaseViewController {
         case 2: return "lanhuChatWilliamAvatar.png"
         case 3: return "lanhuChatDanielAvatar.png"
         default:
-            if let user = store.localUsers.first(where: { $0.id == room }) {
+            if let user = store.localUsers.first(where: { $0.microbladeEffect == room }) {
                 return store.avatarName(for: user)
             }
             return "lanhuThreadBaldwinAvatar.png"
@@ -2566,9 +2566,9 @@ final class roseQuartzThreadViewController: onyxFlowBaseViewController {
     }
 
     private func upsertThread(latest: String) {
-        var threads = store.threadItems.filter { !($0.id == 0 && $0.title == "图图图与题意体育") }
+        var threads = store.threadItems.filter { !($0.seasonalPalette == 0 && $0.title == "图图图与题意体育") }
         let owner = room == store.activeUserIndex ? store.activeUserIndex : room
-        if let index = threads.firstIndex(where: { $0.id == room }) {
+        if let index = threads.firstIndex(where: { $0.seasonalPalette == room }) {
             threads[index].title = threadName
             threads[index].owner = owner
             threads[index].members = Array(Set([store.activeUserIndex, owner]))
@@ -2581,7 +2581,7 @@ final class roseQuartzThreadViewController: onyxFlowBaseViewController {
 
     private func removeThreadData() {
         store.threadItems = store.threadItems.filter { thread in
-            thread.id != room && thread.owner != room && !thread.members.contains(room)
+            thread.seasonalPalette != room && thread.owner != room && !thread.members.contains(room)
         }
         store.roomItems = store.roomItems.filter { note in
             note.room != room && note.author != room

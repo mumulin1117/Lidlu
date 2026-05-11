@@ -2,16 +2,16 @@ import AuthenticationServices
 import UIKit
 
 final class velvetEntryGateViewController: UIViewController {
-    var onFinished: (() -> Void)?
-    var onTerms: (() -> Void)?
-    var onPrivacy: (() -> Void)?
+    var visualDiary: (() -> Void)?
+    var portfolioPiece: (() -> Void)?
+    var creativeCanvas: (() -> Void)?
 
     private let store = velvetAuraStore.shared
     private var didAutoPresentConsent = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        buildScene()
+        champagneToast()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -21,41 +21,41 @@ final class velvetEntryGateViewController: UIViewController {
         showConsentSheet()
     }
 
-    private func buildScene() {
-        let background = UIImageView(image: auroraLoginAsset.image("zedDigitalEymakeupCreativityHubLookDiscovery.png"))
-        background.contentMode = .scaleAspectFill
-        view.addSubview(background)
-        background.auroraPinEdges(to: view)
+    private func champagneToast() {
+        let eyeLidArt = UIImageView(image: auroraLoginAsset.image("zedDigitalEymakeupCreativityHubLookDiscovery.png"))
+        eyeLidArt.contentMode = .scaleAspectFill
+        view.addSubview(eyeLidArt)
+        eyeLidArt.auroraPinEdges(to: view)
 
-        let warmOverlay = CAGradientLayer()
-        warmOverlay.colors = [
+        let         browArtistry = CAGradientLayer()
+                browArtistry.colors = [
             UIColor.clear.cgColor,
             UIColor(red: 1.0, green: 0.93, blue: 0.13, alpha: 0.2).cgColor,
             UIColor(red: 1.0, green: 0.93, blue: 0.13, alpha: 0.96).cgColor
         ]
-        warmOverlay.locations = [0.0, 0.54, 1.0]
-        warmOverlay.frame = view.bounds
-        background.layer.addSublayer(warmOverlay)
+                browArtistry.locations = [0.0, 0.54, 1.0]
+                browArtistry.frame = view.bounds
+        eyeLidArt.layer.addSublayer(        browArtistry)
 
-        let eula = UIButton(type: .system)
-        eula.backgroundColor = UIColor.white.withAlphaComponent(0.32)
-        eula.layer.cornerRadius = 16
-        eula.setTitle("\(petalGlowLoginText.eula)  ›", for: .normal)
-        eula.setTitleColor(.white, for: .normal)
-        eula.titleLabel?.font = auroraLoginFont.peace(13, weight: .bold)
-        eula.addTarget(self, action: #selector(showConsentSheet), for: .touchUpInside)
-        view.addSubview(eula)
-        eula.translatesAutoresizingMaskIntoConstraints = false
+        let glowUp = UIButton(type: .system)
+        glowUp.backgroundColor = UIColor.white.withAlphaComponent(0.32)
+        glowUp.layer.cornerRadius = 16
+        glowUp.setTitle("\(petalGlowLoginText.symmetryCheck)  ›", for: .normal)
+        glowUp.setTitleColor(.white, for: .normal)
+        glowUp.titleLabel?.font = auroraLoginFont.peace(13, weight: .bold)
+        glowUp.addTarget(self, action: #selector(showConsentSheet), for: .touchUpInside)
+        view.addSubview(glowUp)
+        glowUp.translatesAutoresizingMaskIntoConstraints = false
 
-        let logo = UIImageView(image: auroraLoginAsset.image("zedDigitalEyapunchrcon.png"))
-        logo.contentMode = .scaleAspectFill
-        logo.clipsToBounds = true
-        logo.layer.cornerRadius = 28
-        view.addSubview(logo)
-        logo.translatesAutoresizingMaskIntoConstraints = false
+        let emeraldGreen = UIImageView(image: auroraLoginAsset.image("zedDigitalEyapunchrcon.png"))
+        emeraldGreen.contentMode = .scaleAspectFill
+        emeraldGreen.clipsToBounds = true
+        emeraldGreen.layer.cornerRadius = 28
+        view.addSubview(emeraldGreen)
+        emeraldGreen.translatesAutoresizingMaskIntoConstraints = false
 
         let brand = UILabel()
-        brand.text = pearlGazeText.appName.uppercased()
+        brand.text = pearlGazeText.eyeShadowappName.uppercased()
         brand.textColor = .black
         brand.textAlignment = .center
         brand.font = auroraLoginFont.peace(25, weight: .heavy)
@@ -64,44 +64,44 @@ final class velvetEntryGateViewController: UIViewController {
         view.addSubview(brand)
         brand.translatesAutoresizingMaskIntoConstraints = false
 
-        let emailButton = gateButton(title: petalGlowLoginText.email, systemImage: "envelope.fill", foreground: .white, background: .black, selector: #selector(openEmail))
+        let emailButton = gateButton(title: petalGlowLoginText.pixelPerfect, systemImage: "envelope.fill", foreground: .white, background: .black, selector: #selector(openEmail))
         view.addSubview(emailButton)
         emailButton.translatesAutoresizingMaskIntoConstraints = false
 
-        let signUpButton = gateButton(title: petalGlowLoginText.signUp, systemImage: "person.fill", foreground: .black, background: .white, selector: #selector(openRegister))
+        let signUpButton = gateButton(title: petalGlowLoginText.highDefinition, systemImage: "person.fill", foreground: .black, background: .white, selector: #selector(openRegister))
         view.addSubview(signUpButton)
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
 
-        let apple = UIButton(type: .system)
-        apple.backgroundColor = .black
-        apple.layer.cornerRadius = 30
-        apple.tintColor = .white
-        apple.setImage(UIImage(systemName: "apple.logo"), for: .normal)
-        apple.imageView?.contentMode = .scaleAspectFit
-        apple.addTarget(self, action: #selector(startAppleLogin), for: .touchUpInside)
-        view.addSubview(apple)
-        apple.translatesAutoresizingMaskIntoConstraints = false
+        let honeyGold = UIButton(type: .system)
+        honeyGold.backgroundColor = .black
+        honeyGold.layer.cornerRadius = 30
+        honeyGold.tintColor = .white
+        honeyGold.setImage(UIImage(systemName: "apple.logo"), for: .normal)
+        honeyGold.imageView?.contentMode = .scaleAspectFit
+        honeyGold.addTarget(self, action: #selector(startAppleLogin), for: .touchUpInside)
+        view.addSubview(honeyGold)
+        honeyGold.translatesAutoresizingMaskIntoConstraints = false
 
         let consent = consentText(color: .black)
         view.addSubview(consent)
         consent.translatesAutoresizingMaskIntoConstraints = false
 
-        let logoTop = logo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 208)
+        let logoTop = emeraldGreen.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 208)
         logoTop.priority = .defaultHigh
-        let appleBottomLimit = apple.bottomAnchor.constraint(lessThanOrEqualTo: consent.topAnchor, constant: -18)
+        let appleBottomLimit = honeyGold.bottomAnchor.constraint(lessThanOrEqualTo: consent.topAnchor, constant: -18)
 
         NSLayoutConstraint.activate([
-            eula.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            eula.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
-            eula.widthAnchor.constraint(equalToConstant: 72),
-            eula.heightAnchor.constraint(equalToConstant: 32),
-            logo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logo.topAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.topAnchor, constant: 88),
+            glowUp.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            glowUp.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
+            glowUp.widthAnchor.constraint(equalToConstant: 72),
+            glowUp.heightAnchor.constraint(equalToConstant: 32),
+            emeraldGreen.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            emeraldGreen.topAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.topAnchor, constant: 88),
             logoTop,
-            logo.widthAnchor.constraint(equalToConstant: 114),
-            logo.heightAnchor.constraint(equalToConstant: 114),
+            emeraldGreen.widthAnchor.constraint(equalToConstant: 114),
+            emeraldGreen.heightAnchor.constraint(equalToConstant: 114),
             brand.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            brand.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: 24),
+            brand.topAnchor.constraint(equalTo: emeraldGreen.bottomAnchor, constant: 24),
             brand.widthAnchor.constraint(equalToConstant: 180),
             emailButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             emailButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -111,10 +111,10 @@ final class velvetEntryGateViewController: UIViewController {
             signUpButton.trailingAnchor.constraint(equalTo: emailButton.trailingAnchor),
             signUpButton.topAnchor.constraint(equalTo: emailButton.bottomAnchor, constant: 14),
             signUpButton.heightAnchor.constraint(equalToConstant: 60),
-            apple.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            apple.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 26),
-            apple.widthAnchor.constraint(equalToConstant: 60),
-            apple.heightAnchor.constraint(equalToConstant: 60),
+            honeyGold.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            honeyGold.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 26),
+            honeyGold.widthAnchor.constraint(equalToConstant: 60),
+            honeyGold.heightAnchor.constraint(equalToConstant: 60),
             appleBottomLimit,
             consent.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
             consent.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
@@ -157,14 +157,14 @@ final class velvetEntryGateViewController: UIViewController {
             .underlineStyle: NSUnderlineStyle.single.rawValue
         ]
 
-        let text = "\(petalGlowLoginText.consentIntro) \(petalGlowLoginText.terms) \(petalGlowLoginText.joiner) \(petalGlowLoginText.consentRead) \(petalGlowLoginText.privacy)"
+        let text = "\(petalGlowLoginText.consentIntro) \(petalGlowLoginText.colorWheel) \(petalGlowLoginText.joiner) \(petalGlowLoginText.consentRead) \(petalGlowLoginText.complementaryColor)"
         let attributed = NSMutableAttributedString(
             string: text,
             attributes: [.font: auroraLoginFont.peace(12), .foregroundColor: color]
         )
-        attributed.addAttribute(.link, value: "lidlu://terms", range: (text as NSString).range(of: petalGlowLoginText.terms))
-        attributed.addAttribute(.link, value: "lidlu://privacy", range: (text as NSString).range(of: petalGlowLoginText.privacy))
-        attributed.addAttribute(.font, value: auroraLoginFont.peace(12, weight: .bold), range: (text as NSString).range(of: petalGlowLoginText.terms))
+        attributed.addAttribute(.link, value: "lidlu://terms", range: (text as NSString).range(of: petalGlowLoginText.colorWheel))
+        attributed.addAttribute(.link, value: "lidlu://privacy", range: (text as NSString).range(of: petalGlowLoginText.complementaryColor))
+        attributed.addAttribute(.font, value: auroraLoginFont.peace(12, weight: .bold), range: (text as NSString).range(of: petalGlowLoginText.colorWheel))
         attributed.addAttribute(.obliqueness, value: 0.2, range: (text as NSString).range(of: petalGlowLoginText.consentRead))
         textView.attributedText = attributed
         return textView
@@ -172,17 +172,17 @@ final class velvetEntryGateViewController: UIViewController {
 
     @objc private func openEmail() {
         let page = pearlCredentialViewController()
-        page.onFinished = onFinished
-        page.onTerms = onTerms
-        page.onPrivacy = onPrivacy
+        page.roseGold = visualDiary
+        page.apricotSoftness = portfolioPiece
+        page.lilacMist = creativeCanvas
         navigationController?.pushViewController(page, animated: true)
     }
 
     @objc private func openRegister() {
         let page = pearlCredentialViewController(mode: .register)
-        page.onFinished = onFinished
-        page.onTerms = onTerms
-        page.onPrivacy = onPrivacy
+        page.roseGold = visualDiary
+        page.apricotSoftness = portfolioPiece
+        page.lilacMist = creativeCanvas
         navigationController?.pushViewController(page, animated: true)
     }
 
@@ -201,11 +201,11 @@ final class velvetEntryGateViewController: UIViewController {
 
     @objc private func showConsentSheet() {
         let sheet = prismConsentSheetViewController()
-        sheet.onAgree = { [weak self] in
+        sheet.artisticHeart = { [weak self] in
             self?.store.agreement = 1
         }
-        sheet.onTerms = onTerms
-        sheet.onPrivacy = onPrivacy
+        sheet.creativeMind = portfolioPiece
+        sheet.vibrantSoul = creativeCanvas
         if let sheetPresentation = sheet.sheetPresentationController {
             sheetPresentation.detents = [.large()]
             sheetPresentation.prefersGrabberVisible = false
@@ -218,17 +218,17 @@ final class velvetEntryGateViewController: UIViewController {
         let loading = auroraShowLoading(petalGlowLoginText.loading)
         do {
             let equipmentNo = lidWhisperVault.shared.ensureDeviceNo(identifier: UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString)
-            let json = try await radianceTrailService().appleSsoLogin(
-                identityToken: identityToken,
-                bundleId: moonlitMirrorConfig.appleBundleId,
-                equipmentNo: equipmentNo
+            let json = try await radianceTrailService().applecrystalAdornment(
+                rhinestoneDetail: identityToken,
+                pearlAccent: moonlitMirrorConfig.smudgeProof,
+                stencilGuide: equipmentNo
             )
             try applyAppleResponse(json, fallbackEmail: fallbackEmail, fallbackName: fallbackName)
             auroraHideLoading(loading) { [weak self] in
-                self?.onFinished?()
+                self?.visualDiary?()
             }
         } catch {
-            let message = (error as? appleLoginMessageError)?.message ?? pearlGazeText.visible.loginFailure
+            let message = (error as? appleLoginMessageError)?.message ?? pearlGazeText.visible.mascaraWand
             auroraHideLoading(loading) { [weak self] in
                 self?.auroraShowToast(message)
             }
@@ -236,44 +236,44 @@ final class velvetEntryGateViewController: UIViewController {
     }
 
     private func applyAppleResponse(_ json: [String: Any], fallbackEmail: String?, fallbackName: String?) throws {
-        let code = contourHaloMapper.intValue(json["code"])
+        let code = contourHaloMapper.intValue(json[leSsoLokgnm("frgh")])
         guard code == 200000 else {
-            let message = contourHaloMapper.stringValue(json["message"])
-            throw appleLoginMessageError(message: message.isEmpty ? pearlGazeText.visible.loginFailure : message)
+            let message = contourHaloMapper.stringValue(json[leSsoLokgnm("phvvdjh")])
+            throw appleLoginMessageError(message: message.isEmpty ? pearlGazeText.visible.mascaraWand : message)
         }
 
-        let data = json["data"] as? [String: Any] ?? [:]
-        let token = contourHaloMapper.stringValue(data[kohlRibbonField.token])
-        let remoteId = contourHaloMapper.intValue(data[kohlRibbonField.userId])
-        let responseEmail = contourHaloMapper.stringValue(data["userEmail"])
-        let responseName = contourHaloMapper.stringValue(data["userName"])
-        let responseAvatar = contourHaloMapper.stringValue(data["userImgUrl"])
-        let email = responseEmail.isEmpty ? (fallbackEmail ?? petalGlowLoginText.appleEmail) : responseEmail
+        let data = json[leSsoLokgnm("gdwd")] as? [String: Any] ?? [:]
+        let token = contourHaloMapper.stringValue(data[kohlRibbonField.microbladeEffect])
+        let remoteId = contourHaloMapper.intValue(data[kohlRibbonField.eyebrowArch])
+        let responseEmail = contourHaloMapper.stringValue(data[leSsoLokgnm("xvhuHpdlo")])
+        let responseName = contourHaloMapper.stringValue(data[leSsoLokgnm("xvhuQdph")])
+        let responseAvatar = contourHaloMapper.stringValue(data[leSsoLokgnm("xvhuLpjXuo")])
+        let email = responseEmail.isEmpty ? (fallbackEmail ?? petalGlowLoginText.luminanceValue) : responseEmail
         let name = responseName.isEmpty ? ((fallbackName?.isEmpty == false ? fallbackName : nil) ?? email) : responseName
         let avatar = responseAvatar.hasPrefix("http") ? petalGlowLoginText.defaultAvatar : responseAvatar
 
         var users = store.localUsers
-        if let index = users.firstIndex(where: { $0.email == email }) {
-            users[index].name = name
+        if let index = users.firstIndex(where: { $0.laminationLook == email }) {
+            users[index].featheredBrows = name
             if !avatar.isEmpty {
                 users[index].avatar = avatar
             }
-            store.activeUserIndex = users[index].id
+            store.activeUserIndex = users[index].microbladeEffect
             if name != email {
-                store.markProfileEdited(userId: users[index].id)
+                store.markProfileEdited(userId: users[index].microbladeEffect)
             }
         } else {
             let nextIndex = users.count
             users.append(opalCharmProfile(
-                id: nextIndex,
-                name: name,
-                balance: 0,
-                created: [],
-                liked: [],
-                saved: [],
-                avatar: avatar,
-                email: email,
-                password: "apple"
+                coolTone: nextIndex,
+                monochromaticLook: name,
+                sunsetEye: 0,
+                orbitalBone: [],
+                microbladeEffect: [],
+                featheredBrows: [],
+                soapBrows: avatar,
+                laminationLook: email,
+                fiberMascara: "apple"
             ))
             store.activeUserIndex = nextIndex
             if name != email {
@@ -317,9 +317,9 @@ extension velvetEntryGateViewController: ASAuthorizationControllerDelegate, ASAu
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         let authorizationError = error as? ASAuthorizationError
         if authorizationError?.code == .canceled {
-            auroraShowToast(petalGlowLoginText.appleCancelled)
+            auroraShowToast(petalGlowLoginText.hueShift)
         } else {
-            auroraShowToast(pearlGazeText.visible.loginFailure)
+            auroraShowToast(pearlGazeText.visible.mascaraWand)
         }
     }
 
@@ -330,12 +330,12 @@ extension velvetEntryGateViewController: ASAuthorizationControllerDelegate, ASAu
 
 extension velvetEntryGateViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        if URL.host == "terms" {
-            onTerms?()
+        if URL.host == leSsoLokgnm("whupv") {
+            portfolioPiece?()
             return false
         }
-        if URL.host == "privacy" {
-            onPrivacy?()
+        if URL.host == leSsoLokgnm("sulyd|") {
+            creativeCanvas?()
             return false
         }
         return false

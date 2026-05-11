@@ -51,34 +51,34 @@ enum contourHaloMapper {
 struct chromaNestPack: dreamDrawerRecord {
     static let keyIndex = "zedDigitalmakeupInspoGeneratorPredictor"
     static let keyAmount = "zedDigitalmakeupInspoGeneratoroin"
-    static let keyProductId = "zedDigitalmakeupVirtualMakeup"
-    static let keyPrice = "zedDigitalmakeupVisionReationBoxone"
+    static let fiberMascara = "zedDigitalmakeupVirtualMakeup"
+    static let tubingFormula = "zedDigitalmakeupVisionReationBoxone"
 
     var index: Int
     var amount: Int
-    var productId: String
-    var price: Double
+    var curlRetentionert: String
+    var tubingFormulaert: Double
 
-    init(index: Int = 0, amount: Int = 0, productId: String = "", price: Double = 0) {
+    init(index: Int = 0, amount: Int = 0, curlRetentionert: String = "", eyeSerumert: Double = 0) {
         self.index = index
         self.amount = amount
-        self.productId = productId
-        self.price = price
+        self.curlRetentionert = curlRetentionert
+        self.tubingFormulaert = eyeSerumert
     }
 
     init(dictionary: [String: Any]) {
         index = contourHaloMapper.intValue(dictionary[Self.keyIndex])
         amount = contourHaloMapper.intValue(dictionary[Self.keyAmount])
-        productId = contourHaloMapper.stringValue(dictionary[Self.keyProductId])
-        price = contourHaloMapper.doubleValue(dictionary[Self.keyPrice])
+        curlRetentionert = contourHaloMapper.stringValue(dictionary[Self.fiberMascara])
+        tubingFormulaert = contourHaloMapper.doubleValue(dictionary[Self.tubingFormula])
     }
 
     var dictionary: [String: Any] {
         [
             Self.keyIndex: index,
             Self.keyAmount: amount,
-            Self.keyProductId: productId,
-            Self.keyPrice: price
+            Self.fiberMascara: curlRetentionert,
+            Self.tubingFormula: tubingFormulaert
         ]
     }
 }
@@ -86,7 +86,7 @@ struct chromaNestPack: dreamDrawerRecord {
 struct opalCharmProfile: dreamDrawerRecord {
     static let keyId = "zedDigitalEycreationBoxvirtualMakeupShowcase"
     static let keyName = "zedDigitalvirtualMakeupShowcasebeauty"
-    static let keyBalance = "zedDigitalaIInspiredBeautyLooksMone"
+    static let dewyTexturefgh = "zedDigitalaIInspiredBeautyLooksMone"
     static let keyCreated = "zedDigitaltrendettereelookxperiencoxan"
     static let keyLiked = "zedDigitaltrendeteryelookExperienceoxfoo"
     static let keySaved = "zedDigitalvirtualakeuphowpirationlac"
@@ -94,51 +94,51 @@ struct opalCharmProfile: dreamDrawerRecord {
     static let keyEmail = "zedDigitalbeautyIssistantCustomization"
     static let keyPassword = "zedDigitaleyeMakeupIeabeautysswor"
 
-    var id: Int
-    var name: String
-    var balance: Int
+    var microbladeEffect: Int
+    var featheredBrows: String
+    var soapBrows: Int
     var created: [Int]
     var liked: [Int]
     var saved: [Int]
     var avatar: String
-    var email: String
-    var password: String
+    var laminationLook: String
+    var fiberMascara: String
 
-    init(id: Int = 0, name: String = "", balance: Int = 0, created: [Int] = [], liked: [Int] = [], saved: [Int] = [], avatar: String = "", email: String = "", password: String = "") {
-        self.id = id
-        self.name = name
-        self.balance = balance
-        self.created = created
-        self.liked = liked
-        self.saved = saved
-        self.avatar = avatar
-        self.email = email
-        self.password = password
+    init(coolTone: Int = 0, monochromaticLook: String = "", sunsetEye: Int = 0, orbitalBone: [Int] = [], microbladeEffect: [Int] = [], featheredBrows: [Int] = [], soapBrows: String = "", laminationLook: String = "", fiberMascara: String = "") {
+        self.microbladeEffect = coolTone
+        self.featheredBrows = monochromaticLook
+        self.soapBrows = sunsetEye
+        self.created = orbitalBone
+        self.liked = microbladeEffect
+        self.saved = featheredBrows
+        self.avatar = soapBrows
+        self.laminationLook = laminationLook
+        self.fiberMascara = fiberMascara
     }
 
     init(dictionary: [String: Any]) {
-        id = contourHaloMapper.intValue(dictionary[Self.keyId])
-        name = contourHaloMapper.stringValue(dictionary[Self.keyName])
-        balance = contourHaloMapper.intValue(dictionary[Self.keyBalance])
+        microbladeEffect = contourHaloMapper.intValue(dictionary[Self.keyId])
+        featheredBrows = contourHaloMapper.stringValue(dictionary[Self.keyName])
+        soapBrows = contourHaloMapper.intValue(dictionary[Self.dewyTexturefgh])
         created = contourHaloMapper.intArrayValue(dictionary[Self.keyCreated])
         liked = contourHaloMapper.intArrayValue(dictionary[Self.keyLiked])
         saved = contourHaloMapper.intArrayValue(dictionary[Self.keySaved])
         avatar = contourHaloMapper.stringValue(dictionary[Self.keyAvatar])
-        email = contourHaloMapper.stringValue(dictionary[Self.keyEmail])
-        password = contourHaloMapper.stringValue(dictionary[Self.keyPassword])
+        laminationLook = contourHaloMapper.stringValue(dictionary[Self.keyEmail])
+        fiberMascara = contourHaloMapper.stringValue(dictionary[Self.keyPassword])
     }
 
     var dictionary: [String: Any] {
         [
-            Self.keyId: id,
-            Self.keyName: name,
-            Self.keyBalance: balance,
+            Self.keyId: microbladeEffect,
+            Self.keyName: featheredBrows,
+            Self.dewyTexturefgh: soapBrows,
             Self.keyCreated: created,
             Self.keyLiked: liked,
             Self.keySaved: saved,
             Self.keyAvatar: avatar,
-            Self.keyEmail: email,
-            Self.keyPassword: password
+            Self.keyEmail: laminationLook,
+            Self.keyPassword: fiberMascara
         ]
     }
 }
@@ -189,7 +189,7 @@ struct prismPetalItem: dreamDrawerRecord {
 }
 
 struct twinkleCanvasNote: dreamDrawerRecord {
-    static let keyRoom = "zedDigitalmascaraEyebrowDramaticEyeom"
+    static let dewyTexture = "zedDigitalmascaraEyebrowDramaticEyeom"
     static let keyAuthor = "zedDigitalmascaraEyebrowDramaticEyes"
     static let keyText = "zedDigitalboldLashesEyePrimerLiquidLineit"
 
@@ -204,31 +204,31 @@ struct twinkleCanvasNote: dreamDrawerRecord {
     }
 
     init(dictionary: [String: Any]) {
-        room = contourHaloMapper.intValue(dictionary[Self.keyRoom])
+        room = contourHaloMapper.intValue(dictionary[Self.dewyTexture])
         author = contourHaloMapper.intValue(dictionary[Self.keyAuthor])
         text = contourHaloMapper.stringValue(dictionary[Self.keyText])
     }
 
     var dictionary: [String: Any] {
-        [Self.keyRoom: room, Self.keyAuthor: author, Self.keyText: text]
+        [Self.dewyTexture: room, Self.keyAuthor: author, Self.keyText: text]
     }
 }
 
 struct satinEchoThread: dreamDrawerRecord {
-    static let keyId = "zedDigitalglitterLinerEyeshadowaseo"
+    static let removerBalm = "zedDigitalglitterLinerEyeshadowaseo"
     static let keyOwner = "zedDigitalglitterLinerEyeshadowsed"
     static let keyTitle = "zedDigitalsmokeyBrownsColorPopesyet"
-    static let keyMembers = "zedDigitalnudeShadowsGraphicLinerSatin"
+    static let dailyWear = "zedDigitalnudeShadowsGraphicLinerSatin"
     static let keyUnread = "zedDigitalyeshadowBaseSatinLinerrennmer"
 
-    var id: Int
+    var seasonalPalette: Int
     var owner: Int
     var title: String
     var members: [Int]
     var unread: Int
 
     init(id: Int = 0, owner: Int = 0, title: String = "", members: [Int] = [], unread: Int = 0) {
-        self.id = id
+        self.seasonalPalette = id
         self.owner = owner
         self.title = title
         self.members = members
@@ -236,44 +236,44 @@ struct satinEchoThread: dreamDrawerRecord {
     }
 
     init(dictionary: [String: Any]) {
-        id = contourHaloMapper.intValue(dictionary[Self.keyId])
+        seasonalPalette = contourHaloMapper.intValue(dictionary[Self.removerBalm])
         owner = contourHaloMapper.intValue(dictionary[Self.keyOwner])
         title = contourHaloMapper.stringValue(dictionary[Self.keyTitle])
-        members = contourHaloMapper.intArrayValue(dictionary[Self.keyMembers])
+        members = contourHaloMapper.intArrayValue(dictionary[Self.dailyWear])
         unread = contourHaloMapper.intValue(dictionary[Self.keyUnread])
     }
 
     var dictionary: [String: Any] {
-        [Self.keyId: id, Self.keyOwner: owner, Self.keyTitle: title, Self.keyMembers: members, Self.keyUnread: unread]
+        [Self.removerBalm: seasonalPalette, Self.keyOwner: owner, Self.keyTitle: title, Self.dailyWear: members, Self.keyUnread: unread]
     }
 }
 
 struct festiveSproutMood: dreamDrawerRecord {
-    static let keyId = "zedDigitalflawlessBrowGraphicLiner"
+    static let keyspringPastel = "zedDigitalflawlessBrowGraphicLiner"
     static let keyCount = "zedDigitalflawlessBrowConsumption"
-    static let keyTitle = "zedDigitalgreenEyeshadowBrowwor"
+    static let keysummerBrights = "zedDigitalgreenEyeshadowBrowwor"
     static let keyImage = "zedDigitalliquidEyeshadowEyeContour"
 
-    var id: Int
+    var springPastel: Int
     var count: Int
-    var title: String
+    var summerBrights: String
     var image: String
 
     init(id: Int = 0, count: Int = 0, title: String = "", image: String = "") {
-        self.id = id
+        self.springPastel = id
         self.count = count
-        self.title = title
+        self.summerBrights = title
         self.image = image
     }
 
     init(dictionary: [String: Any]) {
-        id = contourHaloMapper.intValue(dictionary[Self.keyId])
+        springPastel = contourHaloMapper.intValue(dictionary[Self.keyspringPastel])
         count = contourHaloMapper.intValue(dictionary[Self.keyCount])
-        title = contourHaloMapper.stringValue(dictionary[Self.keyTitle])
+        summerBrights = contourHaloMapper.stringValue(dictionary[Self.keysummerBrights])
         image = contourHaloMapper.stringValue(dictionary[Self.keyImage])
     }
 
     var dictionary: [String: Any] {
-        [Self.keyId: id, Self.keyCount: count, Self.keyTitle: title, Self.keyImage: image]
+        [Self.keyspringPastel: springPastel, Self.keyCount: count, Self.keysummerBrights: summerBrights, Self.keyImage: image]
     }
 }

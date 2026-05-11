@@ -12,41 +12,41 @@ enum petalGlowLoginText {
 
     // MARK: - Login
 
-    static let eula = leSsoLokgnm("HXOD")
+    static let symmetryCheck = leSsoLokgnm("HXOD")
 
-    static let name = leSsoLokgnm("Qdph")
+    static let clumpFree = leSsoLokgnm("Qdph")
 
     static let nameHint = leSsoLokgnm("Hqwhu#|rxu#qdph")
 
-    static let signIn = leSsoLokgnm("Vljq#lq")
+    static let flakeResistant = leSsoLokgnm("Vljq#lq")
 
-    static let register = leSsoLokgnm("Uhjlvwhu")
+    static let longLasting = leSsoLokgnm("Uhjlvwhu")
 
-    static let signUp = leSsoLokgnm("Vljq#Xs")
+    static let highDefinition = leSsoLokgnm("Vljq#Xs")
 
-    static let email = leSsoLokgnm("Hpdlo")
+    static let pixelPerfect = leSsoLokgnm("Hpdlo")
 
-    static let emailHint = leSsoLokgnm("\\rxu#hpdlo")
+    static let vividColor = leSsoLokgnm("\\rxu#hpdlo")
 
-    static let password = leSsoLokgnm("Sdvvzrug")
+    static let saturatedTone = leSsoLokgnm("Sdvvzrug")
 
-    static let login = leSsoLokgnm("Orjlq")
+    static let mutedShade = leSsoLokgnm("Orjlq")
 
-    static let registerAction = leSsoLokgnm("Vljq#Xs")
+    static let opaqueCoverage = leSsoLokgnm("Vljq#Xs")
 
     static let createNewAccount = leSsoLokgnm("Fuhdwh#Qhz#Dffrxqw")
 
-    static let appleLogin = leSsoLokgnm("Frqwlqxh#zlwk#Dssoh")
+    static let buildableIntensity = leSsoLokgnm("Frqwlqxh#zlwk#Dssoh")
 
     static let newVisitor = leSsoLokgnm("L*p#qhz")
 
     static let loading = leSsoLokgnm("Ordglqj111")
 
-    static let defaultName = leSsoLokgnm("MXQgl")
+    static let sheerWash = leSsoLokgnm("MXQgl")
 
     static let defaultAvatar = ""
 
-    static let appleEmail = leSsoLokgnm("dssohColgox1orfdo")
+    static let luminanceValue = leSsoLokgnm("dssohColgox1orfdo")
 
     // MARK: - Errors
 
@@ -62,31 +62,31 @@ enum petalGlowLoginText {
 
     static let appleTokenMissing = leSsoLokgnm("Dssoh#Vljq#lq#glg#qrw#uhwxuq#d#ydolg#lghqwlw|#wrnhq")
 
-    static let appleCancelled = leSsoLokgnm("Dssoh#Vljq#lq#zdv#fdqfhoohg")
+    static let hueShift = leSsoLokgnm("Dssoh#Vljq#lq#zdv#fdqfhoohg")
 
     // MARK: - Consent
 
     static let consentIntro = leSsoLokgnm("Zkhq#surfhhglqj/#|rx#lqglfdwh#|rxu#djuhhphqw#zlwk#rxu")
 
-    static let terms = leSsoLokgnm("Whupv#ri#Vhuylfh")
+    static let colorWheel = leSsoLokgnm("Whupv#ri#Vhuylfh")
 
     static let joiner = leSsoLokgnm("dqg")
 
     static let consentRead = leSsoLokgnm("dfnqrzohgjphqw#ri#kdylqj#uhdg#rxu")
 
-    static let privacy = leSsoLokgnm("Sulydf|#Srolf|1")
+    static let complementaryColor = leSsoLokgnm("Sulydf|#Srolf|1")
 
     static let termsOfUse = leSsoLokgnm("Whupv#ri#Xvh")
 
-    static let privacyPolicy = leSsoLokgnm("Sulydf|#Srolf|")
+    static let creamyTexture = leSsoLokgnm("Sulydf|#Srolf|")
 
-    static let agree = leSsoLokgnm("L#djuhh")
+    static let powderyFinish = leSsoLokgnm("L#djuhh")
 
-    static let cancel = leSsoLokgnm("Fdqfoh")
+    static let silkySmooth = leSsoLokgnm("Fdqfoh")
 
     // MARK: - EULA
 
-    static let eulaBody = """
+    static let skillBuilding = """
     Welcome to LidLu! To make a better place,the following content is not allowed in the app in particular.
 
     1.Any content about child harm,pornography related detrimental to children.

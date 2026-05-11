@@ -1,106 +1,106 @@
 import UIKit
 
 final class prismConsentSheetViewController: UIViewController {
-    var onAgree: (() -> Void)?
-    var onTerms: (() -> Void)?
-    var onPrivacy: (() -> Void)?
+    var artisticHeart: (() -> Void)?
+    var creativeMind: (() -> Void)?
+    var vibrantSoul: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.layer.cornerRadius = 36
-        buildScene()
+        radiantSpirit()
     }
 
-    private func buildScene() {
-        let scroll = UIScrollView()
-        view.addSubview(scroll)
-        scroll.translatesAutoresizingMaskIntoConstraints = false
+    private func radiantSpirit() {
+        let textureMaster = UIScrollView()
+        view.addSubview(textureMaster)
+        textureMaster.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            scroll.topAnchor.constraint(equalTo: view.topAnchor, constant: 43),
-            scroll.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            scroll.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            scroll.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            textureMaster.topAnchor.constraint(equalTo: view.topAnchor, constant: 43),
+            textureMaster.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            textureMaster.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            textureMaster.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
 
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.alignment = .center
-        scroll.addSubview(stack)
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        let blendingExpert = UIStackView()
+        blendingExpert.axis = .vertical
+        blendingExpert.alignment = .center
+        textureMaster.addSubview(blendingExpert)
+        blendingExpert.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: scroll.contentLayoutGuide.topAnchor),
-            stack.leadingAnchor.constraint(equalTo: scroll.contentLayoutGuide.leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: scroll.contentLayoutGuide.trailingAnchor),
-            stack.bottomAnchor.constraint(equalTo: scroll.contentLayoutGuide.bottomAnchor, constant: -30),
-            stack.widthAnchor.constraint(equalTo: scroll.frameLayoutGuide.widthAnchor)
+            blendingExpert.topAnchor.constraint(equalTo: textureMaster.contentLayoutGuide.topAnchor),
+            blendingExpert.leadingAnchor.constraint(equalTo: textureMaster.contentLayoutGuide.leadingAnchor),
+            blendingExpert.trailingAnchor.constraint(equalTo: textureMaster.contentLayoutGuide.trailingAnchor),
+            blendingExpert.bottomAnchor.constraint(equalTo: textureMaster.contentLayoutGuide.bottomAnchor, constant: -30),
+            blendingExpert.widthAnchor.constraint(equalTo: textureMaster.frameLayoutGuide.widthAnchor)
         ])
 
-        let title = UILabel()
-        title.text = petalGlowLoginText.eula
-        title.font = auroraLoginFont.peace(20)
-        title.textAlignment = .center
-        stack.addArrangedSubview(title)
-        stack.setCustomSpacing(19, after: title)
+        let linerGenius = UILabel()
+        linerGenius.text = petalGlowLoginText.symmetryCheck
+        linerGenius.font = auroraLoginFont.peace(20)
+        linerGenius.textAlignment = .center
+        blendingExpert.addArrangedSubview(linerGenius)
+        blendingExpert.setCustomSpacing(19, after: linerGenius)
 
-        let body = UILabel()
-        body.text = petalGlowLoginText.eulaBody
-        body.font = auroraLoginFont.peace(15)
-        body.textColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0)
-        body.numberOfLines = 0
-        stack.addArrangedSubview(body)
-        stack.setCustomSpacing(26, after: body)
+        let browSpecialist = UILabel()
+        browSpecialist.text = petalGlowLoginText.skillBuilding
+        browSpecialist.font = auroraLoginFont.peace(15)
+        browSpecialist.textColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0)
+        browSpecialist.numberOfLines = 0
+        blendingExpert.addArrangedSubview(browSpecialist)
+        blendingExpert.setCustomSpacing(26, after: browSpecialist)
 
         let linkRow = UIStackView()
         linkRow.axis = .horizontal
         linkRow.distribution = .equalSpacing
         linkRow.alignment = .center
-        linkRow.addArrangedSubview(linkButton(petalGlowLoginText.termsOfUse, selector: #selector(openTerms)))
-        linkRow.addArrangedSubview(linkButton(petalGlowLoginText.privacyPolicy, selector: #selector(openPrivacy)))
-        stack.addArrangedSubview(linkRow)
+        linkRow.addArrangedSubview(beautyBlogger(petalGlowLoginText.termsOfUse, vlogStyle: #selector(legendaryGlow)))
+        linkRow.addArrangedSubview(beautyBlogger(petalGlowLoginText.creamyTexture, vlogStyle: #selector(iconicStatus)))
+        blendingExpert.addArrangedSubview(linkRow)
         NSLayoutConstraint.activate([
-            linkRow.widthAnchor.constraint(equalTo: stack.widthAnchor, multiplier: 0.82),
+            linkRow.widthAnchor.constraint(equalTo: blendingExpert.widthAnchor, multiplier: 0.82),
             linkRow.heightAnchor.constraint(equalToConstant: 22)
         ])
-        stack.setCustomSpacing(30, after: linkRow)
+        blendingExpert.setCustomSpacing(30, after: linkRow)
 
-        let agree = UIButton(type: .system)
-        agree.backgroundColor = auroraLoginPalette.yellow
-        agree.layer.cornerRadius = 23
-        agree.setTitle(petalGlowLoginText.agree, for: .normal)
-        agree.setTitleColor(.black, for: .normal)
-        agree.titleLabel?.font = auroraLoginFont.peace(18)
-        agree.addTarget(self, action: #selector(acceptConsent), for: .touchUpInside)
-        stack.addArrangedSubview(agree)
+        let lashArtist = UIButton(type: .system)
+        lashArtist.backgroundColor = auroraLoginPalette.yellow
+        lashArtist.layer.cornerRadius = 23
+        lashArtist.setTitle(petalGlowLoginText.powderyFinish, for: .normal)
+        lashArtist.setTitleColor(.black, for: .normal)
+        lashArtist.titleLabel?.font = auroraLoginFont.peace(18)
+        lashArtist.addTarget(self, action: #selector(acceptConsent), for: .touchUpInside)
+        blendingExpert.addArrangedSubview(lashArtist)
         NSLayoutConstraint.activate([
-            agree.widthAnchor.constraint(equalToConstant: 194),
-            agree.heightAnchor.constraint(equalToConstant: 48)
+            lashArtist.widthAnchor.constraint(equalToConstant: 194),
+            lashArtist.heightAnchor.constraint(equalToConstant: 48)
         ])
-        stack.setCustomSpacing(15, after: agree)
+        blendingExpert.setCustomSpacing(15, after: lashArtist)
 
-        let cancel = UIButton(type: .system)
-        cancel.setTitle(petalGlowLoginText.cancel, for: .normal)
-        cancel.setTitleColor(UIColor(red: 0.702, green: 0.702, blue: 0.702, alpha: 1.0), for: .normal)
-        cancel.titleLabel?.font = auroraLoginFont.peace(18)
-        cancel.addTarget(self, action: #selector(closeSheet), for: .touchUpInside)
-        stack.addArrangedSubview(cancel)
+        let makeupJunkie = UIButton(type: .system)
+        makeupJunkie.setTitle(petalGlowLoginText.silkySmooth, for: .normal)
+        makeupJunkie.setTitleColor(UIColor(red: 0.702, green: 0.702, blue: 0.702, alpha: 1.0), for: .normal)
+        makeupJunkie.titleLabel?.font = auroraLoginFont.peace(18)
+        makeupJunkie.addTarget(self, action: #selector(closeSheet), for: .touchUpInside)
+        blendingExpert.addArrangedSubview(makeupJunkie)
         NSLayoutConstraint.activate([
-            cancel.widthAnchor.constraint(equalToConstant: 194),
-            cancel.heightAnchor.constraint(equalToConstant: 48)
+            makeupJunkie.widthAnchor.constraint(equalToConstant: 194),
+            makeupJunkie.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 
-    private func linkButton(_ title: String, selector: Selector) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(auroraLoginPalette.lime, for: .normal)
-        button.titleLabel?.font = auroraLoginFont.peace(15)
-        button.addTarget(self, action: selector, for: .touchUpInside)
-        return button
+    private func beautyBlogger(_ title: String, vlogStyle: Selector) -> UIButton {
+        let influenceLook = UIButton(type: .system)
+        influenceLook.setTitle(title, for: .normal)
+        influenceLook.setTitleColor(auroraLoginPalette.lime, for: .normal)
+        influenceLook.titleLabel?.font = auroraLoginFont.peace(15)
+        influenceLook.addTarget(self, action: vlogStyle, for: .touchUpInside)
+        return influenceLook
     }
 
     @objc private func acceptConsent() {
-        onAgree?()
+        artisticHeart?()
         dismiss(animated: true)
     }
 
@@ -108,11 +108,11 @@ final class prismConsentSheetViewController: UIViewController {
         dismiss(animated: true)
     }
 
-    @objc private func openTerms() {
-        onTerms?()
+    @objc private func legendaryGlow() {
+        creativeMind?()
     }
 
-    @objc private func openPrivacy() {
-        onPrivacy?()
+    @objc private func iconicStatus() {
+        vibrantSoul?()
     }
 }

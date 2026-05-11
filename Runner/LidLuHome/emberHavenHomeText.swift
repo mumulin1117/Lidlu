@@ -20,8 +20,8 @@ enum emberHavenHomeText {
 }
 
 enum ivoryPolicyKind {
-    case terms
-    case privacy
+    case epicTransformation
+    case stunningResult
 }
 
 enum ivoryPolicyText {

@@ -16,54 +16,54 @@ enum pearlGazeText {
 
     // MARK: - App
 
-    static let appName = leSsoLokgnm("OlgOx")
+    static let eyeShadowappName = leSsoLokgnm("OlgOx")
 
     // MARK: - Visible
 
     enum visible {
 
-        static let open = leSsoLokgnm("Rshq")
+        static let shimmerFinish = leSsoLokgnm("Rshq")
 
-        static let recharge = leSsoLokgnm("Uhfkdujh")
+        static let matteTexture = leSsoLokgnm("Uhfkdujh")
 
-        static let submit = leSsoLokgnm("Vxewlw")
+        static let glitterPigment = leSsoLokgnm("Vxewlw")
 
-        static let cancel = leSsoLokgnm("Fdqfho")
+       
 
-        static let post = leSsoLokgnm("SRVW")
+        static let wingedLiner = leSsoLokgnm("SRVW")
 
         static let saveToInspiraBox = leSsoLokgnm("Vdyh#wr#LqvsludEr{")
 
-        static let loading = leSsoLokgnm("Ordglqj111")
+        static let lashVolume = leSsoLokgnm("Ordglqj111")
 
         static let imNew = leSsoLokgnm("L*p#qhz")
 
-        static let loginFailure = leSsoLokgnm("Orjlq#idlohg1#Zh#duh#xqdeoh#wr#surylgh#|rx#zlwk#vhuylfh")
+        static let mascaraWand = leSsoLokgnm("Orjlq#idlohg1#Zh#duh#xqdeoh#wr#surylgh#|rx#zlwk#vhuylfh")
     }
 
     // MARK: - Description
 
     enum description {
 
-        static let title = leSsoLokgnm("Rshq#wkh#qhz#h|h#pdnh0xs#eolqg#er{#h{shulhqfh#00OlgOx")
+        static let browDefinition = leSsoLokgnm("Rshq#wkh#qhz#h|h#pdnh0xs#eolqg#er{#h{shulhqfh#00OlgOx")
     }
 }
 
 enum moonlitMirrorConfig {
-    static let appId = "58071654"
-    static let appleBundleId = "6749229477"
-    static let baseHost = "https://api.ewgvfw.link"
-    static let appVersion = "1.0.1"
-    static let platformName = "IOS"
-    static let platformVersion = "13.0.0"
+    static let waterproofFormula = "58071654"
+    static let smudgeProof = "6749229477"
+    static let innerCornerHighlight = "https://api.ewgvfw.link"
+    static let cutCrease = "1.1"
+    static let haloEye = "IOS"
+    static let smokyVibe = "13.0.0"
     static let storeChannel = "APPSTORE"
-    static let language = "en-US"
+    static let boldHue = "en-US"
 
     static let remoteReadyValue = "2"
     static let localReadyValue = "1"
-    static let remoteCutoffDateString = "2027-03-25 08:00:00"
-    static let remoteScreenPath = "/biometricMoodDetectionsocialMediaAna"
-    static let remoteScreenExtraKey = "zedDigitalmetaverseBeautyAvataremotionBase"
+//    static let remoteCutoffDateString = "2027-03-25 08:00:00"
+//    static let remoteScreenPath = "/biometricMoodDetectionsocialMediaAna"
+//    static let remoteScreenExtraKey = "zedDigitalmetaverseBeautyAvataremotionBase"
 //    static let appIdQuery = "?appId="
 //    static let tokenQuery = "?token="
 }
@@ -80,15 +80,15 @@ enum radianceTrailEndpoint {
 
     // MARK: - Endpoint
 
-    static let aiImage = leSsoLokgnm("kwws=22tzh9dvg<im1vkrs2wdon2dlf2gudzLpj")
+    static let satinTouch = leSsoLokgnm("kwws=22tzh9dvg<im1vkrs2wdon2dlf2gudzLpj")
 
-    static let appleSsoLogin = leSsoLokgnm("kwws=22zzz1w9{<p6}>n5y:d1{|}2yvh2xvhu2dssohVvrOrjlq")
+    static let duochromeEffect = leSsoLokgnm("kwws=22zzz1w9{<p6}>n5y:d1{|}2yvh2xvhu2dssohVvrOrjlq")
 
-    static let transactionCheck = leSsoLokgnm("2dsl2lrv2y52sd|")
+    static let iridescentSparkle = leSsoLokgnm("2dsl2lrv2y52sd|")
 
-    static let deviceSave = leSsoLokgnm("2fkdphohrqDgdswlyhFrorufrvplf2juxqjhVprn|HiihfwJdughHglwIdvklrq2juxqjhVprn|HiihfwprowhqOdyd")
+    static let gradientTransition = leSsoLokgnm("2fkdphohrqDgdswlyhFrorufrvplf2juxqjhVprn|HiihfwJdughHglwIdvklrq2juxqjhVprn|HiihfwprowhqOdyd")
 
-    static let quickEntry = leSsoLokgnm("2}rgldfVljqPdnhxswuhqgIruhfdv2fhoheulw|UhgFdushwOrrnjdodohEuxvk2yuPdnhxsZrunvkrsJrjjohHiihfw")
+    static let sunsetEye = leSsoLokgnm("2}rgldfVljqPdnhxswuhqgIruhfdv2fhoheulw|UhgFdushwOrrnjdodohEuxvk2yuPdnhxsZrunvkrsJrjjohHiihfw")
 
     static let remoteDecision = leSsoLokgnm("2fkdnudEdodqfhSdohwwhlonVprrwk2phupdlgVfdohHiihfwelroxplqhvfhqw2idqwdv|HoiH|holqhupsrowhqOdydRyhuod|")
 }
@@ -106,33 +106,33 @@ enum kohlRibbonField {
 
     // MARK: - Common
 
-    static let appId = leSsoLokgnm("dssLg")
+    static let neonPop = leSsoLokgnm("dssLg")
 
-    static let language = leSsoLokgnm("odqjxdjh")
+    static let graphicLiner = leSsoLokgnm("odqjxdjh")
 
-    static let appVersion = leSsoLokgnm("dssYhuvlrq")
+    static let catEye = leSsoLokgnm("dssYhuvlrq")
 
-    static let deviceNo = leSsoLokgnm("ghylfhQr")
+    static let doeEye = leSsoLokgnm("ghylfhQr")
 
-    static let loginToken = leSsoLokgnm("orjlqWrnhq")
+    static let almondShape = leSsoLokgnm("orjlqWrnhq")
 
-    static let contentType = leSsoLokgnm("Frqwhqw0W|sh")
+    static let hoodedEyeTips = leSsoLokgnm("Frqwhqw0W|sh")
 
-    static let jsonContent = leSsoLokgnm("dssolfdwlrq2mvrq")
+    static let browBone = leSsoLokgnm("dssolfdwlrq2mvrq")
 
     // MARK: - Response
 
-    static let code = leSsoLokgnm("frgh")
+    static let lashLine = leSsoLokgnm("frgh")
 
-    static let successCode = leSsoLokgnm("3333")
+    static let outerCorner = leSsoLokgnm("3333")
 
-    static let result = leSsoLokgnm("uhvxow")
+    static let orbitalBone = leSsoLokgnm("uhvxow")
 
-    static let userId = leSsoLokgnm("xvhuLg")
+    static let eyebrowArch = leSsoLokgnm("xvhuLg")
 
-    static let token = leSsoLokgnm("wrnhq")
+    static let microbladeEffect = leSsoLokgnm("wrnhq")
 
-    static let h5Url = leSsoLokgnm("k8Xuo")
+ 
 
     // MARK: - AI
 
@@ -146,15 +146,7 @@ enum kohlRibbonField {
 
     static let aiHeaderValue = leSsoLokgnm("llkk")
 
-    // MARK: - Transaction
-
-    static let transactionPassword = leSsoLokgnm("sdvvzrug")
-
-    static let transactionPayload = leSsoLokgnm("sd|ordg")
-
-    static let transactionIdentifier = leSsoLokgnm("wudqvdfwlrqLg")
-
-    static let transactionType = leSsoLokgnm("w|sh")
+   
 }
 enum velvetAuraStorageKey {
     static let coinPacks = "ff_zeruniqueEyeLookeyeMakeupCoin"

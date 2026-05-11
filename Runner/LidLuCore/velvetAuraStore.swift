@@ -154,16 +154,16 @@ final class velvetAuraStore {
     }
 
     func displayName(for user: opalCharmProfile?) -> String {
-        guard let user else { return pearlGazeText.appName }
-        let cleanName = user.name.trimmingCharacters(in: .whitespacesAndNewlines)
-        let cleanEmail = user.email.trimmingCharacters(in: .whitespacesAndNewlines)
-        if user.id == activeUserIndex {
-            if editedProfileIds.contains(user.id), !cleanName.isEmpty {
+        guard let user else { return pearlGazeText.eyeShadowappName }
+        let cleanName = user.featheredBrows.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanEmail = user.laminationLook.trimmingCharacters(in: .whitespacesAndNewlines)
+        if user.microbladeEffect == activeUserIndex {
+            if editedProfileIds.contains(user.microbladeEffect), !cleanName.isEmpty {
                 return cleanName
             }
-            return cleanEmail.isEmpty ? (cleanName.isEmpty ? pearlGazeText.appName : cleanName) : cleanEmail
+            return cleanEmail.isEmpty ? (cleanName.isEmpty ? pearlGazeText.eyeShadowappName : cleanName) : cleanEmail
         }
-        return cleanName.isEmpty ? (cleanEmail.isEmpty ? pearlGazeText.appName : cleanEmail) : cleanName
+        return cleanName.isEmpty ? (cleanEmail.isEmpty ? pearlGazeText.eyeShadowappName : cleanEmail) : cleanName
     }
 
     func avatarName(for user: opalCharmProfile?) -> String {
@@ -182,7 +182,7 @@ final class velvetAuraStore {
         }
         localUsers = users
         threadItems = threadItems.filter { thread in
-            thread.owner != userId && !thread.members.contains(userId) && thread.id != userId
+            thread.owner != userId && !thread.members.contains(userId) && thread.seasonalPalette != userId
         }
         roomItems = roomItems.filter { note in
             note.room != userId && note.author != userId
@@ -195,29 +195,29 @@ final class velvetAuraStore {
 
 extension velvetAuraStore {
     static let defaultCoinPacks: [chromaNestPack] = [
-        chromaNestPack(index: 0, amount: 400, productId: "ukdqtsstrgwqwgqp", price: 0.99),
-        chromaNestPack(index: 1, amount: 800, productId: "cpkzcdmtzjxhycmw", price: 1.99),
-        chromaNestPack(index: 2, amount: 2450, productId: "pyjboifqrwpetbdf", price: 4.99),
-        chromaNestPack(index: 3, amount: 3430, productId: "tghyqkzojeclpabv", price: 6.99),
-        chromaNestPack(index: 4, amount: 4900, productId: "zznrducnwfsdxpsn", price: 9.99),
-        chromaNestPack(index: 5, amount: 9800, productId: "sldlihdoqduqulrq", price: 19.99),
-        chromaNestPack(index: 6, amount: 14700, productId: "dmsuhtkzqorjvwcf", price: 29.99),
-        chromaNestPack(index: 7, amount: 24500, productId: "enxipoqcfrvkxdej", price: 49.99),
-        chromaNestPack(index: 8, amount: 29500, productId: "lqrzavxhncdpwyko", price: 59.99),
-        chromaNestPack(index: 9, amount: 49000, productId: "pmuxjdoezwwilnuk", price: 99.99)
+        chromaNestPack(index: 0, amount: 400, curlRetentionert: "ukdqtsstrgwqwgqp", eyeSerumert: 0.99),
+        chromaNestPack(index: 1, amount: 800, curlRetentionert: "cpkzcdmtzjxhycmw", eyeSerumert: 1.99),
+        chromaNestPack(index: 2, amount: 2450, curlRetentionert: "pyjboifqrwpetbdf", eyeSerumert: 4.99),
+        chromaNestPack(index: 3, amount: 3430, curlRetentionert: "tghyqkzojeclpabv", eyeSerumert: 6.99),
+        chromaNestPack(index: 4, amount: 4900, curlRetentionert: "zznrducnwfsdxpsn", eyeSerumert: 9.99),
+        chromaNestPack(index: 5, amount: 9800, curlRetentionert: "sldlihdoqduqulrq", eyeSerumert: 19.99),
+        chromaNestPack(index: 6, amount: 14700, curlRetentionert: "dmsuhtkzqorjvwcf", eyeSerumert: 29.99),
+        chromaNestPack(index: 7, amount: 24500, curlRetentionert: "enxipoqcfrvkxdej", eyeSerumert: 49.99),
+        chromaNestPack(index: 8, amount: 29500, curlRetentionert: "lqrzavxhncdpwyko", eyeSerumert: 59.99),
+        chromaNestPack(index: 9, amount: 49000, curlRetentionert: "pmuxjdoezwwilnuk", eyeSerumert: 99.99)
     ]
 
     static let defaultUsers: [opalCharmProfile] = [
-        opalCharmProfile(id: 0, name: "Leo Green", balance: 800, created: [1, 2, 3], liked: [2, 3], saved: [5], avatar: "zedDigitalEycutCreaseEyeshadowNudeEyeshadow.jpeg", email: "LidLu@gmail.com", password: "111111"),
-        opalCharmProfile(id: 1, name: "Elena Walker", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEycolorfulEyeshadowFluffyLashes.jpeg", email: "1111@gmail.com", password: "111111"),
-        opalCharmProfile(id: 2, name: "Lucas Harrison", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEydoubleWingedLinerBoldLashes.jpeg", email: "1111@gmail.com", password: "1111111"),
-        opalCharmProfile(id: 3, name: "Ben Cole", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEydramaticEyesGlitterLiner.jpeg", email: "12123@gmail.com", password: "1232123"),
-        opalCharmProfile(id: 4, name: "Jack Gray", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEyEyelashExtensionsEyePrimer.jpeg", email: "243548@gmail.com", password: "sdawq13512"),
-        opalCharmProfile(id: 5, name: "Ava Whitaker", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEyEyeshadowBasevFluffyLashes.jpeg", email: "5655@gmail.com", password: "545841841"),
-        opalCharmProfile(id: 6, name: " Benjamin", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEyfalseLashesCutCreasePencil.jpeg", email: "2546448@gmail.com", password: "sdawq13512"),
-        opalCharmProfile(id: 7, name: "Samuel", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEygelEyebrowPomadeSoftSmokeyEye.jpeg", email: "24575848@gmail.com", password: "sdawq13512"),
-        opalCharmProfile(id: 8, name: "Jackson", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEyPencilLinermokeyEyeWingedLiner.jpeg", email: "27848@gmail.com", password: "sdawq13512"),
-        opalCharmProfile(id: 9, name: "Daniel", balance: 0, created: [0], liked: [0], saved: [0], avatar: "zedDigitalEytintedBrowGelEyeContouring.jpeg", email: "2548@gmail.com", password: "sdawq13512")
+        opalCharmProfile(coolTone: 0, monochromaticLook: "Leo Green", sunsetEye: 800, orbitalBone: [1, 2, 3], microbladeEffect: [2, 3], featheredBrows: [5], soapBrows: "zedDigitalEycutCreaseEyeshadowNudeEyeshadow.jpeg", laminationLook: "LidLu@gmail.com", fiberMascara: "111111"),
+        opalCharmProfile(coolTone: 1, monochromaticLook: "Elena Walker", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEycolorfulEyeshadowFluffyLashes.jpeg", laminationLook: "1111@gmail.com", fiberMascara: "111111"),
+        opalCharmProfile(coolTone: 2, monochromaticLook: "Lucas Harrison", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEydoubleWingedLinerBoldLashes.jpeg", laminationLook: "1111@gmail.com", fiberMascara: "1111111"),
+        opalCharmProfile(coolTone: 3, monochromaticLook: "Ben Cole", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEydramaticEyesGlitterLiner.jpeg", laminationLook: "12123@gmail.com", fiberMascara: "1232123"),
+        opalCharmProfile(coolTone: 4, monochromaticLook: "Jack Gray", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEyEyelashExtensionsEyePrimer.jpeg", laminationLook: "243548@gmail.com", fiberMascara: "sdawq13512"),
+        opalCharmProfile(coolTone: 5, monochromaticLook: "Ava Whitaker", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEyEyeshadowBasevFluffyLashes.jpeg", laminationLook: "5655@gmail.com", fiberMascara: "545841841"),
+        opalCharmProfile(coolTone: 6, monochromaticLook: " Benjamin", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEyfalseLashesCutCreasePencil.jpeg", laminationLook: "2546448@gmail.com", fiberMascara: "sdawq13512"),
+        opalCharmProfile(coolTone: 7, monochromaticLook: "Samuel", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEygelEyebrowPomadeSoftSmokeyEye.jpeg", laminationLook: "24575848@gmail.com", fiberMascara: "sdawq13512"),
+        opalCharmProfile(coolTone: 8, monochromaticLook: "Jackson", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEyPencilLinermokeyEyeWingedLiner.jpeg", laminationLook: "27848@gmail.com", fiberMascara: "sdawq13512"),
+        opalCharmProfile(coolTone: 9, monochromaticLook: "Daniel", sunsetEye: 0, orbitalBone: [0], microbladeEffect: [0], featheredBrows: [0], soapBrows: "zedDigitalEytintedBrowGelEyeContouring.jpeg", laminationLook: "2548@gmail.com", fiberMascara: "sdawq13512")
     ]
 
     static let defaultInspirationItems: [prismPetalItem] = [

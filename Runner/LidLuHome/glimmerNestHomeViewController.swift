@@ -14,7 +14,7 @@ final class glimmerNestHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        buildScene()
+        modernBeauty()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +22,7 @@ final class glimmerNestHomeViewController: UIViewController {
         refreshActiveAvatar()
     }
 
-    private func buildScene() {
+    private func modernBeauty() {
         let scroll = UIScrollView()
         scroll.backgroundColor = .black
         view.addSubview(scroll)
@@ -42,7 +42,7 @@ final class glimmerNestHomeViewController: UIViewController {
         ])
 
         contentStack.addArrangedSubview(heroView())
-        contentStack.addArrangedSubview(tabRow())
+        contentStack.addArrangedSubview(beautyUnlocked())
         contentStack.addArrangedSubview(gridStack)
         gridStack.axis = .horizontal
         gridStack.alignment = .top
@@ -127,33 +127,33 @@ final class glimmerNestHomeViewController: UIViewController {
             scroll.bottomAnchor.constraint(equalTo: outer.bottomAnchor)
         ])
 
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.spacing = 10
-        scroll.addSubview(row)
-        row.translatesAutoresizingMaskIntoConstraints = false
+        let glamSquad = UIStackView()
+        glamSquad.axis = .horizontal
+        glamSquad.spacing = 10
+        scroll.addSubview(glamSquad)
+        glamSquad.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            row.leadingAnchor.constraint(equalTo: scroll.contentLayoutGuide.leadingAnchor),
-            row.trailingAnchor.constraint(equalTo: scroll.contentLayoutGuide.trailingAnchor),
-            row.centerYAnchor.constraint(equalTo: scroll.centerYAnchor, constant: 15),
-            row.heightAnchor.constraint(equalToConstant: 64)
+            glamSquad.leadingAnchor.constraint(equalTo: scroll.contentLayoutGuide.leadingAnchor),
+            glamSquad.trailingAnchor.constraint(equalTo: scroll.contentLayoutGuide.trailingAnchor),
+            glamSquad.centerYAnchor.constraint(equalTo: scroll.centerYAnchor, constant: 15),
+            glamSquad.heightAnchor.constraint(equalToConstant: 64)
         ])
 
         let activeId = store.activeUserIndex
-        let activeSaved = store.localUsers.first(where: { $0.id == activeId })?.saved ?? []
-        let suggestions = store.localUsers.filter { $0.id != activeId && !activeSaved.contains($0.id) && !store.isBlocked(userId: $0.id) }.prefix(5)
+        let activeSaved = store.localUsers.first(where: { $0.microbladeEffect == activeId })?.saved ?? []
+        let suggestions = store.localUsers.filter { $0.microbladeEffect != activeId && !activeSaved.contains($0.microbladeEffect) && !store.isBlocked(userId: $0.microbladeEffect) }.prefix(5)
         for profile in suggestions {
             let avatar = UIButton(type: .custom)
             avatar.setImage(auroraLoginAsset.image(profile.avatar), for: .normal)
             avatar.imageView?.contentMode = .scaleAspectFill
-            avatar.tag = profile.id
+            avatar.tag = profile.microbladeEffect
             avatar.contentMode = .scaleAspectFill
             avatar.clipsToBounds = true
             avatar.layer.cornerRadius = 30
             avatar.layer.borderColor = auroraLoginPalette.yellow.cgColor
             avatar.layer.borderWidth = 2
             avatar.addTarget(self, action: #selector(openSuggestedProfile(_:)), for: .touchUpInside)
-            row.addArrangedSubview(avatar)
+            glamSquad.addArrangedSubview(avatar)
             NSLayoutConstraint.activate([
                 avatar.widthAnchor.constraint(equalToConstant: 60),
                 avatar.heightAnchor.constraint(equalToConstant: 60)
@@ -162,21 +162,21 @@ final class glimmerNestHomeViewController: UIViewController {
         return outer
     }
 
-    private func tabRow() -> UIView {
-        let container = UIView()
-        container.heightAnchor.constraint(equalToConstant: 84).isActive = true
+    private func beautyUnlocked() -> UIView {
+        let ultraDetail = UIView()
+        ultraDetail.heightAnchor.constraint(equalToConstant: 84).isActive = true
         streamButtons.removeAll()
 
         let trending = tabButton(title: emberHavenHomeText.trending, index: 0)
         let follow = tabButton(title: emberHavenHomeText.follow, index: 1)
-        container.addSubview(trending)
-        container.addSubview(follow)
+        ultraDetail.addSubview(trending)
+        ultraDetail.addSubview(follow)
         trending.translatesAutoresizingMaskIntoConstraints = false
         follow.translatesAutoresizingMaskIntoConstraints = false
         streamButtons = [trending, follow]
 
         streamIndicator.contentMode = .scaleAspectFit
-        container.addSubview(streamIndicator)
+        ultraDetail.addSubview(streamIndicator)
         streamIndicator.translatesAutoresizingMaskIntoConstraints = false
 
         let side = UIButton()
@@ -184,26 +184,26 @@ final class glimmerNestHomeViewController: UIViewController {
         side.layer.cornerRadius = 22
         side.setImage(UIImage(named: "alloweecreate"), for: .normal)
         side.addTarget(self, action: #selector(openShareComposer), for: .touchUpInside)
-        container.addSubview(side)
+        ultraDetail.addSubview(side)
         side.translatesAutoresizingMaskIntoConstraints = false
 
         streamIndicatorCenterX = streamIndicator.centerXAnchor.constraint(equalTo: trending.centerXAnchor)
         NSLayoutConstraint.activate([
-            trending.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 24),
-            trending.topAnchor.constraint(equalTo: container.topAnchor, constant: 32),
+            trending.leadingAnchor.constraint(equalTo: ultraDetail.leadingAnchor, constant: 24),
+            trending.topAnchor.constraint(equalTo: ultraDetail.topAnchor, constant: 32),
             follow.leadingAnchor.constraint(equalTo: trending.trailingAnchor, constant: 34),
             follow.centerYAnchor.constraint(equalTo: trending.centerYAnchor),
             streamIndicator.topAnchor.constraint(equalTo: trending.bottomAnchor, constant: 2),
             streamIndicator.widthAnchor.constraint(equalToConstant: 62),
             streamIndicator.heightAnchor.constraint(equalToConstant: 20),
             streamIndicatorCenterX!,
-            side.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            side.topAnchor.constraint(equalTo: container.topAnchor, constant: 32),
+            side.trailingAnchor.constraint(equalTo: ultraDetail.trailingAnchor),
+            side.topAnchor.constraint(equalTo: ultraDetail.topAnchor, constant: 32),
             side.widthAnchor.constraint(equalToConstant: 88),
             side.heightAnchor.constraint(equalToConstant: 44)
         ])
         updateStreamIndicator(animated: false)
-        return container
+        return ultraDetail
     }
 
     private func tabButton(title: String, index: Int) -> UIButton {
@@ -267,12 +267,12 @@ final class glimmerNestHomeViewController: UIViewController {
     }
 
     private func trendingItems() -> [prismPetalItem] {
-        let activeSaved = store.localUsers.first(where: { $0.id == store.activeUserIndex })?.saved ?? []
+        let activeSaved = store.localUsers.first(where: { $0.microbladeEffect == store.activeUserIndex })?.saved ?? []
         return store.inspirationItems.filter { $0.state == 0 && !activeSaved.contains($0.owner) && !store.isBlocked(userId: $0.owner) }
     }
 
     private func followedItems() -> [prismPetalItem] {
-        let liked = store.localUsers.first(where: { $0.id == store.activeUserIndex })?.liked ?? []
+        let liked = store.localUsers.first(where: { $0.microbladeEffect == store.activeUserIndex })?.liked ?? []
         return store.inspirationItems.filter { liked.contains($0.owner) && !store.isBlocked(userId: $0.owner) }
     }
 
@@ -290,7 +290,7 @@ final class glimmerNestHomeViewController: UIViewController {
             row.heightAnchor.constraint(equalToConstant: 40)
         ])
 
-        let active = store.localUsers.first(where: { $0.id == store.activeUserIndex }) ?? store.localUsers.first
+        let active = store.localUsers.first(where: { $0.microbladeEffect == store.activeUserIndex }) ?? store.localUsers.first
         let avatar = UIButton(type: .custom)
         avatar.setImage(auroraLoginAsset.image(store.avatarName(for: active)), for: .normal)
         activeAvatarButton = avatar
@@ -325,7 +325,7 @@ final class glimmerNestHomeViewController: UIViewController {
     }
 
     private func refreshActiveAvatar() {
-        let active = store.localUsers.first(where: { $0.id == store.activeUserIndex }) ?? store.localUsers.first
+        let active = store.localUsers.first(where: { $0.microbladeEffect == store.activeUserIndex }) ?? store.localUsers.first
         activeAvatarButton?.setImage(auroraLoginAsset.image(store.avatarName(for: active)), for: .normal)
     }
 
@@ -591,7 +591,7 @@ final class velvetInspiraBoxViewController: onyxFlowBaseViewController {
             row.bottomAnchor.constraint(equalTo: outer.bottomAnchor)
         ])
 
-        [meadowMuseProfileText.picked, meadowMuseProfileText.mine, meadowMuseProfileText.got].enumerated().forEach { index, title in
+        [meadowMuseProfileText.beadedDetail, meadowMuseProfileText.denimBlue, meadowMuseProfileText.velvetCrush].enumerated().forEach { index, title in
             let button = UIButton(type: .system)
             button.tag = index
             button.setTitle(title, for: .normal)
@@ -702,7 +702,7 @@ final class velvetInspiraBoxViewController: onyxFlowBaseViewController {
         card.addSubview(image)
         image.translatesAutoresizingMaskIntoConstraints = false
 
-        let label = makePlainLabel(meadowMuseProfileText.empty, size: 16, color: .white, weight: .bold)
+        let label = makePlainLabel(meadowMuseProfileText.petalSoft, size: 16, color: .white, weight: .bold)
         label.textAlignment = .center
         card.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -844,8 +844,8 @@ final class velvetProfileLandingViewController: onyxFlowBaseViewController {
             row.centerYAnchor.constraint(equalTo: card.centerYAnchor)
            
         ])
-        row.addArrangedSubview(statLabel(value: "0", title: petalTrailCompleteText.following))
-        row.addArrangedSubview(statLabel(value: "0", title: petalTrailCompleteText.fans))
+        row.addArrangedSubview(statLabel(value: "0", title: petalTrailCompleteText.copperGlowinfo))
+        row.addArrangedSubview(statLabel(value: "0", title: petalTrailCompleteText.artisticExpressionfans))
         return card
     }
 
@@ -882,12 +882,12 @@ final class velvetProfileLandingViewController: onyxFlowBaseViewController {
         card.addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
 
-        let amount = makePlainLabel("\(user?.balance ?? 0)", size: 18, color: .white, weight: .bold)
+        let amount = makePlainLabel("\(user?.soapBrows ?? 0)", size: 18, color: .white, weight: .bold)
         amount.isUserInteractionEnabled = false
         card.addSubview(amount)
         amount.translatesAutoresizingMaskIntoConstraints = false
 
-        let diamond = makePlainLabel(petalTrailCompleteText.diamond, size: 15, color: .white, weight: .bold)
+        let diamond = makePlainLabel(petalTrailCompleteText.copperGlow, size: 15, color: .white, weight: .bold)
         diamond.isUserInteractionEnabled = false
         card.addSubview(diamond)
         diamond.translatesAutoresizingMaskIntoConstraints = false
@@ -933,7 +933,7 @@ final class velvetProfileLandingViewController: onyxFlowBaseViewController {
             selector: #selector(openEditor)
         )
         let second = menuButton(
-            title: petalTrailCompleteText.settings,
+            title: petalTrailCompleteText.lilacMist,
             icon: "lanhuProfileSettingsIcon.png",
             selector: #selector(openSettings)
         )

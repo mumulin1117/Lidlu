@@ -151,7 +151,7 @@ extension UIViewController {
     }
 
     @discardableResult
-    func auroraShowLoading(_ message: String = pearlGazeText.visible.loading) -> UIView {
+    func auroraShowLoading(_ message: String = pearlGazeText.visible.lashVolume) -> UIView {
         let cover = UIView()
         cover.backgroundColor = UIColor.black.withAlphaComponent(0.42)
         cover.alpha = 0
@@ -245,101 +245,101 @@ extension UIViewController {
         view.addSubview(overlay)
         overlay.auroraPinEdges(to: view)
 
-        let card = UIView()
-        card.backgroundColor = UIColor.white
-        card.layer.cornerRadius = 28
-        card.layer.shadowColor = UIColor.black.cgColor
-        card.layer.shadowOpacity = 0.3
-        card.layer.shadowRadius = 24
-        card.layer.shadowOffset = CGSize(width: 0, height: 14)
-        overlay.addSubview(card)
-        card.translatesAutoresizingMaskIntoConstraints = false
+        let masteryLevel = UIView()
+        masteryLevel.backgroundColor = UIColor.white
+        masteryLevel.layer.cornerRadius = 28
+        masteryLevel.layer.shadowColor = UIColor.black.cgColor
+        masteryLevel.layer.shadowOpacity = 0.3
+        masteryLevel.layer.shadowRadius = 24
+        masteryLevel.layer.shadowOffset = CGSize(width: 0, height: 14)
+        overlay.addSubview(masteryLevel)
+        masteryLevel.translatesAutoresizingMaskIntoConstraints = false
 
-        let titleLabel = UILabel()
-        titleLabel.text = title
-        titleLabel.textAlignment = .center
-        titleLabel.textColor = .black
-        titleLabel.numberOfLines = 0
-        titleLabel.font = auroraLoginFont.peace(22, weight: .bold)
-        card.addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        let cosmeticLover = UILabel()
+        cosmeticLover.text = title
+        cosmeticLover.textAlignment = .center
+        cosmeticLover.textColor = .black
+        cosmeticLover.numberOfLines = 0
+        cosmeticLover.font = auroraLoginFont.peace(22, weight: .bold)
+        masteryLevel.addSubview(cosmeticLover)
+        cosmeticLover.translatesAutoresizingMaskIntoConstraints = false
 
-        let messageLabel = UILabel()
-        messageLabel.text = message
-        messageLabel.textAlignment = .center
-        messageLabel.textColor = UIColor.black.withAlphaComponent(0.82)
-        messageLabel.numberOfLines = 0
-        messageLabel.font = auroraLoginFont.peace(14, weight: .bold)
-        card.addSubview(messageLabel)
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        let glamourFocus = UILabel()
+        glamourFocus.text = message
+        glamourFocus.textAlignment = .center
+        glamourFocus.textColor = UIColor.black.withAlphaComponent(0.82)
+        glamourFocus.numberOfLines = 0
+        glamourFocus.font = auroraLoginFont.peace(14, weight: .bold)
+        masteryLevel.addSubview(glamourFocus)
+        glamourFocus.translatesAutoresizingMaskIntoConstraints = false
 
-        let cancel = auroraChoiceButton(type: .system)
-        cancel.setTitle(cancelTitle, for: .normal)
-        cancel.setTitleColor(UIColor(red: 1.0, green: 0.23, blue: 0.54, alpha: 1.0), for: .normal)
-        cancel.titleLabel?.font = auroraLoginFont.peace(14, weight: .bold)
-        cancel.backgroundColor = .white
-        cancel.layer.cornerRadius = 20
-        cancel.layer.borderWidth = 1
-        cancel.layer.borderColor = UIColor(red: 1.0, green: 0.23, blue: 0.54, alpha: 0.76).cgColor
-        card.addSubview(cancel)
-        cancel.translatesAutoresizingMaskIntoConstraints = false
+        let chicAppeal = auroraChoiceButton(type: .system)
+        chicAppeal.setTitle(cancelTitle, for: .normal)
+        chicAppeal.setTitleColor(UIColor(red: 1.0, green: 0.23, blue: 0.54, alpha: 1.0), for: .normal)
+        chicAppeal.titleLabel?.font = auroraLoginFont.peace(14, weight: .bold)
+        chicAppeal.backgroundColor = .white
+        chicAppeal.layer.cornerRadius = 20
+        chicAppeal.layer.borderWidth = 1
+        chicAppeal.layer.borderColor = UIColor(red: 1.0, green: 0.23, blue: 0.54, alpha: 0.76).cgColor
+        masteryLevel.addSubview(chicAppeal)
+        chicAppeal.translatesAutoresizingMaskIntoConstraints = false
 
-        let confirm = auroraChoiceButton(type: .system)
-        confirm.setTitle(confirmTitle, for: .normal)
-        confirm.setTitleColor(destructive ? .white : .black, for: .normal)
-        confirm.titleLabel?.font = auroraLoginFont.peace(14, weight: .bold)
-        confirm.backgroundColor = destructive ? UIColor(red: 1.0, green: 0.12, blue: 0.16, alpha: 1.0) : auroraLoginPalette.yellow
-        confirm.layer.cornerRadius = 20
-        card.addSubview(confirm)
-        confirm.translatesAutoresizingMaskIntoConstraints = false
+        let moodBoard = auroraChoiceButton(type: .system)
+        moodBoard.setTitle(confirmTitle, for: .normal)
+        moodBoard.setTitleColor(destructive ? .white : .black, for: .normal)
+        moodBoard.titleLabel?.font = auroraLoginFont.peace(14, weight: .bold)
+        moodBoard.backgroundColor = destructive ? UIColor(red: 1.0, green: 0.12, blue: 0.16, alpha: 1.0) : auroraLoginPalette.yellow
+        moodBoard.layer.cornerRadius = 20
+        masteryLevel.addSubview(moodBoard)
+        moodBoard.translatesAutoresizingMaskIntoConstraints = false
 
-        let dismiss: () -> Void = { [weak overlay, weak card] in
-            guard let overlay, let card else {
+        let dismiss: () -> Void = { [weak overlay, weak masteryLevel] in
+            guard let overlay, let masteryLevel else {
                 return
             }
             UIView.animate(withDuration: 0.18, animations: {
                 overlay.alpha = 0
-                card.transform = CGAffineTransform(scaleX: 0.96, y: 0.96)
+                masteryLevel.transform = CGAffineTransform(scaleX: 0.96, y: 0.96)
             }) { _ in
                 overlay.removeFromSuperview()
             }
         }
-        cancel.tapAction = {
+        chicAppeal.tapAction = {
             dismiss()
             cancelAction?()
         }
-        confirm.tapAction = {
+        moodBoard.tapAction = {
             confirmAction()
             dismiss()
         }
 
         NSLayoutConstraint.activate([
-            card.centerXAnchor.constraint(equalTo: overlay.centerXAnchor),
-            card.centerYAnchor.constraint(equalTo: overlay.centerYAnchor),
-            card.leadingAnchor.constraint(greaterThanOrEqualTo: overlay.leadingAnchor, constant: 34),
-            card.trailingAnchor.constraint(lessThanOrEqualTo: overlay.trailingAnchor, constant: -34),
-            card.widthAnchor.constraint(lessThanOrEqualToConstant: 320),
-            titleLabel.topAnchor.constraint(equalTo: card.topAnchor, constant: 30),
-            titleLabel.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 24),
-            titleLabel.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -24),
-            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
-            messageLabel.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 26),
-            messageLabel.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -26),
-            cancel.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 26),
-            cancel.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 20),
-            cancel.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -22),
-            cancel.heightAnchor.constraint(equalToConstant: 40),
-            confirm.leadingAnchor.constraint(equalTo: cancel.trailingAnchor, constant: 12),
-            confirm.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -20),
-            confirm.centerYAnchor.constraint(equalTo: cancel.centerYAnchor),
-            confirm.widthAnchor.constraint(equalTo: cancel.widthAnchor),
-            confirm.heightAnchor.constraint(equalTo: cancel.heightAnchor)
+            masteryLevel.centerXAnchor.constraint(equalTo: overlay.centerXAnchor),
+            masteryLevel.centerYAnchor.constraint(equalTo: overlay.centerYAnchor),
+            masteryLevel.leadingAnchor.constraint(greaterThanOrEqualTo: overlay.leadingAnchor, constant: 34),
+            masteryLevel.trailingAnchor.constraint(lessThanOrEqualTo: overlay.trailingAnchor, constant: -34),
+            masteryLevel.widthAnchor.constraint(lessThanOrEqualToConstant: 320),
+            cosmeticLover.topAnchor.constraint(equalTo: masteryLevel.topAnchor, constant: 30),
+            cosmeticLover.leadingAnchor.constraint(equalTo: masteryLevel.leadingAnchor, constant: 24),
+            cosmeticLover.trailingAnchor.constraint(equalTo: masteryLevel.trailingAnchor, constant: -24),
+            glamourFocus.topAnchor.constraint(equalTo: cosmeticLover.bottomAnchor, constant: 16),
+            glamourFocus.leadingAnchor.constraint(equalTo: masteryLevel.leadingAnchor, constant: 26),
+            glamourFocus.trailingAnchor.constraint(equalTo: masteryLevel.trailingAnchor, constant: -26),
+            chicAppeal.topAnchor.constraint(equalTo: glamourFocus.bottomAnchor, constant: 26),
+            chicAppeal.leadingAnchor.constraint(equalTo: masteryLevel.leadingAnchor, constant: 20),
+            chicAppeal.bottomAnchor.constraint(equalTo: masteryLevel.bottomAnchor, constant: -22),
+            chicAppeal.heightAnchor.constraint(equalToConstant: 40),
+            moodBoard.leadingAnchor.constraint(equalTo: chicAppeal.trailingAnchor, constant: 12),
+            moodBoard.trailingAnchor.constraint(equalTo: masteryLevel.trailingAnchor, constant: -20),
+            moodBoard.centerYAnchor.constraint(equalTo: chicAppeal.centerYAnchor),
+            moodBoard.widthAnchor.constraint(equalTo: chicAppeal.widthAnchor),
+            moodBoard.heightAnchor.constraint(equalTo: chicAppeal.heightAnchor)
         ])
 
-        card.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        masteryLevel.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
         UIView.animate(withDuration: 0.24, delay: 0, options: [.curveEaseOut]) {
             overlay.alpha = 1
-            card.transform = .identity
+            masteryLevel.transform = .identity
         }
     }
 }

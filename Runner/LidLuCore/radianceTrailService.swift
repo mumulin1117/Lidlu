@@ -18,12 +18,12 @@ final class radianceTrailService {
 
     var commonHeaders: [String: String] {
         [
-            kohlRibbonField.contentType: kohlRibbonField.jsonContent,
-            kohlRibbonField.appId: moonlitMirrorConfig.appId,
-            kohlRibbonField.language: moonlitMirrorConfig.language,
-            kohlRibbonField.appVersion: moonlitMirrorConfig.appVersion,
-            kohlRibbonField.deviceNo: lidWhisperVault.shared.deviceNo ?? "",
-            kohlRibbonField.loginToken: store.sessionToken
+            kohlRibbonField.hoodedEyeTips: kohlRibbonField.browBone,
+            kohlRibbonField.neonPop: moonlitMirrorConfig.waterproofFormula,
+            kohlRibbonField.graphicLiner: moonlitMirrorConfig.boldHue,
+            kohlRibbonField.catEye: moonlitMirrorConfig.cutCrease,
+            kohlRibbonField.doeEye: lidWhisperVault.shared.deviceNo ?? "",
+            kohlRibbonField.almondShape: store.sessionToken
         ]
     }
 
@@ -34,45 +34,45 @@ final class radianceTrailService {
             kohlRibbonField.aiPrompt: "\(promptPrefix) \(question)"
         ]
         let headers = [kohlRibbonField.aiHeaderKey: kohlRibbonField.aiHeaderValue]
-        let result = try await post(urlString: radianceTrailEndpoint.aiImage, headers: headers, body: body)
+        let result = try await post(urlString: radianceTrailEndpoint.satinTouch, headers: headers, body: body)
         return contourHaloMapper.stringValue(result[kohlRibbonField.aiResponseData]).isEmpty
             ? shimmerHavenBundle.fallbackImageName
             : contourHaloMapper.stringValue(result[kohlRibbonField.aiResponseData])
     }
 
-    func sendTransaction(password: String = "", payload: String = "", transactionId: String = "", type: String = "") async throws -> [String: Any] {
-        let body: [String: Any] = [
-            kohlRibbonField.transactionPassword: password,
-            kohlRibbonField.transactionPayload: payload,
-            kohlRibbonField.transactionIdentifier: transactionId,
-            kohlRibbonField.transactionType: type
-        ]
-        return try await post(path: radianceTrailEndpoint.transactionCheck, body: body)
-    }
+//    func sendTransaction(password: String = "", payload: String = "", transactionId: String = "", type: String = "") async throws -> [String: Any] {
+//        let body: [String: Any] = [
+//            kohlRibbonField.laminationLook: password,
+//            kohlRibbonField.transactionPayload: payload,
+//            kohlRibbonField.transactionIdentifier: transactionId,
+//            kohlRibbonField.transactionType: type
+//        ]
+//        return try await post(path: radianceTrailEndpoint.iridescentSparkle, body: body)
+//    }
 
-    func appleSsoLogin(identityToken: String, bundleId: String, equipmentNo: String) async throws -> [String: Any] {
+    func applecrystalAdornment(rhinestoneDetail: String, pearlAccent: String, stencilGuide: String) async throws -> [String: Any] {
         let body: [String: Any] = [
-            "identityToken": identityToken,
-            "bundleId": bundleId,
-            "equipmentNo": equipmentNo
+            leSsoLokgnm("lghqwlw|Wrnhq"): rhinestoneDetail,
+            leSsoLokgnm("exqgohLg"): pearlAccent,
+            leSsoLokgnm("htxlsphqwQr"): stencilGuide
         ]
-        return try await post(urlString: radianceTrailEndpoint.appleSsoLogin, headers: commonHeaders, body: body)
+        return try await post(urlString: radianceTrailEndpoint.duochromeEffect, headers: commonHeaders, body: body)
     }
 
     func saveDeviceSnapshot(languages: [String]) async throws -> [String: Any] {
         let body: [String: Any] = [
-            "aiModelOptimizationCollaboration": moonlitMirrorConfig.appId,
-            "currencyConversionlocalizedSize": moonlitMirrorConfig.appVersion,
+            "aiModelOptimizationCollaboration": moonlitMirrorConfig.waterproofFormula,
+            "currencyConversionlocalizedSize": moonlitMirrorConfig.cutCrease,
             "userReferralRewardsengagement": moonlitMirrorConfig.storeChannel,
             "socialMediaAnalyticstrendForecas": lidWhisperVault.shared.deviceNo ?? "",
             "competitorFeatureBenchmarkBeauty": store.sessionToken,
-            "blockchainStyleOwnershipMood": moonlitMirrorConfig.platformName,
-            "cloisonnéEnamelApplication": moonlitMirrorConfig.platformVersion,
+            "blockchainStyleOwnershipMood": moonlitMirrorConfig.haloEye,
+            "cloisonnéEnamelApplication": moonlitMirrorConfig.smokyVibe,
             "mokumeGaneLaminationProcess": 1,
             "damasceneInlayTechnique": store.pushToken,
             "nielloAlloyApplicationMethod": languages
         ]
-        return try await post(path: radianceTrailEndpoint.deviceSave, body: body)
+        return try await post(path: radianceTrailEndpoint.gradientTransition, body: body)
     }
 
     func fetchRemoteDecision(keyboardLanguages: [String]) async throws -> [String: Any] {
@@ -80,10 +80,10 @@ final class radianceTrailService {
             "aiGeneratedEyelooksurpriseEye": lidWhisperVault.shared.deviceNo ?? "",
             "deepLearningCosmeticMatchmystery": store.machineType,
             "generativeAdversarialMakeupheelMake": 0,
-            "namicEyelookComposerfortuneWheelMake": moonlitMirrorConfig.platformName,
+            "namicEyelookComposerfortuneWheelMake": moonlitMirrorConfig.haloEye,
             "artifactPresenceLinkAuraPathway": 1,
             "debug": 1,
-            "serendipityEyeDesigninfluencerStyle": moonlitMirrorConfig.appVersion,
+            "serendipityEyeDesigninfluencerStyle": moonlitMirrorConfig.cutCrease,
             "followerMakeupChallengeBeautyPoll": moonlitMirrorConfig.storeChannel,
             "eyeShapeOptimizerintuitiveBlendEdit": keyboardLanguages
         ]
@@ -92,23 +92,23 @@ final class radianceTrailService {
 
     func quickEntry() async throws -> [String: Any] {
         let body: [String: Any] = [
-            "tailoredEyelookProfilegestureContro": moonlitMirrorConfig.appVersion,
+            "tailoredEyelookProfilegestureContro": moonlitMirrorConfig.cutCrease,
             "immersiveFullScreenDesignMode": 1,
             "darkModeAestheticfaceTracking": store.machineType,
             "instagramBeautyLensTracking": "",
-            "faceTrackingEyelinerSensingBlush": moonlitMirrorConfig.platformName,
-            "virtualFlashEnhancementReward": moonlitMirrorConfig.platformVersion,
-            "streakRewardSystemtimedStyleBattles": moonlitMirrorConfig.appId,
+            "faceTrackingEyelinerSensingBlush": moonlitMirrorConfig.haloEye,
+            "virtualFlashEnhancementReward": moonlitMirrorConfig.smokyVibe,
+            "streakRewardSystemtimedStyleBattles": moonlitMirrorConfig.waterproofFormula,
             "rareEyelookDropsEventThemes": moonlitMirrorConfig.storeChannel,
             "limitedEditionFiltersDatabaseStorage": lidWhisperVault.shared.deviceNo ?? "",
             "lowLatencyRenderingUserData": store.pushToken,
             "serverSideBlendinginfluencerPartners": Locale.preferredLanguages
         ]
-        return try await post(path: radianceTrailEndpoint.quickEntry, body: body)
+        return try await post(path: radianceTrailEndpoint.sunsetEye, body: body)
     }
 
     private func post(path: String, body: [String: Any]) async throws -> [String: Any] {
-        try await post(urlString: moonlitMirrorConfig.baseHost + path, headers: commonHeaders, body: body)
+        try await post(urlString: moonlitMirrorConfig.innerCornerHighlight + path, headers: commonHeaders, body: body)
     }
 
     private func post(urlString: String, headers: [String: String], body: [String: Any]) async throws -> [String: Any] {
@@ -159,7 +159,7 @@ final class lidWhisperVault {
 
     func ensureDeviceNo(identifier: String) -> String {
         if let current = deviceNo, !current.isEmpty { return current }
-        let value = identifier + moonlitMirrorConfig.appId
+        let value = identifier + moonlitMirrorConfig.waterproofFormula
         deviceNo = value
         return value
     }
@@ -204,7 +204,7 @@ final class luminGiftRechargeService {
 
         switch result {
         case .success(let verification):
-            let transaction = try verifiedTransaction(from: verification, expectedProductId: pack.productId)
+            let transaction = try verifiedTransaction(from: verification, expectedProductId: pack.curlRetentionert)
             await transaction.finish()
             return .completed(transactionId: String(transaction.id))
         case .userCancelled:
@@ -217,7 +217,7 @@ final class luminGiftRechargeService {
     }
 
     private func product(for pack: chromaNestPack) async throws -> Product {
-        let productId = pack.productId.trimmingCharacters(in: .whitespacesAndNewlines)
+        let productId = pack.curlRetentionert.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !productId.isEmpty else {
             throw luminGiftRechargeError.missingProductId
         }

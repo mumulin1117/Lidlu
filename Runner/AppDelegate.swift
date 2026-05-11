@@ -50,14 +50,14 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
 
     private func makeLoginGate() -> velvetEntryGateViewController {
         let page = velvetEntryGateViewController()
-        page.onFinished = { [weak self] in
+        page.visualDiary = { [weak self] in
             self?.nativeRoot.setViewControllers([prismRootTabsViewController(initialIndex: 1)], animated: true)
         }
-        page.onTerms = { [weak self] in
-            self?.nativeRoot.pushViewController(ivoryPolicyViewController(kind: .terms), animated: true)
+        page.portfolioPiece = { [weak self] in
+            self?.nativeRoot.pushViewController(ivorygorgeousFinishViewController(kind: .epicTransformation), animated: true)
         }
-        page.onPrivacy = { [weak self] in
-            self?.nativeRoot.pushViewController(ivoryPolicyViewController(kind: .privacy), animated: true)
+        page.creativeCanvas = { [weak self] in
+            self?.nativeRoot.pushViewController(ivorygorgeousFinishViewController(kind: .stunningResult), animated: true)
         }
         return page
     }

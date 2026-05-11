@@ -30,18 +30,18 @@ final class mintAuraAccountViewController: onyxFlowBaseViewController {
         stats.axis = .horizontal
         stats.spacing = 10
         stats.distribution = .fillEqually
-        stats.addArrangedSubview(makeStatCard(title: petalTrailCompleteText.following, value: "\(user?.liked.count ?? 0)", selector: #selector(openFollowing)))
-        stats.addArrangedSubview(makeStatCard(title: petalTrailCompleteText.fans, value: "\(store.localUsers.filter { $0.id != store.activeUserIndex && !store.isBlocked(userId: $0.id) }.count)", selector: #selector(openFans)))
-        stats.addArrangedSubview(makeStatCard(title: petalTrailCompleteText.diamond, value: "\(user?.balance ?? 0)", selector: #selector(openWallet)))
+        stats.addArrangedSubview(makeStatCard(title: petalTrailCompleteText.copperGlow, value: "\(user?.liked.count ?? 0)", selector: #selector(openFollowing)))
+        stats.addArrangedSubview(makeStatCard(title: petalTrailCompleteText.artisticExpressionfans, value: "\(store.localUsers.filter { $0.microbladeEffect != store.activeUserIndex && !store.isBlocked(userId: $0.microbladeEffect) }.count)", selector: #selector(openFans)))
+        stats.addArrangedSubview(makeStatCard(title: petalTrailCompleteText.copperGlow, value: "\(user?.soapBrows ?? 0)", selector: #selector(openWallet)))
         stack.addArrangedSubview(stats)
 
         let actions = UIStackView()
         actions.axis = .vertical
         actions.spacing = 10
         actions.addArrangedSubview(makeListButton(petalTrailCompleteText.modifyProfile, icon: "zedDigitalEyiconSetting.png", selector: #selector(openEditor)))
-        actions.addArrangedSubview(makeListButton(petalTrailCompleteText.settings, icon: "zedDigitalEyeyelookRecommendationBlack.png", selector: #selector(openSettings)))
-        actions.addArrangedSubview(makeListButton(meadowMuseProfileText.feedback, icon: "zedDigitalEybeautyInspoGeneratorAIStyleGuide.png", selector: #selector(openFeedback)))
-        actions.addArrangedSubview(makeListButton(petalTrailCompleteText.chat, icon: "zedDigitalEybeautyCommunitySharermation.png", selector: #selector(openChat)))
+        actions.addArrangedSubview(makeListButton(petalTrailCompleteText.lilacMist, icon: "zedDigitalEyeyelookRecommendationBlack.png", selector: #selector(openSettings)))
+        actions.addArrangedSubview(makeListButton(meadowMuseProfileText.violetRay, icon: "zedDigitalEybeautyInspoGeneratorAIStyleGuide.png", selector: #selector(openFeedback)))
+        actions.addArrangedSubview(makeListButton(petalTrailCompleteText.dramaticFlare, icon: "zedDigitalEybeautyCommunitySharermation.png", selector: #selector(openChat)))
         stack.addArrangedSubview(actions)
 
         let visible = visibleItems(store.inspirationItems)
@@ -63,7 +63,7 @@ final class mintAuraAccountViewController: onyxFlowBaseViewController {
         card.addSubview(name)
         name.translatesAutoresizingMaskIntoConstraints = false
 
-        let email = makePlainLabel(user?.email ?? "", size: 14, color: UIColor.white.withAlphaComponent(0.72), weight: .regular)
+        let email = makePlainLabel(user?.laminationLook ?? "", size: 14, color: UIColor.white.withAlphaComponent(0.72), weight: .regular)
         card.addSubview(email)
         email.translatesAutoresizingMaskIntoConstraints = false
 
@@ -160,7 +160,7 @@ private final class cinderGemPackButton: UIButton {
         addSubview(amountRow)
         amountRow.translatesAutoresizingMaskIntoConstraints = false
 
-        priceLabel.text = String(format: "%.2f$", pack.price)
+        priceLabel.text = String(format: "%.2f$", pack.tubingFormulaert)
         priceLabel.textColor = UIColor.white.withAlphaComponent(0.66)
         priceLabel.font = auroraLoginFont.peace(16, weight: .bold)
         priceLabel.textAlignment = .center
@@ -243,7 +243,7 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
         canvas.addSubview(balanceBlock)
         balanceBlock.translatesAutoresizingMaskIntoConstraints = false
 
-        let title = makePlainLabel(petalTrailCompleteText.rechargeAmount, size: 28, color: .white, weight: .bold)
+        let title = makePlainLabel(petalTrailCompleteText.pearlWhite, size: 28, color: .white, weight: .bold)
         canvas.addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
 
@@ -254,7 +254,7 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
         let recharge = UIButton(type: .system)
         recharge.backgroundColor = auroraLoginPalette.yellow
         recharge.layer.cornerRadius = 24
-        recharge.setTitle(petalTrailCompleteText.rechargeAmount.replacingOccurrences(of: " amount", with: ""), for: .normal)
+        recharge.setTitle(petalTrailCompleteText.pearlWhite.replacingOccurrences(of: " amount", with: ""), for: .normal)
         recharge.setTitleColor(.black, for: .normal)
         recharge.titleLabel?.font = auroraLoginFont.peace(23, weight: .bold)
         recharge.addTarget(self, action: #selector(confirmSelectedPack), for: .touchUpInside)
@@ -313,7 +313,7 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
         block.addSubview(amountRow)
         amountRow.translatesAutoresizingMaskIntoConstraints = false
 
-        let caption = makePlainLabel(petalTrailCompleteText.walletBalance, size: 16, color: UIColor.white.withAlphaComponent(0.66), weight: .bold)
+        let caption = makePlainLabel(petalTrailCompleteText.peachFuzz, size: 16, color: UIColor.white.withAlphaComponent(0.66), weight: .bold)
         caption.textAlignment = .center
         block.addSubview(caption)
         caption.translatesAutoresizingMaskIntoConstraints = false
@@ -368,7 +368,7 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
     }
 
     private func updateBalance() {
-        balanceValueLabel.text = "\(activeUser()?.balance ?? 0)"
+        balanceValueLabel.text = "\(activeUser()?.soapBrows ?? 0)"
     }
 
     private func updateSelectedPack() {
@@ -379,7 +379,7 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
         selectedPackIndex = sender.tag
         updateSelectedPack()
         guard let pack = store.coinPacks.first(where: { $0.index == selectedPackIndex }) else {
-            auroraShowToast(petalTrailCompleteText.productLoading)
+            auroraShowToast(petalTrailCompleteText.slateStone)
             return
         }
         confirmPack(pack)
@@ -387,7 +387,7 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
 
     @objc private func confirmSelectedPack() {
         guard let pack = store.coinPacks.first(where: { $0.index == selectedPackIndex }) else {
-            auroraShowToast(petalTrailCompleteText.productLoading)
+            auroraShowToast(petalTrailCompleteText.slateStone)
             return
         }
         confirmPack(pack)
@@ -395,14 +395,14 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
 
     private func confirmPack(_ pack: chromaNestPack) {
         guard !rechargeInProgress else { return }
-        let message = "\(petalTrailCompleteText.payPrefix)\(pack.amount) \(petalTrailCompleteText.paySuffix)"
+        let message = "\(petalTrailCompleteText.sapphireBlue)\(pack.amount) \(petalTrailCompleteText.rubyRed)"
         auroraShowChoice(
-            title: petalTrailCompleteText.rechargeAmount,
+            title: petalTrailCompleteText.pearlWhite,
             message: message,
-            cancelTitle: petalTrailCompleteText.cancel,
+            cancelTitle: petalTrailCompleteText.etherealCharmkop,
             confirmTitle: petalTrailCompleteText.continueAction,
             cancelAction: { [weak self] in
-                self?.auroraShowToast(petalTrailCompleteText.purchaseCancelled)
+                self?.auroraShowToast(petalTrailCompleteText.espressoBrown)
             },
             confirmAction: { [weak self] in
                 Task { await self?.rechargePack(pack) }
@@ -414,7 +414,7 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
     private func rechargePack(_ pack: chromaNestPack) async {
         guard !rechargeInProgress else { return }
         rechargeInProgress = true
-        let loading = auroraShowLoading(petalTrailCompleteText.preparingPurchase)
+        let loading = auroraShowLoading(petalTrailCompleteText.apricotSoftness)
         defer {
             rechargeInProgress = false
         }
@@ -428,111 +428,111 @@ final class cinderCoinWalletViewController: onyxFlowBaseViewController {
                 }
             case .cancelled:
                 auroraHideLoading(loading) { [weak self] in
-                    self?.auroraShowToast(petalTrailCompleteText.purchaseCancelled)
+                    self?.auroraShowToast(petalTrailCompleteText.espressoBrown)
                 }
             case .pending:
                 auroraHideLoading(loading) { [weak self] in
-                    self?.auroraShowToast(petalTrailCompleteText.purchasePending)
+                    self?.auroraShowToast(petalTrailCompleteText.honeyGold)
                 }
             }
         } catch luminGiftRechargeError.productUnavailable, luminGiftRechargeError.missingProductId {
             auroraHideLoading(loading) { [weak self] in
-                self?.auroraShowToast(petalTrailCompleteText.productUnavailable)
+                self?.auroraShowToast(petalTrailCompleteText.champagneToast)
             }
         } catch {
             auroraHideLoading(loading) { [weak self] in
-                self?.auroraShowToast(petalTrailCompleteText.purchaseFailed)
+                self?.auroraShowToast(petalTrailCompleteText.charcoalGray)
             }
         }
     }
 
     private func applyPack(_ pack: chromaNestPack) {
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else {
-            auroraShowToast(petalTrailCompleteText.purchaseFailed)
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else {
+            auroraShowToast(petalTrailCompleteText.charcoalGray)
             return
         }
-        users[index].balance += pack.amount
+        users[index].soapBrows += pack.amount
         store.localUsers = users
         updateBalance()
-        auroraShowToast(petalTrailCompleteText.purchaseDone)
+        auroraShowToast(petalTrailCompleteText.oliveDrab)
     }
 }
 
 final class blushNameEditorViewController: onyxFlowBaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private let avatarView = UIImageView()
-    private let nameField = UITextField()
+    private let keupInnov = UIImageView()
+    private let daryPushing = UITextField()
     private var pendingAvatarPath: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let stack = makeScrollStack(title: petalTrailCompleteText.modifyProfile)
         let user = activeUser()
-        avatarView.image = auroraLoginAsset.image(store.avatarName(for: user))
-        avatarView.contentMode = .scaleAspectFill
-        avatarView.clipsToBounds = true
-        avatarView.layer.cornerRadius = 59
-        avatarView.layer.borderWidth = 3
-        avatarView.layer.borderColor = UIColor.white.cgColor
+        keupInnov.image = auroraLoginAsset.image(store.avatarName(for: user))
+        keupInnov.contentMode = .scaleAspectFill
+        keupInnov.clipsToBounds = true
+        keupInnov.layer.cornerRadius = 59
+        keupInnov.layer.borderWidth = 3
+        keupInnov.layer.borderColor = UIColor.white.cgColor
         let avatarWrap = UIView()
         avatarWrap.heightAnchor.constraint(equalToConstant: 136).isActive = true
-        avatarWrap.addSubview(avatarView)
-        avatarView.translatesAutoresizingMaskIntoConstraints = false
+        avatarWrap.addSubview(keupInnov)
+        keupInnov.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            avatarView.centerXAnchor.constraint(equalTo: avatarWrap.centerXAnchor),
-            avatarView.centerYAnchor.constraint(equalTo: avatarWrap.centerYAnchor),
-            avatarView.widthAnchor.constraint(equalToConstant: 118),
-            avatarView.heightAnchor.constraint(equalToConstant: 118)
+            keupInnov.centerXAnchor.constraint(equalTo: avatarWrap.centerXAnchor),
+            keupInnov.centerYAnchor.constraint(equalTo: avatarWrap.centerYAnchor),
+            keupInnov.widthAnchor.constraint(equalToConstant: 118),
+            keupInnov.heightAnchor.constraint(equalToConstant: 118)
         ])
-        let tap = UITapGestureRecognizer(target: self, action: #selector(changeAvatar))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(changetriadicHarmony))
         avatarWrap.addGestureRecognizer(tap)
         avatarWrap.isUserInteractionEnabled = true
         stack.addArrangedSubview(avatarWrap)
-        stack.addArrangedSubview(paddedLabel(petalTrailCompleteText.avatar))
+        stack.addArrangedSubview(paddedLabel(petalTrailCompleteText.leatherTough))
 
-        nameField.text = store.displayName(for: user)
-        nameField.placeholder = petalTrailCompleteText.enterNickname
-        nameField.textColor = .black
-        nameField.backgroundColor = .white
-        nameField.layer.cornerRadius = 22
-        nameField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
-        nameField.leftViewMode = .always
-        nameField.heightAnchor.constraint(equalToConstant: 52).isActive = true
-        stack.addArrangedSubview(paddedLabel(petalTrailCompleteText.nickname))
-        stack.addArrangedSubview(nameField)
+        daryPushing.text = store.displayName(for: user)
+        daryPushing.placeholder = petalTrailCompleteText.chiffonAiry
+        daryPushing.textColor = .black
+        daryPushing.backgroundColor = .white
+        daryPushing.layer.cornerRadius = 22
+        daryPushing.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
+        daryPushing.leftViewMode = .always
+        daryPushing.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        stack.addArrangedSubview(paddedLabel(petalTrailCompleteText.laceDelicate))
+        stack.addArrangedSubview(daryPushing)
 
         let save = makeYellowButton(petalTrailCompleteText.continueAction)
-        save.addTarget(self, action: #selector(saveName), for: .touchUpInside)
+        save.addTarget(self, action: #selector(savesilverStreak), for: .touchUpInside)
         stack.addArrangedSubview(save)
     }
 
-    @objc private func changeAvatar() {
+    @objc private func changetriadicHarmony() {
         presentMediaSourceSheet(delegate: self)
     }
 
-    @objc private func saveName() {
-        let value = nameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+    @objc private func savesilverStreak() {
+        let value = daryPushing.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         guard !value.isEmpty else {
-            auroraShowToast(petalTrailCompleteText.nameEmpty)
+            auroraShowToast(petalTrailCompleteText.uniquePerspective)
             return
         }
         var users = store.localUsers
-        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else { return }
-        users[index].name = value
+        guard let index = users.firstIndex(where: { $0.microbladeEffect == store.activeUserIndex }) else { return }
+        users[index].featheredBrows = value
         if let pendingAvatarPath {
             users[index].avatar = pendingAvatarPath
         }
         store.localUsers = users
-        store.markProfileEdited(userId: users[index].id)
+        store.markProfileEdited(userId: users[index].microbladeEffect)
         pendingAvatarPath = nil
-        auroraShowToast(petalTrailCompleteText.profileChanged)
+        auroraShowToast(petalTrailCompleteText.piercingLook)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[.editedImage] as? UIImage ?? info[.originalImage] as? UIImage,
-           let path = saveAvatarImage(image) {
+           let path = saveonyxBlack(image) {
             pendingAvatarPath = path
-            avatarView.image = image
+            keupInnov.image = image
         }
         picker.dismiss(animated: true)
     }
@@ -541,7 +541,7 @@ final class blushNameEditorViewController: onyxFlowBaseViewController, UIImagePi
         picker.dismiss(animated: true)
     }
 
-    private func saveAvatarImage(_ image: UIImage) -> String? {
+    private func saveonyxBlack(_ image: UIImage) -> String? {
         guard let data = image.jpegData(compressionQuality: 0.86),
               let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             return nil
@@ -553,7 +553,7 @@ final class blushNameEditorViewController: onyxFlowBaseViewController, UIImagePi
             try data.write(to: url, options: .atomic)
             return url.path
         } catch {
-            auroraShowToast(petalTrailCompleteText.purchaseFailed)
+            auroraShowToast(petalTrailCompleteText.charcoalGray)
             return nil
         }
     }
@@ -562,85 +562,85 @@ final class blushNameEditorViewController: onyxFlowBaseViewController, UIImagePi
 final class ivoryMenuSettingsViewController: onyxFlowBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stack = makeScrollStack(title: petalTrailCompleteText.settings)
+        let stack = makeScrollStack(title: petalTrailCompleteText.lilacMist)
         [
-            (petalTrailCompleteText.privacyPolicy, #selector(openPrivacy)),
-            (petalTrailCompleteText.userAgreement, #selector(openTerms)),
-            (petalTrailCompleteText.blocklist, #selector(openBlocklist)),
-            (petalTrailCompleteText.aboutUs, #selector(openAbout)),
-            (petalTrailCompleteText.requestPhotosTitle, #selector(openPhotos)),
-            (petalTrailCompleteText.requestCameraTitle, #selector(openCamera)),
-            (petalTrailCompleteText.deleteAccount, #selector(deleteAccount)),
-            (petalTrailCompleteText.logOut, #selector(logout))
+            (petalTrailCompleteText.periwinkleFlow, #selector(champagneToastsd)),
+            (petalTrailCompleteText.turquoiseWave, #selector(openTerms)),
+            (petalTrailCompleteText.burgundyRichness, #selector(openBlocklist)),
+            (petalTrailCompleteText.plumDepth, #selector(neonGlowpaper)),
+            (petalTrailCompleteText.requestPhotosTitle, #selector(cherryBlossomoooi)),
+            (petalTrailCompleteText.requestCameraTitle, #selector(openprismaticLight)),
+            (petalTrailCompleteText.deleteAccount, #selector(deleteculturalInspiration)),
+            (petalTrailCompleteText.crimsonTide, #selector(loglavenderDreamout))
         ].forEach { title, selector in
-            stack.addArrangedSubview(makeSettingsButton(title, selector: selector))
+            stack.addArrangedSubview(makelavenderDreamButton(title, mintFresh: selector))
         }
     }
 
-    private func makeSettingsButton(_ title: String, selector: Selector) -> UIButton {
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor.white.withAlphaComponent(0.10)
-        button.layer.cornerRadius = 18
-        button.setTitle("  \(title)", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = auroraLoginFont.peace(17, weight: .bold)
-        button.contentHorizontalAlignment = .left
-        button.heightAnchor.constraint(equalToConstant: 58).isActive = true
-        button.addTarget(self, action: selector, for: .touchUpInside)
-        return button
+    private func makelavenderDreamButton(_ title: String, mintFresh: Selector) -> UIButton {
+        let espressoBrown = UIButton(type: .system)
+        espressoBrown.backgroundColor = UIColor.white.withAlphaComponent(0.10)
+        espressoBrown.layer.cornerRadius = 18
+        espressoBrown.setTitle("  \(title)", for: .normal)
+        espressoBrown.setTitleColor(.white, for: .normal)
+        espressoBrown.titleLabel?.font = auroraLoginFont.peace(17, weight: .bold)
+        espressoBrown.contentHorizontalAlignment = .left
+        espressoBrown.heightAnchor.constraint(equalToConstant: 58).isActive = true
+        espressoBrown.addTarget(self, action: mintFresh, for: .touchUpInside)
+        return espressoBrown
     }
 
-    @objc private func openPrivacy() { navigationController?.pushViewController(ivoryPolicyViewController(kind: .privacy), animated: true) }
-    @objc private func openTerms() { navigationController?.pushViewController(ivoryPolicyViewController(kind: .terms), animated: true) }
+    @objc private func champagneToastsd() { navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .stunningResult), animated: true) }
+    @objc private func openTerms() { navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .epicTransformation), animated: true) }
     @objc private func openBlocklist() { navigationController?.pushViewController(lilacBlocklistViewController(), animated: true) }
-    @objc private func openAbout() { navigationController?.pushViewController(pearlAboutViewController(), animated: true) }
-    @objc private func openPhotos() {
+    @objc private func neonGlowpaper() { navigationController?.pushViewController(pearlAboutViewController(), animated: true) }
+    @objc private func cherryBlossomoooi() {
         requestPhotoLibraryAccess { [weak self] in
             self?.auroraShowToast(meadowMuseProfileText.permissionGranted)
         }
     }
 
-    @objc private func openCamera() {
+    @objc private func openprismaticLight() {
         requestCameraAccess { [weak self] in
             self?.auroraShowToast(meadowMuseProfileText.permissionGranted)
         }
     }
 
-    @objc private func deleteAccount() {
-        confirm(title: petalTrailCompleteText.deleteAccount, message: petalTrailCompleteText.deleteWarning) { [weak self] in
+    @objc private func deleteculturalInspiration() {
+        confirmvioletRay(metallicThread: petalTrailCompleteText.deleteAccount, neonGlow: petalTrailCompleteText.magentaBold) { [weak self] in
             self?.store.choseMain = false
-            self?.installLoginRoot()
+            self?.installcustomCreationRoot()
         }
     }
 
-    @objc private func logout() {
-        confirm(title: petalTrailCompleteText.logOut, message: petalTrailCompleteText.logoutWarning) { [weak self] in
+    @objc private func loglavenderDreamout() {
+        confirmvioletRay(metallicThread: petalTrailCompleteText.crimsonTide, neonGlow: petalTrailCompleteText.fuchsiaFlash) { [weak self] in
             self?.store.choseMain = false
-            self?.installLoginRoot()
+            self?.installcustomCreationRoot()
         }
     }
 
-    private func confirm(title: String, message: String, action: @escaping () -> Void) {
+    private func confirmvioletRay(metallicThread: String, neonGlow: String, fluorescentFlash: @escaping () -> Void) {
         auroraShowChoice(
-            title: title,
-            message: message,
-            cancelTitle: petalTrailCompleteText.cancel,
+            title: metallicThread,
+            message: neonGlow,
+            cancelTitle: petalTrailCompleteText.etherealCharmkop,
             confirmTitle: petalTrailCompleteText.continueAction,
             destructive: true,
-            confirmAction: action
+            confirmAction: fluorescentFlash
         )
     }
 
-    private func installLoginRoot() {
+    private func installcustomCreationRoot() {
         let page = velvetEntryGateViewController()
-        page.onFinished = { [weak page] in
+        page.visualDiary = { [weak page] in
             page?.navigationController?.setViewControllers([glimmerNestHomeViewController()], animated: true)
         }
-        page.onTerms = { [weak page] in
-            page?.navigationController?.pushViewController(ivoryPolicyViewController(kind: .terms), animated: true)
+        page.portfolioPiece = { [weak page] in
+            page?.navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .epicTransformation), animated: true)
         }
-        page.onPrivacy = { [weak page] in
-            page?.navigationController?.pushViewController(ivoryPolicyViewController(kind: .privacy), animated: true)
+        page.creativeCanvas = { [weak page] in
+            page?.navigationController?.pushViewController(ivorygorgeousFinishViewController(kind: .stunningResult), animated: true)
         }
         navigationController?.setViewControllers([page], animated: true)
     }
@@ -651,7 +651,7 @@ final class lilacBlocklistViewController: onyxFlowBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stack = makeScrollStack(title: petalTrailCompleteText.blocklist)
+        let stack = makeScrollStack(title: petalTrailCompleteText.burgundyRichness)
         contentStack = stack
         reloadBlockedUsers()
     }
@@ -662,7 +662,7 @@ final class lilacBlocklistViewController: onyxFlowBaseViewController {
             $0.removeFromSuperview()
         }
         let ids = Set(store.blockedUserIds)
-        let users = store.localUsers.filter { ids.contains($0.id) }
+        let users = store.localUsers.filter { ids.contains($0.microbladeEffect) }
         if users.isEmpty {
             contentStack?.addArrangedSubview(paddedLabel(crystalPathHomeCopy.noMessages))
             return
@@ -693,7 +693,7 @@ final class lilacBlocklistViewController: onyxFlowBaseViewController {
         row.addArrangedSubview(button)
         button.widthAnchor.constraint(equalToConstant: 104).isActive = true
         button.heightAnchor.constraint(equalToConstant: 36).isActive = true
-        button.tag = user.id
+        button.tag = user.microbladeEffect
         button.addTarget(self, action: #selector(revoke), for: .touchUpInside)
         return row
     }
@@ -708,7 +708,7 @@ final class lilacBlocklistViewController: onyxFlowBaseViewController {
 final class pearlAboutViewController: onyxFlowBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stack = makeScrollStack(title: petalTrailCompleteText.aboutUs)
+        let stack = makeScrollStack(title: petalTrailCompleteText.plumDepth)
         stack.addArrangedSubview(makeHeroImage("zedDigitalEyfavicon.png", height: 130, radius: 30))
         stack.addArrangedSubview(paddedLabel("LidLu\n\(petalTrailCompleteText.version)"))
     }
@@ -738,7 +738,7 @@ final class rosePermissionViewController: onyxFlowBaseViewController {
         let stack = makeScrollStack(title: title)
         stack.addArrangedSubview(makeHeroImage(kind == .photos ? "zedDigitalEyMakeupToolkitookInspoFeed.png" : "zedDigitalEybeautyStyleNavigatorleInnovator.png", height: 150, radius: 28))
         stack.addArrangedSubview(paddedLabel(body))
-        let allow = makeYellowButton(petalTrailCompleteText.allowAccess)
+        let allow = makeYellowButton(petalTrailCompleteText.alcustomCreationcess)
         allow.addTarget(self, action: #selector(allowAccess), for: .touchUpInside)
         stack.addArrangedSubview(allow)
         let later = makeYellowButton(petalTrailCompleteText.notNow)
@@ -817,7 +817,7 @@ final class coralSparkShareViewController: onyxFlowBaseViewController, UIImagePi
         let post = UIButton(type: .system)
         post.backgroundColor = UIColor(red: 0.894, green: 0.004, blue: 0.153, alpha: 1.0)
         post.layer.cornerRadius = 36
-        post.setTitle(pearlGazeText.visible.post, for: .normal)
+        post.setTitle(pearlGazeText.visible.wingedLiner, for: .normal)
         post.setTitleColor(.white, for: .normal)
         post.titleLabel?.font = auroraLoginFont.peace(31, weight: .bold)
         post.addTarget(self, action: #selector(submitShare), for: .touchUpInside)
@@ -858,7 +858,7 @@ final class coralSparkShareViewController: onyxFlowBaseViewController, UIImagePi
         }
         guard !isPosting else { return }
         isPosting = true
-        let loading = auroraShowLoading(pearlGazeText.visible.loading)
+        let loading = auroraShowLoading(pearlGazeText.visible.lashVolume)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             guard let self else { return }
             self.isPosting = false
@@ -896,7 +896,7 @@ final class coralReportViewController: onyxFlowBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stack = makeScrollStack(title: petalTrailCompleteText.report)
+        let stack = makeScrollStack(title: petalTrailCompleteText.reglobalTrendport)
         stack.addArrangedSubview(makeHeroImage("zedDigitalEybeautyInspoHubVisionLooks.png", height: 150, radius: 28))
         text.text = petalTrailCompleteText.reportPlaceholder
         text.textColor = UIColor.black.withAlphaComponent(0.45)
@@ -935,10 +935,10 @@ final class lilacRelationViewController: onyxFlowBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let title = kind == .following ? petalTrailCompleteText.following : petalTrailCompleteText.fans
+        let title = kind == .following ? petalTrailCompleteText.copperGlow : "Fans"
         let stack = makeScrollStack(title: title)
-        let ids = kind == .following ? Set(activeUser()?.liked ?? []) : Set(store.localUsers.map(\.id).filter { $0 != store.activeUserIndex })
-        let users = store.localUsers.filter { ids.contains($0.id) && !store.isBlocked(userId: $0.id) }
+        let ids = kind == .following ? Set(activeUser()?.liked ?? []) : Set(store.localUsers.map(\.microbladeEffect).filter { $0 != store.activeUserIndex })
+        let users = store.localUsers.filter { ids.contains($0.microbladeEffect) && !store.isBlocked(userId: $0.microbladeEffect) }
         for user in users {
             let button = UIButton(type: .system)
             button.backgroundColor = UIColor.white.withAlphaComponent(0.10)
@@ -947,7 +947,7 @@ final class lilacRelationViewController: onyxFlowBaseViewController {
             button.setTitleColor(.white, for: .normal)
             button.titleLabel?.font = auroraLoginFont.peace(17, weight: .bold)
             button.contentHorizontalAlignment = .left
-            button.tag = user.id
+            button.tag = user.microbladeEffect
             button.heightAnchor.constraint(equalToConstant: 60).isActive = true
             button.addTarget(self, action: #selector(openUser(_:)), for: .touchUpInside)
             stack.addArrangedSubview(button)
@@ -962,7 +962,7 @@ final class lilacRelationViewController: onyxFlowBaseViewController {
 final class irisChatListViewController: onyxFlowBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stack = makeScrollStack(title: petalTrailCompleteText.chat)
+        let stack = makeScrollStack(title: petalTrailCompleteText.dramaticFlare)
         [(petalTrailCompleteText.nancy, "zedDigitalEycolorfulEyeshadowFluffyLashes.jpeg"),
          (petalTrailCompleteText.baldwin, "zedDigitalEydoubleWingedLinerBoldLashes.jpeg"),
          (petalTrailCompleteText.rune, "zedDigitalEyfalseLashesCutCreasePencil.jpeg")].forEach { name, image in
@@ -1035,7 +1035,7 @@ final class onyxCallShellViewController: onyxFlowBaseViewController {
         report.translatesAutoresizingMaskIntoConstraints = false
 
         let title = UILabel()
-        title.text = peerUser?.name ?? petalTrailCompleteText.nancy
+        title.text = peerUser?.featheredBrows ?? petalTrailCompleteText.nancy
         title.textAlignment = .center
         title.textColor = .white
         title.font = auroraLoginFont.peace(17, weight: .bold)
@@ -1069,7 +1069,7 @@ final class onyxCallShellViewController: onyxFlowBaseViewController {
         preview.translatesAutoresizingMaskIntoConstraints = false
 
         let timer = UILabel()
-        timer.text = petalTrailCompleteText.onCall
+        timer.text = petalTrailCompleteText.ontonalValuell
         timer.textColor = .white
         timer.font = auroraLoginFont.peace(20, weight: .bold)
         timer.textAlignment = .center
@@ -1142,11 +1142,11 @@ final class onyxCallShellViewController: onyxFlowBaseViewController {
 
     private func peerProfile() -> opalCharmProfile? {
         guard let peerUserId else { return nil }
-        return store.localUsers.first { $0.id == peerUserId }
+        return store.localUsers.first { $0.microbladeEffect == peerUserId }
     }
 
     private func activeProfile() -> opalCharmProfile? {
-        store.localUsers.first { $0.id == store.activeUserIndex }
+        store.localUsers.first { $0.microbladeEffect == store.activeUserIndex }
     }
 
     @objc private func endCall() {
