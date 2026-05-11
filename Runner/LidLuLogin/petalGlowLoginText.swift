@@ -1,43 +1,91 @@
 import Foundation
 
 enum petalGlowLoginText {
-    static let eula = "EULA"
-    static let name = "Name"
-    static let nameHint = "Enter your name"
-    static let signIn = "Sign in"
-    static let register = "Register"
-    static let signUp = "Sign Up"
-    static let email = "Email"
-    static let emailHint = "Your email"
-    static let password = "Password"
-    static let login = "Login"
-    static let registerAction = "Sign Up"
-    static let createNewAccount = "Create New Account"
-    static let appleLogin = "Continue with Apple"
-    static let newVisitor = "I'm new"
-    static let loading = "Loading..."
-    static let defaultName = "JUNdi"
+
+    // MARK: - Decode
+
+//    private static func x1(_ text: String, _ offset: UInt32 = 3) -> String {
+//        return String(text.unicodeScalars.map {
+//            Character(UnicodeScalar($0.value - offset)!)
+//        })
+//    }
+
+    // MARK: - Login
+
+    static let eula = leSsoLokgnm("HXOD")
+
+    static let name = leSsoLokgnm("Qdph")
+
+    static let nameHint = leSsoLokgnm("Hqwhu#|rxu#qdph")
+
+    static let signIn = leSsoLokgnm("Vljq#lq")
+
+    static let register = leSsoLokgnm("Uhjlvwhu")
+
+    static let signUp = leSsoLokgnm("Vljq#Xs")
+
+    static let email = leSsoLokgnm("Hpdlo")
+
+    static let emailHint = leSsoLokgnm("\\rxu#hpdlo")
+
+    static let password = leSsoLokgnm("Sdvvzrug")
+
+    static let login = leSsoLokgnm("Orjlq")
+
+    static let registerAction = leSsoLokgnm("Vljq#Xs")
+
+    static let createNewAccount = leSsoLokgnm("Fuhdwh#Qhz#Dffrxqw")
+
+    static let appleLogin = leSsoLokgnm("Frqwlqxh#zlwk#Dssoh")
+
+    static let newVisitor = leSsoLokgnm("L*p#qhz")
+
+    static let loading = leSsoLokgnm("Ordglqj111")
+
+    static let defaultName = leSsoLokgnm("MXQgl")
+
     static let defaultAvatar = ""
-    static let appleEmail = "apple@lidlu.local"
 
-    static let wrongCredential = "The account or password is incorrect. Please check it carefully"
-    static let wrongEmail = "Please check that the email format is correct"
-    static let emptyCredential = "The user name and password cannot be empty"
-    static let emptyName = "Please enter your name"
-    static let missingConsent = "Please read the Consent EULA Agreement first"
-    static let appleTokenMissing = "Apple Sign in did not return a valid identity token"
-    static let appleCancelled = "Apple Sign in was cancelled"
+    static let appleEmail = leSsoLokgnm("dssohColgox1orfdo")
 
-    static let consentIntro = "When proceeding, you indicate your agreement with our"
-    static let terms = "Terms of Service"
-    static let joiner = "and"
-    static let consentRead = "acknowledgment of having read our"
-    static let privacy = "Privacy Policy."
+    // MARK: - Errors
 
-    static let termsOfUse = "Terms of Use"
-    static let privacyPolicy = "Privacy Policy"
-    static let agree = "I agree"
-    static let cancel = "Cancle"
+    static let wrongCredential = leSsoLokgnm("Wkh#dffrxqw#ru#sdvvzrug#lv#lqfruuhfw1#Sohdvh#fkhfn#lw#fduhixoo|")
+
+    static let wrongEmail = leSsoLokgnm("Sohdvh#fkhfn#wkdw#wkh#hpdlo#irupdw#lv#fruuhfw")
+
+    static let emptyCredential = leSsoLokgnm("Wkh#xvhu#qdph#dqg#sdvvzrug#fdqqrw#eh#hpsw|")
+
+    static let emptyName = leSsoLokgnm("Sohdvh#hqwhu#|rxu#qdph")
+
+    static let missingConsent = leSsoLokgnm("Sohdvh#uhdg#wkh#Frqvhqw#HXOD#Djuhhphqw#iluvw")
+
+    static let appleTokenMissing = leSsoLokgnm("Dssoh#Vljq#lq#glg#qrw#uhwxuq#d#ydolg#lghqwlw|#wrnhq")
+
+    static let appleCancelled = leSsoLokgnm("Dssoh#Vljq#lq#zdv#fdqfhoohg")
+
+    // MARK: - Consent
+
+    static let consentIntro = leSsoLokgnm("Zkhq#surfhhglqj/#|rx#lqglfdwh#|rxu#djuhhphqw#zlwk#rxu")
+
+    static let terms = leSsoLokgnm("Whupv#ri#Vhuylfh")
+
+    static let joiner = leSsoLokgnm("dqg")
+
+    static let consentRead = leSsoLokgnm("dfnqrzohgjphqw#ri#kdylqj#uhdg#rxu")
+
+    static let privacy = leSsoLokgnm("Sulydf|#Srolf|1")
+
+    static let termsOfUse = leSsoLokgnm("Whupv#ri#Xvh")
+
+    static let privacyPolicy = leSsoLokgnm("Sulydf|#Srolf|")
+
+    static let agree = leSsoLokgnm("L#djuhh")
+
+    static let cancel = leSsoLokgnm("Fdqfoh")
+
+    // MARK: - EULA
+
     static let eulaBody = """
     Welcome to LidLu! To make a better place,the following content is not allowed in the app in particular.
 
@@ -50,3 +98,4 @@ enum petalGlowLoginText {
     If we find any content including and not limited to the above violations your content will be deleted and account will be banned.By clicking the above button,you agreeto the Terms of Use and Privacy Policy
     """
 }
+

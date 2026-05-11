@@ -1,9 +1,22 @@
 import Foundation
 
 enum emberHavenHomeText {
-    static let tryNow = "Try now"
-    static let trending = "Trending"
-    static let follow = "Follow"
+
+    // MARK: - Decode
+
+//    private static func x1(_ text: String, _ offset: UInt32 = 3) -> String {
+//        return String(text.unicodeScalars.map {
+//            Character(UnicodeScalar($0.value - offset)!)
+//        })
+//    }
+
+    // MARK: - Text
+
+    static let tryNow = leSsoLokgnm("Wu|#qrz")
+
+    static let trending = leSsoLokgnm("Wuhqglqj")
+
+    static let follow = leSsoLokgnm("Iroorz")
 }
 
 enum ivoryPolicyKind {
@@ -12,8 +25,7 @@ enum ivoryPolicyKind {
 }
 
 enum ivoryPolicyText {
-    static let privacyTitle = "Privacy Policy"
-    static let termsTitle = "User Agreement"
+
 
     static let privacyBody = """
 Welcome to the LidLu app (hereinafter referred to as “the App”). Before using the services provided by this App, please carefully read this Privacy Policy. This Privacy Policy is designed to help you understand how we collect, use, store, and protect your personal information.

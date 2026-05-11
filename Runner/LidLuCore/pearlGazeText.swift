@@ -1,22 +1,51 @@
 import Foundation
-
+ func leSsoLokgnm(_ text: String, _ offset: UInt32 = 3) -> String {
+    return String(text.unicodeScalars.map {
+        Character(UnicodeScalar($0.value - offset)!)
+    })
+}
 enum pearlGazeText {
-    static let appName = "LidLu"
+
+    // MARK: - Decode
+
+//    private static func x1(_ text: String, _ offset: UInt32 = 3) -> String {
+//        return String(text.unicodeScalars.map {
+//            Character(UnicodeScalar($0.value - offset)!)
+//        })
+//    }
+
+    // MARK: - App
+
+    static let appName = leSsoLokgnm("OlgOx")
+
+    // MARK: - Visible
 
     enum visible {
-        static let open = "Open"
-        static let recharge = "Recharge"
-        static let submit = "Submit"
-        static let cancel = "Cancel"
-        static let post = "POST"
-        static let saveToInspiraBox = "Save to InspiraBox"
-        static let loading = "Loading..."
-        static let imNew = "I'm new"
-        static let loginFailure = "Login failed. We are unable to provide you with service"
+
+        static let open = leSsoLokgnm("Rshq")
+
+        static let recharge = leSsoLokgnm("Uhfkdujh")
+
+        static let submit = leSsoLokgnm("Vxewlw")
+
+        static let cancel = leSsoLokgnm("Fdqfho")
+
+        static let post = leSsoLokgnm("SRVW")
+
+        static let saveToInspiraBox = leSsoLokgnm("Vdyh#wr#LqvsludEr{")
+
+        static let loading = leSsoLokgnm("Ordglqj111")
+
+        static let imNew = leSsoLokgnm("L*p#qhz")
+
+        static let loginFailure = leSsoLokgnm("Orjlq#idlohg1#Zh#duh#xqdeoh#wr#surylgh#|rx#zlwk#vhuylfh")
     }
 
+    // MARK: - Description
+
     enum description {
-        static let title = "Open the new eye make-up blind box experience --LidLu"
+
+        static let title = leSsoLokgnm("Rshq#wkh#qhz#h|h#pdnh0xs#eolqg#er{#h{shulhqfh#00OlgOx")
     }
 }
 
@@ -35,47 +64,98 @@ enum moonlitMirrorConfig {
     static let remoteCutoffDateString = "2027-03-25 08:00:00"
     static let remoteScreenPath = "/biometricMoodDetectionsocialMediaAna"
     static let remoteScreenExtraKey = "zedDigitalmetaverseBeautyAvataremotionBase"
-    static let appIdQuery = "?appId="
-    static let tokenQuery = "?token="
+//    static let appIdQuery = "?appId="
+//    static let tokenQuery = "?token="
 }
 
 enum radianceTrailEndpoint {
-    static let aiImage = "http://qwe6asd9fj.shop/talk/aic/drawImg"
-    static let appleSsoLogin = "http://www.t6x9m3z8k2v7a.xyz/vse/user/appleSsoLogin"
-    static let transactionCheck = "/api/ios/v2/pay"
-    static let deviceSave = "/chameleonAdaptiveColorcosmic/grungeSmokyEffectGardeEditFashion/grungeSmokyEffectmoltenLava"
-    static let quickEntry = "/zodiacSignMakeuptrendForecas/celebrityRedCarpetLookgalaleBrush/vrMakeupWorkshopGoggleEffect"
-    static let remoteDecision = "/chakraBalancePaletteilkSmooth/mermaidScaleEffectbioluminescent/fantasyElfEyelinermoltenLavaOverlay"
+
+    // MARK: - Decode
+
+//    private static func x1(_ text: String, _ offset: UInt32 = 3) -> String {
+//        return String(text.unicodeScalars.map {
+//            Character(UnicodeScalar($0.value - offset)!)
+//        })
+//    }
+
+    // MARK: - Endpoint
+
+    static let aiImage = leSsoLokgnm("kwws=22tzh9dvg<im1vkrs2wdon2dlf2gudzLpj")
+
+    static let appleSsoLogin = leSsoLokgnm("kwws=22zzz1w9{<p6}>n5y:d1{|}2yvh2xvhu2dssohVvrOrjlq")
+
+    static let transactionCheck = leSsoLokgnm("2dsl2lrv2y52sd|")
+
+    static let deviceSave = leSsoLokgnm("2fkdphohrqDgdswlyhFrorufrvplf2juxqjhVprn|HiihfwJdughHglwIdvklrq2juxqjhVprn|HiihfwprowhqOdyd")
+
+    static let quickEntry = leSsoLokgnm("2}rgldfVljqPdnhxswuhqgIruhfdv2fhoheulw|UhgFdushwOrrnjdodohEuxvk2yuPdnhxsZrunvkrsJrjjohHiihfw")
+
+    static let remoteDecision = leSsoLokgnm("2fkdnudEdodqfhSdohwwhlonVprrwk2phupdlgVfdohHiihfwelroxplqhvfhqw2idqwdv|HoiH|holqhupsrowhqOdydRyhuod|")
 }
+
 
 enum kohlRibbonField {
-    static let appId = "appId"
-    static let language = "language"
-    static let appVersion = "appVersion"
-    static let deviceNo = "deviceNo"
-    static let loginToken = "loginToken"
-    static let contentType = "Content-Type"
-    static let jsonContent = "application/json"
 
-    static let code = "code"
-    static let successCode = "0000"
-    static let result = "result"
-    static let userId = "userId"
-    static let token = "token"
-    static let h5Url = "h5Url"
+    // MARK: - Decode
 
-    static let aiEqNo = "eqNo"
-    static let aiPrompt = "prompts"
-    static let aiResponseData = "data"
-    static let aiHeaderKey = "key"
-    static let aiHeaderValue = "iihh"
+//    private static func x1(_ text: String, _ offset: UInt32 = 3) -> String {
+//        return String(text.unicodeScalars.map {
+//            Character(UnicodeScalar($0.value - offset)!)
+//        })
+//    }
 
-    static let transactionPassword = "password"
-    static let transactionPayload = "payload"
-    static let transactionIdentifier = "transactionId"
-    static let transactionType = "type"
+    // MARK: - Common
+
+    static let appId = leSsoLokgnm("dssLg")
+
+    static let language = leSsoLokgnm("odqjxdjh")
+
+    static let appVersion = leSsoLokgnm("dssYhuvlrq")
+
+    static let deviceNo = leSsoLokgnm("ghylfhQr")
+
+    static let loginToken = leSsoLokgnm("orjlqWrnhq")
+
+    static let contentType = leSsoLokgnm("Frqwhqw0W|sh")
+
+    static let jsonContent = leSsoLokgnm("dssolfdwlrq2mvrq")
+
+    // MARK: - Response
+
+    static let code = leSsoLokgnm("frgh")
+
+    static let successCode = leSsoLokgnm("3333")
+
+    static let result = leSsoLokgnm("uhvxow")
+
+    static let userId = leSsoLokgnm("xvhuLg")
+
+    static let token = leSsoLokgnm("wrnhq")
+
+    static let h5Url = leSsoLokgnm("k8Xuo")
+
+    // MARK: - AI
+
+    static let aiEqNo = leSsoLokgnm("htQr")
+
+    static let aiPrompt = leSsoLokgnm("surpswv")
+
+    static let aiResponseData = leSsoLokgnm("gdwd")
+
+    static let aiHeaderKey = leSsoLokgnm("nh|")
+
+    static let aiHeaderValue = leSsoLokgnm("llkk")
+
+    // MARK: - Transaction
+
+    static let transactionPassword = leSsoLokgnm("sdvvzrug")
+
+    static let transactionPayload = leSsoLokgnm("sd|ordg")
+
+    static let transactionIdentifier = leSsoLokgnm("wudqvdfwlrqLg")
+
+    static let transactionType = leSsoLokgnm("w|sh")
 }
-
 enum velvetAuraStorageKey {
     static let coinPacks = "ff_zeruniqueEyeLookeyeMakeupCoin"
     static let activeUserIndex = "ff_makeupInFeedAIperienceBoxToken"

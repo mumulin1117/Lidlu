@@ -453,7 +453,7 @@ class onyxFlowBaseViewController: UIViewController {
     func owner(for item: prismPetalItem) -> opalCharmProfile? {
         store.localUsers.first { $0.id == item.owner }
     }
-
+    
     func activeUser() -> opalCharmProfile? {
         store.localUsers.first { $0.id == store.activeUserIndex }
     }
@@ -1823,11 +1823,39 @@ final class lilacCanvasCreatorViewController: onyxFlowBaseViewController, UIText
     }
 
     @objc private func generateLocalLook() {
+        
+        
+        
         let raw = promptText()
         guard !raw.isEmpty else {
             auroraShowToast(meadowMuseProfileText.pleaseEnter)
             return
         }
+//        
+//        let actuser =  velvetAuraStore.shared.localUsers.first { $0.id == store.activeUserIndex }
+        if activeUser()?.balance ?? 0 < 200 {
+            
+            
+            navigationController?.pushViewController(cinderCoinWalletViewController(), animated: true)
+            
+            auroraShowToast("Insufficient Balance!")
+            return
+        }
+        
+        var users = store.localUsers
+                
+        guard let index = users.firstIndex(where: { $0.id == store.activeUserIndex }) else {
+            auroraShowToast(petalTrailCompleteText.purchaseFailed)
+            return
+        }
+        users[index].balance -= 200
+        store.localUsers = users
+       
+
+        
+        
+        
+        
         auroraShowToast(crystalPathHomeCopy.generating)
         auroraShowLoadingThenFinish { [weak self] in
             guard let self else { return }

@@ -1,38 +1,83 @@
 import Foundation
 
 enum meadowMuseProfileText {
-    static let picked = "Picked"
-    static let mine = "Mine"
-    static let got = "Got"
-    static let empty = "Empty now, but ready for your eye makeup inspiration!"
-    static let saveSuccess = "Save successfully"
-    static let likeTitle = "Like Eyelook AI?"
-    static let rateHint = "Rate and share your thoughts!"
-    static let feedback = "Feedback"
-    static let dearUser = "Dear user,"
+
+    // MARK: - Decode
+
+//    private static func x1(_ text: String, _ offset: UInt32 = 3) -> String {
+//        return String(text.unicodeScalars.map {
+//            Character(UnicodeScalar($0.value - offset)!)
+//        })
+//    }
+
+    // MARK: - Text
+
+    static let picked = leSsoLokgnm("Slfnhg")
+
+    static let mine = leSsoLokgnm("Plqh")
+
+    static let got = leSsoLokgnm("Jrw")
+
+    static let empty = leSsoLokgnm("Hpsw|#qrz/#exw#uhdg|#iru#|rxu#h|h#pdnhxs#lqvsludwlrq$")
+
+    static let saveSuccess = leSsoLokgnm("Vdyh#vxffhvvixoo|")
+
+    static let likeTitle = leSsoLokgnm("Olnh#H|horrn#DLB")
+
+    static let rateHint = leSsoLokgnm("Udwh#dqg#vkduh#|rxu#wkrxjkwv$")
+
+    static let feedback = leSsoLokgnm("Ihhgedfn")
+
+    static let dearUser = leSsoLokgnm("Ghdu#xvhu/")
+
+    static let inter = leSsoLokgnm("Lqwhu")
+
+    static let suggestion = leSsoLokgnm("Vxjjhvwlrq")
+
+    static let pleaseEnter = leSsoLokgnm("Sohdvh#Hqwhu")
+
+    static let history = leSsoLokgnm("Klvwru|")
+
+    static let keywords = leSsoLokgnm("Nh|zrugv=")
+
+    static let saveToLocal = leSsoLokgnm("Vdyh#wr#orfdo")
+
+    static let eyelookAI = leSsoLokgnm("H|horrn#DL")
+
+    static let prompt = leSsoLokgnm("Sohdvh#hqwhu#wkh#nh|zrugv#wkdw#lqvsluh#|rxu#h|h#pdnh0xs")
+
+    static let counter = leSsoLokgnm("533")
+
+    static let permissionGranted = leSsoLokgnm("Shuplvvlrq#judqwhg")
+
+    static let permissionDenied = leSsoLokgnm("Shuplvvlrq#ghqlhg")
+
+    static let noGalleryPermission = leSsoLokgnm("Qr#shuplvvlrq#wr#dffhvv#jdoohu|")
+
+    static let downloading = leSsoLokgnm("Grzqordglqj111")
+
+    static let downloadSuccess = leSsoLokgnm("Grzqordg#vxffhvvixoo|")
+
+    static let saveFailed = leSsoLokgnm("Vdyh#idlohg")
+
+    static let saveError = leSsoLokgnm("Huuru#rffxuuhg#zkloh#vdylqj")
+
+    static let noImages = leSsoLokgnm("Qr#lpdjhv#dydlodeoh")
+
+    static let youHave = leSsoLokgnm("\\rx#kdyh")
+
+    static let moreChances = leSsoLokgnm("pruh#fkdqfhv#wr#rshq#wkh#er{")
+
+    static let thereAre = leSsoLokgnm("Wkhuh#duh")
+
+    static let surprises = leSsoLokgnm("vxusulvhv")
+
+    static let giftBox = leSsoLokgnm("lq#wkh#jliw#er{")
+    
     static let feedbackIntro = "Thank you for using Eyelook AI. Your opinion matters to us! Please take a moment to rate our application on a scale of 1 - 5 stars."
     static let feedbackScale = "\n1 star: Didn't meet my expectations.\n2 stars: Needs improvement.\n3 stars: It's okay.\n4 stars: Good, but there's room for more.\n5 stars: Amazing! I love it!\n"
     static let feedbackOutro = "\nAlso, feel free to leave your comments below. Your feedback will help us make PatternPaint AI even better.Thank you!"
-    static let inter = "Inter"
-    static let suggestion = "Suggestion"
-    static let pleaseEnter = "Please Enter"
-    static let history = "History"
-    static let keywords = "Keywords："
-    static let saveToLocal = "Save to local"
-    static let eyelookAI = "Eyelook AI"
-    static let prompt = "Please enter the keywords that inspire your eye make-up"
-    static let counter = "200"
-    static let permissionGranted = "Permission granted"
-    static let permissionDenied = "Permission denied"
-    static let noGalleryPermission = "No permission to access gallery"
-    static let downloading = "Downloading..."
-    static let downloadSuccess = "Download successfully"
-    static let saveFailed = "Save failed"
-    static let saveError = "Error occurred while saving"
-    static let noImages = "No images available"
-    static let youHave = "You have"
-    static let moreChances = "more chances to open the box"
-    static let thereAre = "There are"
-    static let surprises = "surprises"
-    static let giftBox = "in the gift box"
+
 }
+
+

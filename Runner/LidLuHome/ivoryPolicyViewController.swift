@@ -55,7 +55,7 @@ final class ivoryPolicyViewController: UIViewController {
         ])
 
         let title = UILabel()
-        title.text = kind == .privacy ? ivoryPolicyText.privacyTitle : ivoryPolicyText.termsTitle
+        title.text = kind == .privacy ? "Privacy Policy": "User Agreement"
         title.font = auroraLoginFont.peace(20, weight: .medium)
         title.textAlignment = .center
         stack.addArrangedSubview(title)
