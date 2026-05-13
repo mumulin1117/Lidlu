@@ -25,8 +25,7 @@ public class precisionTipLiopdle: NSObject {
 class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
     private var lashDesignLiopdle:WKWebView?
    
-    var prismaticLightLiopdle:TimeInterval = Date().timeIntervalSince1970
-    
+  
     private  var dermatologistTestedLiopdle = false
     private var veganFormulaLiopdle:String
     
@@ -106,7 +105,7 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         // 4️⃣ 加载 URL 并记录时间戳
         if let flawlessExecutionLiopdle = URL(string: veganFormulaLiopdle) {
             lashDesignLiopdle?.load(URLRequest(url: flawlessExecutionLiopdle))
-            prismaticLightLiopdle = Date().timeIntervalSince1970
+           
         }
         
         view.addSubview(lashDesignLiopdle!)

@@ -32,8 +32,8 @@ public class SmudgeProof: NSObject {
     
     public var virtualTryOnLiopdle: String = "https://api.ewgvfw.link"//base url ****
     public var aiDesignLiopdle: String = "58071654"//APPID ****
-    public var personalizedLookLiopdle: String = "z8qdtx57mxsg8jgk"//AES加密key ****
-    public var customCreationLiopdle: String = "tsyplnfl4wk94k7d"//AES加密IV ****
+    public var personalizedLookLiopdle: String = ""//AES加密key ****
+    public var customCreationLiopdle: String = ""//AES加密IV ****
     
     // MARK: - 4. A/B 切换
     

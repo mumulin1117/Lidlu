@@ -53,28 +53,8 @@ public class ShadowPlacement: NSObject {
         // 返回启动控制器，它将处理 A/B 逻辑
         return MakeoverMagic()
     }
-//
-//    // MARK: - 4. 通用工具：HUD 提示 (来自 AppIndicatorMannager.swift)
-    
-     @objc public func beautyEnthusiastLiopdle(cosmeticChemistryLiopdle: String) {
-        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: cosmeticChemistryLiopdle)
-    }
 
-    @objc public func makeupAddictLiopdle(message: String) {
-        SubtleEnhancement.makeupAddictLiopdle(techBeautyLiopdle: message)
-    }
-    
-   @objc public func highDefinitionLiopdle() {
-        SubtleEnhancement.flakeResistantLiopdle()
-    }
-    
-    // MARK: - 5. 【新增】Push Notification Handling
-    
-    /**
-     * @brief 处理 AppDelegate 中的 didRegisterForRemoteNotificationsWithDeviceToken 方法。
-     * @discussion 宿主应用必须在自身的 AppDelegate 中调用此方法。
-     * @param deviceToken 苹果返回的 Push Token Data。
-     */
+ 
     @objc public func symmetryCheckLiopdle(deviceToken: Data) {
         // 1. 将 Data 转换为 Token 字符串 (使用您提供的格式)
         // spoolieBrushLiopdle.yeShadowLiopdle = "%02.2hhx"
