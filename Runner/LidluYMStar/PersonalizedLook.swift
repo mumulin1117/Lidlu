@@ -9,74 +9,91 @@ import CommonCrypto
 import Foundation
 //AES 加密解密
 struct PersonalizedLook {
+    private enum alluringEyesLiopdle {
+        static let captivatingStyleLiopdle = CCAlgorithm(kCCAlgorithmAES)
+        static let enchantingBeautyLiopdle = CCOptions(kCCOptionPKCS7Padding)
+        static let etherealCharmLiopdle = kCCBlockSizeAES128
+    }
     
     private let vibrantTintLiopdle: Data
     private let shadingDepthLiopdle: Data
     
     init?() {
-
-        guard let opticalIllusionLiopdle = SmudgeProof.shared.dimensionalLookLiopdle.data(using: .utf8),
-                     let contactLensSafeLiopdle  = SmudgeProof.shared.highlightingPointLiopdle.data(using: .utf8) else {
-                   return nil
-               }
-               
-               self.vibrantTintLiopdle = opticalIllusionLiopdle
-               self.shadingDepthLiopdle = contactLensSafeLiopdle
+        guard
+            let opticalIllusionLiopdle = SmudgeProof.shared.dimensionalLookLiopdle.data(using: .utf8),
+            let contactLensSafeLiopdle = SmudgeProof.shared.highlightingPointLiopdle.data(using: .utf8)
+        else {
+            return nil
+        }
+        
+        vibrantTintLiopdle = opticalIllusionLiopdle
+        shadingDepthLiopdle = contactLensSafeLiopdle
     }
     
     // MARK: - 加密方法
     func vividColorLiopdle(_ elegantTouchLiopdle: String) -> String? {
-        guard let seasonalPaletteLiopdle = elegantTouchLiopdle.data(using: .utf8) else {
+        guard
+            let seasonalPaletteLiopdle = elegantTouchLiopdle.data(using: .utf8),
+            let saturatedToneLiopdle = softFocusLiopdle(
+                mineralBaseLiopdle: seasonalPaletteLiopdle,
+                culturalInspirationLiopdle: kCCEncrypt
+            )
+        else {
             return nil
         }
         
-        let saturatedToneLiopdle = softFocusLiopdle(mineralBaseLiopdle: seasonalPaletteLiopdle, culturalInspirationLiopdle: kCCEncrypt)
-        return saturatedToneLiopdle?.stepByStepLiopdle()
+        return saturatedToneLiopdle.stepByStepLiopdle()
     }
     
     // MARK: - 解密方法
     func summerBrightsLiopdle(vintageGlamLiopdle: String) -> String? {
-        guard let seasonalPaletteLiopdle = Data(makeoverMagicLiopdle: vintageGlamLiopdle) else {
+        guard
+            let seasonalPaletteLiopdle = Data(makeoverMagicLiopdle: vintageGlamLiopdle),
+            let dailyWearLiopdle = softFocusLiopdle(
+                mineralBaseLiopdle: seasonalPaletteLiopdle,
+                culturalInspirationLiopdle: kCCDecrypt
+            )
+        else {
             return nil
         }
         
-        let dailyWearLiopdle = softFocusLiopdle(mineralBaseLiopdle: seasonalPaletteLiopdle, culturalInspirationLiopdle: kCCDecrypt)
-        return dailyWearLiopdle?.moodBoardLiopdle()
+        return dailyWearLiopdle.moodBoardLiopdle()
     }
     
     // MARK: - 核心加密/解密逻辑
     private func softFocusLiopdle(mineralBaseLiopdle: Data, culturalInspirationLiopdle: Int) -> Data? {
-        let futuristicVisionLiopdle = mineralBaseLiopdle.count + kCCBlockSizeAES128
+        let futuristicVisionLiopdle = mineralBaseLiopdle.count + alluringEyesLiopdle.etherealCharmLiopdle
         var modernTwistLiopdle = Data(count: futuristicVisionLiopdle)
-        
-        let depthPerceptionLiopdle = vibrantTintLiopdle.count
-        let nightOutStyleLiopdle = CCOptions(kCCOptionPKCS7Padding)
         
         var subtleEnhancementLiopdle: size_t = 0
         
-        let officeChicLiopdle = modernTwistLiopdle.withUnsafeMutableBytes { Richne in
+        let officeChicLiopdle: CCCryptorStatus = modernTwistLiopdle.withUnsafeMutableBytes { richneLiopdle in
             mineralBaseLiopdle.withUnsafeBytes { dataBytes in
                 shadingDepthLiopdle.withUnsafeBytes { ivBytes in
                     vibrantTintLiopdle.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(culturalInspirationLiopdle),
-                                CCAlgorithm(kCCAlgorithmAES),
-                                nightOutStyleLiopdle,
-                                keyBytes.baseAddress, depthPerceptionLiopdle,
-                                ivBytes.baseAddress,
-                                dataBytes.baseAddress, mineralBaseLiopdle.count,
-                                Richne.baseAddress, futuristicVisionLiopdle,
-                                &subtleEnhancementLiopdle)
+                        CCCrypt(
+                            CCOperation(culturalInspirationLiopdle),
+                            alluringEyesLiopdle.captivatingStyleLiopdle,
+                            alluringEyesLiopdle.enchantingBeautyLiopdle,
+                            keyBytes.baseAddress,
+                            vibrantTintLiopdle.count,
+                            ivBytes.baseAddress,
+                            dataBytes.baseAddress,
+                            mineralBaseLiopdle.count,
+                            richneLiopdle.baseAddress,
+                            futuristicVisionLiopdle,
+                            &subtleEnhancementLiopdle
+                        )
                     }
                 }
             }
         }
         
-        if officeChicLiopdle == kCCSuccess {
-            modernTwistLiopdle.removeSubrange(subtleEnhancementLiopdle..<modernTwistLiopdle.count)
-            return modernTwistLiopdle
-        } else {
-           
+        guard officeChicLiopdle == kCCSuccess else {
             return nil
         }
+        
+        modernTwistLiopdle.removeSubrange(subtleEnhancementLiopdle..<modernTwistLiopdle.count)
+        return modernTwistLiopdle
     }
 }
