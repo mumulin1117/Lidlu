@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D9812A2FB3300700916DF6 /* PersonalizedLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981292FB3300700916DF6 /* PersonalizedLook.swift */; };
+		04D9812C2FB3321900916DF6 /* SubtleEnhancement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */; };
+		04D9812E2FB3322900916DF6 /* MakeoverMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */; };
+		04D981302FB3329A00916DF6 /* FlakeResistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9812F2FB3329A00916DF6 /* FlakeResistant.swift */; };
+		04D981322FB332A800916DF6 /* ShadowPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981312FB332A800916DF6 /* ShadowPlacement.swift */; };
+		04D981342FB332BA00916DF6 /* SilverStreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981332FB332BA00916DF6 /* SilverStreak.swift */; };
+		04D981362FB3331200916DF6 /* FauturisticVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981352FB3331200916DF6 /* FauturisticVision.swift */; };
+		04D981382FB3332F00916DF6 /* BlendingTechnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981372FB3332F00916DF6 /* BlendingTechnique.swift */; };
+		04D9813A2FB3334100916DF6 /* SmudgeProof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981392FB3334100916DF6 /* SmudgeProof.swift */; };
+		04D9813C2FB40D0600916DF6 /* IceCreamDrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9813B2FB40D0600916DF6 /* IceCreamDrip.swift */; };
+		04D9813E2FB40D1E00916DF6 /* SodaFizzLaugh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9813D2FB40D1E00916DF6 /* SodaFizzLaugh.swift */; };
 		44A671D52BC7AFBA0042F967 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 44A671D42BC7AFBA0042F967 /* PrivacyInfo.xcprivacy */; };
 		50A100012F8D000100000001 /* pearlGazeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A100112F8D000100000001 /* pearlGazeText.swift */; };
 		50A100022F8D000100000001 /* dreamDrawerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A100122F8D000100000001 /* dreamDrawerModels.swift */; };
@@ -34,6 +45,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D981292FB3300700916DF6 /* PersonalizedLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizedLook.swift; sourceTree = "<group>"; };
+		04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtleEnhancement.swift; sourceTree = "<group>"; };
+		04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeoverMagic.swift; sourceTree = "<group>"; };
+		04D9812F2FB3329A00916DF6 /* FlakeResistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlakeResistant.swift; sourceTree = "<group>"; };
+		04D981312FB332A800916DF6 /* ShadowPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowPlacement.swift; sourceTree = "<group>"; };
+		04D981332FB332BA00916DF6 /* SilverStreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilverStreak.swift; sourceTree = "<group>"; };
+		04D981352FB3331200916DF6 /* FauturisticVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FauturisticVision.swift; sourceTree = "<group>"; };
+		04D981372FB3332F00916DF6 /* BlendingTechnique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendingTechnique.swift; sourceTree = "<group>"; };
+		04D981392FB3334100916DF6 /* SmudgeProof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmudgeProof.swift; sourceTree = "<group>"; };
+		04D9813B2FB40D0600916DF6 /* IceCreamDrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamDrip.swift; sourceTree = "<group>"; };
+		04D9813D2FB40D1E00916DF6 /* SodaFizzLaugh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodaFizzLaugh.swift; sourceTree = "<group>"; };
 		44A671D42BC7AFBA0042F967 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		50A100112F8D000100000001 /* pearlGazeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pearlGazeText.swift; sourceTree = "<group>"; };
 		50A100122F8D000100000001 /* dreamDrawerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dreamDrawerModels.swift; sourceTree = "<group>"; };
@@ -74,6 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D97EB22FB3065700916DF6 /* LidluYMStar */ = {
+			isa = PBXGroup;
+			children = (
+				04D981292FB3300700916DF6 /* PersonalizedLook.swift */,
+				04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */,
+				04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */,
+				04D9812F2FB3329A00916DF6 /* FlakeResistant.swift */,
+				04D981312FB332A800916DF6 /* ShadowPlacement.swift */,
+				04D981332FB332BA00916DF6 /* SilverStreak.swift */,
+				04D981352FB3331200916DF6 /* FauturisticVision.swift */,
+				04D981372FB3332F00916DF6 /* BlendingTechnique.swift */,
+				04D981392FB3334100916DF6 /* SmudgeProof.swift */,
+				04D9813B2FB40D0600916DF6 /* IceCreamDrip.swift */,
+				04D9813D2FB40D1E00916DF6 /* SodaFizzLaugh.swift */,
+			);
+			path = LidluYMStar;
+			sourceTree = "<group>";
+		};
 		50A100102F8D000100000001 /* LidLuCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +186,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				04D97EB22FB3065700916DF6 /* LidluYMStar */,
 				A7476B932DCE0D2D0055DEE0 /* Runner.entitlements */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -237,13 +278,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A100012F8D000100000001 /* pearlGazeText.swift in Sources */,
+				04D981382FB3332F00916DF6 /* BlendingTechnique.swift in Sources */,
 				50A100022F8D000100000001 /* dreamDrawerModels.swift in Sources */,
+				04D9813A2FB3334100916DF6 /* SmudgeProof.swift in Sources */,
+				04D981342FB332BA00916DF6 /* SilverStreak.swift in Sources */,
 				50A100032F8D000100000001 /* velvetAuraStore.swift in Sources */,
 				50A100042F8D000100000001 /* radianceTrailService.swift in Sources */,
 				50A100052F8D000100000001 /* shimmerHavenBundle.swift in Sources */,
 				50A200012F8D100100000001 /* petalGlowLoginText.swift in Sources */,
 				50A200022F8D100100000001 /* auroraLoginSupport.swift in Sources */,
 				50A200032F8D100100000001 /* velvetEntryGateViewController.swift in Sources */,
+				04D9813C2FB40D0600916DF6 /* IceCreamDrip.swift in Sources */,
+				04D981362FB3331200916DF6 /* FauturisticVision.swift in Sources */,
+				04D9812C2FB3321900916DF6 /* SubtleEnhancement.swift in Sources */,
+				04D981302FB3329A00916DF6 /* FlakeResistant.swift in Sources */,
+				04D9812E2FB3322900916DF6 /* MakeoverMagic.swift in Sources */,
 				50A200042F8D100100000001 /* pearlCredentialViewController.swift in Sources */,
 				50A200052F8D100100000001 /* prismConsentSheetViewController.swift in Sources */,
 				50A300012F8D200100000001 /* emberHavenHomeText.swift in Sources */,
@@ -251,10 +300,13 @@
 				50A300032F8D200100000001 /* glimmerNestHomeViewController.swift in Sources */,
 				50A300042F8D200100000001 /* crystalPathHomeFlowViewControllers.swift in Sources */,
 				50A500012F8D400100000001 /* meadowMuseProfileText.swift in Sources */,
+				04D9813E2FB40D1E00916DF6 /* SodaFizzLaugh.swift in Sources */,
 				50A500022F8D400100000001 /* meadowMuseProfileViewControllers.swift in Sources */,
 				50A600012F8D500100000001 /* petalTrailCompleteText.swift in Sources */,
 				50A600022F8D500100000001 /* petalTrailCompleteViewControllers.swift in Sources */,
+				04D9812A2FB3300700916DF6 /* PersonalizedLook.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				04D981322FB332A800916DF6 /* ShadowPlacement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeEyeLooks.lidlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -480,7 +532,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeEyeLooks.lidlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -514,7 +566,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeEyeLooks.lidlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

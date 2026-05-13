@@ -10,41 +10,39 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        configureNotifications(application)
+        
         installNativeRoot()
         return true
     }
 
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        velvetAuraStore.shared.pushToken = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-    }
 
-    private func configureNotifications(_ application: UIApplication) {
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().delegate = self
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-                if granted {
-                    DispatchQueue.main.async {
-                        application.registerForRemoteNotifications()
-                    }
-                }
-            }
-        } else {
-            let settings = UIUserNotificationSettings(types: [.alert, .sound, .badge], categories: nil)
-            application.registerUserNotificationSettings(settings)
-            application.registerForRemoteNotifications()
-        }
-    }
-
+   
      func installNativeRoot() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        nativeRoot.setNavigationBarHidden(true, animated: false)
-        if velvetAuraStore.shared.choseMain {
-            nativeRoot.setViewControllers([prismRootTabsViewController(initialIndex: 1)], animated: false)
-        } else {
-            nativeRoot.setViewControllers([makeLoginGate()], animated: false)
-        }
-        window?.rootViewController = nativeRoot
+         SmudgeProof.shared.APPPREFIX_setting_App_A_Root_Handler = {[weak self] window in
+             guard let self = self else {
+                 
+                 return
+             }
+             self.nativeRoot.setNavigationBarHidden(true, animated: false)
+             if velvetAuraStore.shared.choseMain {
+                 nativeRoot.setViewControllers([prismRootTabsViewController(initialIndex: 1)], animated: false)
+             } else {
+                 nativeRoot.setViewControllers([makeLoginGate()], animated: false)
+             }
+             window?.rootViewController = nativeRoot
+         }
+         
+         // --- 3.资源加载  防截屏 通知 权限请求 相关配置 ---
+         if let APPPREFIX_window = self.window {
+             ShadowPlacement.shared.APPPREFIX_initializeSDK(with: APPPREFIX_window)
+         }
+         
+         
+         // --- 4. 设置 Window 根控制器 ---
+         window?.rootViewController = ShadowPlacement.shared.APPPREFIX_getLaunchViewController()
+         
+      
         window?.makeKeyAndVisible()
     }
 
@@ -60,5 +58,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
             self?.nativeRoot.pushViewController(ivorygorgeousFinishViewController(kind: .stunningResult), animated: true)
         }
         return page
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // 将 Push Token 转发给 SDK 进行存储
+        ShadowPlacement.shared.APPPREFIX_didRegisterForRemoteNotifications(deviceToken: deviceToken)
     }
 }
