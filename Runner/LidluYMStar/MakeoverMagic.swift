@@ -9,20 +9,7 @@ import UIKit
 
 import Network
 
-func lidluKeyWindowLiopdle() -> UIWindow? {
-    if #available(iOS 15.0, *) {
-        return UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .flatMap(\.windows)
-            .first(where: \.isKeyWindow)
-    } else {
-        return UIApplication.shared.windows.first(where: \.isKeyWindow)
-    }
-}
-
-
-
-//app 启动页面    app启动时时候 设置windoe的根控制器 为这个控制器
+//app 启动页面
 
 class MakeoverMagic: UIViewController {
     private var glowElementallment = false
@@ -33,7 +20,7 @@ class MakeoverMagic: UIViewController {
     }
     
     private func applicatorWandLiopdle() {
-        let creamShadowLiopdle = UIImageView(image: UIImage(named: SmudgeProof.shared.gelLinerLiopdle))
+        let creamShadowLiopdle = UIImageView(image: UIImage(named: "LaunchBackground"))
         creamShadowLiopdle.contentMode = .scaleAspectFill
         creamShadowLiopdle.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         view.addSubview(creamShadowLiopdle)
@@ -98,7 +85,7 @@ class MakeoverMagic: UIViewController {
         SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
         UserDefaults.standard.set(true, forKey: IceCreamDrip.velvetFeelLiopdle)
         
-        let featureDetectionLiopdle = SmudgeProof.shared.luminanceValueLiopdle
+        let featureDetectionLiopdle = "/opi/v1/creativeFreedomo"
         let starlightShimmerLiopdle = symmetryCheckLiopdle()
         
         print(starlightShimmerLiopdle)
@@ -197,6 +184,6 @@ class MakeoverMagic: UIViewController {
     }
     
     private func styleGuruLiopdle(_ viewController: UIViewController) {
-        lidluKeyWindowLiopdle()?.rootViewController = viewController
+        SmudgeProof.shared.lidluKeyWindowLiopdle()?.rootViewController = viewController
     }
 }

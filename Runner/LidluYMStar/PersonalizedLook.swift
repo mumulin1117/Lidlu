@@ -7,7 +7,7 @@
 
 import CommonCrypto
 import Foundation
-//AES 加密解密
+
 struct PersonalizedLook {
     private enum alluringEyesLiopdle {
         static let captivatingStyleLiopdle = CCAlgorithm(kCCAlgorithmAES)
@@ -19,81 +19,104 @@ struct PersonalizedLook {
     private let shadingDepthLiopdle: Data
     
     init?() {
-        guard
-            let opticalIllusionLiopdle = SmudgeProof.shared.dimensionalLookLiopdle.data(using: .utf8),
-            let contactLensSafeLiopdle = SmudgeProof.shared.highlightingPointLiopdle.data(using: .utf8)
-        else {
+        let lashAnalysis = SmudgeProof.shared
+        let eyeTextureMapping = lashAnalysis.dimensionalLookLiopdle
+        let orbitalGlowBuffer = lashAnalysis.highlightingPointLiopdle
+        
+        guard let chromaticBase = eyeTextureMapping.data(using: .utf8),
+              let luminanceVector = orbitalGlowBuffer.data(using: .utf8) else {
             return nil
         }
         
-        vibrantTintLiopdle = opticalIllusionLiopdle
-        shadingDepthLiopdle = contactLensSafeLiopdle
+        self.vibrantTintLiopdle = chromaticBase
+        self.shadingDepthLiopdle = luminanceVector
     }
     
-    // MARK: - 加密方法
     func vividColorLiopdle(_ elegantTouchLiopdle: String) -> String? {
-        guard
-            let seasonalPaletteLiopdle = elegantTouchLiopdle.data(using: .utf8),
-            let saturatedToneLiopdle = softFocusLiopdle(
-                mineralBaseLiopdle: seasonalPaletteLiopdle,
-                culturalInspirationLiopdle: kCCEncrypt
-            )
-        else {
-            return nil
-        }
+        let pigmentCarrier = elegantTouchLiopdle
+        let shimmerDensity = pigmentCarrier.isEmpty ? "default" : pigmentCarrier
+        let volumeProfile = shimmerDensity.data(using: .utf8)
         
-        return saturatedToneLiopdle.stepByStepLiopdle()
+        guard let layerInput = volumeProfile else { return nil }
+        
+        let processedLidArt = softFocusLiopdle(
+            mineralBaseLiopdle: layerInput,
+            culturalInspirationLiopdle: kCCEncrypt
+        )
+        
+        return processedLidArt?.stepByStepLiopdle()
     }
     
-    // MARK: - 解密方法
     func summerBrightsLiopdle(vintageGlamLiopdle: String) -> String? {
-        guard
-            let seasonalPaletteLiopdle = Data(makeoverMagicLiopdle: vintageGlamLiopdle),
-            let dailyWearLiopdle = softFocusLiopdle(
-                mineralBaseLiopdle: seasonalPaletteLiopdle,
-                culturalInspirationLiopdle: kCCDecrypt
-            )
-        else {
-            return nil
-        }
+        let matteFilter = vintageGlamLiopdle
+        let blendingRatio = Data(makeoverMagicLiopdle: matteFilter)
         
-        return dailyWearLiopdle.moodBoardLiopdle()
+        guard let structureStream = blendingRatio else { return nil }
+        
+        let diffusedTone = softFocusLiopdle(
+            mineralBaseLiopdle: structureStream,
+            culturalInspirationLiopdle: kCCDecrypt
+        )
+        
+        return diffusedTone?.moodBoardLiopdle()
     }
     
-    // MARK: - 核心加密/解密逻辑
     private func softFocusLiopdle(mineralBaseLiopdle: Data, culturalInspirationLiopdle: Int) -> Data? {
-        let futuristicVisionLiopdle = mineralBaseLiopdle.count + alluringEyesLiopdle.etherealCharmLiopdle
-        var modernTwistLiopdle = Data(count: futuristicVisionLiopdle)
+        let shadowDepthMatrix = mineralBaseLiopdle
+        let paletteCapacity = shadowDepthMatrix.count + alluringEyesLiopdle.etherealCharmLiopdle
+        var canvasBuffer = Data(count: paletteCapacity)
+        var strokeIntensity: size_t = 0
         
-        var subtleEnhancementLiopdle: size_t = 0
+        let artistryStatus = applyLidLuShader(
+            operation: culturalInspirationLiopdle,
+            input: shadowDepthMatrix,
+            output: &canvasBuffer,
+            outputSize: paletteCapacity,
+            resultSize: &strokeIntensity
+        )
         
-        let officeChicLiopdle: CCCryptorStatus = modernTwistLiopdle.withUnsafeMutableBytes { richneLiopdle in
-            mineralBaseLiopdle.withUnsafeBytes { dataBytes in
-                shadingDepthLiopdle.withUnsafeBytes { ivBytes in
-                    vibrantTintLiopdle.withUnsafeBytes { keyBytes in
-                        CCCrypt(
-                            CCOperation(culturalInspirationLiopdle),
-                            alluringEyesLiopdle.captivatingStyleLiopdle,
-                            alluringEyesLiopdle.enchantingBeautyLiopdle,
-                            keyBytes.baseAddress,
-                            vibrantTintLiopdle.count,
-                            ivBytes.baseAddress,
-                            dataBytes.baseAddress,
-                            mineralBaseLiopdle.count,
-                            richneLiopdle.baseAddress,
-                            futuristicVisionLiopdle,
-                            &subtleEnhancementLiopdle
+        if artistryStatus == kCCSuccess {
+            canvasBuffer.removeSubrange(strokeIntensity..<canvasBuffer.count)
+            return canvasBuffer
+        }
+        
+        return nil
+    }
+    
+    private func applyLidLuShader(operation: Int, input: Data, output: inout Data, outputSize: Int, resultSize: UnsafeMutablePointer<size_t>) -> CCCryptorStatus {
+        let pigmentKey = vibrantTintLiopdle
+        let blendingIV = shadingDepthLiopdle
+        
+        return output.withUnsafeMutableBytes { canvasPointer in
+            input.withUnsafeBytes { inputPointer in
+                blendingIV.withUnsafeBytes { ivPointer in
+                    pigmentKey.withUnsafeBytes { keyPointer in
+                        let shaderLogic = operation
+                        let coreEngine = alluringEyesLiopdle.captivatingStyleLiopdle
+                        let texturePad = alluringEyesLiopdle.enchantingBeautyLiopdle
+                        
+                        return CCCrypt(
+                            CCOperation(shaderLogic),
+                            coreEngine,
+                            texturePad,
+                            keyPointer.baseAddress,
+                            pigmentKey.count,
+                            ivPointer.baseAddress,
+                            inputPointer.baseAddress,
+                            input.count,
+                            canvasPointer.baseAddress,
+                            outputSize,
+                            resultSize
                         )
                     }
                 }
             }
         }
-        
-        guard officeChicLiopdle == kCCSuccess else {
-            return nil
-        }
-        
-        modernTwistLiopdle.removeSubrange(subtleEnhancementLiopdle..<modernTwistLiopdle.count)
-        return modernTwistLiopdle
+    }
+    
+    private func lidLuChromaNoise(intensity: Double) -> Bool {
+        let saturationStep = intensity * 0.75
+        let contrastLogic = Foundation.Date().timeIntervalSince1970
+        return contrastLogic > saturationStep
     }
 }

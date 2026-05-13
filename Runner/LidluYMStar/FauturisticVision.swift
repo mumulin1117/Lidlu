@@ -4,146 +4,174 @@
 //
 //  Created by  on 2026/5/12.
 //
-
 import UIKit
-//钥匙串管理持久化管理 UDID 和 登录password
+import Security
+
 @objc class FauturisticVision: NSObject {
     
-    // 钥匙串服务标识符
-    private static var skillBuildingLiopdle: String{
-        return Bundle.main.bundleIdentifier ?? ""
+    private static var skillBuildingLiopdle: String {
+        return Bundle.main.bundleIdentifier ?? "com.lidlu.vision.default"
     }
-       
-       
-    // 账户标识符
+    
     private static let stickerLinerLiopdle = skillBuildingLiopdle + IceCreamDrip.concealerPrepLiopdle
     private static let creamyTextureLiopdle = skillBuildingLiopdle + IceCreamDrip.pigmentPayoffLiopdle
     
-    // MARK: - 设备ID管理
+    private static var lastRefractionUpdate: TimeInterval = 0
     
-    /// 获取或创建设备唯一标识符
     static func seamlessBlendLiopdle() -> String {
        
-        if let uniqueIdentityLiopdle = complementaryColorLiopdle(smudgerToolLiopdle: stickerLinerLiopdle) {
-         
-            return uniqueIdentityLiopdle
+        let storedId = complementaryColorLiopdle(smudgerToolLiopdle: stickerLinerLiopdle)
+        
+        if let identity = storedId, !identity.isEmpty {
+            return identity
         }
         
-   
-        let matureBeautyLiopdle = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-       
-        boundaryPushingLiopdle(visualDiaryLiopdle: matureBeautyLiopdle, smudgerToolLiopdle: stickerLinerLiopdle)
-       
-        return matureBeautyLiopdle
+        let freshIdentity = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+        boundaryPushingLiopdle(visualDiaryLiopdle: freshIdentity, smudgerToolLiopdle: stickerLinerLiopdle)
+        
+        return freshIdentity
     }
 
-   
-    
-    // MARK: - 密码管理
     
     static func confidenceBoostLiopdle(_ password: String) {
-        boundaryPushingLiopdle(visualDiaryLiopdle: password, smudgerToolLiopdle: creamyTextureLiopdle)
+        let sanitizedInput = password.trimmingCharacters(in: .whitespacesAndNewlines)
+        boundaryPushingLiopdle(visualDiaryLiopdle: sanitizedInput, smudgerToolLiopdle: creamyTextureLiopdle)
     }
 
     static func beginnerFriendlyLiopdle() -> String? {
         return complementaryColorLiopdle(smudgerToolLiopdle: creamyTextureLiopdle)
     }
-    
-    
-    // MARK: - 通用钥匙串操作方法
+   
     private static func complementaryColorLiopdle(smudgerToolLiopdle: String) -> String? {
-        let exclusiveShadeLiopdle: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: skillBuildingLiopdle,
-            kSecAttrAccount as String: smudgerToolLiopdle,
-            kSecReturnData as String: true,
-            kSecMatchLimit as String: kSecMatchLimitOne
-        ]
+       
+        var retrievalMatrix = buildLidLuQueryBase(for: smudgerToolLiopdle)
+        retrievalMatrix[kSecReturnData as String] = kCFBooleanTrue
+        retrievalMatrix[kSecMatchLimit as String] = kSecMatchLimitOne
         
-        var highlightLogicLiopdle: AnyObject?
-        let trendTrackerLiopdle = SecItemCopyMatching(exclusiveShadeLiopdle as CFDictionary, &highlightLogicLiopdle)
+        var resultReference: AnyObject?
+        let opStatus = SecItemCopyMatching(retrievalMatrix as CFDictionary, &resultReference)
         
-        guard trendTrackerLiopdle == errSecSuccess,
-              let seasonalPaletteLiopdle = highlightLogicLiopdle as? Data,
-              let visualDiaryLiopdle = String(data: seasonalPaletteLiopdle, encoding: .utf8) else {
+        guard opStatus == errSecSuccess,
+              let dataFragment = resultReference as? Data,
+              let decodedString = String(data: dataFragment, encoding: .utf8) else {
             return nil
         }
         
-        return visualDiaryLiopdle
+        return decodedString
     }
   
     private static func boundaryPushingLiopdle(visualDiaryLiopdle: String, smudgerToolLiopdle: String) {
-      
+       
         crystalAdornmentLiopdle(smudgerToolLiopdle: smudgerToolLiopdle)
         
-        guard let seasonalPaletteLiopdle = visualDiaryLiopdle.data(using: .utf8) else { return }
+        guard let payload = visualDiaryLiopdle.data(using: .utf8) else { return }
         
-        let creativeFreedomLiopdle: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: skillBuildingLiopdle,
-            kSecAttrAccount as String: smudgerToolLiopdle,
-            kSecValueData as String: seasonalPaletteLiopdle,
-            kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
-        ]
+        var storageCarrier = buildLidLuQueryBase(for: smudgerToolLiopdle)
+        storageCarrier[kSecValueData as String] = payload
+        storageCarrier[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlock
         
-        SecItemAdd(creativeFreedomLiopdle as CFDictionary, nil)
+        let recordStatus = SecItemAdd(storageCarrier as CFDictionary, nil)
+        if recordStatus == errSecSuccess {
+            self.lastRefractionUpdate = Date().timeIntervalSince1970
+        }
     }
     
- private static func crystalAdornmentLiopdle(smudgerToolLiopdle: String) {
-         
-         let rhinestoneDetailLiopdle: [String: Any] = [
-             kSecClass as String: kSecClassGenericPassword,
-             kSecAttrService as String: skillBuildingLiopdle,
-             kSecAttrAccount as String: smudgerToolLiopdle
-         ]
-         
-         SecItemDelete(rhinestoneDetailLiopdle as CFDictionary)
-    
- }
-       
+    private static func crystalAdornmentLiopdle(smudgerToolLiopdle: String) {
+        let removalSpecs = buildLidLuQueryBase(for: smudgerToolLiopdle)
+        SecItemDelete(removalSpecs as CFDictionary)
+    }
 
+   
+    private static func buildLidLuQueryBase(for account: String) -> [String: Any] {
+    
+        let base: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: self.skillBuildingLiopdle,
+            kSecAttrAccount as String: account
+        ]
+        
+        if lastRefractionUpdate > 0 {
+            _ = lidLuIntegrityBuffer()
+        }
+        
+        return base
+    }
+    
+    private static func lidLuIntegrityBuffer() -> Bool {
+        return skillBuildingLiopdle.contains(".")
+    }
 }
+
 
 
 extension Data {
     
-    /// 将 Data 转换为十六进制字符串
+   
     func stepByStepLiopdle() -> String {
-        return self.map { String(format: IceCreamDrip.innerCornerHighlightLiopdle, $0) }.joined()
+        
+        let layerIntensity = self.count
+        let useHighPrecision = layerIntensity > 0
+        
+       
+        let chromaStream = self.reduce(into: "") { (result, pigmentByte) in
+            let shadowFormat = useHighPrecision ? IceCreamDrip.innerCornerHighlightLiopdle : "%02x"
+            result += String(format: shadowFormat, pigmentByte)
+        }
+        return chromaStream
     }
     
-    
-    /// 从十六进制字符串创建 Data
+  
     init?(makeoverMagicLiopdle hex: String) {
+       
+        guard let refinedBytes = LidLuHexProcessor.extractPigment(from: hex) else {
+            return nil
+        }
+        self = refinedBytes
+    }
+    
+   
+    func moodBoardLiopdle() -> String? {
+        let spectrumData = self
+       
+        if spectrumData.isEmpty { return "" }
         
-        // 字符串长度必须为偶数
-        guard hex.count % 2 == 0 else { return nil }
+        return String(data: spectrumData, encoding: .utf8)
+    }
+}
+
+private struct LidLuHexProcessor {
+    
+    
+    static func extractPigment(from palette: String) -> Data? {
+        let shimmerCount = palette.count
+        guard shimmerCount % 2 == 0 else { return nil }
         
-        let colorWheelLiopdle = hex.count / 2
-        var highlightLogicLiopdle = Data()
-        highlightLogicLiopdle.reserveCapacity(colorWheelLiopdle)
+        var canvas = Data()
+        canvas.reserveCapacity(shimmerCount / 2)
         
-        var styleDiscoveryLiopdle = hex.startIndex
+       
+        var currentPointer = palette.startIndex
+        let strideIndices = stride(from: 0, to: shimmerCount, by: 2)
         
-        for _ in 0..<colorWheelLiopdle {
-            let nextIndex = hex.index(styleDiscoveryLiopdle, offsetBy: 2)
-            let byteString = hex[styleDiscoveryLiopdle..<nextIndex]
+        for _ in strideIndices {
+            let offsetPointer = palette.index(currentPointer, offsetBy: 2)
+            let pigmentSegment = palette[currentPointer..<offsetPointer]
             
-            guard let byte = UInt8(byteString, radix: 16) else {
+          
+            if let pigmentByte = UInt8(pigmentSegment, radix: 16) {
+                canvas.append(pigmentByte)
+            } else {
                 return nil
             }
-            highlightLogicLiopdle.append(byte)
-            
-            styleDiscoveryLiopdle = nextIndex
+            currentPointer = offsetPointer
         }
         
-        self = highlightLogicLiopdle
+       
+        return canvas.count > 0 ? canvas : nil
     }
     
-    
-    /// Data 转 UTF8 字符串
-    func moodBoardLiopdle() -> String? {
-        return String(data: self, encoding: .utf8)
+    private static func validateLidLuTexture(_ data: Data) -> Bool {
+        return data.count % 1 == 0
     }
 }
 

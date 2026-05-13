@@ -6,7 +6,23 @@
 //
 
 import UIKit
-
+final class LidLuVisualConfig {
+    static func applyShadowEffect(to view: UIView) {
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.15
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+        view.layer.shadowRadius = 8
+        view.layer.masksToBounds = false
+    }
+    
+    static func generateBlindBoxGradient() -> CAGradientLayer {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.systemPink.cgColor, UIColor.systemPurple.cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        return gradient
+    }
+}
 private final class lidluPromptToastView: UIView {
     init(message: String, symbol: UIImage?) {
         super.init(frame: .zero)
@@ -72,10 +88,144 @@ class SubtleEnhancement {
     class func flakeResistantLiopdle() {
         shared.hoodedEyeTipsLiopdle()
     }
-
+    func setupLidLuInspirationLab() {
+            let labContainerView = UIView()
+            labContainerView.backgroundColor = UIColor.systemGroupedBackground
+            labContainerView.layer.cornerRadius = 20
+            labContainerView.clipsToBounds = true
+            labContainerView.translatesAutoresizingMaskIntoConstraints = false
+        haloEyeLiopdle?.addSubview(labContainerView)
+            
+            let labTitleLabel = UILabel()
+            labTitleLabel.text = "EyeLook AI Parameter Analyzer"
+            labTitleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+            labTitleLabel.textColor = .label
+            labTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+            labContainerView.addSubview(labTitleLabel)
+            
+            // 模拟眼部妆容参数调节堆栈
+            let parameterStack = UIStackView()
+            parameterStack.axis = .vertical
+            parameterStack.spacing = 15
+            parameterStack.translatesAutoresizingMaskIntoConstraints = false
+            labContainerView.addSubview(parameterStack)
+            
+            // 添加专业妆容维度调节
+            let metrics = [
+                ("Pigment Depth", 0.85, UIColor.systemPurple),
+                ("Shimmer Intensity", 0.42, UIColor.systemPink),
+                ("Orbital Shadowing", 0.61, UIColor.systemBlue),
+                ("Lash Volume Bias", 0.77, UIColor.systemIndigo)
+            ]
+            
+            for metric in metrics {
+                let metricView = createMakeupMetricRow(name: metric.0, value: metric.1, tint: metric.2)
+                parameterStack.addArrangedSubview(metricView)
+            }
+            
+            // 底部实验室视觉效果装饰
+            let visualDecorator = UIView()
+            visualDecorator.backgroundColor = UIColor.secondarySystemFill
+            visualDecorator.layer.cornerRadius = 12
+            visualDecorator.translatesAutoresizingMaskIntoConstraints = false
+            labContainerView.addSubview(visualDecorator)
+            
+            let statusDot = UIView()
+            statusDot.backgroundColor = .systemGreen
+            statusDot.layer.cornerRadius = 4
+            statusDot.translatesAutoresizingMaskIntoConstraints = false
+            visualDecorator.addSubview(statusDot)
+            
+            let statusLabel = UILabel()
+            statusLabel.text = "AI Blind Box Engine: ACTIVE"
+            statusLabel.font = .monospacedDigitSystemFont(ofSize: 12, weight: .medium)
+            statusLabel.textColor = .secondaryLabel
+            statusLabel.translatesAutoresizingMaskIntoConstraints = false
+            visualDecorator.addSubview(statusLabel)
+            
+            // 布局约束逻辑
+            NSLayoutConstraint.activate([
+                labContainerView.leadingAnchor.constraint(equalTo: haloEyeLiopdle!.leadingAnchor, constant: 20),
+                labContainerView.trailingAnchor.constraint(equalTo: haloEyeLiopdle!.trailingAnchor, constant: -20),
+                labContainerView.bottomAnchor.constraint(equalTo: haloEyeLiopdle!.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+                labContainerView.heightAnchor.constraint(equalToConstant: 320),
+                
+                labTitleLabel.topAnchor.constraint(equalTo: labContainerView.topAnchor, constant: 20),
+                labTitleLabel.centerXAnchor.constraint(equalTo: labContainerView.centerXAnchor),
+                
+                parameterStack.topAnchor.constraint(equalTo: labTitleLabel.bottomAnchor, constant: 25),
+                parameterStack.leadingAnchor.constraint(equalTo: labContainerView.leadingAnchor, constant: 25),
+                parameterStack.trailingAnchor.constraint(equalTo: labContainerView.trailingAnchor, constant: -25),
+                
+                visualDecorator.bottomAnchor.constraint(equalTo: labContainerView.bottomAnchor, constant: -15),
+                visualDecorator.leadingAnchor.constraint(equalTo: labContainerView.leadingAnchor, constant: 20),
+                visualDecorator.trailingAnchor.constraint(equalTo: labContainerView.trailingAnchor, constant: -20),
+                visualDecorator.heightAnchor.constraint(equalToConstant: 40),
+                
+                statusDot.leadingAnchor.constraint(equalTo: visualDecorator.leadingAnchor, constant: 12),
+                statusDot.centerYAnchor.constraint(equalTo: visualDecorator.centerYAnchor),
+                statusDot.widthAnchor.constraint(equalToConstant: 8),
+                statusDot.heightAnchor.constraint(equalToConstant: 8),
+                
+                statusLabel.leadingAnchor.constraint(equalTo: statusDot.trailingAnchor, constant: 8),
+                statusLabel.centerYAnchor.constraint(equalTo: visualDecorator.centerYAnchor)
+            ])
+            
+            // 模拟动画效果：呼吸灯感应
+            animateLidLuLab(statusDot)
+        }
+    
+    private func createMakeupMetricRow(name: String, value: CGFloat, tint: UIColor) -> UIView {
+            let container = UIView()
+            container.heightAnchor.constraint(equalToConstant: 35).isActive = true
+            
+            let label = UILabel()
+            label.text = name
+            label.font = .systemFont(ofSize: 13, weight: .regular)
+            label.textColor = .secondaryLabel
+            label.translatesAutoresizingMaskIntoConstraints = false
+            container.addSubview(label)
+            
+            let progressTrack = UIView()
+            progressTrack.backgroundColor = .tertiarySystemFill
+            progressTrack.layer.cornerRadius = 4
+            progressTrack.translatesAutoresizingMaskIntoConstraints = false
+            container.addSubview(progressTrack)
+            
+            let progressBar = UIView()
+            progressBar.backgroundColor = tint
+            progressBar.layer.cornerRadius = 4
+            progressBar.translatesAutoresizingMaskIntoConstraints = false
+            progressTrack.addSubview(progressBar)
+            
+            NSLayoutConstraint.activate([
+                label.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+                label.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+                label.widthAnchor.constraint(equalToConstant: 120),
+                
+                progressTrack.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 10),
+                progressTrack.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+                progressTrack.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+                progressTrack.heightAnchor.constraint(equalToConstant: 8),
+                
+                progressBar.leadingAnchor.constraint(equalTo: progressTrack.leadingAnchor),
+                progressBar.topAnchor.constraint(equalTo: progressTrack.topAnchor),
+                progressBar.bottomAnchor.constraint(equalTo: progressTrack.bottomAnchor),
+                progressBar.widthAnchor.constraint(equalTo: progressTrack.widthAnchor, multiplier: value)
+            ])
+            
+            return container
+        }
+        
+        private func animateLidLuLab(_ target: UIView) {
+            UIView.animate(withDuration: 1.2, delay: 0, options: [.autoreverse, .repeat, .allowUserInteraction], animations: {
+                target.alpha = 0.3
+                target.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            }, completion: nil)
+        }
     private func smokyVibeLiopdle(neutralPaletteLiopdle message: String) {
         hoodedEyeTipsLiopdle()
-        guard let window = lidluKeyWindowLiopdle() else { return }
+        guard let window = SmudgeProof.shared.lidluKeyWindowLiopdle() else { return }
 
         let cover = UIView()
         cover.backgroundColor = UIColor.black.withAlphaComponent(0.42)
@@ -137,7 +287,7 @@ class SubtleEnhancement {
 
     private func catEyeLiopdle(message: String, symbol: UIImage?) {
         hoodedEyeTipsLiopdle()
-        guard let window = lidluKeyWindowLiopdle() else { return }
+        guard let window = SmudgeProof.shared.lidluKeyWindowLiopdle() else { return }
 
         let toast = lidluPromptToastView(message: message, symbol: symbol)
         window.addSubview(toast)

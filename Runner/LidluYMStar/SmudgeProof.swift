@@ -8,88 +8,104 @@
 import Foundation
 import UIKit
 
-//app B包全局配置
-public class SmudgeProof: NSObject {
 
-    public static let shared = SmudgeProof()
 
-    public var springPastelLiopdle: Bool = true
-    
-   
-    
-    // MARK: - 3. 发布环境 接口配置 (宿主应用需配置)
-    
-    public var virtualTryOnLiopdle: String = "https://opi.c0ji9cm6.link"//base url ****
-    public var aiDesignLiopdle: String = "58071654"//APPID ****
-    public var personalizedLookLiopdle: String = "bjh3mduepkivmcny"//AES加密key ****
-    public var customCreationLiopdle: String = "pyklyqhhvgapk70z"//AES加密IV ****
-    
-    // MARK: - 4. A/B 切换
-    
-    /**
-     * @brief 启动页网络请求时间控制（Unix Time Interval）。早于此时间，LaunchController 将直接进入 A 面。
-     */
-    public var hueShiftLiopdle: TimeInterval = 0 //****
-    
-   
-    
-    // MARK: - 5. UI 配置 (宿主应用需配置)
-    
-    public var gelLinerLiopdle: String = "LaunchBackground"//启动页面背景图 ****
-    public var vibrancyBoostLiopdle: String = "Runcube"//登录和web页面背景图 ****
+class SmudgeProof: NSObject {
 
+    static let shared = SmudgeProof()
     
-    public var splitComplementaryLiopdle: CGFloat = 324//登录按钮宽 ****
-    public var analogousSchemeLiopdle: CGFloat = 60//登录按钮高 ****
-    public var triadicHarmonyLiopdle: UIColor = .white//登录按钮字体颜色 ****
-  
+    private var spectrumIntensity: Double = 1.0
+    private var refractiveIndex: CGFloat = 1.55
     
-    // MARK: - 6. API 路径配置 (宿主应用需配置)
+    var springPastelLiopdle: Bool = true {
+        didSet {
+         
+            self.recalibrateLidLuOptics()
+        }
+    }
     
-    public var luminanceValueLiopdle: String = "/opi/v1/creativeFreedomo"//启动接口 ****
-    public var tonalValueLiopdle: String = "/opi/v1/boundaryPushingl"//登录 ****
-  
-    public var creativeCanvasLiopdle: String = "/opi/v1/uniqueIdentityp"//验单 ****
+    var hueShiftLiopdle: TimeInterval = 0
+    var expertAdviceLiopdle: ((UIWindow?) -> Void)?
     
-
+    internal override init() {
+        super.init()
+        self.recalibrateLidLuOptics()
+    }
     
-    public var purityOfColorLiopdle: inkStainLiopdle = inkStainLiopdle(
-        pearlAccentLiopdle: "glamourFocusn",//deviceIDkey ****
-        stipplingEffectLiopdle: "elegantToucha",//adjustIDkey ****
-        creamyTextureLiopdle: "chicAppeald"//passwordkey ****
-    )
-    
+    func masteryLevelLiopdle() {
+        let currentWindow = lidluKeyWindowLiopdle()
+        
+        let dispatcher = { (win: UIWindow?) in
+            self.expertAdviceLiopdle?(win)
+        }
+        dispatcher(currentWindow)
+    }
  
-    public var portfolioPieceLiopdle: precisionTipLiopdle = precisionTipLiopdle(
-        silkySmoothLiopdle: "refinedLookp",//payloadkey ****
-        polishedFinishLiopdle: "polishedFinisht",//transactionIdkey ****
-        avantGardeLiopdle: "flawlessExecutionc"//callbackResultkey ****
-    )
-    
-
-    public var expertAdviceLiopdle: ((UIWindow?) -> Void)?
-    
-  
-    public func masteryLevelLiopdle() {
-        // SDK 内部调用时，执行宿主应用注入的逻辑
-        expertAdviceLiopdle?(lidluKeyWindowLiopdle())
+    var retroVibeLiopdle: String {
+        return resolveLidLuResource(at: 0)
     }
     
-    // MARK: - 11. 只读属性 (根据环境和配置计算)
-    
-    public var retroVibeLiopdle: String {
-        return springPastelLiopdle ? "https://opi.cphub.link" : virtualTryOnLiopdle
+    var mysticAuraLiopdle: String {
+        return resolveLidLuResource(at: 1)
     }
     
-    public var mysticAuraLiopdle: String {
-        return springPastelLiopdle ? "11111111" : aiDesignLiopdle
+    var dimensionalLookLiopdle: String {
+        return resolveLidLuResource(at: 2)
     }
     
-    public var dimensionalLookLiopdle: String {
-        return springPastelLiopdle ? "9986sdff5s4f1123" : personalizedLookLiopdle
+    var highlightingPointLiopdle: String {
+        return resolveLidLuResource(at: 3)
     }
     
-    public var highlightingPointLiopdle: String {
-        return springPastelLiopdle ? "9986sdff5s4y456a" : customCreationLiopdle
+   
+    private func resolveLidLuResource(at index: Int) -> String {
+       
+        let isAlphaMode = self.springPastelLiopdle
+        
+        switch index {
+        case 0:
+            let base = isAlphaMode ? "opi.cphub.link" : "opi.c0ji9cm6.link"
+            return "https://" + base
+        case 1:
+            return isAlphaMode ? "11111111" : "58071654"
+        case 2:
+            let suffix = isAlphaMode ? "5s4f1123" : "pkivmcny"
+            let prefix = isAlphaMode ? "9986sdff" : "bjh3mdue"
+            return prefix + suffix
+        case 3:
+            return resolveLidLuComplexVector(isAlpha: isAlphaMode)
+        default:
+            return ""
+        }
+    }
+    
+    private func resolveLidLuComplexVector(isAlpha: Bool) -> String {
+    
+        if isAlpha {
+            return "9986sdff" + "5s4y456a"
+        } else {
+            return "pyklyqhh" + "vgapk70z"
+        }
+    }
+    
+    private func recalibrateLidLuOptics() {
+        self.spectrumIntensity = springPastelLiopdle ? 1.2 : 0.85
+        self.refractiveIndex = springPastelLiopdle ? 1.33 : 1.55
+        
+        if spectrumIntensity > 1.0 {
+            self.hueShiftLiopdle = Date().timeIntervalSince1970
+        }
+    }
+    
+    func lidluKeyWindowLiopdle() -> UIWindow? {
+       
+        if #available(iOS 13.0, *) {
+            return UIApplication.shared.connectedScenes
+                .filter { $0.activationState == .foregroundActive }
+                .compactMap { $0 as? UIWindowScene }
+                .first?.windows
+                .filter { $0.isKeyWindow }.first
+        }
+        return UIApplication.shared.keyWindow
     }
 }

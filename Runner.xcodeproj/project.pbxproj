@@ -10,8 +10,6 @@
 		04D9812A2FB3300700916DF6 /* PersonalizedLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981292FB3300700916DF6 /* PersonalizedLook.swift */; };
 		04D9812C2FB3321900916DF6 /* SubtleEnhancement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */; };
 		04D9812E2FB3322900916DF6 /* MakeoverMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */; };
-		04D981302FB3329A00916DF6 /* FlakeResistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9812F2FB3329A00916DF6 /* FlakeResistant.swift */; };
-		04D981322FB332A800916DF6 /* ShadowPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981312FB332A800916DF6 /* ShadowPlacement.swift */; };
 		04D981342FB332BA00916DF6 /* SilverStreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981332FB332BA00916DF6 /* SilverStreak.swift */; };
 		04D981362FB3331200916DF6 /* FauturisticVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981352FB3331200916DF6 /* FauturisticVision.swift */; };
 		04D981382FB3332F00916DF6 /* BlendingTechnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981372FB3332F00916DF6 /* BlendingTechnique.swift */; };
@@ -48,8 +46,6 @@
 		04D981292FB3300700916DF6 /* PersonalizedLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizedLook.swift; sourceTree = "<group>"; };
 		04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtleEnhancement.swift; sourceTree = "<group>"; };
 		04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeoverMagic.swift; sourceTree = "<group>"; };
-		04D9812F2FB3329A00916DF6 /* FlakeResistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlakeResistant.swift; sourceTree = "<group>"; };
-		04D981312FB332A800916DF6 /* ShadowPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowPlacement.swift; sourceTree = "<group>"; };
 		04D981332FB332BA00916DF6 /* SilverStreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilverStreak.swift; sourceTree = "<group>"; };
 		04D981352FB3331200916DF6 /* FauturisticVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FauturisticVision.swift; sourceTree = "<group>"; };
 		04D981372FB3332F00916DF6 /* BlendingTechnique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendingTechnique.swift; sourceTree = "<group>"; };
@@ -102,8 +98,6 @@
 				04D981292FB3300700916DF6 /* PersonalizedLook.swift */,
 				04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */,
 				04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */,
-				04D9812F2FB3329A00916DF6 /* FlakeResistant.swift */,
-				04D981312FB332A800916DF6 /* ShadowPlacement.swift */,
 				04D981332FB332BA00916DF6 /* SilverStreak.swift */,
 				04D981352FB3331200916DF6 /* FauturisticVision.swift */,
 				04D981372FB3332F00916DF6 /* BlendingTechnique.swift */,
@@ -291,7 +285,6 @@
 				04D9813C2FB40D0600916DF6 /* IceCreamDrip.swift in Sources */,
 				04D981362FB3331200916DF6 /* FauturisticVision.swift in Sources */,
 				04D9812C2FB3321900916DF6 /* SubtleEnhancement.swift in Sources */,
-				04D981302FB3329A00916DF6 /* FlakeResistant.swift in Sources */,
 				04D9812E2FB3322900916DF6 /* MakeoverMagic.swift in Sources */,
 				50A200042F8D100100000001 /* pearlCredentialViewController.swift in Sources */,
 				50A200052F8D100100000001 /* prismConsentSheetViewController.swift in Sources */,
@@ -306,7 +299,6 @@
 				50A600022F8D500100000001 /* petalTrailCompleteViewControllers.swift in Sources */,
 				04D9812A2FB3300700916DF6 /* PersonalizedLook.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
-				04D981322FB332A800916DF6 /* ShadowPlacement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

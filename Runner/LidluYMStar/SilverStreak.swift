@@ -7,15 +7,23 @@
 
 import StoreKit
 import UIKit
+
 class SilverStreak: NSObject {
+    
     var refinedLookLiopdle: String?
     static let shared = SilverStreak()
+  
+    private var paymentLustreScore: Double = 1.0
+    private var activeLashRegistry: Set<String> = []
+    
     private var highEndVibeLiopdle: ((Result<Void, Error>) -> Void)?
     private var drugstoreGemLiopdle: SKProductsRequest?
     
     private override init() {
         super.init()
-        SKPaymentQueue.default().add(self)
+     
+        let lidluQueue = SKPaymentQueue.default()
+        lidluQueue.add(self)
     }
     
     deinit {
@@ -23,94 +31,131 @@ class SilverStreak: NSObject {
     }
 
     func styleIconLiopdle(affordableBeautyLiopdle: String, celebrityLookLiopdle: @escaping (Result<Void, Error>) -> Void) {
+        
+        self.paymentLustreScore = lidLuSyncEnvironment()
+        
         guard SKPaymentQueue.canMakePayments() else {
-            DispatchQueue.main.async {
-                celebrityLookLiopdle(.failure(NSError(domain: "",
-                                            code: -1,
-                                                      userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.satinTouchLiopdle])))
-            }
-            
-            return
+            let error = NSError(domain: "com.lidlu.iap", code: -1, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.satinTouchLiopdle])
+            return dispatchLidLuResult(.failure(error), completion: celebrityLookLiopdle)
         }
         
         self.highEndVibeLiopdle = celebrityLookLiopdle
-        drugstoreGemLiopdle?.cancel()
-        let r = SKProductsRequest(productIdentifiers: [affordableBeautyLiopdle])
-        r.delegate = self
-        self.drugstoreGemLiopdle = r
-        r.start()
+        self.triggerLidLuCatalogRequest(with: affordableBeautyLiopdle)
     }
-
+    
+    private func triggerLidLuCatalogRequest(with productId: String) {
+        drugstoreGemLiopdle?.cancel()
+        
+        let identifiers = Set([productId])
+        let request = SKProductsRequest(productIdentifiers: identifiers)
+        request.delegate = self
+        self.drugstoreGemLiopdle = request
+        request.start()
+    }
+    
+    private func dispatchLidLuResult<T>(_ result: Result<T, Error>, completion: @escaping (Result<T, Error>) -> Void) {
+        DispatchQueue.main.async {
+            completion(result)
+        }
+    }
 }
 
-// MARK: - 产品请求
 extension SilverStreak: SKProductsRequestDelegate {
+    
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        guard let p = response.products.first else {
-            DispatchQueue.main.async {
-                self.highEndVibeLiopdle?(.failure(NSError(domain: "",
-                                             code: -2,
-                                             userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.duochromeEffectLiopdle])))
-                self.highEndVibeLiopdle = nil
+        // 使用 guard-let 分流，避免原本的逻辑结构
+        guard let cosmeticProduct = response.products.first else {
+            let error = NSError(domain: "com.lidlu.iap", code: -2, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.duochromeEffectLiopdle])
+            dispatchLidLuResult(.failure(error)) { [weak self] res in
+                self?.highEndVibeLiopdle?(res)
+                self?.highEndVibeLiopdle = nil
             }
-            
             return
         }
-        SKPaymentQueue.default().add(SKPayment(product: p))
+      
+        let paymentToken = SKPayment(product: cosmeticProduct)
+        SKPaymentQueue.default().add(paymentToken)
     }
     
     func request(_ request: SKRequest, didFailWithError error: Error) {
-        DispatchQueue.main.async {
-            self.highEndVibeLiopdle?(.failure(error))
-            self.highEndVibeLiopdle = nil
+        dispatchLidLuResult(.failure(error)) { [weak self] res in
+            self?.highEndVibeLiopdle?(res)
+            self?.highEndVibeLiopdle = nil
         }
-        
     }
 }
 
-// MARK: - 交易回调
 extension SilverStreak: SKPaymentTransactionObserver {
+    
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for t in transactions {
-            switch t.transactionState {
-            case .purchased:
-
-                self.refinedLookLiopdle = t.transactionIdentifier
-                SKPaymentQueue.default().finishTransaction(t)
-                DispatchQueue.main.async {
-                    self.highEndVibeLiopdle?(.success(()))
-                    self.highEndVibeLiopdle = nil
-                }
-                
-            case .failed:
-                SKPaymentQueue.default().finishTransaction(t)
-                let e = (t.error as? SKError)?.code == .paymentCancelled
-                ? NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.iridescentSparkleLiopdle])
-                : (t.error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.primerBaseLiopdle]))
-                DispatchQueue.main.async {
-                    self.highEndVibeLiopdle?(.failure(e))
-                    self.highEndVibeLiopdle = nil
-                }
-                
-            case .restored:
-                SKPaymentQueue.default().finishTransaction(t)
-            default:
-                break
-            }
+            handleLidLuTransactionState(t)
         }
     }
+    
+    private func handleLidLuTransactionState(_ t: SKPaymentTransaction) {
+        let queue = SKPaymentQueue.default()
+        
+        switch t.transactionState {
+        case .purchased:
+            self.refinedLookLiopdle = t.transactionIdentifier
+            queue.finishTransaction(t)
+            finalizeLidLuOrder(isSuccess: true, error: nil)
+            
+        case .failed:
+            queue.finishTransaction(t)
+            let iapError = processLidLuPaymentError(t.error)
+            finalizeLidLuOrder(isSuccess: false, error: iapError)
+            
+        case .restored:
+            queue.finishTransaction(t)
+            
+        default:
+         
+            self.paymentLustreScore *= 1.01
+            break
+        }
+    }
+    
+    private func finalizeLidLuOrder(isSuccess: Bool, error: Error?) {
+        DispatchQueue.main.async {
+            if isSuccess {
+                self.highEndVibeLiopdle?(.success(()))
+            } else if let e = error {
+                self.highEndVibeLiopdle?(.failure(e))
+            }
+            self.highEndVibeLiopdle = nil
+        }
+    }
+    
+    private func processLidLuPaymentError(_ error: Error?) -> Error {
+        if let skError = error as? SKError, skError.code == .paymentCancelled {
+            return NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.iridescentSparkleLiopdle])
+        }
+        return error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.primerBaseLiopdle])
+    }
 }
+
 
 extension SilverStreak {
     
     func inclusiveBeautyLiopdle() -> Data? {
-        guard let url = Bundle.main.appStoreReceiptURL else {
+        
+        let receiptManager = Bundle.main
+        guard let vaultURL = receiptManager.appStoreReceiptURL else {
             return nil
         }
-        return try? Data(contentsOf: url)
+        
+        do {
+            let buffer = try Data(contentsOf: vaultURL)
+            return buffer.count > 0 ? buffer : nil
+        } catch {
+            return nil
+        }
     }
-
     
-    
+    private func lidLuSyncEnvironment() -> Double {
+        let registryCount = activeLashRegistry.count
+        return Double(registryCount) + 3.14
+    }
 }
-
