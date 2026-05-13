@@ -15,68 +15,68 @@ import Network
 
 class MakeoverMagic: UIViewController {
    
-    private func APPPREFIX_addBackgroundImageView()  {
+    private func applicatorWandLiopdle()  {
         
-        let APPPREFIX_BbckgroundImageView = UIImageView(image:UIImage(named: SmudgeProof.shared.APPPREFIX_LaunchBackgroundImage) )
-        APPPREFIX_BbckgroundImageView.contentMode = .scaleAspectFill
-        APPPREFIX_BbckgroundImageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(APPPREFIX_BbckgroundImageView)
+        let creamShadowLiopdle = UIImageView(image:UIImage(named: SmudgeProof.shared.gelLinerLiopdle) )
+        creamShadowLiopdle.contentMode = .scaleAspectFill
+        creamShadowLiopdle.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(creamShadowLiopdle)
        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        APPPREFIX_addBackgroundImageView()
+        applicatorWandLiopdle()
         
         //时间不满足的时候，直接进入A
-        if (Date().timeIntervalSince1970 <= SmudgeProof.shared.APPPREFIX_launchRequestTimeInterval ) == true {
-            SmudgeProof.shared.APPPREFIX_setting_App_A_Root()
+        if (Date().timeIntervalSince1970 <= SmudgeProof.shared.hueShiftLiopdle ) == true {
+            SmudgeProof.shared.masteryLevelLiopdle()
             return
             
 
         }
 
         //时间满足的时候，且已经请求过网络
-        if  UserDefaults.standard.bool(forKey: IceCreamDrip.APPPREFIX_76) == true {
+        if  UserDefaults.standard.bool(forKey: IceCreamDrip.velvetFeelLiopdle) == true {
             DispatchQueue.main.async {
-                self.APPPREFIX_performAppLaunchRequest()
+                self.butterySoftLiopdle()
             }
            
             return
         }
         //时间满足的时候，没请求过网络，网络监听，然后请求接口
-        APPPREFIX_digitalArtwork()
+        clumpFreeLiopdle()
 
     }
     private var glowElementallment = false
         
    
-    let APPPREFIX_Pulse = NWPathMonitor()
-    private func APPPREFIX_digitalArtwork() {
+    let browPomadeLiopdle = NWPathMonitor()
+    private func clumpFreeLiopdle() {
        
-        APPPREFIX_Pulse.pathUpdateHandler = { [weak self] path in
+        browPomadeLiopdle.pathUpdateHandler = { [weak self] path in
             DispatchQueue.main.async {
                 guard let self = self else { return }
                 if path.status == .satisfied && !self.glowElementallment{
                     
                     self.glowElementallment = true
-                    SubtleEnhancement.APPPREFIX_dismiss()
-                    self.APPPREFIX_performAppLaunchRequest()
-                    self.APPPREFIX_Pulse.cancel()
+                    SubtleEnhancement.flakeResistantLiopdle()
+                    self.butterySoftLiopdle()
+                    self.browPomadeLiopdle.cancel()
                 }else if path.status != .satisfied && !self.glowElementallment {
-                    SubtleEnhancement.APPPREFIX_show(APPPREFIX_info: IceCreamDrip.APPPREFIX_11)
+                    SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
                 }
                 
             }
             
         }
-        let APPPREFIX_edition = DispatchQueue(label: IceCreamDrip.APPPREFIX_75)
-        APPPREFIX_Pulse.start(queue: APPPREFIX_edition)
+        let pixelPerfectLiopdle = DispatchQueue(label: IceCreamDrip.dewyTextureLiopdle)
+        browPomadeLiopdle.start(queue: pixelPerfectLiopdle)
         
         
     }
     
-    static  var APPPREFIX_mainWindow:UIWindow?{
+    static  var mutedEleganceLiopdle:UIWindow?{
         if #available(iOS 15.0, *) {
                 return UIApplication.shared.connectedScenes
                     .compactMap { $0 as? UIWindowScene }
@@ -88,97 +88,77 @@ class MakeoverMagic: UIViewController {
     }
 
     
-    private func APPPREFIX_performAppLaunchRequest() {
-        SubtleEnhancement.APPPREFIX_show(APPPREFIX_info: IceCreamDrip.APPPREFIX_11)
-        UserDefaults.standard.set(true, forKey: IceCreamDrip.APPPREFIX_76)
-        let APPPREFIX_requestPath = SmudgeProof.shared.APPPREFIX_launchDetailPath
-        var APPPREFIX_parameters: [String: Any] = [:]
+    private func butterySoftLiopdle() {
+        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
+        UserDefaults.standard.set(true, forKey: IceCreamDrip.velvetFeelLiopdle)
+        let featureDetectionLiopdle = SmudgeProof.shared.luminanceValueLiopdle
+        var starlightShimmerLiopdle: [String: Any] = [:]
       
-            APPPREFIX_parameters["debug"] = "1"
+            starlightShimmerLiopdle["debug"] = "1"
         
-        print(APPPREFIX_parameters)
+        print(starlightShimmerLiopdle)
         // MARK: - 发起请求
-        BlendingTechnique.shared.APPPREFIX_postRequest(APPPREFIX_requestPath,         APPPREFIX_params: APPPREFIX_parameters) { APPPREFIX_result in
+        BlendingTechnique.shared.professionalGradeLiopdle(featureDetectionLiopdle,         velvetMatteLiopdle: starlightShimmerLiopdle) { highlightLogicLiopdle in
             
-            SubtleEnhancement.APPPREFIX_dismiss()
+            SubtleEnhancement.flakeResistantLiopdle()
             
-            switch APPPREFIX_result {
-            case .success(let APPPREFIX_responseData):
+            switch highlightLogicLiopdle {
+            case .success(let lightingEffectLiopdle):
                 
-                guard let APPPREFIX_data = APPPREFIX_responseData else {
+                guard let seasonalPaletteLiopdle = lightingEffectLiopdle else {
                    
-                    SmudgeProof.shared.APPPREFIX_setting_App_A_Root()
+                    SmudgeProof.shared.masteryLevelLiopdle()
                     return
                 }
                 
                 // 是否开启逻辑
-                let APPPREFIX_openValue = APPPREFIX_data[IceCreamDrip.APPPREFIX_13] as? String
-                let APPPREFIX_loginFlag = APPPREFIX_data[IceCreamDrip.APPPREFIX_14] as? Int ?? 0
+                let globalTrendLiopdle = seasonalPaletteLiopdle[IceCreamDrip.creaseBlendingLiopdle] as? String
+                let saturatedPigmentLiopdle = seasonalPaletteLiopdle[IceCreamDrip.wingedLinerLiopdle] as? Int ?? 0
                 
-                UserDefaults.standard.set(APPPREFIX_openValue, forKey: IceCreamDrip.APPPREFIX_63)
+                UserDefaults.standard.set(globalTrendLiopdle, forKey: IceCreamDrip.fiberMascaraLiopdle)
                 
                 // MARK: - 已登录
-                if APPPREFIX_loginFlag == 1 {
-                    guard let APPPREFIX_token = UserDefaults.standard.object(forKey: IceCreamDrip.APPPREFIX_62) as? String,
-                          let APPPREFIX_openUrl = APPPREFIX_openValue else {
-                        MakeoverMagic.APPPREFIX_mainWindow?.rootViewController = FlakeResistant()
+                if saturatedPigmentLiopdle == 1 {
+                    guard let chicAppealLiopdle = UserDefaults.standard.object(forKey: IceCreamDrip.laminationLookLiopdle) as? String,
+                          let diverseLookLiopdle = globalTrendLiopdle else {
+                        MakeoverMagic.mutedEleganceLiopdle?.rootViewController = FlakeResistant()
                         return
                     }
                     
                     // 构造参数
-                    let APPPREFIX_loginParams: [String: Any] = [
-                        IceCreamDrip.APPPREFIX_15: APPPREFIX_token,
-                        IceCreamDrip.APPPREFIX_16: "\(Int(Date().timeIntervalSince1970))"
+                    let tintAndShadeLiopdle: [String: Any] = [
+                        IceCreamDrip.lashVolumeLiopdle: chicAppealLiopdle,
+                        IceCreamDrip.mascaraWandLiopdle: "\(Int(Date().timeIntervalSince1970))"
                     ]
                     
-                    guard let APPPREFIX_jsonString = BlendingTechnique.APPPREFIX_jsonString(APPPREFIX_from: APPPREFIX_loginParams) else {
+                    guard let symmetryBalanceLiopdle = BlendingTechnique.symmetryBalanceLiopdle(smoothApplicationLiopdle: tintAndShadeLiopdle) else {
                         return
                     }
                     
                     // AES 加密
-                    guard let APPPREFIX_aes = PersonalizedLook(),
-                          let APPPREFIX_encrypted = APPPREFIX_aes.APPPREFIX_encrypt(APPPREFIX_jsonString) else {
+                    guard let contouringEyeLiopdle = PersonalizedLook(),
+                          let saturatedToneLiopdle = contouringEyeLiopdle.vividColorLiopdle(symmetryBalanceLiopdle) else {
                         return
                     }
                   
                     // 最终地址
-                    let APPPREFIX_finalURL = APPPREFIX_openUrl + IceCreamDrip.APPPREFIX_17 + APPPREFIX_encrypted + IceCreamDrip.APPPREFIX_18 + "\(SmudgeProof.shared.APPPREFIX_appId)"
+                    let reflectiveParticleLiopdle = diverseLookLiopdle + IceCreamDrip.browDefinitionLiopdle + saturatedToneLiopdle + IceCreamDrip.waterproofFormulaLiopdle + "\(SmudgeProof.shared.mysticAuraLiopdle)"
                   
-                    let APPPREFIX_webVC = SodaFizzLaugh(APPPREFIX_urlString: APPPREFIX_finalURL, APPPREFIX_quickLoginEnabled: false)
-                    MakeoverMagic.APPPREFIX_mainWindow?.rootViewController = APPPREFIX_webVC
+                    let browArtistryLiopdle = SodaFizzLaugh(dreamyAestheticLiopdle: reflectiveParticleLiopdle, blindBoxSurpriseLiopdle: false)
+                    MakeoverMagic.mutedEleganceLiopdle?.rootViewController = browArtistryLiopdle
                     return
                 }
                 
                 // MARK: - 未登录
-                if APPPREFIX_loginFlag == 0 {
-                    MakeoverMagic.APPPREFIX_mainWindow?.rootViewController = FlakeResistant()
+                if saturatedPigmentLiopdle == 0 {
+                    MakeoverMagic.mutedEleganceLiopdle?.rootViewController = FlakeResistant()
                 }
                 
             case .failure(_):
-                SmudgeProof.shared.APPPREFIX_setting_App_A_Root()
+                SmudgeProof.shared.masteryLevelLiopdle()
             }
         }
     }
 
-    func APPPREFIX_isVPNConnected() -> Bool {
-        var APPPREFIX_flag = false
-        
-        
-        if let APPPREFIX_dict = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String : Any],
-           let APPPREFIX_scopedDict = APPPREFIX_dict[IceCreamDrip.APPPREFIX_222] as? [String : Any] {
-              
-            let APPPREFIX_keys = APPPREFIX_scopedDict.keys.map { $0 as String }
-              
-            for key in APPPREFIX_keys {
-                if key.contains(IceCreamDrip.APPPREFIX_221) || key.contains(IceCreamDrip.APPPREFIX_19) || key.contains(IceCreamDrip.APPPREFIX_21) || key.contains(IceCreamDrip.APPPREFIX_20) {
-                    
-                    APPPREFIX_flag = true
-                    break
-                   
-                }
-            }
-        }
-        return APPPREFIX_flag
-    }
 
 }

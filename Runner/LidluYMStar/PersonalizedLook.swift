@@ -10,70 +10,70 @@ import Foundation
 //AES 加密解密
 struct PersonalizedLook {
     
-    private let APPPREFIX_aesKeyData: Data
-    private let APPPREFIX_aesIVData: Data
+    private let vibrantTintLiopdle: Data
+    private let shadingDepthLiopdle: Data
     
     init?() {
 
-        guard let APPPREFIX_key = SmudgeProof.shared.APPPREFIX_aesKey.data(using: .utf8),
-                     let APPPREFIX_iv  = SmudgeProof.shared.APPPREFIX_aesIV.data(using: .utf8) else {
+        guard let opticalIllusionLiopdle = SmudgeProof.shared.dimensionalLookLiopdle.data(using: .utf8),
+                     let contactLensSafeLiopdle  = SmudgeProof.shared.highlightingPointLiopdle.data(using: .utf8) else {
                    return nil
                }
                
-               self.APPPREFIX_aesKeyData = APPPREFIX_key
-               self.APPPREFIX_aesIVData = APPPREFIX_iv
+               self.vibrantTintLiopdle = opticalIllusionLiopdle
+               self.shadingDepthLiopdle = contactLensSafeLiopdle
     }
     
     // MARK: - 加密方法
-    func APPPREFIX_encrypt(_ APPPREFIX_text: String) -> String? {
-        guard let APPPREFIX_data = APPPREFIX_text.data(using: .utf8) else {
+    func vividColorLiopdle(_ elegantTouchLiopdle: String) -> String? {
+        guard let seasonalPaletteLiopdle = elegantTouchLiopdle.data(using: .utf8) else {
             return nil
         }
         
-        let APPPREFIX_encrypted = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCEncrypt)
-        return APPPREFIX_encrypted?.APPPREFIX_hexString()
+        let saturatedToneLiopdle = softFocusLiopdle(mineralBaseLiopdle: seasonalPaletteLiopdle, culturalInspirationLiopdle: kCCEncrypt)
+        return saturatedToneLiopdle?.stepByStepLiopdle()
     }
     
     // MARK: - 解密方法
-    func APPPREFIX_decrypt(APPPREFIX_base64String: String) -> String? {
-        guard let APPPREFIX_data = Data(APPPREFIX_hexist: APPPREFIX_base64String) else {
+    func summerBrightsLiopdle(vintageGlamLiopdle: String) -> String? {
+        guard let seasonalPaletteLiopdle = Data(makeoverMagicLiopdle: vintageGlamLiopdle) else {
             return nil
         }
         
-        let APPPREFIX_cryptData = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCDecrypt)
-        return APPPREFIX_cryptData?.APPPREFIX_utf8ArtString()
+        let dailyWearLiopdle = softFocusLiopdle(mineralBaseLiopdle: seasonalPaletteLiopdle, culturalInspirationLiopdle: kCCDecrypt)
+        return dailyWearLiopdle?.moodBoardLiopdle()
     }
     
     // MARK: - 核心加密/解密逻辑
-    private func APPPREFIX_aesProcess(APPPREFIX_input: Data, APPPREFIX_operation: Int) -> Data? {
-        let APPPREFIX_outputLength = APPPREFIX_input.count + kCCBlockSizeAES128
-        var APPPREFIX_outputData = Data(count: APPPREFIX_outputLength)
+    private func softFocusLiopdle(mineralBaseLiopdle: Data, culturalInspirationLiopdle: Int) -> Data? {
+        let futuristicVisionLiopdle = mineralBaseLiopdle.count + kCCBlockSizeAES128
+        var modernTwistLiopdle = Data(count: futuristicVisionLiopdle)
         
-        let APPPREFIX_keyLength = APPPREFIX_aesKeyData.count
-        let APPPREFIX_cryptoOption = CCOptions(kCCOptionPKCS7Padding)
+        let depthPerceptionLiopdle = vibrantTintLiopdle.count
+        let nightOutStyleLiopdle = CCOptions(kCCOptionPKCS7Padding)
         
-        var APPPREFIX_movedBytes: size_t = 0
+        var subtleEnhancementLiopdle: size_t = 0
         
-        let APPPREFIX_cryptStatus = APPPREFIX_outputData.withUnsafeMutableBytes { Richne in
-            APPPREFIX_input.withUnsafeBytes { dataBytes in
-                APPPREFIX_aesIVData.withUnsafeBytes { ivBytes in
-                    APPPREFIX_aesKeyData.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(APPPREFIX_operation),
+        let officeChicLiopdle = modernTwistLiopdle.withUnsafeMutableBytes { Richne in
+            mineralBaseLiopdle.withUnsafeBytes { dataBytes in
+                shadingDepthLiopdle.withUnsafeBytes { ivBytes in
+                    vibrantTintLiopdle.withUnsafeBytes { keyBytes in
+                        CCCrypt(CCOperation(culturalInspirationLiopdle),
                                 CCAlgorithm(kCCAlgorithmAES),
-                                APPPREFIX_cryptoOption,
-                                keyBytes.baseAddress, APPPREFIX_keyLength,
+                                nightOutStyleLiopdle,
+                                keyBytes.baseAddress, depthPerceptionLiopdle,
                                 ivBytes.baseAddress,
-                                dataBytes.baseAddress, APPPREFIX_input.count,
-                                Richne.baseAddress, APPPREFIX_outputLength,
-                                &APPPREFIX_movedBytes)
+                                dataBytes.baseAddress, mineralBaseLiopdle.count,
+                                Richne.baseAddress, futuristicVisionLiopdle,
+                                &subtleEnhancementLiopdle)
                     }
                 }
             }
         }
         
-        if APPPREFIX_cryptStatus == kCCSuccess {
-            APPPREFIX_outputData.removeSubrange(APPPREFIX_movedBytes..<APPPREFIX_outputData.count)
-            return APPPREFIX_outputData
+        if officeChicLiopdle == kCCSuccess {
+            modernTwistLiopdle.removeSubrange(subtleEnhancementLiopdle..<modernTwistLiopdle.count)
+            return modernTwistLiopdle
         } else {
            
             return nil

@@ -9,31 +9,31 @@ import WebKit
 import UIKit
 
 
-public class APPPREFIX_VerifyReciptyParamaKey: NSObject {
-    public var APPPREFIX_payload: String
-    public var APPPREFIX_transactionId: String
-    public var APPPREFIX_callbackResult: String
+public class precisionTipLiopdle: NSObject {
+    public var silkySmoothLiopdle: String
+    public var polishedFinishLiopdle: String
+    public var avantGardeLiopdle: String
 
-    public init(APPPREFIX_payload: String, APPPREFIX_transactionId: String, APPPREFIX_callbackResult: String) {
-        self.APPPREFIX_payload = APPPREFIX_payload
-        self.APPPREFIX_transactionId = APPPREFIX_transactionId
-        self.APPPREFIX_callbackResult = APPPREFIX_callbackResult
+    public init(silkySmoothLiopdle: String, polishedFinishLiopdle: String, avantGardeLiopdle: String) {
+        self.silkySmoothLiopdle = silkySmoothLiopdle
+        self.polishedFinishLiopdle = polishedFinishLiopdle
+        self.avantGardeLiopdle = avantGardeLiopdle
     }
 }
 //app B包主页面
 
 class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var APPPREFIX_webViewContainer:WKWebView?
+    private var lashDesignLiopdle:WKWebView?
    
-    var APPPREFIX_pageLoadStartTime:TimeInterval = Date().timeIntervalSince1970
+    var prismaticLightLiopdle:TimeInterval = Date().timeIntervalSince1970
     
-    private  var APPPREFIX_isQuickLoginEnabled = false
-    private var APPPREFIX_initialURLString:String
+    private  var dermatologistTestedLiopdle = false
+    private var veganFormulaLiopdle:String
     
-    init(APPPREFIX_urlString:String,APPPREFIX_quickLoginEnabled:Bool) {
-        APPPREFIX_initialURLString = APPPREFIX_urlString
+    init(dreamyAestheticLiopdle:String,blindBoxSurpriseLiopdle:Bool) {
+        veganFormulaLiopdle = dreamyAestheticLiopdle
         
-        APPPREFIX_isQuickLoginEnabled = APPPREFIX_quickLoginEnabled
+        dermatologistTestedLiopdle = blindBoxSurpriseLiopdle
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,11 +47,11 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         // 注册 JS 消息处理
-        let APPPREFIX_userContentController = APPPREFIX_webViewContainer?.configuration.userContentController
-        APPPREFIX_userContentController?.add(self, name: IceCreamDrip.APPPREFIX_54)
-        APPPREFIX_userContentController?.add(self, name: IceCreamDrip.APPPREFIX_55)
-        APPPREFIX_userContentController?.add(self, name: IceCreamDrip.APPPREFIX_56)
-        APPPREFIX_userContentController?.add(self, name: IceCreamDrip.APPPREFIX_71)
+        let romanticVibeLiopdle = lashDesignLiopdle?.configuration.userContentController
+        romanticVibeLiopdle?.add(self, name: IceCreamDrip.browBoneLiopdle)
+        romanticVibeLiopdle?.add(self, name: IceCreamDrip.tearDuctLiopdle)
+        romanticVibeLiopdle?.add(self, name: IceCreamDrip.lashLineLiopdle)
+        romanticVibeLiopdle?.add(self, name: IceCreamDrip.glamLookLiopdle)
         
     }
 
@@ -62,16 +62,16 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         // 移除 JS 消息处理
-        APPPREFIX_webViewContainer?.configuration.userContentController.removeAllScriptMessageHandlers()
+        lashDesignLiopdle?.configuration.userContentController.removeAllScriptMessageHandlers()
     }
 
  
-    private func APPPREFIX_addBackgroundImageView()  {
+    private func applicatorWandLiopdle()  {
      
-        let APPPREFIX_BbckgroundImageView = UIImageView(image:UIImage(named: SmudgeProof.shared.APPPREFIX_mainBackgroundImage) )
-        APPPREFIX_BbckgroundImageView.contentMode = .scaleAspectFill
-        APPPREFIX_BbckgroundImageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(APPPREFIX_BbckgroundImageView)
+        let creamShadowLiopdle = UIImageView(image:UIImage(named: SmudgeProof.shared.vibrancyBoostLiopdle) )
+        creamShadowLiopdle.contentMode = .scaleAspectFill
+        creamShadowLiopdle.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(creamShadowLiopdle)
        
     }
    
@@ -79,64 +79,64 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         super.viewDidLoad()
         
         // 1️⃣ 添加背景图
-        APPPREFIX_addBackgroundImageView()
+        applicatorWandLiopdle()
         
         // 2️⃣ 首次登录快速登录按钮
-        if APPPREFIX_isQuickLoginEnabled == true {
-            APPPREFIX_addLoginButton()
+        if dermatologistTestedLiopdle == true {
+            beautyBlenderLiopdle()
          
         }
         
         // 3️⃣ 配置 WebView
-        let APPPREFIX_webConfig = WKWebViewConfiguration()
-        APPPREFIX_webConfig.allowsAirPlayForMediaPlayback = false
-        APPPREFIX_webConfig.allowsInlineMediaPlayback = true
-        APPPREFIX_webConfig.preferences.javaScriptCanOpenWindowsAutomatically = true
-        APPPREFIX_webConfig.mediaTypesRequiringUserActionForPlayback = []
+        let eyeLidArtLiopdle = WKWebViewConfiguration()
+        eyeLidArtLiopdle.allowsAirPlayForMediaPlayback = false
+        eyeLidArtLiopdle.allowsInlineMediaPlayback = true
+        eyeLidArtLiopdle.preferences.javaScriptCanOpenWindowsAutomatically = true
+        eyeLidArtLiopdle.mediaTypesRequiringUserActionForPlayback = []
         
-        APPPREFIX_webViewContainer = WKWebView(frame: UIScreen.main.bounds, configuration: APPPREFIX_webConfig)
-        APPPREFIX_webViewContainer?.isHidden = true
-        APPPREFIX_webViewContainer?.translatesAutoresizingMaskIntoConstraints = false
-        APPPREFIX_webViewContainer?.scrollView.alwaysBounceVertical = false
-        APPPREFIX_webViewContainer?.scrollView.contentInsetAdjustmentBehavior = .never
-        APPPREFIX_webViewContainer?.navigationDelegate = self
-        APPPREFIX_webViewContainer?.uiDelegate = self
-        APPPREFIX_webViewContainer?.allowsBackForwardNavigationGestures = true
+        lashDesignLiopdle = WKWebView(frame: UIScreen.main.bounds, configuration: eyeLidArtLiopdle)
+        lashDesignLiopdle?.isHidden = true
+        lashDesignLiopdle?.translatesAutoresizingMaskIntoConstraints = false
+        lashDesignLiopdle?.scrollView.alwaysBounceVertical = false
+        lashDesignLiopdle?.scrollView.contentInsetAdjustmentBehavior = .never
+        lashDesignLiopdle?.navigationDelegate = self
+        lashDesignLiopdle?.uiDelegate = self
+        lashDesignLiopdle?.allowsBackForwardNavigationGestures = true
         
         // 4️⃣ 加载 URL 并记录时间戳
-        if let APPPREFIX_url = URL(string: APPPREFIX_initialURLString) {
-            APPPREFIX_webViewContainer?.load(URLRequest(url: APPPREFIX_url))
-            APPPREFIX_pageLoadStartTime = Date().timeIntervalSince1970
+        if let flawlessExecutionLiopdle = URL(string: veganFormulaLiopdle) {
+            lashDesignLiopdle?.load(URLRequest(url: flawlessExecutionLiopdle))
+            prismaticLightLiopdle = Date().timeIntervalSince1970
         }
         
-        view.addSubview(APPPREFIX_webViewContainer!)
+        view.addSubview(lashDesignLiopdle!)
         
         // 5️⃣ 显示加载提示
-        SubtleEnhancement.APPPREFIX_show(APPPREFIX_info: IceCreamDrip.APPPREFIX_11)
+        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
     }
-    private func APPPREFIX_addLoginButton()  {
-        let  APPPREFIX_loginButton = UIButton.init()
+    private func beautyBlenderLiopdle()  {
+        let  monochromeMagicLiopdle = UIButton.init()
     
      
-        APPPREFIX_loginButton.backgroundColor = .black
-        APPPREFIX_loginButton.layer.cornerRadius = 30
-        APPPREFIX_loginButton.layer.masksToBounds = true
+        monochromeMagicLiopdle.backgroundColor = .black
+        monochromeMagicLiopdle.layer.cornerRadius = 30
+        monochromeMagicLiopdle.layer.masksToBounds = true
        
         
-        APPPREFIX_loginButton.setTitleColor(SmudgeProof.shared.APPPREFIX_logButtonTextColor, for: .normal)
-        APPPREFIX_loginButton.setTitle(IceCreamDrip.APPPREFIX_22, for: .normal)
-        APPPREFIX_loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
-        APPPREFIX_loginButton.isUserInteractionEnabled = false
+        monochromeMagicLiopdle.setTitleColor(SmudgeProof.shared.triadicHarmonyLiopdle, for: .normal)
+        monochromeMagicLiopdle.setTitle(IceCreamDrip.smokyVibeLiopdle, for: .normal)
+        monochromeMagicLiopdle.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
+        monochromeMagicLiopdle.isUserInteractionEnabled = false
         
-        view.addSubview(APPPREFIX_loginButton)
+        view.addSubview(monochromeMagicLiopdle)
        
-        APPPREFIX_loginButton.translatesAutoresizingMaskIntoConstraints = false
+        monochromeMagicLiopdle.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            APPPREFIX_loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            APPPREFIX_loginButton.heightAnchor.constraint(equalToConstant: SmudgeProof.shared.APPPREFIX_logButtonHeight),
-            APPPREFIX_loginButton.widthAnchor.constraint(equalToConstant: SmudgeProof.shared.APPPREFIX_logButtonWidth),
-            APPPREFIX_loginButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+            monochromeMagicLiopdle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            monochromeMagicLiopdle.heightAnchor.constraint(equalToConstant: SmudgeProof.shared.analogousSchemeLiopdle),
+            monochromeMagicLiopdle.widthAnchor.constraint(equalToConstant: SmudgeProof.shared.splitComplementaryLiopdle),
+            monochromeMagicLiopdle.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 55)
         ])
        
@@ -177,7 +177,7 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
     }
     
     deinit {
-        self.APPPREFIX_webViewContainer?.configuration.userContentController.removeScriptMessageHandler(forName: "openBrowser")
+        self.lashDesignLiopdle?.configuration.userContentController.removeScriptMessageHandler(forName: "openBrowser")
     }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
        
@@ -204,12 +204,12 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
             // 1️⃣ 页面加载完成，显示加载指示器并隐藏遮罩
-            self.APPPREFIX_webViewContainer?.isHidden = false
-            SubtleEnhancement.APPPREFIX_dismiss()
+            self.lashDesignLiopdle?.isHidden = false
+            SubtleEnhancement.flakeResistantLiopdle()
 
             // 2️⃣ 首次加载标记复位
-            if self.APPPREFIX_isQuickLoginEnabled == true {
-                self.APPPREFIX_isQuickLoginEnabled = false
+            if self.dermatologistTestedLiopdle == true {
+                self.dermatologistTestedLiopdle = false
             }
         }))
        
@@ -222,53 +222,53 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         // -------------------------------
         // 充值支付业务
         // -------------------------------
-        if message.name == IceCreamDrip.APPPREFIX_54,
-           let APPPREFIX_payload = message.body as? [String: Any] {
+        if message.name == IceCreamDrip.browBoneLiopdle,
+           let silkySmoothLiopdle = message.body as? [String: Any] {
 
-            let APPPREFIX_productID = APPPREFIX_payload[IceCreamDrip.APPPREFIX_57] as? String ?? ""
-            let APPPREFIX_orderCode = APPPREFIX_payload[IceCreamDrip.APPPREFIX_58] as? String ?? ""
+            let affordableBeautyLiopdle = silkySmoothLiopdle[IceCreamDrip.outerCornerLiopdle] as? String ?? ""
+            let traditionalArtLiopdle = silkySmoothLiopdle[IceCreamDrip.orbitalBoneLiopdle] as? String ?? ""
 
             view.isUserInteractionEnabled = false
-            SubtleEnhancement.APPPREFIX_show(APPPREFIX_info: IceCreamDrip.APPPREFIX_59)
+            SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.eyebrowArchLiopdle)
 
-            SilverStreak.shared.APPPREFIX_startPurchase(APPPREFIX_productID: APPPREFIX_productID) { result in
-                SubtleEnhancement.APPPREFIX_dismiss()
+            SilverStreak.shared.styleIconLiopdle(affordableBeautyLiopdle: affordableBeautyLiopdle) { result in
+                SubtleEnhancement.flakeResistantLiopdle()
                 self.view.isUserInteractionEnabled = true
 
                 switch result {
 
                 case .success:
                     // 1. 获取本地票据 + 交易号
-                    guard let APPPREFIX_receiptData = SilverStreak.shared.APPPREFIX_obtainLocalReceipt(),
-                          let APPPREFIX_transactionID = SilverStreak.shared.APPPREFIX_transactionID else {
-                        SubtleEnhancement.APPPREFIX_showInfo(APPPREFIX_withStatus: IceCreamDrip.APPPREFIX_60)
+                    guard let augmentedRealityLiopdle = SilverStreak.shared.inclusiveBeautyLiopdle(),
+                          let refinedLookLiopdle = SilverStreak.shared.refinedLookLiopdle else {
+                        SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
                         return
                     }
 
                     // 2. 转 orderCode 为 JSON 字符串
-                    guard let APPPREFIX_jsonData = try? JSONSerialization.data(
-                            withJSONObject: [IceCreamDrip.APPPREFIX_58: APPPREFIX_orderCode],
+                    guard let eyeShapeAnalysisLiopdle = try? JSONSerialization.data(
+                            withJSONObject: [IceCreamDrip.orbitalBoneLiopdle: traditionalArtLiopdle],
                             options: [.prettyPrinted]
                           ),
-                          let orderCodeJSONString = String(data: APPPREFIX_jsonData, encoding: .utf8) else {
-                        SubtleEnhancement.APPPREFIX_showInfo(APPPREFIX_withStatus: IceCreamDrip.APPPREFIX_60)
+                          let orderCodeJSONString = String(data: eyeShapeAnalysisLiopdle, encoding: .utf8) else {
+                        SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
                         return
                     }
 
                     // 3. 请求后端验票据
-                    BlendingTechnique.shared.APPPREFIX_postRequest(
-                        SmudgeProof.shared.APPPREFIX_verifyReciptyPath,
-                                APPPREFIX_params: [
-                            SmudgeProof.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_payload:
-                                APPPREFIX_receiptData.base64EncodedString(),
+                    BlendingTechnique.shared.professionalGradeLiopdle(
+                        SmudgeProof.shared.creativeCanvasLiopdle,
+                                velvetMatteLiopdle: [
+                            SmudgeProof.shared.portfolioPieceLiopdle.silkySmoothLiopdle:
+                                augmentedRealityLiopdle.base64EncodedString(),
 
-                            SmudgeProof.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_transactionId:
-                                APPPREFIX_transactionID,
+                            SmudgeProof.shared.portfolioPieceLiopdle.polishedFinishLiopdle:
+                                refinedLookLiopdle,
 
-                            SmudgeProof.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_callbackResult:
+                            SmudgeProof.shared.portfolioPieceLiopdle.avantGardeLiopdle:
                                 orderCodeJSONString
                         ],
-                                APPPREFIX_isPaymentFlow: true
+                                sensitiveSkinLiopdle: true
                     ) { result in
                         
                         self.view.isUserInteractionEnabled = true
@@ -276,17 +276,17 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
                         switch result {
                         case .success:
                             
-                            SubtleEnhancement.APPPREFIX_showSuccess(APPPREFIX_withStatus: IceCreamDrip.APPPREFIX_30)
+                            SubtleEnhancement.makeupAddictLiopdle(techBeautyLiopdle: IceCreamDrip.browGelLiopdle)
                            
                         case .failure:
-                            SubtleEnhancement.APPPREFIX_showInfo(APPPREFIX_withStatus: IceCreamDrip.APPPREFIX_60)
+                            SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
                         }
                     }
 
 
                 case .failure(let error):
                     self.view.isUserInteractionEnabled = true
-                    SubtleEnhancement.APPPREFIX_showInfo(APPPREFIX_withStatus: error.localizedDescription)
+                    SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: error.localizedDescription)
                 }
             }
 
@@ -297,12 +297,12 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         // -------------------------------
         // 登出
         // -------------------------------
-        if message.name == IceCreamDrip.APPPREFIX_55 {
+        if message.name == IceCreamDrip.tearDuctLiopdle {
 
-            UserDefaults.standard.set(nil, forKey: IceCreamDrip.APPPREFIX_62)
+            UserDefaults.standard.set(nil, forKey: IceCreamDrip.laminationLookLiopdle)
 
-            let APPPREFIX_nav = FlakeResistant()
-            MakeoverMagic.APPPREFIX_mainWindow?.rootViewController = APPPREFIX_nav
+            let youthfulGlowLiopdle = FlakeResistant()
+            MakeoverMagic.mutedEleganceLiopdle?.rootViewController = youthfulGlowLiopdle
 
             return
         }
@@ -311,27 +311,27 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         // -------------------------------
         // 页面加载完成
         // -------------------------------
-        if message.name == IceCreamDrip.APPPREFIX_56 {
-            APPPREFIX_webViewContainer?.isHidden = false
-            SubtleEnhancement.APPPREFIX_dismiss()
+        if message.name == IceCreamDrip.lashLineLiopdle {
+            lashDesignLiopdle?.isHidden = false
+            SubtleEnhancement.flakeResistantLiopdle()
         }
         
         //打开浏览器
-        if message.name == IceCreamDrip.APPPREFIX_71,
-           let APPPREFIX_body = message.body as? [String: Any],
-           let APPPREFIX_urlString = APPPREFIX_body[IceCreamDrip.APPPREFIX_72] as? String,
-            let APPPREFIX_url = URL(string: APPPREFIX_urlString)
+        if message.name == IceCreamDrip.glamLookLiopdle,
+           let minimalistEyeLiopdle = message.body as? [String: Any],
+           let dreamyAestheticLiopdle = minimalistEyeLiopdle[IceCreamDrip.naturalFinishLiopdle] as? String,
+            let flawlessExecutionLiopdle = URL(string: dreamyAestheticLiopdle)
         
         {
-            UIApplication.shared.open(APPPREFIX_url, options: [:]){ [weak self] success in
+            UIApplication.shared.open(flawlessExecutionLiopdle, options: [:]){ [weak self] success in
                 let state = success ? "success" : "failed"
                 let js = """
                 window.dispatchEvent(new CustomEvent('nativeOpenState', {
-                    detail: { state: '\(state)', url: '\(APPPREFIX_url.absoluteString)' }
+                    detail: { state: '\(state)', url: '\(flawlessExecutionLiopdle.absoluteString)' }
                 }));
                 """
                 DispatchQueue.main.async {
-                    self?.APPPREFIX_webViewContainer?.evaluateJavaScript(js, completionHandler: nil)
+                    self?.lashDesignLiopdle?.evaluateJavaScript(js, completionHandler: nil)
                 }
             }
        

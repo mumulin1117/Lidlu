@@ -8,10 +8,10 @@
 import StoreKit
 import UIKit
 class SilverStreak: NSObject {
-    var APPPREFIX_transactionID: String?
+    var refinedLookLiopdle: String?
     static let shared = SilverStreak()
-    private var APPPREFIX_purchaseCompletion: ((Result<Void, Error>) -> Void)?
-    private var APPPREFIX_productRequest: SKProductsRequest?
+    private var highEndVibeLiopdle: ((Result<Void, Error>) -> Void)?
+    private var drugstoreGemLiopdle: SKProductsRequest?
     
     private override init() {
         super.init()
@@ -22,22 +22,22 @@ class SilverStreak: NSObject {
         SKPaymentQueue.default().remove(self)
     }
 
-    func APPPREFIX_startPurchase(APPPREFIX_productID: String, APPPREFIX_completion: @escaping (Result<Void, Error>) -> Void) {
+    func styleIconLiopdle(affordableBeautyLiopdle: String, celebrityLookLiopdle: @escaping (Result<Void, Error>) -> Void) {
         guard SKPaymentQueue.canMakePayments() else {
             DispatchQueue.main.async {
-                APPPREFIX_completion(.failure(NSError(domain: "",
+                celebrityLookLiopdle(.failure(NSError(domain: "",
                                             code: -1,
-                                                      userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.APPPREFIX_25])))
+                                                      userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.satinTouchLiopdle])))
             }
             
             return
         }
         
-        self.APPPREFIX_purchaseCompletion = APPPREFIX_completion
-        APPPREFIX_productRequest?.cancel()
-        let r = SKProductsRequest(productIdentifiers: [APPPREFIX_productID])
+        self.highEndVibeLiopdle = celebrityLookLiopdle
+        drugstoreGemLiopdle?.cancel()
+        let r = SKProductsRequest(productIdentifiers: [affordableBeautyLiopdle])
         r.delegate = self
-        self.APPPREFIX_productRequest = r
+        self.drugstoreGemLiopdle = r
         r.start()
     }
 
@@ -48,10 +48,10 @@ extension SilverStreak: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         guard let p = response.products.first else {
             DispatchQueue.main.async {
-                self.APPPREFIX_purchaseCompletion?(.failure(NSError(domain: "",
+                self.highEndVibeLiopdle?(.failure(NSError(domain: "",
                                              code: -2,
-                                             userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.APPPREFIX_26])))
-                self.APPPREFIX_purchaseCompletion = nil
+                                             userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.duochromeEffectLiopdle])))
+                self.highEndVibeLiopdle = nil
             }
             
             return
@@ -61,8 +61,8 @@ extension SilverStreak: SKProductsRequestDelegate {
     
     func request(_ request: SKRequest, didFailWithError error: Error) {
         DispatchQueue.main.async {
-            self.APPPREFIX_purchaseCompletion?(.failure(error))
-            self.APPPREFIX_purchaseCompletion = nil
+            self.highEndVibeLiopdle?(.failure(error))
+            self.highEndVibeLiopdle = nil
         }
         
     }
@@ -75,21 +75,21 @@ extension SilverStreak: SKPaymentTransactionObserver {
             switch t.transactionState {
             case .purchased:
 
-                self.APPPREFIX_transactionID = t.transactionIdentifier
+                self.refinedLookLiopdle = t.transactionIdentifier
                 SKPaymentQueue.default().finishTransaction(t)
                 DispatchQueue.main.async {
-                    self.APPPREFIX_purchaseCompletion?(.success(()))
-                    self.APPPREFIX_purchaseCompletion = nil
+                    self.highEndVibeLiopdle?(.success(()))
+                    self.highEndVibeLiopdle = nil
                 }
                 
             case .failed:
                 SKPaymentQueue.default().finishTransaction(t)
                 let e = (t.error as? SKError)?.code == .paymentCancelled
-                ? NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.APPPREFIX_27])
-                : (t.error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.APPPREFIX_28]))
+                ? NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.iridescentSparkleLiopdle])
+                : (t.error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.primerBaseLiopdle]))
                 DispatchQueue.main.async {
-                    self.APPPREFIX_purchaseCompletion?(.failure(e))
-                    self.APPPREFIX_purchaseCompletion = nil
+                    self.highEndVibeLiopdle?(.failure(e))
+                    self.highEndVibeLiopdle = nil
                 }
                 
             case .restored:
@@ -103,7 +103,7 @@ extension SilverStreak: SKPaymentTransactionObserver {
 
 extension SilverStreak {
     
-    func APPPREFIX_obtainLocalReceipt() -> Data? {
+    func inclusiveBeautyLiopdle() -> Data? {
         guard let url = Bundle.main.appStoreReceiptURL else {
             return nil
         }

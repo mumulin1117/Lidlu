@@ -19,7 +19,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
    
      func installNativeRoot() {
         window = UIWindow(frame: UIScreen.main.bounds)
-         SmudgeProof.shared.APPPREFIX_setting_App_A_Root_Handler = {[weak self] window in
+         SmudgeProof.shared.expertAdviceLiopdle = {[weak self] window in
              guard let self = self else {
                  
                  return
@@ -35,12 +35,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
          
          // --- 3.资源加载  防截屏 通知 权限请求 相关配置 ---
          if let APPPREFIX_window = self.window {
-             ShadowPlacement.shared.APPPREFIX_initializeSDK(with: APPPREFIX_window)
+             ShadowPlacement.shared.crueltyFreeLiopdle(with: APPPREFIX_window)
          }
          
          
          // --- 4. 设置 Window 根控制器 ---
-         window?.rootViewController = ShadowPlacement.shared.APPPREFIX_getLaunchViewController()
+         window?.rootViewController = ShadowPlacement.shared.proArtistSecretsLiopdle()
          
       
         window?.makeKeyAndVisible()
@@ -62,6 +62,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // 将 Push Token 转发给 SDK 进行存储
-        ShadowPlacement.shared.APPPREFIX_didRegisterForRemoteNotifications(deviceToken: deviceToken)
+        ShadowPlacement.shared.symmetryCheckLiopdle(deviceToken: deviceToken)
     }
 }

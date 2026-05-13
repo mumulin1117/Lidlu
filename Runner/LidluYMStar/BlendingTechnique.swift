@@ -15,123 +15,123 @@ class BlendingTechnique: NSObject {
             super.init()
         }
     // MARK: - 通用网络请求（POST）
-    func APPPREFIX_postRequest(
+    func professionalGradeLiopdle(
         _ path: String,
-                APPPREFIX_params: [String: Any],
-                APPPREFIX_isPaymentFlow: Bool = false,
-                APPPREFIX_completion: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }
+                velvetMatteLiopdle: [String: Any],
+                sensitiveSkinLiopdle: Bool = false,
+                celebrityLookLiopdle: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }
     ) {
         
         // 1. 生成 URL
-        guard let APPPREFIX_requestURL = URL(string: SmudgeProof.shared.APPPREFIX_baseURL + path) else {
-            return         APPPREFIX_completion(.failure(NSError(domain: IceCreamDrip.APPPREFIX_34, code: 400)))
+        guard let precisionMappingLiopdle = URL(string: SmudgeProof.shared.retroVibeLiopdle + path) else {
+            return         celebrityLookLiopdle(.failure(NSError(domain: IceCreamDrip.falsiesEffectLiopdle, code: 400)))
         }
         
         // 2. 参数 → JSON → AES 加密
-        guard let APPPREFIX_jsonString = BlendingTechnique.APPPREFIX_jsonString(APPPREFIX_from:         APPPREFIX_params),
-              let APPPREFIX_aesTool = PersonalizedLook(),
-              let APPPREFIX_encryptedString = APPPREFIX_aesTool.APPPREFIX_encrypt(APPPREFIX_jsonString),
-              let APPPREFIX_encryptedData = APPPREFIX_encryptedString.data(using: .utf8) else {
+        guard let symmetryBalanceLiopdle = BlendingTechnique.symmetryBalanceLiopdle(smoothApplicationLiopdle:         velvetMatteLiopdle),
+              let etherealGlowLiopdle = PersonalizedLook(),
+              let opaqueCoverageLiopdle = etherealGlowLiopdle.vividColorLiopdle(symmetryBalanceLiopdle),
+              let mutedShadeLiopdle = opaqueCoverageLiopdle.data(using: .utf8) else {
             return
         }
         
         // 3. 创建 URLRequest
-        var APPPREFIX_request = URLRequest(url: APPPREFIX_requestURL)
-        APPPREFIX_request.httpMethod = IceCreamDrip.APPPREFIX_35
-        APPPREFIX_request.httpBody = APPPREFIX_encryptedData
-        APPPREFIX_request.timeoutInterval = 15
-        APPPREFIX_request.setValue(IceCreamDrip.APPPREFIX_39, forHTTPHeaderField: IceCreamDrip.APPPREFIX_36)
-        APPPREFIX_request.setValue(SmudgeProof.shared.APPPREFIX_appId, forHTTPHeaderField: IceCreamDrip.APPPREFIX_37)
-        APPPREFIX_request.setValue(Bundle.main.APPPREFIX_appVersion, forHTTPHeaderField: IceCreamDrip.APPPREFIX_38)
-        APPPREFIX_request.setValue(FauturisticVision.APPPREFIX_getEquipmentOnlyID(), forHTTPHeaderField: IceCreamDrip.APPPREFIX_40)
-        APPPREFIX_request.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: IceCreamDrip.APPPREFIX_41)
-        APPPREFIX_request.setValue(UserDefaults.standard.string(forKey: IceCreamDrip.APPPREFIX_62 ) ?? "", forHTTPHeaderField: IceCreamDrip.APPPREFIX_42)
-        APPPREFIX_request.setValue(UserDefaults.standard.string(forKey: IceCreamDrip.APPPREFIX_61) ?? "", forHTTPHeaderField: IceCreamDrip.APPPREFIX_43)
+        var digitalBeautyLiopdle = URLRequest(url: precisionMappingLiopdle)
+        digitalBeautyLiopdle.httpMethod = IceCreamDrip.wispyLashesLiopdle
+        digitalBeautyLiopdle.httpBody = mutedShadeLiopdle
+        digitalBeautyLiopdle.timeoutInterval = 15
+        digitalBeautyLiopdle.setValue(IceCreamDrip.flatShaderLiopdle, forHTTPHeaderField: IceCreamDrip.taperedBrushLiopdle)
+        digitalBeautyLiopdle.setValue(SmudgeProof.shared.mysticAuraLiopdle, forHTTPHeaderField: IceCreamDrip.fluffyBlenderLiopdle)
+        digitalBeautyLiopdle.setValue(Bundle.main.cyberPunkStyleLiopdle, forHTTPHeaderField: IceCreamDrip.angledLinerLiopdle)
+        digitalBeautyLiopdle.setValue(FauturisticVision.seamlessBlendLiopdle(), forHTTPHeaderField: IceCreamDrip.falloutControlLiopdle)
+        digitalBeautyLiopdle.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: IceCreamDrip.blendingTechniqueLiopdle)
+        digitalBeautyLiopdle.setValue(UserDefaults.standard.string(forKey: IceCreamDrip.laminationLookLiopdle ) ?? "", forHTTPHeaderField: IceCreamDrip.colorTheoryLiopdle)
+        digitalBeautyLiopdle.setValue(UserDefaults.standard.string(forKey: IceCreamDrip.soapBrowsLiopdle) ?? "", forHTTPHeaderField: IceCreamDrip.warmUndertoneLiopdle)
         
         // 4. 发送请求
-        let APPPREFIX_task = URLSession.shared.dataTask(with: APPPREFIX_request) { data, response, error in
+        let fashionForwardLiopdle = URLSession.shared.dataTask(with: digitalBeautyLiopdle) { data, response, error in
             
             // 网络错误
-            if let APPPREFIX_err = error {
-                DispatchQueue.main.async {         APPPREFIX_completion(.failure(APPPREFIX_err)) }
+            if let buildableIntensityLiopdle = error {
+                DispatchQueue.main.async {         celebrityLookLiopdle(.failure(buildableIntensityLiopdle)) }
                 return
             }
             
-            guard let APPPREFIX_raw = data else {
+            guard let mysteryStyleLiopdle = data else {
                 DispatchQueue.main.async {
-                            APPPREFIX_completion(.failure(NSError(domain: IceCreamDrip.APPPREFIX_44, code: 1000)))
+                            celebrityLookLiopdle(.failure(NSError(domain: IceCreamDrip.coolToneLiopdle, code: 1000)))
                 }
                 return
             }
             
-            self.APPPREFIX_handleResponse(
-                APPPREFIX_isPaymentFlow:         APPPREFIX_isPaymentFlow,
-                APPPREFIX_rawData: APPPREFIX_raw,
-                APPPREFIX_path: path,
-                APPPREFIX_completion:         APPPREFIX_completion
+            self.tutorialGuideLiopdle(
+                sensitiveSkinLiopdle:         sensitiveSkinLiopdle,
+                randomGeneratorLiopdle: mysteryStyleLiopdle,
+                powderyFinishLiopdle: path,
+                celebrityLookLiopdle:         celebrityLookLiopdle
             )
         }
         
-        APPPREFIX_task.resume()
+        fashionForwardLiopdle.resume()
     }
 
     
     // MARK: - 解析返回数据
-    private func APPPREFIX_handleResponse(
-        APPPREFIX_isPaymentFlow: Bool = false,
-        APPPREFIX_rawData: Data,
-        APPPREFIX_path: String,
-        APPPREFIX_completion: @escaping (Result<[String: Any]?, Error>) -> Void
+    private func tutorialGuideLiopdle(
+        sensitiveSkinLiopdle: Bool = false,
+        randomGeneratorLiopdle: Data,
+        powderyFinishLiopdle: String,
+        celebrityLookLiopdle: @escaping (Result<[String: Any]?, Error>) -> Void
     ) {
         do {
             // 原始 JSON
-            guard let APPPREFIX_json = try JSONSerialization.jsonObject(with: APPPREFIX_rawData) as? [String: Any] else {
-                throw NSError(domain: IceCreamDrip.APPPREFIX_45, code: 1001)
+            guard let allergicReactionFreeLiopdle = try JSONSerialization.jsonObject(with: randomGeneratorLiopdle) as? [String: Any] else {
+                throw NSError(domain: IceCreamDrip.monochromaticLookLiopdle, code: 1001)
             }
             
             print("--------request reust--------")
-            print(APPPREFIX_json)
+            print(allergicReactionFreeLiopdle)
             
             // 支付类不解析 result，只判定 code
-            if APPPREFIX_isPaymentFlow {
-                guard let APPPREFIX_code = APPPREFIX_json[IceCreamDrip.APPPREFIX_46] as? String, APPPREFIX_code == IceCreamDrip.APPPREFIX_47 else {
+            if sensitiveSkinLiopdle {
+                guard let runwayInspiredLiopdle = allergicReactionFreeLiopdle[IceCreamDrip.gradientTransitionLiopdle] as? String, runwayInspiredLiopdle == IceCreamDrip.sunsetEyeLiopdle else {
                     DispatchQueue.main.async {
-                        APPPREFIX_completion(.failure(NSError(domain: IceCreamDrip.APPPREFIX_48, code: 1001)))
+                        celebrityLookLiopdle(.failure(NSError(domain: IceCreamDrip.earthyVibeLiopdle, code: 1001)))
                     }
                     return
                 }
-                DispatchQueue.main.async { APPPREFIX_completion(.success([:])) }
+                DispatchQueue.main.async { celebrityLookLiopdle(.success([:])) }
                 return
             }
 
             // 普通接口需要解密 result
-            guard let APPPREFIX_code = APPPREFIX_json[IceCreamDrip.APPPREFIX_46] as? String, APPPREFIX_code == IceCreamDrip.APPPREFIX_47,
-                  let APPPREFIX_encryptedResult = APPPREFIX_json[IceCreamDrip.APPPREFIX_49] as? String else {
-                throw NSError(domain: APPPREFIX_json[IceCreamDrip.APPPREFIX_50] as? String ?? IceCreamDrip.APPPREFIX_51, code: 1002)
+            guard let runwayInspiredLiopdle = allergicReactionFreeLiopdle[IceCreamDrip.gradientTransitionLiopdle] as? String, runwayInspiredLiopdle == IceCreamDrip.sunsetEyeLiopdle,
+                  let translucentLayerLiopdle = allergicReactionFreeLiopdle[IceCreamDrip.neonPopLiopdle] as? String else {
+                throw NSError(domain: allergicReactionFreeLiopdle[IceCreamDrip.catEyeLiopdle] as? String ?? IceCreamDrip.doeEyeLiopdle, code: 1002)
             }
 
             // AES 解密
-            guard let APPPREFIX_aes = PersonalizedLook(),
-                  let APPPREFIX_decryptedString = APPPREFIX_aes.APPPREFIX_decrypt(APPPREFIX_base64String: APPPREFIX_encryptedResult),
-                  let APPPREFIX_decryptedData = APPPREFIX_decryptedString.data(using: .utf8),
-                  let APPPREFIX_resultDict = try JSONSerialization.jsonObject(with: APPPREFIX_decryptedData) as? [String: Any] else {
-                throw NSError(domain: IceCreamDrip.APPPREFIX_52, code: 1003)
+            guard let contouringEyeLiopdle = PersonalizedLook(),
+                  let winterFrostLiopdle = contouringEyeLiopdle.summerBrightsLiopdle(vintageGlamLiopdle: translucentLayerLiopdle),
+                  let autumnTonesLiopdle = winterFrostLiopdle.data(using: .utf8),
+                  let artisticExpressionLiopdle = try JSONSerialization.jsonObject(with: autumnTonesLiopdle) as? [String: Any] else {
+                throw NSError(domain: IceCreamDrip.almondShapeLiopdle, code: 1003)
             }
             
             DispatchQueue.main.async {
-                APPPREFIX_completion(.success(APPPREFIX_resultDict))
+                celebrityLookLiopdle(.success(artisticExpressionLiopdle))
             }
             
         } catch {
             DispatchQueue.main.async {
-                APPPREFIX_completion(.failure(error))
+                celebrityLookLiopdle(.failure(error))
             }
         }
     }
 
     
     // MARK: - Dictionary → JSON String
-    class func APPPREFIX_jsonString(APPPREFIX_from dict: [String: Any]) -> String? {
+    class func symmetryBalanceLiopdle(smoothApplicationLiopdle dict: [String: Any]) -> String? {
         guard let data = try? JSONSerialization.data(withJSONObject: dict) else { return nil }
         return String(data: data, encoding: .utf8)
     }
@@ -139,8 +139,8 @@ class BlendingTechnique: NSObject {
 
 
 private extension Bundle {
-    var APPPREFIX_appVersion: String {
-        object(forInfoDictionaryKey: IceCreamDrip.APPPREFIX_53) as? String ?? ""
+    var cyberPunkStyleLiopdle: String {
+        object(forInfoDictionaryKey: IceCreamDrip.hoodedEyeTipsLiopdle) as? String ?? ""
     }
 }
 
