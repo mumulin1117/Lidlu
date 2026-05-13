@@ -25,139 +25,178 @@ func lidluKeyWindowLiopdle() -> UIWindow? {
 //app 启动页面    app启动时时候 设置windoe的根控制器 为这个控制器
 
 class MakeoverMagic: UIViewController {
-   
-    private func applicatorWandLiopdle()  {
-        
-        let creamShadowLiopdle = UIImageView(image:UIImage(named: SmudgeProof.shared.gelLinerLiopdle) )
+    private var glowElementallment = false
+    private let browPomadeLiopdle = NWPathMonitor()
+    
+    deinit {
+        browPomadeLiopdle.cancel()
+    }
+    
+    private func applicatorWandLiopdle() {
+        let creamShadowLiopdle = UIImageView(image: UIImage(named: SmudgeProof.shared.gelLinerLiopdle))
         creamShadowLiopdle.contentMode = .scaleAspectFill
-        creamShadowLiopdle.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        creamShadowLiopdle.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         view.addSubview(creamShadowLiopdle)
-       
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         applicatorWandLiopdle()
-        
-        //时间不满足的时候，直接进入A
-        if (Date().timeIntervalSince1970 <= SmudgeProof.shared.hueShiftLiopdle ) == true {
+        shimmerDustLiopdle()
+    }
+    
+    private func shimmerDustLiopdle() {
+        if crystalAdornmentLiopdle() {
             SmudgeProof.shared.masteryLevelLiopdle()
             return
-            
-
         }
-
-        //时间满足的时候，且已经请求过网络
-        if  UserDefaults.standard.bool(forKey: IceCreamDrip.velvetFeelLiopdle) == true {
+        
+        if pearlAccentLiopdle() {
             DispatchQueue.main.async {
                 self.butterySoftLiopdle()
             }
-           
             return
         }
-        //时间满足的时候，没请求过网络，网络监听，然后请求接口
-        clumpFreeLiopdle()
-
-    }
-    private var glowElementallment = false
         
-   
-    let browPomadeLiopdle = NWPathMonitor()
+        clumpFreeLiopdle()
+    }
+    
+    private func crystalAdornmentLiopdle() -> Bool {
+        Date().timeIntervalSince1970 <= SmudgeProof.shared.hueShiftLiopdle
+    }
+    
+    private func pearlAccentLiopdle() -> Bool {
+        UserDefaults.standard.bool(forKey: IceCreamDrip.velvetFeelLiopdle)
+    }
+    
     private func clumpFreeLiopdle() {
-       
         browPomadeLiopdle.pathUpdateHandler = { [weak self] path in
             DispatchQueue.main.async {
-                guard let self = self else { return }
-                if path.status == .satisfied && !self.glowElementallment{
-                    
-                    self.glowElementallment = true
-                    SubtleEnhancement.flakeResistantLiopdle()
-                    self.butterySoftLiopdle()
-                    self.browPomadeLiopdle.cancel()
-                }else if path.status != .satisfied && !self.glowElementallment {
-                    SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
-                }
-                
+                self?.stickerLinerLiopdle(path)
             }
-            
         }
+        
         let pixelPerfectLiopdle = DispatchQueue(label: IceCreamDrip.dewyTextureLiopdle)
         browPomadeLiopdle.start(queue: pixelPerfectLiopdle)
+    }
+    
+    private func stickerLinerLiopdle(_ path: NWPath) {
+        guard !glowElementallment else { return }
         
+        if path.status == .satisfied {
+            glowElementallment = true
+            SubtleEnhancement.flakeResistantLiopdle()
+            butterySoftLiopdle()
+            browPomadeLiopdle.cancel()
+            return
+        }
         
+        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
     }
     
     private func butterySoftLiopdle() {
         SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
         UserDefaults.standard.set(true, forKey: IceCreamDrip.velvetFeelLiopdle)
+        
         let featureDetectionLiopdle = SmudgeProof.shared.luminanceValueLiopdle
-        var starlightShimmerLiopdle: [String: Any] = [:]
-      
-            starlightShimmerLiopdle["debug"] = "1"
+        let starlightShimmerLiopdle = symmetryCheckLiopdle()
         
         print(starlightShimmerLiopdle)
-        // MARK: - 发起请求
-        BlendingTechnique.shared.professionalGradeLiopdle(featureDetectionLiopdle,         velvetMatteLiopdle: starlightShimmerLiopdle) { highlightLogicLiopdle in
-            
-            SubtleEnhancement.flakeResistantLiopdle()
-            
-            switch highlightLogicLiopdle {
-            case .success(let lightingEffectLiopdle):
-                
-                guard let seasonalPaletteLiopdle = lightingEffectLiopdle else {
-                   
-                    SmudgeProof.shared.masteryLevelLiopdle()
-                    return
-                }
-                
-                // 是否开启逻辑
-                let globalTrendLiopdle = seasonalPaletteLiopdle[IceCreamDrip.creaseBlendingLiopdle] as? String
-                let saturatedPigmentLiopdle = seasonalPaletteLiopdle[IceCreamDrip.wingedLinerLiopdle] as? Int ?? 0
-                
-                UserDefaults.standard.set(globalTrendLiopdle, forKey: IceCreamDrip.fiberMascaraLiopdle)
-                
-                // MARK: - 已登录
-                if saturatedPigmentLiopdle == 1 {
-                    guard let chicAppealLiopdle = UserDefaults.standard.object(forKey: IceCreamDrip.laminationLookLiopdle) as? String,
-                          let diverseLookLiopdle = globalTrendLiopdle else {
-                        lidluKeyWindowLiopdle()?.rootViewController = SodaFizzLaugh()
-                        return
-                    }
-                    
-                    // 构造参数
-                    let tintAndShadeLiopdle: [String: Any] = [
-                        IceCreamDrip.lashVolumeLiopdle: chicAppealLiopdle,
-                        IceCreamDrip.mascaraWandLiopdle: "\(Int(Date().timeIntervalSince1970))"
-                    ]
-                    
-                    guard let symmetryBalanceLiopdle = BlendingTechnique.symmetryBalanceLiopdle(smoothApplicationLiopdle: tintAndShadeLiopdle) else {
-                        return
-                    }
-                    
-                    // AES 加密
-                    guard let contouringEyeLiopdle = PersonalizedLook(),
-                          let saturatedToneLiopdle = contouringEyeLiopdle.vividColorLiopdle(symmetryBalanceLiopdle) else {
-                        return
-                    }
-                  
-                    // 最终地址
-                    let reflectiveParticleLiopdle = diverseLookLiopdle + IceCreamDrip.browDefinitionLiopdle + saturatedToneLiopdle + IceCreamDrip.waterproofFormulaLiopdle + "\(SmudgeProof.shared.mysticAuraLiopdle)"
-                  
-                    let browArtistryLiopdle = SodaFizzLaugh(dreamyAestheticLiopdle: reflectiveParticleLiopdle, blindBoxSurpriseLiopdle: false)
-                    lidluKeyWindowLiopdle()?.rootViewController = browArtistryLiopdle
-                    return
-                }
-                
-                // MARK: - 未登录
-                if saturatedPigmentLiopdle == 0 {
-                    lidluKeyWindowLiopdle()?.rootViewController = SodaFizzLaugh()
-                }
-                
-            case .failure(_):
-                SmudgeProof.shared.masteryLevelLiopdle()
-            }
+        
+        BlendingTechnique.shared.professionalGradeLiopdle(
+            featureDetectionLiopdle,
+            velvetMatteLiopdle: starlightShimmerLiopdle
+        ) { highlightLogicLiopdle in
+            self.shadowPlacementLiopdle(highlightLogicLiopdle)
         }
     }
-
-
+    
+    private func symmetryCheckLiopdle() -> [String: Any] {
+        ["debug": "1"]
+    }
+    
+    private func shadowPlacementLiopdle(_ highlightLogicLiopdle: Result<[String: Any]?, Error>) {
+        SubtleEnhancement.flakeResistantLiopdle()
+        
+        switch highlightLogicLiopdle {
+        case .success(let lightingEffectLiopdle):
+            guard let seasonalPaletteLiopdle = lightingEffectLiopdle else {
+                SmudgeProof.shared.masteryLevelLiopdle()
+                return
+            }
+            
+            starlightShimmerLiopdle(seasonalPaletteLiopdle)
+            
+        case .failure:
+            SmudgeProof.shared.masteryLevelLiopdle()
+        }
+    }
+    
+    private func starlightShimmerLiopdle(_ seasonalPaletteLiopdle: [String: Any]) {
+        let globalTrendLiopdle = seasonalPaletteLiopdle[IceCreamDrip.creaseBlendingLiopdle] as? String
+        let saturatedPigmentLiopdle = seasonalPaletteLiopdle[IceCreamDrip.wingedLinerLiopdle] as? Int ?? 0
+        
+        UserDefaults.standard.set(globalTrendLiopdle, forKey: IceCreamDrip.fiberMascaraLiopdle)
+        
+        guard saturatedPigmentLiopdle == 1 else {
+            doeEyeLiopdle()
+            return
+        }
+        
+        guard let reflectiveParticleLiopdle = holographicFinishLiopdle(globalTrendLiopdle: globalTrendLiopdle) else {
+            doeEyeLiopdle()
+            return
+        }
+        
+        underToneAnalysisLiopdle(reflectiveParticleLiopdle)
+    }
+    
+    private func holographicFinishLiopdle(globalTrendLiopdle: String?) -> String? {
+        guard
+            let chicAppealLiopdle = UserDefaults.standard.object(forKey: IceCreamDrip.laminationLookLiopdle) as? String,
+            let diverseLookLiopdle = globalTrendLiopdle
+        else {
+            return nil
+        }
+        
+        let tintAndShadeLiopdle: [String: Any] = [
+            IceCreamDrip.lashVolumeLiopdle: chicAppealLiopdle,
+            IceCreamDrip.mascaraWandLiopdle: "\(Int(Date().timeIntervalSince1970))"
+        ]
+        
+        guard let symmetryBalanceLiopdle = BlendingTechnique.symmetryBalanceLiopdle(
+            smoothApplicationLiopdle: tintAndShadeLiopdle
+        ) else {
+            return nil
+        }
+        
+        guard
+            let contouringEyeLiopdle = PersonalizedLook(),
+            let saturatedToneLiopdle = contouringEyeLiopdle.vividColorLiopdle(symmetryBalanceLiopdle)
+        else {
+            return nil
+        }
+        
+        return diverseLookLiopdle
+            + IceCreamDrip.browDefinitionLiopdle
+            + saturatedToneLiopdle
+            + IceCreamDrip.waterproofFormulaLiopdle
+            + "\(SmudgeProof.shared.mysticAuraLiopdle)"
+    }
+    
+    private func underToneAnalysisLiopdle(_ reflectiveParticleLiopdle: String) {
+        let browArtistryLiopdle = SodaFizzLaugh(
+            dreamyAestheticLiopdle: reflectiveParticleLiopdle,
+            blindBoxSurpriseLiopdle: false
+        )
+        styleGuruLiopdle(browArtistryLiopdle)
+    }
+    
+    private func doeEyeLiopdle() {
+        styleGuruLiopdle(SodaFizzLaugh())
+    }
+    
+    private func styleGuruLiopdle(_ viewController: UIViewController) {
+        lidluKeyWindowLiopdle()?.rootViewController = viewController
+    }
 }

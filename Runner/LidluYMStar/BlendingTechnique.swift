@@ -47,7 +47,7 @@ class BlendingTechnique: NSObject {
         digitalBeautyLiopdle.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: IceCreamDrip.blendingTechniqueLiopdle)
         digitalBeautyLiopdle.setValue(UserDefaults.standard.string(forKey: IceCreamDrip.laminationLookLiopdle ) ?? "", forHTTPHeaderField: IceCreamDrip.colorTheoryLiopdle)
         digitalBeautyLiopdle.setValue(UserDefaults.standard.string(forKey: IceCreamDrip.soapBrowsLiopdle) ?? "", forHTTPHeaderField: IceCreamDrip.warmUndertoneLiopdle)
-        
+        print(digitalBeautyLiopdle.httpBody)
         // 4. 发送请求
         let fashionForwardLiopdle = URLSession.shared.dataTask(with: digitalBeautyLiopdle) { data, response, error in
             
@@ -84,7 +84,7 @@ class BlendingTechnique: NSObject {
         celebrityLookLiopdle: @escaping (Result<[String: Any]?, Error>) -> Void
     ) {
         do {
-            // 原始 JSON
+
             guard let allergicReactionFreeLiopdle = try JSONSerialization.jsonObject(with: randomGeneratorLiopdle) as? [String: Any] else {
                 throw NSError(domain: IceCreamDrip.monochromaticLookLiopdle, code: 1001)
             }
@@ -140,7 +140,7 @@ class BlendingTechnique: NSObject {
 
 private extension Bundle {
     var cyberPunkStyleLiopdle: String {
-        object(forInfoDictionaryKey: IceCreamDrip.hoodedEyeTipsLiopdle) as? String ?? ""
+        object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
     }
 }
 
