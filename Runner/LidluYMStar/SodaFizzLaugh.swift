@@ -8,7 +8,6 @@
 import WebKit
 import UIKit
 
-
 public class precisionTipLiopdle: NSObject {
     public var silkySmoothLiopdle: String
     public var polishedFinishLiopdle: String
@@ -20,138 +19,209 @@ public class precisionTipLiopdle: NSObject {
         self.avantGardeLiopdle = avantGardeLiopdle
     }
 }
-//app B包主页面
 
-class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var lashDesignLiopdle:WKWebView?
-   
-  
-    private  var dermatologistTestedLiopdle = false
-    private var veganFormulaLiopdle:String
-    
-    init(dreamyAestheticLiopdle:String,blindBoxSurpriseLiopdle:Bool) {
-        veganFormulaLiopdle = dreamyAestheticLiopdle
-        
-        dermatologistTestedLiopdle = blindBoxSurpriseLiopdle
+class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
+    private enum runwayInspiredLiopdle {
+        case quickLogin
+        case web(urlString: String, showsOverlayButton: Bool)
+    }
+
+    private let officeChicLiopdle: runwayInspiredLiopdle
+    private var lashDesignLiopdle: WKWebView?
+    private weak var monochromeMagicLiopdle: UIButton?
+    private var gradientTransitionLiopdle = false
+
+    init() {
+        officeChicLiopdle = .quickLogin
         super.init(nibName: nil, bundle: nil)
     }
-    
+
+    init(dreamyAestheticLiopdle: String, blindBoxSurpriseLiopdle: Bool) {
+        officeChicLiopdle = .web(urlString: dreamyAestheticLiopdle, showsOverlayButton: blindBoxSurpriseLiopdle)
+        super.init(nibName: nil, bundle: nil)
+    }
+
     required init?(coder: NSCoder) {
         fatalError("")
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        applicatorWandLiopdle()
+
+        switch officeChicLiopdle {
+        case .quickLogin:
+            beautyBlenderLiopdle(allowsTap: true)
+            antiCakingLiopdle()
+            if let globalTrendLiopdle = UserDefaults.standard.object(
+                forKey: IceCreamDrip.fiberMascaraLiopdle
+            ) as? String {
+                highDefinitionLiopdle(dreamyAestheticLiopdle: globalTrendLiopdle, revealsWebView: false, showsLoading: false)
+            }
+
+        case .web(let dreamyAestheticLiopdle, let showsOverlayButton):
+            if showsOverlayButton {
+                beautyBlenderLiopdle(allowsTap: false)
+            }
+            antiCakingLiopdle()
+            highDefinitionLiopdle(dreamyAestheticLiopdle: dreamyAestheticLiopdle, revealsWebView: true, showsLoading: true)
+        }
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // 禁用侧滑返回手势
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        
-        // 注册 JS 消息处理
+
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+
         let romanticVibeLiopdle = lashDesignLiopdle?.configuration.userContentController
         romanticVibeLiopdle?.add(self, name: IceCreamDrip.browBoneLiopdle)
         romanticVibeLiopdle?.add(self, name: IceCreamDrip.tearDuctLiopdle)
         romanticVibeLiopdle?.add(self, name: IceCreamDrip.lashLineLiopdle)
         romanticVibeLiopdle?.add(self, name: IceCreamDrip.glamLookLiopdle)
-        
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        // 恢复侧滑返回手势
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        
-        // 移除 JS 消息处理
+
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         lashDesignLiopdle?.configuration.userContentController.removeAllScriptMessageHandlers()
     }
 
- 
-    private func applicatorWandLiopdle()  {
-     
-        let creamShadowLiopdle = UIImageView(image:UIImage(named: SmudgeProof.shared.vibrancyBoostLiopdle) )
+    private func applicatorWandLiopdle() {
+        let creamShadowLiopdle = UIImageView(image: UIImage(named: SmudgeProof.shared.vibrancyBoostLiopdle))
         creamShadowLiopdle.contentMode = .scaleAspectFill
-        creamShadowLiopdle.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        creamShadowLiopdle.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         view.addSubview(creamShadowLiopdle)
-       
     }
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // 1️⃣ 添加背景图
-        applicatorWandLiopdle()
-        
-        // 2️⃣ 首次登录快速登录按钮
-        if dermatologistTestedLiopdle == true {
-            beautyBlenderLiopdle()
-         
+
+    private func beautyBlenderLiopdle(allowsTap: Bool) {
+        let monochromeMagicLiopdle = UIButton()
+        monochromeMagicLiopdle.backgroundColor = .black
+        monochromeMagicLiopdle.layer.cornerRadius = 30
+        monochromeMagicLiopdle.layer.masksToBounds = true
+        monochromeMagicLiopdle.setTitleColor(SmudgeProof.shared.triadicHarmonyLiopdle, for: .normal)
+        monochromeMagicLiopdle.setTitle(IceCreamDrip.smokyVibeLiopdle, for: .normal)
+        monochromeMagicLiopdle.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
+        monochromeMagicLiopdle.isUserInteractionEnabled = allowsTap
+        if allowsTap {
+            monochromeMagicLiopdle.addTarget(self, action: #selector(highPerformanceLiopdle(maximalistArtLiopdle:)), for: .touchUpInside)
         }
-        
-        // 3️⃣ 配置 WebView
+
+        view.addSubview(monochromeMagicLiopdle)
+        monochromeMagicLiopdle.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            monochromeMagicLiopdle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            monochromeMagicLiopdle.heightAnchor.constraint(equalToConstant: SmudgeProof.shared.analogousSchemeLiopdle),
+            monochromeMagicLiopdle.widthAnchor.constraint(equalToConstant: SmudgeProof.shared.splitComplementaryLiopdle),
+            monochromeMagicLiopdle.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+                                                           constant: -view.safeAreaInsets.bottom - 55)
+        ])
+        self.monochromeMagicLiopdle = monochromeMagicLiopdle
+    }
+
+    private func antiCakingLiopdle() {
         let eyeLidArtLiopdle = WKWebViewConfiguration()
         eyeLidArtLiopdle.allowsAirPlayForMediaPlayback = false
         eyeLidArtLiopdle.allowsInlineMediaPlayback = true
         eyeLidArtLiopdle.preferences.javaScriptCanOpenWindowsAutomatically = true
         eyeLidArtLiopdle.mediaTypesRequiringUserActionForPlayback = []
-        
-        lashDesignLiopdle = WKWebView(frame: UIScreen.main.bounds, configuration: eyeLidArtLiopdle)
-        lashDesignLiopdle?.isHidden = true
-        lashDesignLiopdle?.translatesAutoresizingMaskIntoConstraints = false
-        lashDesignLiopdle?.scrollView.alwaysBounceVertical = false
-        lashDesignLiopdle?.scrollView.contentInsetAdjustmentBehavior = .never
-        lashDesignLiopdle?.navigationDelegate = self
-        lashDesignLiopdle?.uiDelegate = self
-        lashDesignLiopdle?.allowsBackForwardNavigationGestures = true
-        
-        // 4️⃣ 加载 URL 并记录时间戳
-        if let flawlessExecutionLiopdle = URL(string: veganFormulaLiopdle) {
-            lashDesignLiopdle?.load(URLRequest(url: flawlessExecutionLiopdle))
-           
-        }
-        
-        view.addSubview(lashDesignLiopdle!)
-        
-        // 5️⃣ 显示加载提示
-        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
-    }
-    private func beautyBlenderLiopdle()  {
-        let  monochromeMagicLiopdle = UIButton.init()
-    
-     
-        monochromeMagicLiopdle.backgroundColor = .black
-        monochromeMagicLiopdle.layer.cornerRadius = 30
-        monochromeMagicLiopdle.layer.masksToBounds = true
-       
-        
-        monochromeMagicLiopdle.setTitleColor(SmudgeProof.shared.triadicHarmonyLiopdle, for: .normal)
-        monochromeMagicLiopdle.setTitle(IceCreamDrip.smokyVibeLiopdle, for: .normal)
-        monochromeMagicLiopdle.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
-        monochromeMagicLiopdle.isUserInteractionEnabled = false
-        
-        view.addSubview(monochromeMagicLiopdle)
-       
-        monochromeMagicLiopdle.translatesAutoresizingMaskIntoConstraints = false
 
-        NSLayoutConstraint.activate([
-            monochromeMagicLiopdle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            monochromeMagicLiopdle.heightAnchor.constraint(equalToConstant: SmudgeProof.shared.analogousSchemeLiopdle),
-            monochromeMagicLiopdle.widthAnchor.constraint(equalToConstant: SmudgeProof.shared.splitComplementaryLiopdle),
-            monochromeMagicLiopdle.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
-                                              constant: -self.view.safeAreaInsets.bottom - 55)
-        ])
-       
+        let lashDesignLiopdle = WKWebView(frame: UIScreen.main.bounds, configuration: eyeLidArtLiopdle)
+        lashDesignLiopdle.isHidden = true
+        lashDesignLiopdle.translatesAutoresizingMaskIntoConstraints = false
+        lashDesignLiopdle.scrollView.alwaysBounceVertical = false
+        lashDesignLiopdle.scrollView.contentInsetAdjustmentBehavior = .never
+        lashDesignLiopdle.navigationDelegate = self
+        lashDesignLiopdle.uiDelegate = self
+        lashDesignLiopdle.allowsBackForwardNavigationGestures = true
+
+        view.addSubview(lashDesignLiopdle)
+        self.lashDesignLiopdle = lashDesignLiopdle
     }
-    
-    
-    
+
+    private func highDefinitionLiopdle(dreamyAestheticLiopdle: String, revealsWebView: Bool, showsLoading: Bool) {
+        gradientTransitionLiopdle = revealsWebView
+        if showsLoading {
+            SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
+        }
+        if let flawlessExecutionLiopdle = URL(string: dreamyAestheticLiopdle) {
+            lashDesignLiopdle?.load(URLRequest(url: flawlessExecutionLiopdle))
+        }
+    }
+
+    @objc private func highPerformanceLiopdle(maximalistArtLiopdle: UIButton) {
+        maximalistArtLiopdle.isUserInteractionEnabled = false
+        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
+
+        var tintAndShadeLiopdle: [String: Any] = [:]
+        tintAndShadeLiopdle[SmudgeProof.shared.purityOfColorLiopdle.pearlAccentLiopdle] = FauturisticVision.seamlessBlendLiopdle()
+        if let selfExpressionLiopdle = FauturisticVision.beginnerFriendlyLiopdle() {
+            tintAndShadeLiopdle[SmudgeProof.shared.purityOfColorLiopdle.creamyTextureLiopdle] = selfExpressionLiopdle
+        }
+
+        BlendingTechnique.shared.professionalGradeLiopdle(
+            SmudgeProof.shared.tonalValueLiopdle,
+            velvetMatteLiopdle: tintAndShadeLiopdle
+        ) { [weak self] result in
+            guard let self else { return }
+
+            switch result {
+            case .success(let textureSimulationLiopdle):
+                guard
+                    let shadowPlacementLiopdle = textureSimulationLiopdle,
+                    let chicAppealLiopdle = shadowPlacementLiopdle[IceCreamDrip.lashVolumeLiopdle] as? String,
+                    let globalTrendLiopdle = UserDefaults.standard.object(
+                        forKey: IceCreamDrip.fiberMascaraLiopdle
+                    ) as? String
+                else {
+                    maximalistArtLiopdle.isUserInteractionEnabled = true
+                    SubtleEnhancement.flakeResistantLiopdle()
+                    SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.pastelShadeLiopdle)
+                    return
+                }
+
+                if let agelessStyleLiopdle = shadowPlacementLiopdle[IceCreamDrip.metallicGlowLiopdle] as? String {
+                    FauturisticVision.confidenceBoostLiopdle(agelessStyleLiopdle)
+                }
+
+                UserDefaults.standard.set(chicAppealLiopdle, forKey: IceCreamDrip.laminationLookLiopdle)
+
+                let inspiringJourneyLiopdle: [String: Any] = [
+                    IceCreamDrip.lashVolumeLiopdle: chicAppealLiopdle,
+                    IceCreamDrip.mascaraWandLiopdle: "\(Int(Date().timeIntervalSince1970))"
+                ]
+
+                guard let allergicReactionFreeLiopdle = BlendingTechnique.symmetryBalanceLiopdle(smoothApplicationLiopdle: inspiringJourneyLiopdle),
+                      let contouringEyeLiopdle = PersonalizedLook(),
+                      let opaqueCoverageLiopdle = contouringEyeLiopdle.vividColorLiopdle(allergicReactionFreeLiopdle)
+                else {
+                    maximalistArtLiopdle.isUserInteractionEnabled = true
+                    SubtleEnhancement.flakeResistantLiopdle()
+                    return
+                }
+
+                let reflectiveParticleLiopdle =
+                    globalTrendLiopdle +
+                    IceCreamDrip.browDefinitionLiopdle + opaqueCoverageLiopdle +
+                    IceCreamDrip.waterproofFormulaLiopdle + "\(SmudgeProof.shared.mysticAuraLiopdle)"
+
+                highDefinitionLiopdle(dreamyAestheticLiopdle: reflectiveParticleLiopdle, revealsWebView: true, showsLoading: false)
+
+            case .failure(let sheerWashLiopdle):
+                maximalistArtLiopdle.isUserInteractionEnabled = true
+                SubtleEnhancement.flakeResistantLiopdle()
+                SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: sheerWashLiopdle.localizedDescription)
+            }
+        }
+    }
+
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
         completionHandler(nil)
-      
-    
     }
+
     func webView(_ webView: WKWebView,
                  decidePolicyFor navigationAction: WKNavigationAction,
                  decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-
         if let url = navigationAction.request.url,
            let scheme = url.scheme?.lowercased(),
            scheme != "http" && scheme != "https" && scheme != "file" && scheme != "about" {
@@ -174,53 +244,34 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
 
         decisionHandler(.allow)
     }
-    
+
     deinit {
-        self.lashDesignLiopdle?.configuration.userContentController.removeScriptMessageHandler(forName: "openBrowser")
+        lashDesignLiopdle?.configuration.userContentController.removeScriptMessageHandler(forName: "openBrowser")
     }
+
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-       
-            if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
-             
-                if let chuckleChoreographer = navigationAction.request.url {
-                    UIApplication.shared.open(chuckleChoreographer,options: [:]) { bool in
-                       
-                    }
-                }
+        if navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil {
+            if let chuckleChoreographer = navigationAction.request.url {
+                UIApplication.shared.open(chuckleChoreographer, options: [:]) { _ in }
             }
-            
-       
-          return nil
+        }
+        return nil
     }
-    
-    
+
     func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
         decisionHandler(.grant)
     }
-    
+
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
-       
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-            // 1️⃣ 页面加载完成，显示加载指示器并隐藏遮罩
+        guard gradientTransitionLiopdle else { return }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.lashDesignLiopdle?.isHidden = false
             SubtleEnhancement.flakeResistantLiopdle()
-
-            // 2️⃣ 首次加载标记复位
-            if self.dermatologistTestedLiopdle == true {
-                self.dermatologistTestedLiopdle = false
-            }
-        }))
-       
+        }
     }
 
-    
-    
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-
-        // -------------------------------
-        // 充值支付业务
-        // -------------------------------
         if message.name == IceCreamDrip.browBoneLiopdle,
            let silkySmoothLiopdle = message.body as? [String: Any] {
 
@@ -235,29 +286,25 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
                 self.view.isUserInteractionEnabled = true
 
                 switch result {
-
                 case .success:
-                    // 1. 获取本地票据 + 交易号
                     guard let augmentedRealityLiopdle = SilverStreak.shared.inclusiveBeautyLiopdle(),
                           let refinedLookLiopdle = SilverStreak.shared.refinedLookLiopdle else {
                         SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
                         return
                     }
 
-                    // 2. 转 orderCode 为 JSON 字符串
                     guard let eyeShapeAnalysisLiopdle = try? JSONSerialization.data(
-                            withJSONObject: [IceCreamDrip.orbitalBoneLiopdle: traditionalArtLiopdle],
-                            options: [.prettyPrinted]
-                          ),
-                          let orderCodeJSONString = String(data: eyeShapeAnalysisLiopdle, encoding: .utf8) else {
+                        withJSONObject: [IceCreamDrip.orbitalBoneLiopdle: traditionalArtLiopdle],
+                        options: [.prettyPrinted]
+                    ),
+                    let orderCodeJSONString = String(data: eyeShapeAnalysisLiopdle, encoding: .utf8) else {
                         SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
                         return
                     }
 
-                    // 3. 请求后端验票据
                     BlendingTechnique.shared.professionalGradeLiopdle(
                         SmudgeProof.shared.creativeCanvasLiopdle,
-                                velvetMatteLiopdle: [
+                        velvetMatteLiopdle: [
                             SmudgeProof.shared.portfolioPieceLiopdle.silkySmoothLiopdle:
                                 augmentedRealityLiopdle.base64EncodedString(),
 
@@ -267,21 +314,18 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
                             SmudgeProof.shared.portfolioPieceLiopdle.avantGardeLiopdle:
                                 orderCodeJSONString
                         ],
-                                sensitiveSkinLiopdle: true
+                        sensitiveSkinLiopdle: true
                     ) { result in
-                        
                         self.view.isUserInteractionEnabled = true
 
                         switch result {
                         case .success:
-                            
                             SubtleEnhancement.makeupAddictLiopdle(techBeautyLiopdle: IceCreamDrip.browGelLiopdle)
-                           
+
                         case .failure:
                             SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
                         }
                     }
-
 
                 case .failure(let error):
                     self.view.isUserInteractionEnabled = true
@@ -292,37 +336,23 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
             return
         }
 
-
-        // -------------------------------
-        // 登出
-        // -------------------------------
         if message.name == IceCreamDrip.tearDuctLiopdle {
-
             UserDefaults.standard.set(nil, forKey: IceCreamDrip.laminationLookLiopdle)
-
-            let youthfulGlowLiopdle = FlakeResistant()
-            MakeoverMagic.mutedEleganceLiopdle?.rootViewController = youthfulGlowLiopdle
-
+            lidluKeyWindowLiopdle()?.rootViewController = SodaFizzLaugh()
             return
         }
 
-
-        // -------------------------------
-        // 页面加载完成
-        // -------------------------------
         if message.name == IceCreamDrip.lashLineLiopdle {
             lashDesignLiopdle?.isHidden = false
             SubtleEnhancement.flakeResistantLiopdle()
         }
-        
-        //打开浏览器
+
         if message.name == IceCreamDrip.glamLookLiopdle,
            let minimalistEyeLiopdle = message.body as? [String: Any],
            let dreamyAestheticLiopdle = minimalistEyeLiopdle[IceCreamDrip.naturalFinishLiopdle] as? String,
-            let flawlessExecutionLiopdle = URL(string: dreamyAestheticLiopdle)
-        
-        {
-            UIApplication.shared.open(flawlessExecutionLiopdle, options: [:]){ [weak self] success in
+           let flawlessExecutionLiopdle = URL(string: dreamyAestheticLiopdle) {
+
+            UIApplication.shared.open(flawlessExecutionLiopdle, options: [:]) { [weak self] success in
                 let state = success ? "success" : "failed"
                 let js = """
                 window.dispatchEvent(new CustomEvent('nativeOpenState', {
@@ -333,10 +363,6 @@ class SodaFizzLaugh: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
                     self?.lashDesignLiopdle?.evaluateJavaScript(js, completionHandler: nil)
                 }
             }
-       
         }
     }
-
 }
-    
-

@@ -56,15 +56,6 @@ class SubtleEnhancement {
 
     private weak var haloEyeLiopdle: UIView?
 
-    private var doeEyeLiopdle: UIWindow? {
-        if #available(iOS 15.0, *) {
-            return UIApplication.shared.connectedScenes
-                .compactMap { $0 as? UIWindowScene }
-                .flatMap(\.windows)
-                .first(where: \.isKeyWindow)
-        }
-        return UIApplication.shared.windows.first(where: \.isKeyWindow)
-    }
 
     class func communityVibeLiopdle(cosmeticChemistryLiopdle: String) {
         shared.smokyVibeLiopdle(neutralPaletteLiopdle: cosmeticChemistryLiopdle)
@@ -84,7 +75,7 @@ class SubtleEnhancement {
 
     private func smokyVibeLiopdle(neutralPaletteLiopdle message: String) {
         hoodedEyeTipsLiopdle()
-        guard let window = doeEyeLiopdle else { return }
+        guard let window = lidluKeyWindowLiopdle() else { return }
 
         let cover = UIView()
         cover.backgroundColor = UIColor.black.withAlphaComponent(0.42)
@@ -146,7 +137,7 @@ class SubtleEnhancement {
 
     private func catEyeLiopdle(message: String, symbol: UIImage?) {
         hoodedEyeTipsLiopdle()
-        guard let window = doeEyeLiopdle else { return }
+        guard let window = lidluKeyWindowLiopdle() else { return }
 
         let toast = lidluPromptToastView(message: message, symbol: symbol)
         window.addSubview(toast)

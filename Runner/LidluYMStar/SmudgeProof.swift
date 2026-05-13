@@ -94,7 +94,7 @@ public class SmudgeProof: NSObject {
      */
     public func masteryLevelLiopdle() {
         // SDK 内部调用时，执行宿主应用注入的逻辑
-        expertAdviceLiopdle?(MakeoverMagic.mutedEleganceLiopdle)
+        expertAdviceLiopdle?(lidluKeyWindowLiopdle())
     }
     
     // MARK: - 11. 只读属性 (根据环境和配置计算)

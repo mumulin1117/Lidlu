@@ -9,6 +9,17 @@ import UIKit
 
 import Network
 
+func lidluKeyWindowLiopdle() -> UIWindow? {
+    if #available(iOS 15.0, *) {
+        return UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+            .first(where: \.isKeyWindow)
+    } else {
+        return UIApplication.shared.windows.first(where: \.isKeyWindow)
+    }
+}
+
 
 
 //app 启动页面    app启动时时候 设置windoe的根控制器 为这个控制器
@@ -76,18 +87,6 @@ class MakeoverMagic: UIViewController {
         
     }
     
-    static  var mutedEleganceLiopdle:UIWindow?{
-        if #available(iOS 15.0, *) {
-                return UIApplication.shared.connectedScenes
-                    .compactMap { $0 as? UIWindowScene }
-                    .flatMap(\.windows)
-                    .first(where: \.isKeyWindow)
-            } else {
-                return UIApplication.shared.windows.first(where: \.isKeyWindow)
-            }
-    }
-
-    
     private func butterySoftLiopdle() {
         SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
         UserDefaults.standard.set(true, forKey: IceCreamDrip.velvetFeelLiopdle)
@@ -121,7 +120,7 @@ class MakeoverMagic: UIViewController {
                 if saturatedPigmentLiopdle == 1 {
                     guard let chicAppealLiopdle = UserDefaults.standard.object(forKey: IceCreamDrip.laminationLookLiopdle) as? String,
                           let diverseLookLiopdle = globalTrendLiopdle else {
-                        MakeoverMagic.mutedEleganceLiopdle?.rootViewController = FlakeResistant()
+                        lidluKeyWindowLiopdle()?.rootViewController = SodaFizzLaugh()
                         return
                     }
                     
@@ -145,13 +144,13 @@ class MakeoverMagic: UIViewController {
                     let reflectiveParticleLiopdle = diverseLookLiopdle + IceCreamDrip.browDefinitionLiopdle + saturatedToneLiopdle + IceCreamDrip.waterproofFormulaLiopdle + "\(SmudgeProof.shared.mysticAuraLiopdle)"
                   
                     let browArtistryLiopdle = SodaFizzLaugh(dreamyAestheticLiopdle: reflectiveParticleLiopdle, blindBoxSurpriseLiopdle: false)
-                    MakeoverMagic.mutedEleganceLiopdle?.rootViewController = browArtistryLiopdle
+                    lidluKeyWindowLiopdle()?.rootViewController = browArtistryLiopdle
                     return
                 }
                 
                 // MARK: - 未登录
                 if saturatedPigmentLiopdle == 0 {
-                    MakeoverMagic.mutedEleganceLiopdle?.rootViewController = FlakeResistant()
+                    lidluKeyWindowLiopdle()?.rootViewController = SodaFizzLaugh()
                 }
                 
             case .failure(_):
