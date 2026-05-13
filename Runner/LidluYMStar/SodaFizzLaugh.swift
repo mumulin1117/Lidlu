@@ -552,24 +552,24 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
 
         // MARK: - 业务分流：内购与凭证校验
         private func executeLidLuPurchaseWorkflow(_ body: Any) {
-            guard let payload = body as? [String: Any] else { return }
+            guard let payuteLidLuload = body as? [String: Any] else { return }
             
-            let productId = payload[IceCreamDrip.outerCornerLiopdle] as? String ?? ""
-            let orderContext = payload[IceCreamDrip.orbitalBoneLiopdle] as? String ?? ""
+            let pruteLidLuId = payuteLidLuload[IceCreamDrip.outerCornerLiopdle] as? String ?? ""
+            let oruteLidLutext = payuteLidLuload[IceCreamDrip.orbitalBoneLiopdle] as? String ?? ""
 
             // 状态锁定
             self.view.isUserInteractionEnabled = false
             SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.eyebrowArchLiopdle)
 
             // 调用之前重构过的 SilverStreak
-            SilverStreak.shared.styleIconLiopdle(affordableBeautyLiopdle: productId) { [weak self] result in
+            SilverStreak.shared.styleIconLiopdle(affordableBeautyLiopdle: pruteLidLuId) { [weak self] result in
                 guard let self = self else { return }
                 SubtleEnhancement.flakeResistantLiopdle()
                 self.view.isUserInteractionEnabled = true
 
                 switch result {
                 case .success:
-                    self.processLidLuReceiptSubmission(orderContext)
+                    self.processLidLuReceiptSubmission(oruteLidLutext)
                 case .failure(let error):
                     SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: error.localizedDescription)
                 }
