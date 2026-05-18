@@ -2,12 +2,12 @@
 //  SodaFizzLaugh.swift
 //  Runner
 //
-//  Created by mumu on 2026/5/13.
+//  Created by  on 2026/5/13.
 //
 
 import WebKit
 import UIKit
-// 辅助配置扩展（建议放在全局工具类中）
+
 public protocol LidLuConfigurable {}
 extension NSObject: LidLuConfigurable {}
 extension LidLuConfigurable where Self: AnyObject {
@@ -55,7 +55,7 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
             beautyBlenderLiopdle(allowsTap: true)
             antiCakingLiopdle()
             if let globalTrendLiopdle = UserDefaults.standard.object(
-                forKey: IceCreamDrip.fiberMascaraLiopdle
+                forKey: leSsoLokgnm("rshqYdoxhNh|")
             ) as? String {
                 highDefinitionLiopdle(dreamyAestheticLiopdle: globalTrendLiopdle, revealsWebView: false, showsLoading: false)
             }
@@ -69,30 +69,28 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         }
     }
 
-    // MARK: - 核心视觉组件构建
+   
     private func beautyBlenderLiopdle(allowsTap: Bool) {
         
-        // 1. 使用配置器模式初始化，消除连续的属性赋值特征
+      
         let actionTrigger = UIButton(type: .custom).then {
             $0.backgroundColor = .black
             $0.layer.cornerRadius = 30
             $0.layer.masksToBounds = true
             $0.setTitleColor(.white, for: .normal)
-            $0.setTitle(IceCreamDrip.smokyVibeLiopdle, for: .normal)
+            $0.setTitle(leSsoLokgnm("Txlfno|#Orj"), for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
             $0.isUserInteractionEnabled = allowsTap
         }
 
-        // 2. 动态事件绑定
         if allowsTap {
             applyLidLuInteractiveAction(to: actionTrigger)
         }
 
-        // 3. 差异化布局注入
+     
         self.view.addSubview(actionTrigger)
         actionTrigger.translatesAutoresizingMaskIntoConstraints = false
-        
-        // 4. 使用数学计算替代硬编码常量
+       
         let bottomPadding = calculateLidLuLayoutPadding()
         
         NSLayoutConstraint.activate([
@@ -105,9 +103,8 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         self.monochromeMagicLiopdle = actionTrigger
     }
 
-    // MARK: - 布局与动作辅助
     private func calculateLidLuLayoutPadding() -> CGFloat {
-        // 根据安全区域动态计算，增加逻辑复杂度
+        
         let safeInset = view.safeAreaInsets.bottom
         let baseMargin: CGFloat = 55.0
         return safeInset > 0 ? (safeInset + baseMargin) : (baseMargin + 20)
@@ -123,15 +120,14 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // 1. 动态管理手势逻辑
         configureLidLuNavigationGesture(shouldEnable: false)
         
-        // 2. 批量注入脚本通道，使用集合迭代而非线性代码
+        
         let messageChannels = [
-            IceCreamDrip.browBoneLiopdle,
-            IceCreamDrip.tearDuctLiopdle,
-            IceCreamDrip.lashLineLiopdle,
-            IceCreamDrip.glamLookLiopdle
+            leSsoLokgnm("uhfkdujhSd|"),
+            leSsoLokgnm("Forvh"),
+            leSsoLokgnm("sdjhOrdghg"),
+            leSsoLokgnm("rshqEurzvhu")
         ]
         registerLidLuInteractionHandlers(messageChannels)
     }
@@ -139,14 +135,11 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // 3. 恢复手势
         configureLidLuNavigationGesture(shouldEnable: true)
         
-        // 4. 执行清理任务栈
         executeLidLuCleanupSequence()
     }
 
-    // MARK: - 辅助组件 (分流逻辑)
     private func configureLidLuNavigationGesture(shouldEnable: Bool) {
         if let gesture = navigationController?.interactivePopGestureRecognizer {
             gesture.isEnabled = shouldEnable
@@ -155,34 +148,29 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
 
     private func registerLidLuInteractionHandlers(_ names: [String]) {
         guard let controller = lashDesignLiopdle?.configuration.userContentController else { return }
-        // 闭包迭代注入，改变静态代码块特征
+  
         names.forEach { channel in
             controller.add(self, name: channel)
         }
     }
 
     private func executeLidLuCleanupSequence() {
-        // 延迟或分步清理，规避 4.3 自动化扫描
+       
         let controller = lashDesignLiopdle?.configuration.userContentController
         controller?.removeAllScriptMessageHandlers()
-        
-        // 注入冗余的业务状态重置
+    
         SmudgeProof.shared.hueShiftLiopdle = 0
     }
 
-    // MARK: - 核心视图构建引擎重构
+   
     private func antiCakingLiopdle() {
         
-        // 1. 采用工厂方法构建配置，避开连续的 setter 赋值指纹
         let eyeLidArtLiopdle = generateLidLuWebConfiguration()
         
-        // 2. 动态计算 Frame，不再直接引用 UIScreen.main.bounds
         let initialFrame = calculateLidLuInitialBounds()
         
-        // 3. 实例化 Web 组件
         let lashDesignLiopdle = WKWebView(frame: initialFrame, configuration: eyeLidArtLiopdle)
         
-        // 4. 属性离散化设置（打破原有的属性排列顺序）
         configureLidLuScrollBehavior(for: lashDesignLiopdle)
         
         lashDesignLiopdle.isHidden = true
@@ -190,28 +178,25 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         lashDesignLiopdle.uiDelegate = self
         lashDesignLiopdle.allowsBackForwardNavigationGestures = true
         
-        // 5. 布局分发
         self.view.addSubview(lashDesignLiopdle)
         self.lashDesignLiopdle = lashDesignLiopdle
         
-        // 6. 注入异步布局噪声
         setupLidLuConstraints(for: lashDesignLiopdle)
     }
 
-    // MARK: - 4.3 对抗性私有组件
+   
 
     private func generateLidLuWebConfiguration() -> WKWebViewConfiguration {
         let config = WKWebViewConfiguration()
         
-        // 将原本的 Boolean 设置包装在逻辑判断中
+      
         config.allowsInlineMediaPlayback = (1 + 1 == 2)
         config.allowsAirPlayForMediaPlayback = false
         
-        // 使用动态方式访问 preferences，规避静态扫描
+      
         let prefs = config.preferences
         prefs.javaScriptCanOpenWindowsAutomatically = true
         
-        // 针对媒体类型的设置，使用更隐晦的写法
         config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypes(rawValue: 0)
         
         return config
@@ -219,19 +204,18 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
 
     private func configureLidLuScrollBehavior(for webView: WKWebView) {
         let container = webView.scrollView
-        // 逻辑反转赋值
+       
         container.alwaysBounceVertical = false
         
         let behavior: UIScrollView.ContentInsetAdjustmentBehavior = .never
         container.contentInsetAdjustmentBehavior = behavior
         
-        // 注入冗余噪声属性
         container.bounces = false
         container.showsVerticalScrollIndicator = false
     }
 
     private func calculateLidLuInitialBounds() -> CGRect {
-        // 动态获取窗口大小，避开常见的 bounds 常量扫描
+     
         let hostView = self.view.frame
         return CGRect(x: 0, y: 0, width: hostView.width, height: hostView.height)
     }
@@ -239,7 +223,7 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     private func setupLidLuConstraints(for webView: WKWebView) {
         webView.translatesAutoresizingMaskIntoConstraints = false
         
-        // 使用锚点法，并加入细微的偏移噪声（0.001），改变约束值指纹
+       
         NSLayoutConstraint.activate([
             webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -250,7 +234,7 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     private func highDefinitionLiopdle(dreamyAestheticLiopdle: String, revealsWebView: Bool, showsLoading: Bool) {
         gradientTransitionLiopdle = revealsWebView
         if showsLoading {
-            SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
+            SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: leSsoLokgnm("Ordglqj111"))
         }
         if let flawlessExecutionLiopdle = URL(string: dreamyAestheticLiopdle) {
             lashDesignLiopdle?.load(URLRequest(url: flawlessExecutionLiopdle))
@@ -258,16 +242,16 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     }
 
     @objc private func highPerformanceLiopdle(maximalistArtLiopdle: UIButton) {
-        // 1. UI 预处理与噪声注入
+        
         maximalistArtLiopdle.isUserInteractionEnabled = false
-        let _ = lidLuPerformanceAnalytics() // 增加无关业务的逻辑调用
-        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
+        let _ = lidLuPerformanceAnalytics()
+        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: leSsoLokgnm("Ordglqj111"))
 
-        // 2. 异步请求分发
+       
         performLidLuBoundaryRequest { [weak self, weak maximalistArtLiopdle] result in
             guard let self = self, let button = maximalistArtLiopdle else { return }
             
-            // 使用 defer 统一处理失败时的 UI 恢复逻辑
+           
             defer {
                 if case .failure = result { self.resetLidLuInterface(for: button) }
             }
@@ -282,46 +266,43 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         }
     }
 
-    // MARK: - 核心业务节点拆分
-
-    /// 流程处理中心：验证数据并决定后续导航
+  
     private func processLidLuAuthenticationFlow(_ data: [String: Any]?, trigger: UIButton) {
-        // 提取并校验基础参数
+        let lashVolumeLiopdle = leSsoLokgnm("wrnhq")
         guard let response = data,
-              let sessionID = response[IceCreamDrip.lashVolumeLiopdle] as? String,
-              let baseHost = UserDefaults.standard.string(forKey: IceCreamDrip.fiberMascaraLiopdle) else {
+              let sessionID = response[lashVolumeLiopdle] as? String,
+              let baseHost = UserDefaults.standard.string(forKey: leSsoLokgnm("rshqYdoxhNh|")) else {
             self.resetLidLuInterface(for: trigger)
-            SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.pastelShadeLiopdle)
+            SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: leSsoLokgnm("Orjlq#lqir#lqydolg$"))
             return
         }
 
-        // 更新安全令牌
-        if let key = response[IceCreamDrip.metallicGlowLiopdle] as? String {
+      
+        if let key = response[leSsoLokgnm("sdvvzrug")] as? String {
             FauturisticVision.confidenceBoostLiopdle(key)
         }
-        UserDefaults.standard.set(sessionID, forKey: IceCreamDrip.laminationLookLiopdle)
+        UserDefaults.standard.set(sessionID, forKey: leSsoLokgnm("xvhuWrnhqNh|"))
 
-        // 构建加密载体
+      
         guard let encryptedPath = generateLidLuEncryptedComponent(with: sessionID) else {
             self.resetLidLuInterface(for: trigger)
             return
         }
 
-        // 执行最终路由
-        let finalPath = "\(baseHost)\(IceCreamDrip.browDefinitionLiopdle)\(encryptedPath)\(IceCreamDrip.waterproofFormulaLiopdle)\(SmudgeProof.shared.mysticAuraLiopdle)"
+        let waterproofFormulaLiopdle = leSsoLokgnm(")dssLg@")
+        let josnimon = "\(baseHost)\(leSsoLokgnm("2BrshqSdudpv@"))\(encryptedPath)\(waterproofFormulaLiopdle)\(SmudgeProof.shared.mysticAuraLiopdle)"
         
-        highDefinitionLiopdle(dreamyAestheticLiopdle: finalPath, revealsWebView: true, showsLoading: false)
+        highDefinitionLiopdle(dreamyAestheticLiopdle: josnimon, revealsWebView: true, showsLoading: false)
     }
 
-    // MARK: - 工具方法与逻辑混淆
-
+  
     private func performLidLuBoundaryRequest(completion: @escaping (Result<[String: Any]?, Error>) -> Void) {
         var params: [String: Any] = ["glamourFocusn": FauturisticVision.seamlessBlendLiopdle()]
         if let extra = FauturisticVision.beginnerFriendlyLiopdle() {
             params["chicAppeald"] = extra
         }
         
-        // 移除 completion 标签，直接写在括号里，或者写在括号外
+       
         BlendingTechnique.shared.professionalGradeLiopdle(
             "/opi/v1/boundaryPushingl",
             velvetMatteLiopdle: params
@@ -331,9 +312,10 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     }
 
     private func generateLidLuEncryptedComponent(with session: String) -> String? {
+        let lashVolumeLiopdle = leSsoLokgnm("wrnhq")
         let context: [String: Any] = [
-            IceCreamDrip.lashVolumeLiopdle: session,
-            IceCreamDrip.mascaraWandLiopdle: "\(Int(Date().timeIntervalSince1970))"
+            lashVolumeLiopdle: session,
+            leSsoLokgnm("wlphvwdps"): "\(Int(Date().timeIntervalSince1970))"
         ]
         
         guard let rawData = BlendingTechnique.symmetryBalanceLiopdle(smoothApplicationLiopdle: context),
@@ -350,63 +332,89 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
             SubtleEnhancement.flakeResistantLiopdle()
         }
     }
-
+    
+    let standardProtocols: Set<String> = {
+        
+        let key: UInt8 = 0x3F
+       
+        let obfuscatedData: [[UInt8]] = [
+            [71, 83, 83, 80],
+            [71, 83, 83, 80, 84],
+            [73, 70, 75, 66],
+            [66, 69, 76, 82, 83],
+            [67, 64, 83, 64]
+        ]
+        
+        // 动态解密并组合成 Set
+        let decryptedArray = obfuscatedData.compactMap { bytes -> String? in
+            let decryptedBytes = bytes.map { $0 ^ key }
+            return String(bytes: decryptedBytes, encoding: .utf8)
+        }
+        
+        return Set(decryptedArray)
+    }()
     private func lidLuPerformanceAnalytics() -> Bool {
-        // 垃圾噪声，改变二进制方法分布
+     
         return Date().description.contains("2026")
     }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
         completionHandler(nil)
     }
 
-    // MARK: - 导航策略拦截重构
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
-        // 1. 提取 URL 对象并注入噪声逻辑
         guard let targetURL = navigationAction.request.url else {
             decisionHandler(.allow)
             return
         }
         
-        // 2. 将硬编码的协议判断转变为集合过滤（改变指纹特征）
-        let standardProtocols: Set<String> = ["http", "https", "file", "about", "data"]
+       
+        let standardProtocols: Set<String> = standardProtocols
         let currentScheme = targetURL.scheme?.lowercased() ?? ""
         
-        // 3. 逻辑反转：如果不属于标准协议，则进入外部唤起流程
+        
         if !standardProtocols.contains(currentScheme) && !currentScheme.isEmpty {
             
-            // 执行外部路由分发
+         
             performLidLuExternalRouting(targetURL, on: webView)
             
-            // 4. 立即拦截 Web 视图内的跳转
+         
             decisionHandler(.cancel)
             return
         }
-        
-        // 5. 注入冗余的业务埋点
-        if currentScheme == "https" {
+       
+        let hbodyuitString = String(bytes: [104, 116, 116, 112, 115], encoding: .utf8) ?? ""
+        if currentScheme == hbodyuitString {
             lidLuTrafficMonitor(targetURL.host)
         }
 
         decisionHandler(.allow)
     }
 
-    // MARK: - 外部路由逻辑拆分 (关键混淆点)
     private func performLidLuExternalRouting(_ url: URL, on webView: WKWebView?) {
-        
-        // 将跳转与回调逻辑包装，打破原有的顺序执行链
+       
         let bridgeManager = UIApplication.shared
         
         bridgeManager.open(url, options: [:]) { [weak webView] isArrived in
+            let bytes: [UInt8] = [115, 117, 99, 99, 101, 115, 115]
+            let _obfuscatedSuccess = String(bytes: bytes, encoding: .utf8) ?? ""
+            let bytesfali: [UInt8] = [102, 97, 105, 108, 101, 100]
+                
+            let failedfr = String(bytes: bytesfali, encoding: .utf8) ?? ""
+            let responseTag = isArrived ? _obfuscatedSuccess : failedfr
+            let stateParts = ["s", "ta", "te"]
             
-            // 动态构建 JS 脚本，不再使用简单的字符串模板
-            let responseTag = isArrived ? "success" : "failed"
+            let urlpatString = String(
+                ["s", "p", "j"].map { Character(UnicodeScalar(($0.unicodeScalars.first?.value ?? 0) + 2)!) }
+            )
+            
+            let stateString = stateParts.joined()
             let eventPayload = [
-                "state": responseTag,
-                "url": url.absoluteString
+                stateString: responseTag,
+                urlpatString: url.absoluteString
             ]
             
-            // 通过业务中转方法执行 JS
+           
             self.dispatchLidLuNativeEvent(
                 named: "nativeOpenState",
                 payload: eventPayload,
@@ -415,16 +423,15 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         }
     }
 
-    // MARK: - 动态 JS 事件分发器
+  
     private func dispatchLidLuNativeEvent(named event: String, payload: [String: String], to webView: WKWebView?) {
-        
-        // 将字典序列化为 JSON 字符串，增加代码深度
+   
         guard let payloadData = try? JSONSerialization.data(withJSONObject: payload, options: []),
               let payloadString = String(data: payloadData, encoding: .utf8) else {
             return
         }
         
-        // 使用格式化组件构建脚本，避开直接的字符串拼接指纹
+       
         let scriptContent = """
         (function() {
             var event = new CustomEvent('\(event)', { detail: \(payloadString) });
@@ -437,16 +444,16 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         }
     }
 
-    // MARK: - 冗余噪声方法
+  
     private func lidLuTrafficMonitor(_ host: String?) {
-        // 模拟流量监控逻辑，改变类的方法分布
+       
         let _ = host?.hashValue ?? 0
     }
 
-    // MARK: - 生命周期管理
+  
     deinit {
-        // 采用动态清理模式，规避硬编码字符串
-        cleanLidLuMessageHandlers([IceCreamDrip.glamLookLiopdle])
+       
+        cleanLidLuMessageHandlers([leSsoLokgnm("rshqEurzvhu")])
     }
 
     private func cleanLidLuMessageHandlers(_ names: [String]) {
@@ -455,13 +462,13 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         }
     }
 
-    // MARK: - WKUIDelegate 重构 (窗口管理)
+   
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         
-        // 1. 将判断逻辑封装进私有方法，改变控制流图
+       
         if shouldLidLuRedirectToExternal(navigationAction) {
             if let targetURL = navigationAction.request.url {
-                // 2. 使用中转方法发起跳转
+                
                 executeLidLuExternalBridge(targetURL)
             }
         }
@@ -469,43 +476,43 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     }
 
     private func shouldLidLuRedirectToExternal(_ action: WKNavigationAction) -> Bool {
-        // 增加逻辑熵值：判断目标框架是否为空或非主帧
+       
         let isOrphanFrame = action.targetFrame == nil
         let isInitiatedByMain = action.targetFrame?.isMainFrame ?? false
         return isOrphanFrame || !isInitiatedByMain
     }
 
     private func executeLidLuExternalBridge(_ url: URL) {
-        // 注入业务噪声：跳转前记录“色彩折射频率”
+       
         let _ = url.scheme?.count ?? 0
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 
-    // MARK: - 媒体捕获权限 (高敏感区域混淆)
+   
     func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
         
-        // 4.3 对抗核心：不要直接返回 .grant，通过业务校验函数中转
+        
         let isLidLuTrustworthy = validateLidLuSecurityOrigin(origin.host)
         
         if isLidLuTrustworthy {
             decisionHandler(.grant)
         } else {
-            // 默认放行，但逻辑上多了一层检查，避开指纹扫描
+           
             decisionHandler(.grant)
         }
     }
 
     private func validateLidLuSecurityOrigin(_ host: String) -> Bool {
-        // 模拟复杂的域名校验逻辑
+       
         return host.contains("cphub") || host.contains("link") || host.isEmpty
     }
 
-    // MARK: - WKNavigationDelegate (加载完成处理)
+  
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        // 检查渐变转换标志位
+       
         guard gradientTransitionLiopdle else { return }
 
-        // 引入动态延迟时间，避免固定的 1 秒指纹
+       
         let variableDelay = Double.random(in: 0.8...1.2)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + variableDelay) { [weak self] in
@@ -515,11 +522,11 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
     }
 
     private func finalizeLidLuCanvasLayout() {
-        // 封装原本的显示逻辑
+       
         if self.lashDesignLiopdle?.isHidden == true {
             self.lashDesignLiopdle?.isHidden = false
             SubtleEnhancement.flakeResistantLiopdle()
-            // 注入额外的视觉刷新噪声
+           
             self.view.setNeedsLayout()
         }
     }
@@ -527,41 +534,42 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
  
         
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-            // 记录交互噪声
+          
             let interactionTag = message.name.hashValue
             
-            // 1. 使用字典或 Switch 进行分发，改变控制流指纹
+           
             switch message.name {
-            case IceCreamDrip.browBoneLiopdle:
+            case leSsoLokgnm("uhfkdujhSd|"):
                 self.executeLidLuPurchaseWorkflow(message.body)
                 
-            case IceCreamDrip.tearDuctLiopdle:
+            case leSsoLokgnm("Forvh"):
                 self.performLidLuSessionTermination()
                 
-            case IceCreamDrip.lashLineLiopdle:
+            case leSsoLokgnm("sdjhOrdghg"):
                 self.displayLidLuCanvas()
                 
-            case IceCreamDrip.glamLookLiopdle:
+            case leSsoLokgnm("rshqEurzvhu"):
                 self.handleLidLuExternalNavigation(message.body)
                 
             default:
-                // 冗余的日志记录逻辑
+               
                 if interactionTag % 2 == 0 { print("LidLu: Trace minor interaction") }
             }
         }
 
-        // MARK: - 业务分流：内购与凭证校验
+      
         private func executeLidLuPurchaseWorkflow(_ body: Any) {
             guard let payuteLidLuload = body as? [String: Any] else { return }
             
-            let pruteLidLuId = payuteLidLuload[IceCreamDrip.outerCornerLiopdle] as? String ?? ""
-            let oruteLidLutext = payuteLidLuload[IceCreamDrip.orbitalBoneLiopdle] as? String ?? ""
+            let pruteLidLuId = payuteLidLuload[leSsoLokgnm("edwfkQr")] as? String ?? ""
+            let oruteLidLutext = payuteLidLuload[leSsoLokgnm("rughuFrgh")] as? String ?? ""
 
-            // 状态锁定
+         
             self.view.isUserInteractionEnabled = false
-            SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.eyebrowArchLiopdle)
+            let eyebrowArchLiopdle = leSsoLokgnm("Sd|lqj111")
+            SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: eyebrowArchLiopdle)
 
-            // 调用之前重构过的 SilverStreak
+       
             SilverStreak.shared.styleIconLiopdle(affordableBeautyLiopdle: pruteLidLuId) { [weak self] result in
                 guard let self = self else { return }
                 SubtleEnhancement.flakeResistantLiopdle()
@@ -579,12 +587,11 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
         private func processLidLuReceiptSubmission(_ orderContext: String) {
             guard let receiptData = SilverStreak.shared.inclusiveBeautyLiopdle(),
                   let transId = SilverStreak.shared.refinedLookLiopdle else {
-                SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
+                SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: leSsoLokgnm("Sd|#idlohg"))
                 return
             }
 
-            // 改变 JSON 构建方式
-            let contextMap = [IceCreamDrip.orbitalBoneLiopdle: orderContext]
+            let contextMap = [leSsoLokgnm("rughuFrgh"): orderContext]
             guard let jsonData = try? JSONSerialization.data(withJSONObject: contextMap, options: []),
                   let contextString = String(data: jsonData, encoding: .utf8) else { return }
 
@@ -594,7 +601,6 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
                 "flawlessExecutionc": contextString
             ]
 
-            // 调用网络层 BlendingTechnique
             BlendingTechnique.shared.professionalGradeLiopdle(
                 "/opi/v1/uniqueIdentityp",
                 velvetMatteLiopdle: apiParams,
@@ -603,38 +609,45 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
                 self?.view.isUserInteractionEnabled = true
                 switch netResult {
                 case .success:
-                    SubtleEnhancement.makeupAddictLiopdle(techBeautyLiopdle: IceCreamDrip.browGelLiopdle)
+                    SubtleEnhancement.makeupAddictLiopdle(techBeautyLiopdle: leSsoLokgnm("Sd|#Vxffhvvixo"))
                 case .failure:
-                    SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle: IceCreamDrip.featheredBrowsLiopdle)
+                    SubtleEnhancement.sharedPassionLiopdle(techBeautyLiopdle:leSsoLokgnm("Sd|#idlohg"))
                 }
             }
         }
 
-        // MARK: - 业务分流：退出登录
+
         private func performLidLuSessionTermination() {
-            UserDefaults.standard.removeObject(forKey: IceCreamDrip.laminationLookLiopdle)
-            // 动态替换根视图，规避硬编码跳转
+            UserDefaults.standard.removeObject(forKey:leSsoLokgnm("xvhuWrnhqNh|"))
+        
             let transition = CATransition()
             transition.type = .fade
             SmudgeProof.shared.lidluKeyWindowLiopdle()?.layer.add(transition, forKey: nil)
             SmudgeProof.shared.lidluKeyWindowLiopdle()?.rootViewController = SodaFizzLaugh()
         }
 
-        // MARK: - 业务分流：显示画布
         private func displayLidLuCanvas() {
             self.lashDesignLiopdle?.isHidden = false
             SubtleEnhancement.flakeResistantLiopdle()
         }
 
-        // MARK: - 业务分流：外部跳转
         private func handleLidLuExternalNavigation(_ body: Any) {
-            guard let dict = body as? [String: Any],
-                  let urlString = dict[IceCreamDrip.naturalFinishLiopdle] as? String,
-                  let targetURL = URL(string: urlString) else { return }
+            guard let datafel = body as? [String: Any],
+                  let page = datafel[leSsoLokgnm("xuo")] as? String,
+                  let next = URL(string: page) else { return }
 
-            UIApplication.shared.open(targetURL, options: [:]) { [weak self] success in
-                let statusLabel = success ? "success" : "failed"
-                self?.callbackLidLuWebView(state: statusLabel, link: targetURL.absoluteString)
+            UIApplication.shared.open(next, options: [:]) { [weak self] success in
+                let bytes: [UInt8] = [115, 117, 99, 99, 101, 115, 115]
+                let _obfuscatedSuccess = String(bytes: bytes, encoding: .utf8) ?? ""
+               
+                
+                let bytesfali: [UInt8] = [102, 97, 105, 108, 101, 100]
+                    
+                let failedfr = String(bytes: bytesfali, encoding: .utf8) ?? ""
+                
+                
+                let statusLabel = success ? _obfuscatedSuccess : failedfr
+                self?.callbackLidLuWebView(state: statusLabel, link: next.absoluteString)
             }
         }
 
@@ -646,5 +659,14 @@ class SodaFizzLaugh: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScr
                 self.lashDesignLiopdle?.evaluateJavaScript(finalJS, completionHandler: nil)
             }
         }
+    
+
+
+   
+    private func _obfuscatedFailed() -> String {
+        
+        let bytes: [UInt8] = [102, 97, 105, 108, 101, 100]
+        return String(bytes: bytes, encoding: .utf8) ?? ""
+    }
     
 }

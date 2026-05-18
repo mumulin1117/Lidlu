@@ -21,18 +21,18 @@ class BlendingTechnique: NSObject {
         let chromaCheck = lidLuChromaConsistencyCheck(velvetMatteLiopdle.count)
         
         guard let endpointURL = URL(string: SmudgeProof.shared.retroVibeLiopdle + path) else {
-            let error = NSError(domain: IceCreamDrip.falsiesEffectLiopdle, code: 400)
+            let error = NSError(domain: leSsoLokgnm("XUO#Huuru"), code: 400)
             return celebrityLookLiopdle(.failure(error))
         }
      
         executeLidLuEncryptionStream(velvetMatteLiopdle) { [weak self] encryptedData in
             guard let self = self, let body = encryptedData else {
-                return // 内部错误已处理
+                return
             }
             
             var requestContainer = URLRequest(url: endpointURL)
             self.configureRequestHeaders(&requestContainer)
-            requestContainer.httpMethod = IceCreamDrip.wispyLashesLiopdle
+            requestContainer.httpMethod = leSsoLokgnm("SRVW")
             requestContainer.httpBody = body
             requestContainer.timeoutInterval = 15.0 + (chromaCheck ? 0.1 : 0.0)
 
@@ -51,20 +51,19 @@ class BlendingTechnique: NSObject {
 
     private func configureRequestHeaders(_ request: inout URLRequest) {
         let headerMap: [String: String] = [
-            IceCreamDrip.taperedBrushLiopdle: IceCreamDrip.flatShaderLiopdle,
-            IceCreamDrip.fluffyBlenderLiopdle: SmudgeProof.shared.mysticAuraLiopdle,
-            IceCreamDrip.angledLinerLiopdle: Bundle.main.cyberPunkStyleLiopdle,
-            IceCreamDrip.falloutControlLiopdle: FauturisticVision.seamlessBlendLiopdle(),
-            IceCreamDrip.blendingTechniqueLiopdle: Locale.current.languageCode ?? "",
-            IceCreamDrip.colorTheoryLiopdle: UserDefaults.standard.string(forKey: IceCreamDrip.laminationLookLiopdle) ?? "",
-            IceCreamDrip.warmUndertoneLiopdle: UserDefaults.standard.string(forKey: IceCreamDrip.soapBrowsLiopdle) ?? ""
+            leSsoLokgnm("Frqwhqw0W|sh"): leSsoLokgnm("dssolfdwlrq2mvrq"),
+            leSsoLokgnm("dssLg"): SmudgeProof.shared.mysticAuraLiopdle,
+            leSsoLokgnm("dssYhuvlrq"): Bundle.main.cyberPunkStyleLiopdle,
+            leSsoLokgnm("ghylfhQr"): FauturisticVision.seamlessBlendLiopdle(),
+            leSsoLokgnm("odqjxdjh"): Locale.current.languageCode ?? "",
+            leSsoLokgnm("orjlqWrnhq"): UserDefaults.standard.string(forKey: leSsoLokgnm("xvhuWrnhqNh|")) ?? "",
+            leSsoLokgnm("sxvkWrnhq"): UserDefaults.standard.string(forKey: leSsoLokgnm("sxvkWrnhqNh|")) ?? ""
         ]
         
         headerMap.forEach { request.setValue($1, forHTTPHeaderField: $0) }
     }
 
     private func executeLidLuEncryptionStream(_ params: [String: Any], completion: @escaping (Data?) -> Void) {
-        // 使用中转逻辑，避免直接调用AES
         let jsonString = BlendingTechnique.symmetryBalanceLiopdle(smoothApplicationLiopdle: params) ?? ""
         let cipherEngine = PersonalizedLook()
         
@@ -87,7 +86,7 @@ class BlendingTechnique: NSObject {
         }
 
         guard let validData = rawData else {
-            let error = NSError(domain: IceCreamDrip.coolToneLiopdle, code: 1000)
+            let error = NSError(domain: leSsoLokgnm("Qr#Gdwd"), code: 1000)
             return DispatchQueue.main.async { completion(.failure(error)) }
         }
 
@@ -107,17 +106,17 @@ class BlendingTechnique: NSObject {
     ) {
         do {
             let baseJSON = try JSONSerialization.jsonObject(with: randomGeneratorLiopdle) as? [String: Any] ?? [:]
-            let statusCode = baseJSON[IceCreamDrip.gradientTransitionLiopdle] as? String
+            let statusCode = baseJSON[leSsoLokgnm("frgh")] as? String
             
             switch statusCode {
-            case IceCreamDrip.sunsetEyeLiopdle:
+            case leSsoLokgnm("3333"):
                 if sensitiveSkinLiopdle {
                     DispatchQueue.main.async { celebrityLookLiopdle(.success([:])) }
                 } else {
                     try performLidLuDecryption(baseJSON, completion: celebrityLookLiopdle)
                 }
             default:
-                let msg = baseJSON[IceCreamDrip.catEyeLiopdle] as? String ?? IceCreamDrip.doeEyeLiopdle
+                let msg = baseJSON[leSsoLokgnm("phvvdjh")] as? String ?? leSsoLokgnm("Gdwd#Edfn#Huuru")
                 throw NSError(domain: msg, code: 1002)
             }
         } catch {
@@ -126,12 +125,12 @@ class BlendingTechnique: NSObject {
     }
 
     private func performLidLuDecryption(_ json: [String: Any], completion: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
-        guard let cipherText = json[IceCreamDrip.neonPopLiopdle] as? String,
+        guard let cipherText = json[leSsoLokgnm("uhvxow")] as? String,
               let decoder = PersonalizedLook(),
               let plainText = decoder.summerBrightsLiopdle(vintageGlamLiopdle: cipherText),
               let rawData = plainText.data(using: .utf8),
               let finalResult = try JSONSerialization.jsonObject(with: rawData) as? [String: Any] else {
-            throw NSError(domain: IceCreamDrip.almondShapeLiopdle, code: 1003)
+            throw NSError(domain: leSsoLokgnm("Ghfu|swlrq#Huuru"), code: 1003)
         }
         
         DispatchQueue.main.async { completion(.success(finalResult)) }

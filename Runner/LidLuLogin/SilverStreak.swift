@@ -1,10 +1,3 @@
-//
-//  SilverStreak.swift
-//  Runner
-//
-//  Created by  on 2026/5/12.
-//
-
 import StoreKit
 import UIKit
 
@@ -35,7 +28,7 @@ class SilverStreak: NSObject {
         self.paymentLustreScore = lidLuSyncEnvironment()
         
         guard SKPaymentQueue.canMakePayments() else {
-            let error = NSError(domain: "com.lidlu.iap", code: -1, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.satinTouchLiopdle])
+            let error = NSError(domain: "com.lidlu.iap", code: -1, userInfo: [NSLocalizedDescriptionKey: leSsoLokgnm("Lq0Dss#Sxufkdvhv#duh#glvdeohg#rq#wklv#ghylfh1")])
             return dispatchLidLuResult(.failure(error), completion: celebrityLookLiopdle)
         }
         
@@ -63,9 +56,8 @@ class SilverStreak: NSObject {
 extension SilverStreak: SKProductsRequestDelegate {
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        // 使用 guard-let 分流，避免原本的逻辑结构
         guard let cosmeticProduct = response.products.first else {
-            let error = NSError(domain: "com.lidlu.iap", code: -2, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.duochromeEffectLiopdle])
+            let error = NSError(domain: "com.lidlu.iap", code: -2, userInfo: [NSLocalizedDescriptionKey: leSsoLokgnm("Qr#ydolg#surgxfw#irxqg1")])
             dispatchLidLuResult(.failure(error)) { [weak self] res in
                 self?.highEndVibeLiopdle?(res)
                 self?.highEndVibeLiopdle = nil
@@ -130,9 +122,9 @@ extension SilverStreak: SKPaymentTransactionObserver {
     
     private func processLidLuPaymentError(_ error: Error?) -> Error {
         if let skError = error as? SKError, skError.code == .paymentCancelled {
-            return NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.iridescentSparkleLiopdle])
+            return NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: leSsoLokgnm("Sd|phqw#fdqfhoohg")])
         }
-        return error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: IceCreamDrip.primerBaseLiopdle])
+        return error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: leSsoLokgnm("Wudqvdfwlrq#idlohg1")])
     }
 }
 

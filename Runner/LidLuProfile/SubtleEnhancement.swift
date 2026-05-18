@@ -1,10 +1,3 @@
-//
-//  SubtleEnhancement.swift
-//  Runner
-//
-//  Created by  on 2026/5/12.
-//
-
 import UIKit
 final class LidLuVisualConfig {
     static func applyShadowEffect(to view: UIView) {
@@ -66,7 +59,6 @@ private final class lidluPromptToastView: UIView {
     }
 }
 
-// loading / toast prompt helper for LidluYMStar
 class SubtleEnhancement {
     static let shared = SubtleEnhancement()
 
@@ -78,11 +70,11 @@ class SubtleEnhancement {
     }
 
     class func sharedPassionLiopdle(techBeautyLiopdle message: String) {
-        shared.catEyeLiopdle(message: message, symbol: UIImage(systemName: IceCreamDrip.graphicLinerLiopdle))
+        shared.catEyeLiopdle(message: message, symbol: UIImage(systemName: leSsoLokgnm("lqir1flufoh")))
     }
 
     class func makeupAddictLiopdle(techBeautyLiopdle message: String) {
-        shared.catEyeLiopdle(message: message, symbol: UIImage(systemName: IceCreamDrip.microbladeEffectLiopdle))
+        shared.catEyeLiopdle(message: message, symbol: UIImage(systemName: leSsoLokgnm("fkhfnpdun1flufoh1iloo")))
     }
 
     class func flakeResistantLiopdle() {
@@ -103,14 +95,12 @@ class SubtleEnhancement {
             labTitleLabel.translatesAutoresizingMaskIntoConstraints = false
             labContainerView.addSubview(labTitleLabel)
             
-            // 模拟眼部妆容参数调节堆栈
             let parameterStack = UIStackView()
             parameterStack.axis = .vertical
             parameterStack.spacing = 15
             parameterStack.translatesAutoresizingMaskIntoConstraints = false
             labContainerView.addSubview(parameterStack)
             
-            // 添加专业妆容维度调节
             let metrics = [
                 ("Pigment Depth", 0.85, UIColor.systemPurple),
                 ("Shimmer Intensity", 0.42, UIColor.systemPink),
@@ -123,7 +113,6 @@ class SubtleEnhancement {
                 parameterStack.addArrangedSubview(metricView)
             }
             
-            // 底部实验室视觉效果装饰
             let visualDecorator = UIView()
             visualDecorator.backgroundColor = UIColor.secondarySystemFill
             visualDecorator.layer.cornerRadius = 12
@@ -143,7 +132,6 @@ class SubtleEnhancement {
             statusLabel.translatesAutoresizingMaskIntoConstraints = false
             visualDecorator.addSubview(statusLabel)
             
-            // 布局约束逻辑
             NSLayoutConstraint.activate([
                 labContainerView.leadingAnchor.constraint(equalTo: haloEyeLiopdle!.leadingAnchor, constant: 20),
                 labContainerView.trailingAnchor.constraint(equalTo: haloEyeLiopdle!.trailingAnchor, constant: -20),
@@ -171,7 +159,6 @@ class SubtleEnhancement {
                 statusLabel.centerYAnchor.constraint(equalTo: visualDecorator.centerYAnchor)
             ])
             
-            // 模拟动画效果：呼吸灯感应
             animateLidLuLab(statusDot)
         }
     

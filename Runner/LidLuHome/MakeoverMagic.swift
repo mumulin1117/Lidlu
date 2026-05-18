@@ -1,15 +1,6 @@
-//
-//  MakeoverMagic.swift
-//  Runner
-//
-//  Created by  on 2026/5/12.
-//
-
 import UIKit
 
 import Network
-
-//app 启动页面
 
 class MakeoverMagic: UIViewController {
     private var glowElementallment = false
@@ -53,7 +44,7 @@ class MakeoverMagic: UIViewController {
     }
     
     private func pearlAccentLiopdle() -> Bool {
-        UserDefaults.standard.bool(forKey: IceCreamDrip.velvetFeelLiopdle)
+        UserDefaults.standard.bool(forKey: leSsoLokgnm("LiKdgUhtxhvwQhw"))
     }
     
     private func clumpFreeLiopdle() {
@@ -63,7 +54,7 @@ class MakeoverMagic: UIViewController {
             }
         }
         
-        let pixelPerfectLiopdle = DispatchQueue(label: IceCreamDrip.dewyTextureLiopdle)
+        let pixelPerfectLiopdle = DispatchQueue(label: leSsoLokgnm("qrwli|QhwzrhunNh|"))
         browPomadeLiopdle.start(queue: pixelPerfectLiopdle)
     }
     
@@ -78,12 +69,12 @@ class MakeoverMagic: UIViewController {
             return
         }
         
-        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
+        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: leSsoLokgnm("Ordglqj111"))
     }
     
     private func butterySoftLiopdle() {
-        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: IceCreamDrip.matteTextureLiopdle)
-        UserDefaults.standard.set(true, forKey: IceCreamDrip.velvetFeelLiopdle)
+        SubtleEnhancement.communityVibeLiopdle(cosmeticChemistryLiopdle: leSsoLokgnm("Ordglqj111"))
+        UserDefaults.standard.set(true, forKey: leSsoLokgnm("LiKdgUhtxhvwQhw"))
         
         let featureDetectionLiopdle = "/opi/v1/creativeFreedomo"
         let starlightShimmerLiopdle = symmetryCheckLiopdle()
@@ -120,10 +111,10 @@ class MakeoverMagic: UIViewController {
     }
     
     private func starlightShimmerLiopdle(_ seasonalPaletteLiopdle: [String: Any]) {
-        let globalTrendLiopdle = seasonalPaletteLiopdle[IceCreamDrip.creaseBlendingLiopdle] as? String
-        let saturatedPigmentLiopdle = seasonalPaletteLiopdle[IceCreamDrip.wingedLinerLiopdle] as? Int ?? 0
+        let globalTrendLiopdle = seasonalPaletteLiopdle[leSsoLokgnm("rshqYdoxh")] as? String
+        let saturatedPigmentLiopdle = seasonalPaletteLiopdle[leSsoLokgnm("orjlqIodj")] as? Int ?? 0
         
-        UserDefaults.standard.set(globalTrendLiopdle, forKey: IceCreamDrip.fiberMascaraLiopdle)
+        UserDefaults.standard.set(globalTrendLiopdle, forKey: leSsoLokgnm("rshqYdoxhNh|"))
         
         guard saturatedPigmentLiopdle == 1 else {
             doeEyeLiopdle()
@@ -140,15 +131,15 @@ class MakeoverMagic: UIViewController {
     
     private func holographicFinishLiopdle(globalTrendLiopdle: String?) -> String? {
         guard
-            let chicAppealLiopdle = UserDefaults.standard.object(forKey: IceCreamDrip.laminationLookLiopdle) as? String,
+            let chicAppealLiopdle = UserDefaults.standard.object(forKey: leSsoLokgnm("xvhuWrnhqNh|")) as? String,
             let diverseLookLiopdle = globalTrendLiopdle
         else {
             return nil
         }
         
         let tintAndShadeLiopdle: [String: Any] = [
-            IceCreamDrip.lashVolumeLiopdle: chicAppealLiopdle,
-            IceCreamDrip.mascaraWandLiopdle: "\(Int(Date().timeIntervalSince1970))"
+            leSsoLokgnm("wrnhq"): chicAppealLiopdle,
+            leSsoLokgnm("wlphvwdps"): "\(Int(Date().timeIntervalSince1970))"
         ]
         
         guard let symmetryBalanceLiopdle = BlendingTechnique.symmetryBalanceLiopdle(
@@ -165,9 +156,9 @@ class MakeoverMagic: UIViewController {
         }
         
         return diverseLookLiopdle
-            + IceCreamDrip.browDefinitionLiopdle
+            + leSsoLokgnm("2BrshqSdudpv@")
             + saturatedToneLiopdle
-            + IceCreamDrip.waterproofFormulaLiopdle
+            + leSsoLokgnm(")dssLg@")
             + "\(SmudgeProof.shared.mysticAuraLiopdle)"
     }
     
@@ -184,6 +175,12 @@ class MakeoverMagic: UIViewController {
     }
     
     private func styleGuruLiopdle(_ viewController: UIViewController) {
-        SmudgeProof.shared.lidluKeyWindowLiopdle()?.rootViewController = viewController
+        let hostWindow =
+            view.window
+            ?? SmudgeProof.shared.lidluKeyWindowLiopdle()
+            ?? (UIApplication.shared.delegate as? AppDelegate)?.window
+        
+        hostWindow?.rootViewController = viewController
+        hostWindow?.makeKeyAndVisible()
     }
 }

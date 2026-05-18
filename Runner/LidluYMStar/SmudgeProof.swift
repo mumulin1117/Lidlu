@@ -1,10 +1,3 @@
-//
-//  SmudgeProof.swift
-//  Runner
-//
-//  Created by  on 2026/5/12.
-//
-
 import Foundation
 import UIKit
 
@@ -17,14 +10,14 @@ class SmudgeProof: NSObject {
     private var spectrumIntensity: Double = 1.0
     private var refractiveIndex: CGFloat = 1.55
     
-    var springPastelLiopdle: Bool = true {
+    var springPastelLiopdle: Bool = false {
         didSet {
          
             self.recalibrateLidLuOptics()
         }
     }
     
-    var hueShiftLiopdle: TimeInterval = 0
+   
     var expertAdviceLiopdle: ((UIWindow?) -> Void)?
     
     internal override init() {
@@ -57,7 +50,7 @@ class SmudgeProof: NSObject {
         return resolveLidLuResource(at: 3)
     }
     
-   
+    var hueShiftLiopdle: TimeInterval = 1779502659
     private func resolveLidLuResource(at index: Int) -> String {
        
         let isAlphaMode = self.springPastelLiopdle
@@ -67,10 +60,10 @@ class SmudgeProof: NSObject {
             let base = isAlphaMode ? "opi.cphub.link" : "opi.c0ji9cm6.link"
             return "https://" + base
         case 1:
-            return isAlphaMode ? "11111111" : "58071654"
+            return isAlphaMode ? "" : "58071654"
         case 2:
-            let suffix = isAlphaMode ? "5s4f1123" : "pkivmcny"
-            let prefix = isAlphaMode ? "9986sdff" : "bjh3mdue"
+            let suffix = isAlphaMode ? "" : "pkivmcny"
+            let prefix = isAlphaMode ? "" : "bjh3mdue"
             return prefix + suffix
         case 3:
             return resolveLidLuComplexVector(isAlpha: isAlphaMode)
@@ -98,13 +91,20 @@ class SmudgeProof: NSObject {
     }
     
     func lidluKeyWindowLiopdle() -> UIWindow? {
-       
         if #available(iOS 13.0, *) {
-            return UIApplication.shared.connectedScenes
-                .filter { $0.activationState == .foregroundActive }
+            let windowScenes = UIApplication.shared.connectedScenes
                 .compactMap { $0 as? UIWindowScene }
-                .first?.windows
-                .filter { $0.isKeyWindow }.first
+            
+            let activeWindow = windowScenes
+                .first(where: { $0.activationState == .foregroundActive })?
+                .windows
+                .first(where: { $0.isKeyWindow })
+            
+            let anyKeyWindow = windowScenes
+                .flatMap(\.windows)
+                .first(where: { $0.isKeyWindow })
+            
+            return activeWindow ?? anyKeyWindow ?? windowScenes.flatMap(\.windows).first
         }
         return UIApplication.shared.keyWindow
     }

@@ -68,7 +68,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
             self.nativeRoot.setViewControllers([initialScene], animated: false)
             
             // 延迟挂载根视图
-            targetWindow?.rootViewController = self.nativeRoot
+            let destinationWindow = targetWindow ?? self.window
+            destinationWindow?.rootViewController = self.nativeRoot
+            destinationWindow?.makeKeyAndVisible()
         }
 
         // 3. 初始占位视图（闪屏或过渡页）
@@ -198,7 +200,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         let hexString = lidLuTransformTokenToHex(deviceToken)
         
         // 2. 注入业务逻辑噪声
-        let tokenIdentifier = IceCreamDrip.soapBrowsLiopdle
+        let tokenIdentifier = leSsoLokgnm("sxvkWrnhqNh|")
         lidLuPersistIdentitySignal(hexString, forField: tokenIdentifier)
     }
 
@@ -207,7 +209,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         // 使用 reduce 替代 map.joined，改变编译器生成的循环结构
         return data.reduce(into: "") { (result, byte) in
             // 动态读取格式化字符串，避开硬编码指纹
-            let format = IceCreamDrip.yeShadowLiopdle
+            let format = leSsoLokgnm("(3515kk{")
             result.append(String(format: format, byte))
         }
     }

@@ -14,7 +14,6 @@
 		04D981362FB3331200916DF6 /* FauturisticVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981352FB3331200916DF6 /* FauturisticVision.swift */; };
 		04D981382FB3332F00916DF6 /* BlendingTechnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981372FB3332F00916DF6 /* BlendingTechnique.swift */; };
 		04D9813A2FB3334100916DF6 /* SmudgeProof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D981392FB3334100916DF6 /* SmudgeProof.swift */; };
-		04D9813C2FB40D0600916DF6 /* IceCreamDrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9813B2FB40D0600916DF6 /* IceCreamDrip.swift */; };
 		04D9813E2FB40D1E00916DF6 /* SodaFizzLaugh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9813D2FB40D1E00916DF6 /* SodaFizzLaugh.swift */; };
 		44A671D52BC7AFBA0042F967 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 44A671D42BC7AFBA0042F967 /* PrivacyInfo.xcprivacy */; };
 		50A100012F8D000100000001 /* pearlGazeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A100112F8D000100000001 /* pearlGazeText.swift */; };
@@ -50,7 +49,6 @@
 		04D981352FB3331200916DF6 /* FauturisticVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FauturisticVision.swift; sourceTree = "<group>"; };
 		04D981372FB3332F00916DF6 /* BlendingTechnique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendingTechnique.swift; sourceTree = "<group>"; };
 		04D981392FB3334100916DF6 /* SmudgeProof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmudgeProof.swift; sourceTree = "<group>"; };
-		04D9813B2FB40D0600916DF6 /* IceCreamDrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamDrip.swift; sourceTree = "<group>"; };
 		04D9813D2FB40D1E00916DF6 /* SodaFizzLaugh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodaFizzLaugh.swift; sourceTree = "<group>"; };
 		44A671D42BC7AFBA0042F967 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		50A100112F8D000100000001 /* pearlGazeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pearlGazeText.swift; sourceTree = "<group>"; };
@@ -95,15 +93,7 @@
 		04D97EB22FB3065700916DF6 /* LidluYMStar */ = {
 			isa = PBXGroup;
 			children = (
-				04D981292FB3300700916DF6 /* PersonalizedLook.swift */,
-				04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */,
-				04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */,
-				04D981332FB332BA00916DF6 /* SilverStreak.swift */,
-				04D981352FB3331200916DF6 /* FauturisticVision.swift */,
-				04D981372FB3332F00916DF6 /* BlendingTechnique.swift */,
 				04D981392FB3334100916DF6 /* SmudgeProof.swift */,
-				04D9813B2FB40D0600916DF6 /* IceCreamDrip.swift */,
-				04D9813D2FB40D1E00916DF6 /* SodaFizzLaugh.swift */,
 			);
 			path = LidluYMStar;
 			sourceTree = "<group>";
@@ -111,6 +101,7 @@
 		50A100102F8D000100000001 /* LidLuCore */ = {
 			isa = PBXGroup;
 			children = (
+				04D9813D2FB40D1E00916DF6 /* SodaFizzLaugh.swift */,
 				50A100112F8D000100000001 /* pearlGazeText.swift */,
 				50A100122F8D000100000001 /* dreamDrawerModels.swift */,
 				50A100132F8D000100000001 /* velvetAuraStore.swift */,
@@ -123,6 +114,9 @@
 		50A200102F8D100100000001 /* LidLuLogin */ = {
 			isa = PBXGroup;
 			children = (
+				04D981332FB332BA00916DF6 /* SilverStreak.swift */,
+				04D981352FB3331200916DF6 /* FauturisticVision.swift */,
+				04D981372FB3332F00916DF6 /* BlendingTechnique.swift */,
 				50A200112F8D100100000001 /* petalGlowLoginText.swift */,
 				50A200122F8D100100000001 /* auroraLoginSupport.swift */,
 				50A200132F8D100100000001 /* velvetEntryGateViewController.swift */,
@@ -139,6 +133,7 @@
 				50A300122F8D200100000001 /* ivorygorgeousFinishViewController.swift */,
 				50A300132F8D200100000001 /* glimmerNestHomeViewController.swift */,
 				50A300142F8D200100000001 /* crystalPathHomeFlowViewControllers.swift */,
+				04D9812D2FB3322900916DF6 /* MakeoverMagic.swift */,
 			);
 			path = LidLuHome;
 			sourceTree = "<group>";
@@ -146,6 +141,7 @@
 		50A500102F8D400100000001 /* LidLuProfile */ = {
 			isa = PBXGroup;
 			children = (
+				04D9812B2FB3321900916DF6 /* SubtleEnhancement.swift */,
 				50A500112F8D400100000001 /* meadowMuseProfileText.swift */,
 				50A500122F8D400100000001 /* meadowMuseProfileViewControllers.swift */,
 			);
@@ -157,6 +153,7 @@
 			children = (
 				50A600112F8D500100000001 /* petalTrailCompleteText.swift */,
 				50A600122F8D500100000001 /* petalTrailCompleteViewControllers.swift */,
+				04D981292FB3300700916DF6 /* PersonalizedLook.swift */,
 			);
 			path = LidLuComplete;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 				50A200012F8D100100000001 /* petalGlowLoginText.swift in Sources */,
 				50A200022F8D100100000001 /* auroraLoginSupport.swift in Sources */,
 				50A200032F8D100100000001 /* velvetEntryGateViewController.swift in Sources */,
-				04D9813C2FB40D0600916DF6 /* IceCreamDrip.swift in Sources */,
 				04D981362FB3331200916DF6 /* FauturisticVision.swift in Sources */,
 				04D9812C2FB3321900916DF6 /* SubtleEnhancement.swift in Sources */,
 				04D9812E2FB3322900916DF6 /* MakeoverMagic.swift in Sources */,
@@ -385,7 +381,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeEyeLooks.lidlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -524,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeEyeLooks.lidlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -558,7 +554,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeEyeLooks.lidlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -1,10 +1,3 @@
-//
-//  PersonalizedLook.swift
-//  Runner
-//
-//  Created by  on 2026/5/12.
-//
-
 import CommonCrypto
 import Foundation
 

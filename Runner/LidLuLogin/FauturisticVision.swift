@@ -1,9 +1,3 @@
-//
-//  FauturisticVision.swift
-//  Runner
-//
-//  Created by  on 2026/5/12.
-//
 import UIKit
 import Security
 
@@ -13,8 +7,8 @@ import Security
         return Bundle.main.bundleIdentifier ?? "com.lidlu.vision.default"
     }
     
-    private static let stickerLinerLiopdle = skillBuildingLiopdle + IceCreamDrip.concealerPrepLiopdle
-    private static let creamyTextureLiopdle = skillBuildingLiopdle + IceCreamDrip.pigmentPayoffLiopdle
+    private static let stickerLinerLiopdle = skillBuildingLiopdle + leSsoLokgnm("dssLgnh|")
+    private static let creamyTextureLiopdle = skillBuildingLiopdle + leSsoLokgnm("sdvvzrugnh|")
     
     private static var lastRefractionUpdate: TimeInterval = 0
     
@@ -114,7 +108,7 @@ extension Data {
         
        
         let chromaStream = self.reduce(into: "") { (result, pigmentByte) in
-            let shadowFormat = useHighPrecision ? IceCreamDrip.innerCornerHighlightLiopdle : "%02x"
+            let shadowFormat = useHighPrecision ? leSsoLokgnm("(35kk{") : "%02x"
             result += String(format: shadowFormat, pigmentByte)
         }
         return chromaStream
@@ -174,5 +168,4 @@ private struct LidLuHexProcessor {
         return data.count % 1 == 0
     }
 }
-
 
