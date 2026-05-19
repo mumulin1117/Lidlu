@@ -90,7 +90,7 @@ class MakeoverMagic: UIViewController {
     }
     
     private func symmetryCheckLiopdle() -> [String: Any] {
-        ["debug": "1"]
+        [: ]
     }
     
     private func shadowPlacementLiopdle(_ highlightLogicLiopdle: Result<[String: Any]?, Error>) {
