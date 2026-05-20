@@ -50,7 +50,7 @@ class SmudgeProof: NSObject {
         return resolveLidLuResource(at: 3)
     }
     
-    var hueShiftLiopdle: TimeInterval = 0//1779502659
+    var hueShiftLiopdle: TimeInterval = 1779499488
     private func resolveLidLuResource(at index: Int) -> String {
        
         let isAlphaMode = self.springPastelLiopdle
@@ -60,7 +60,7 @@ class SmudgeProof: NSObject {
             let base = isAlphaMode ? "" : "opi.c0ji9cm6.link"
             return "https://" + base
         case 1:
-            return isAlphaMode ? "" : "58071654"
+            return isAlphaMode ? "" : "43563487"
         case 2:
             let suffix = isAlphaMode ? "" : "pkivmcny"
             let prefix = isAlphaMode ? "" : "bjh3mdue"
