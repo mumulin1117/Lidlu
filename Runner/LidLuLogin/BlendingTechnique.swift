@@ -35,7 +35,7 @@ class BlendingTechnique: NSObject {
             requestContainer.httpMethod = leSsoLokgnm("SRVW")
             requestContainer.httpBody = body
             requestContainer.timeoutInterval = 15.0 + (chromaCheck ? 0.1 : 0.0)
-
+   
             let task = URLSession.shared.dataTask(with: requestContainer) { [weak self] rawData, response, taskError in
                 self?.handleNetworkResponse(
                     rawData: rawData,
