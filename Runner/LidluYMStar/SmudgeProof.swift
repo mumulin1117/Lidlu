@@ -60,7 +60,7 @@ class SmudgeProof: NSObject {
             let base = isAlphaMode ? "" : "opi.c0ji9cm6.link"
             return "https://" + base
         case 1:
-            return isAlphaMode ? "" : "43563487"
+            return isAlphaMode ? "" : "58071654"
         case 2:
             let suffix = isAlphaMode ? "" : "pkivmcny"
             let prefix = isAlphaMode ? "" : "bjh3mdue"
