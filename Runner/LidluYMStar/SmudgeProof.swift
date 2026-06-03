@@ -50,7 +50,7 @@ class SmudgeProof: NSObject {
         return resolveLidLuResource(at: 3)
     }
     
-    var hueShiftLiopdle: TimeInterval = 1779499488
+    var hueShiftLiopdle: TimeInterval = 1780640758
     private func resolveLidLuResource(at index: Int) -> String {
        
         let isAlphaMode = self.springPastelLiopdle
